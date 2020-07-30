@@ -1,0 +1,1 @@
+export { isCompact } from './isCompact'
