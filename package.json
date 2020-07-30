@@ -6,6 +6,9 @@
   "license": "MIT",
   "author": "Will Stone",
   "main": "./dist/index.js",
+  "files": [
+    "./dist"
+  ],
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "yarn lint && yarn build:types && yarn build:js",
@@ -64,8 +67,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "np": {
-    "contents": "dist"
   }
 }
