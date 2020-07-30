@@ -12,6 +12,7 @@
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
     "build:types": "tsc --emitDeclarationOnly",
     "lint": "eslint . --ignore-path .gitignore",
+    "release": "np",
     "typecheck": "tsc"
   },
   "husky": {
@@ -55,8 +56,12 @@
     "eslint": "^7.5.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "np": "^6.3.2",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
+  },
+  "np": {
+    "contents": "dist"
   }
 }
