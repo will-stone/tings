@@ -17,6 +17,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "prerelease": "yarn build",
     "release": "np",
+    "test": "jest",
     "typecheck": "tsc --noEmit"
   },
   "husky": {
@@ -55,10 +56,12 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@types/jest": "^26.0.7",
     "@will-stone/eslint-config": "^1.17.1",
     "@will-stone/prettier-config": "^3.1.0",
     "eslint": "^7.5.0",
     "husky": "^4.2.5",
+    "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "np": "^6.3.2",
     "prettier": "^2.0.5",
