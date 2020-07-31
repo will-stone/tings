@@ -1,1 +1,1 @@
-export { isCompact } from './isCompact'
+export { default as isCompact } from './isCompact'
