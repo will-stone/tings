@@ -10,8 +10,7 @@ test.each([
   'twoSpaces  inside',
   'regular sentence of words',
   '  all the  problems  ',
-  '\t',
-  '\n',
+  '\r\n\t\f\v',
   `
       `,
 ])('isCompact($input) is false', (input) => {
