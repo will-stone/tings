@@ -1,6 +1,7 @@
 import isCompact from './isCompact'
 
 test.each([
+  '',
   '  leadingSpace',
   '  twoLeadingSpaces',
   'trailingSpace ',
