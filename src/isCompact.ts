@@ -1,4 +1,4 @@
-import { guard } from './guard'
+import { guard } from './_guard'
 
 function isCompact(value: string): boolean {
   return /^\S*$/u.test(value)
