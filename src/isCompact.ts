@@ -1,7 +1,11 @@
-import { guard } from './_guard'
+import { Validator } from './_model'
+import { optionify } from './_optionify'
 
-function isCompact(value: string): boolean {
-  return /^\S+$/u.test(value)
-}
+const isCompactCore: Validator = (string) => /^\S+$/u.test(string)
 
-export default guard(isCompact)
+const isCompact = optionify(isCompactCore, {
+  invalidMessage: 'not compact',
+  validMessage: 'is compact',
+})
+
+export default isCompact
