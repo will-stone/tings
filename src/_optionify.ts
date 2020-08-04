@@ -11,9 +11,6 @@ const stringGuard = (input: string): input is string => {
 export const optionify = (
   validator: Validator,
   config: Config,
-  // TODO how the hell do you type this?
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
 ): ValidatorWithOptions => (string: string, options?: Options) => {
   stringGuard(string)
 
@@ -26,5 +23,8 @@ export const optionify = (
     }
   }
 
-  return valid
+  // This any is required as TS doesn't know how to type this conditional return type
+  // correctly without the casting. The return types are correct despite adding this. Weird.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return valid as any
 }
