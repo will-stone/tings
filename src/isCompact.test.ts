@@ -13,7 +13,7 @@ test.each([
   '\r\n\t\f\v',
   `
       `,
-])('isCompact($input) is false', (input) => {
+])('isCompact(%p) is false', (input) => {
   expect(isCompact(input)).toBe(false)
 })
 
@@ -23,6 +23,6 @@ test.each([
   'mixed123',
   'hyphenated-123',
   'special!@@£$%^%^*(-123',
-])('isCompact($input) is true', (input) => {
+])('isCompact(%p) is true', (input) => {
   expect(isCompact(input)).toBe(true)
 })
