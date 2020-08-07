@@ -57,7 +57,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
     "@types/jest": "^26.0.7",
-    "@will-stone/eslint-config": "^1.17.1",
+    "@will-stone/eslint-config": "^1.18.0",
     "@will-stone/prettier-config": "^3.1.0",
     "eslint": "^7.5.0",
     "husky": "^4.2.5",
