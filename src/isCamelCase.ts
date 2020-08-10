@@ -1,10 +1,9 @@
 import { Validator } from './_model'
 import { optionify } from './_optionify'
 
-const isCamelCaseCore: Validator = (string) =>
-  /^[a-z]+([A-Z][a-z]+)*$/u.test(string)
+const validator: Validator = (string) => /^[a-z]+([A-Z][a-z]+)*$/u.test(string)
 
-const isCamelCase = optionify(isCamelCaseCore, {
+const isCamelCase = optionify(validator, {
   invalidMessage: 'not camelCase',
   validMessage: 'is camelCase',
 })

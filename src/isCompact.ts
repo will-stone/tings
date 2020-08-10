@@ -1,9 +1,9 @@
 import { Validator } from './_model'
 import { optionify } from './_optionify'
 
-const isCompactCore: Validator = (string) => /^\S+$/u.test(string)
+const validator: Validator = (string) => /^\S+$/u.test(string)
 
-const isCompact = optionify(isCompactCore, {
+const isCompact = optionify(validator, {
   invalidMessage: 'not compact',
   validMessage: 'is compact',
 })

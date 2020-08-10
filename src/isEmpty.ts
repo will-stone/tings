@@ -1,9 +1,9 @@
 import { Validator } from './_model'
 import { optionify } from './_optionify'
 
-const isEmptyCore: Validator = (value) => value.length === 0
+const validator: Validator = (value) => value.length === 0
 
-const isEmpty = optionify(isEmptyCore, {
+const isEmpty = optionify(validator, {
   invalidMessage: 'not empty',
   validMessage: 'is empty',
 })
