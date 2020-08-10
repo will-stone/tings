@@ -1,4 +1,4 @@
-import isCamelCase from './isCamelCase'
+import { isCamelCase } from '.'
 
 test.each([
   '',
