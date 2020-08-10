@@ -1,4 +1,4 @@
-import isCompact from './isCompact'
+import { isCompact } from '.'
 
 test.each([
   '',

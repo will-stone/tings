@@ -1,4 +1,4 @@
-import isNotEmpty from './isNotEmpty'
+import { isNotEmpty } from '.'
 
 test.each([''])('isNotEmpty(%p) is false', (input) => {
   expect(isNotEmpty(input)).toBe(false)
