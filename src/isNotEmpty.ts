@@ -1,10 +1,8 @@
 import { optionify } from './_optionify'
 
-function isNotEmptyCore(value: string): boolean {
-  return value.length > 0
-}
+const validator = (value: string): boolean => value.length > 0
 
-const isNotEmpty = optionify(isNotEmptyCore, {
+const isNotEmpty = optionify(validator, {
   invalidMessage: 'is empty',
   validMessage: 'not empty',
 })
