@@ -10,14 +10,13 @@
     "./dist"
   ],
   "scripts": {
-    "prebuild": "rimraf ./dist",
-    "build": "yarn lint && yarn build:types && yarn build:js",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline --ignore '**/*.test.ts'",
-    "build:types": "tsc --emitDeclarationOnly",
+    "prebuild": "rimraf ./dist && yarn lint",
+    "build": "tsc",
     "lint": "eslint . --ignore-path .gitignore",
     "prerelease": "yarn build",
     "release": "np",
-    "test": "jest",
+    "test": "uvu -r ts-node/register tests",
+    "test:watch": "watchlist src tests -- yarn test",
     "typecheck": "tsc --noEmit"
   },
   "husky": {
@@ -33,40 +32,27 @@
       "eslint --fix"
     ]
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-typescript"
-    ]
-  },
-  "browserslist": [
-    "maintained node versions"
-  ],
   "prettier": "@will-stone/prettier-config",
   "eslintConfig": {
     "extends": [
       "@will-stone/eslint-config",
       "@will-stone/eslint-config/node",
-      "@will-stone/eslint-config/jest",
       "@will-stone/eslint-config/typescript"
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-typescript": "^7.10.4",
-    "@types/jest": "^26.0.7",
     "@will-stone/eslint-config": "^1.18.0",
     "@will-stone/prettier-config": "^3.1.0",
     "eslint": "^7.5.0",
     "husky": "^4.2.5",
-    "jest": "^26.1.0",
     "lint-staged": "^10.2.11",
     "np": "^6.3.2",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.7"
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "uvu": "^0.3.2",
+    "watchlist": "^0.2.3"
   },
   "publishConfig": {
     "access": "public"
