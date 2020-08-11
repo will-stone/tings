@@ -3,14 +3,14 @@ import path from 'path'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-const isFiles: NodeRequire[] = []
+const validators: NodeRequire[] = []
 
 const sourceDirectory = path.join(__dirname, '..', 'src')
 
 fs.readdirSync(sourceDirectory).forEach((file) => {
   if (file.startsWith('is')) {
     // eslint-disable-next-line node/global-require, @typescript-eslint/no-var-requires
-    isFiles.push(require(path.join(sourceDirectory, file)).default)
+    validators.push(require(path.join(sourceDirectory, file)).default)
   }
 })
 
@@ -29,7 +29,7 @@ const invalidInputs: any[] = [
   () => '',
 ]
 
-isFiles.forEach((validator) => {
+validators.forEach((validator) => {
   test('not throw on string', () => {
     assert.not.throws(() => validator('string'))
   })
