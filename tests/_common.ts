@@ -1,9 +1,19 @@
+import fs from 'fs'
+import path from 'path'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
 import * as all from '../src'
 
+const validatorFileNames = fs
+  .readdirSync(path.join(__dirname, '..', 'src'))
+  .filter((n) => n.startsWith('is'))
+
 const validators = Object.entries(all).filter(([name]) => name.startsWith('is'))
+
+test('index exports all validators', () => {
+  assert.is(validatorFileNames.length, validators.length)
+})
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- allow all bad types
 const invalidInputs: any[] = [
