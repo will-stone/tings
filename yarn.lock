@@ -3806,10 +3806,10 @@ url-parse-lax@^3.0.0:
   dependencies:
     prepend-http "^2.0.0"
 
-uvu@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/uvu/-/uvu-0.3.2.tgz#28a312593f6d8d0a269e5c43bd51ac2205936c37"
-  integrity sha512-Zslo3AWP3slfrxrv5m+7P4E+eEo+XgB4rmgCRUnDNcYuCiNVL+sjYYn3Th9aWfIg7S8jg/BvecHjklkb/oaR/g==
+uvu@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/uvu/-/uvu-0.3.3.tgz#ad2edd8d2fca50c4dcb39fb2e843f4c15e48ac94"
+  integrity sha512-5oeS+bkoRM5FGjXMXCZvjLLeUB9P5HXn2LFiTQaItopJFBtXuJ2XxWkWJNe2NgWthxFUOZR+eyhodgiaFqv7wQ==
   dependencies:
     dequal "^1.0.0"
     diff "^4.0.2"
