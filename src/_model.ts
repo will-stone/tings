@@ -7,11 +7,11 @@ export interface Options {
   verbose?: boolean
 }
 
-export interface OptionsIsVerbose extends Options {
+interface OptionsIsVerbose extends Options {
   verbose: true
 }
 
-export interface OptionsNotVerbose extends Options {
+interface OptionsNotVerbose extends Options {
   verbose: false | undefined
 }
 
