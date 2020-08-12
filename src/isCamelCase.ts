@@ -1,11 +1,8 @@
-import { Validator } from './_model'
-import { optionify } from './_optionify'
+import { Tester } from './_model'
+import strngs from './strngs'
 
-const validator: Validator = (string) => /^[a-z]+([A-Z][a-z]+)*$/u.test(string)
+const tester: Tester = (string) => /^[a-z]+([A-Z][a-z]+)*$/u.test(string)
 
-const isCamelCase = optionify(validator, {
-  invalidMessage: 'not camelCase',
-  validMessage: 'is camelCase',
-})
+const isCamelCase = strngs.create(tester, 'is camelCase', 'not camelCase')
 
 export default isCamelCase
