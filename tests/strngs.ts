@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import strngs, { isCompact, isEmpty, isNotEmpty } from '../src'
+import { isCompact, isEmpty, isNotEmpty, strngs } from '../src'
 
 test('strngs.or should be valid 1', () => {
   const validator = strngs.or(isEmpty, isCompact)
