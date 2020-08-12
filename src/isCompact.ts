@@ -1,11 +1,8 @@
-import { Validator } from './_model'
-import { optionify } from './_optionify'
+import { Tester } from './_model'
+import strngs from './strngs'
 
-const validator: Validator = (string) => /^\S+$/u.test(string)
+const tester: Tester = (string) => /^\S+$/u.test(string)
 
-const isCompact = optionify(validator, {
-  invalidMessage: 'not compact',
-  validMessage: 'is compact',
-})
+const isCompact = strngs.create(tester, 'is compact', 'not compact')
 
 export default isCompact

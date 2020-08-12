@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isCompact, isEmpty, isNotEmpty, strngs } from '../src'
+import { isCamelCase, isCompact, isEmpty, isNotEmpty, strngs } from '../src'
 
 test('strngs.or should be valid 1', () => {
   const validator = strngs.or(isEmpty, isCompact)
@@ -58,6 +58,7 @@ test('strngs.and should throw', () => {
 })
 
 // ---------------------------------------------------------
+
 test('strngs.or() should be valid 1', () => {
   assert.equal(strngs('').or(isEmpty, isCompact), {
     valid: true,
@@ -108,6 +109,73 @@ test('strngs.and() should throw', () => {
     // @ts-expect-error
     () => strngs(123).or(isEmpty, isCompact),
     (error: Error) => error.message === 'Input is not a string',
+  )
+})
+
+// ---------------------------------------------------------
+
+test('custom validator', () => {
+  const customValidator = strngs.create((s) => s === 'yes', 'valid', 'invalid')
+
+  assert.equal(strngs('yes').or(customValidator), {
+    valid: true,
+    message: 'valid',
+  })
+  assert.equal(strngs('no').and(customValidator), {
+    valid: false,
+    message: 'invalid',
+  })
+})
+
+test('strngs.some', () => {
+  assert.equal(
+    strngs.some(
+      strngs('').or(isEmpty, isCompact),
+      strngs('compact').or(isEmpty, isCamelCase),
+    ),
+    { valid: true, message: 'number 1 check passed: is empty' },
+  )
+  assert.equal(
+    strngs.some(
+      strngs('compact').or(isEmpty, isCamelCase),
+      strngs('').or(isEmpty, isCompact),
+    ),
+    { valid: true, message: 'number 1 check passed: is camelCase' },
+  )
+  assert.equal(
+    strngs.some(
+      strngs('compact').or(isEmpty),
+      strngs('').or(isEmpty, isCompact),
+    ),
+    { valid: true, message: 'number 2 check passed: is empty' },
+  )
+  assert.equal(
+    strngs.some(strngs('compact').or(isEmpty), strngs('').or(isCompact)),
+    { valid: false, message: 'all checks failed' },
+  )
+})
+
+test('strngs.every', () => {
+  assert.equal(
+    strngs.every(
+      strngs('compact').or(isNotEmpty, isCompact),
+      strngs('').or(isEmpty),
+    ),
+    { valid: true, message: 'all checks passed' },
+  )
+  assert.equal(
+    strngs.every(
+      strngs('compact').and(isEmpty, isCompact),
+      strngs('').or(isEmpty),
+    ),
+    { valid: false, message: 'number 1 check failed: not empty' },
+  )
+  assert.equal(
+    strngs.every(
+      strngs('').or(isEmpty),
+      strngs('compact').and(isEmpty, isCompact),
+    ),
+    { valid: false, message: 'number 2 check failed: not empty' },
   )
 })
 

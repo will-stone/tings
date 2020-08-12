@@ -1,11 +1,8 @@
-import { Validator } from './_model'
-import { optionify } from './_optionify'
+import { Tester } from './_model'
+import strngs from './strngs'
 
-const validator: Validator = (value) => value.length === 0
+const tester: Tester = (value) => value.length === 0
 
-const isEmpty = optionify(validator, {
-  invalidMessage: 'not empty',
-  validMessage: 'is empty',
-})
+const isEmpty = strngs.create(tester, 'is empty', 'not empty')
 
 export default isEmpty

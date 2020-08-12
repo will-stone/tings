@@ -1,12 +1,8 @@
-import { Validator } from './_model'
-import { optionify } from './_optionify'
+import { Tester } from './_model'
+import strngs from './strngs'
 
-const validator: Validator = (string) =>
-  /^[A-Z][a-z]+([A-Z][a-z]+)*$/u.test(string)
+const tester: Tester = (string) => /^[A-Z][a-z]+([A-Z][a-z]+)*$/u.test(string)
 
-const isPascalCase = optionify(validator, {
-  invalidMessage: 'not PascalCase',
-  validMessage: 'is PascalCase',
-})
+const isPascalCase = strngs.create(tester, 'is PascalCase', 'not PascalCase')
 
 export default isPascalCase
