@@ -1,4 +1,5 @@
 import { Options, Tester, Validator, ValidMessage } from './_model'
+import intToOrdinal from './intToOrdinal'
 
 function or(string: string, validators: Validator[]) {
   for (const validator of validators) {
@@ -51,7 +52,7 @@ strngs.some = (...validMessages: ValidMessage[]) => {
     if (valid) {
       return {
         valid: true,
-        message: `number ${count} check passed: ${message}`,
+        message: `${intToOrdinal(count)} check passed: ${message}`,
       }
     }
   }
@@ -66,7 +67,7 @@ strngs.every = (...validMessages: ValidMessage[]) => {
     if (!valid) {
       return {
         valid: false,
-        message: `number ${count} check failed: ${message}`,
+        message: `${intToOrdinal(count)} check failed: ${message}`,
       }
     }
   }

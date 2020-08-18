@@ -133,21 +133,21 @@ test('strngs.some', () => {
       strngs('').or(isEmpty, isCompact),
       strngs('compact').or(isEmpty, isCamelCase),
     ),
-    { valid: true, message: 'number 1 check passed: is empty' },
+    { valid: true, message: '1st check passed: is empty' },
   )
   assert.equal(
     strngs.some(
       strngs('compact').or(isEmpty, isCamelCase),
       strngs('').or(isEmpty, isCompact),
     ),
-    { valid: true, message: 'number 1 check passed: is camelCase' },
+    { valid: true, message: '1st check passed: is camelCase' },
   )
   assert.equal(
     strngs.some(
       strngs('compact').or(isEmpty),
       strngs('').or(isEmpty, isCompact),
     ),
-    { valid: true, message: 'number 2 check passed: is empty' },
+    { valid: true, message: '2nd check passed: is empty' },
   )
   assert.equal(
     strngs.some(strngs('compact').or(isEmpty), strngs('').or(isCompact)),
@@ -168,14 +168,14 @@ test('strngs.every', () => {
       strngs('compact').and(isEmpty, isCompact),
       strngs('').or(isEmpty),
     ),
-    { valid: false, message: 'number 1 check failed: not empty' },
+    { valid: false, message: '1st check failed: not empty' },
   )
   assert.equal(
     strngs.every(
       strngs('').or(isEmpty),
       strngs('compact').and(isEmpty, isCompact),
     ),
-    { valid: false, message: 'number 2 check failed: not empty' },
+    { valid: false, message: '2nd check failed: not empty' },
   )
 })
 
