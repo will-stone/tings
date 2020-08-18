@@ -10,11 +10,10 @@
     "./dist"
   ],
   "scripts": {
-    "prebuild": "rimraf ./dist && yarn lint",
-    "build": "tsc",
+    "build": "yarn clean && tsc",
+    "clean": "rimraf ./dist",
     "lint": "eslint . --ignore-path .gitignore",
-    "prerelease": "yarn build",
-    "release": "np",
+    "release": "yarn lint && yarn build && np",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- yarn test",
     "typecheck": "tsc --noEmit"
