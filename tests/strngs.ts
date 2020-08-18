@@ -27,7 +27,7 @@ test('strngs.or should throw', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     () => validator(123),
-    (error: Error) => error.message === 'Input is not a string',
+    (error: Error) => error.message === '123 is not a string',
   )
 })
 
@@ -53,7 +53,7 @@ test('strngs.and should throw', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     () => validator(123),
-    (error: Error) => error.message === 'Input is not a string',
+    (error: Error) => error.message === '123 is not a string',
   )
 })
 
@@ -85,7 +85,7 @@ test('strngs.or() should throw', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     () => strngs(123).or(isEmpty, isCompact),
-    (error: Error) => error.message === 'Input is not a string',
+    (error: Error) => error.message === '123 is not a string',
   )
 })
 
@@ -108,7 +108,7 @@ test('strngs.and() should throw', () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     () => strngs(123).or(isEmpty, isCompact),
-    (error: Error) => error.message === 'Input is not a string',
+    (error: Error) => error.message === '123 is not a string',
   )
 })
 

@@ -42,7 +42,7 @@ validators.forEach(([name, validator]) => {
     test(`${name} throws ${String(input)} is not a string`, () => {
       assert.throws(
         () => validator(input),
-        (error: Error) => error.message === 'Input is not a string',
+        (error: Error) => error.message === `${String(input)} is not a string`,
       )
     })
   })
