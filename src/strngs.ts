@@ -76,7 +76,7 @@ strngs.every = (...validMessages: ValidMessage[]) => {
 
 const stringGuard = (input: string): input is string => {
   if (typeof input !== 'string') {
-    throw new TypeError('Input is not a string')
+    throw new TypeError(`${String(input)} is not a string`)
   }
 
   return true
