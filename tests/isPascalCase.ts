@@ -5,16 +5,10 @@ import { isPascalCase } from '../src'
 
 const invalidInputs = [
   123,
-  '',
-  'A',
-  'AWord',
-  'NotCAMEL',
-  'EndWithCaptiaL',
-  'ContainNumbers123',
-  '123',
-  'ContainsSpecial!Characters',
   '!',
-  'This HasaSpace',
+  'notCAMEL',
+  'containsSpecial!Characters',
+  'thisHas aSpace',
 ]
 invalidInputs.forEach((input) => {
   test(`${input} is not valid`, () => {
@@ -22,7 +16,17 @@ invalidInputs.forEach((input) => {
   })
 })
 
-const validInputs = ['One', 'CamelCase', 'MiltiWordCamelCase']
+const validInputs = [
+  '',
+  'One',
+  'A',
+  '123',
+  'CamelCase',
+  'EndWithCaptiaL',
+  'MiltiWordCamelCase',
+  'AWord',
+  'ContainNumbers123',
+]
 validInputs.forEach((input) => {
   test(`${input} is valid`, () => {
     assert.is(isPascalCase(input), true)
