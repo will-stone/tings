@@ -1,8 +1,3 @@
-import { Tester } from './_model'
-import strngs from './strngs'
-
-const tester: Tester = (string) => /^\S+$/u.test(string)
-
-const isCompact = strngs.create(tester, 'is compact', 'not compact')
+const isCompact = (string: string): boolean => /^\S+$/u.test(string)
 
 export default isCompact

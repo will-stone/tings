@@ -1,9 +1,11 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { intToOrdinal } from '../src'
+import { toOrdinal } from '../src'
 
 const cases = [
+  // Nonsense
+  ['blah blah', '0th'],
   // Numbers
   [1, '1st'],
   [2, '2nd'],
@@ -70,7 +72,7 @@ const cases = [
 
 cases.forEach(([input, expected]) => {
   test(`${input} is ${expected}`, () => {
-    assert.is(intToOrdinal(input), expected)
+    assert.is(toOrdinal(input), expected)
   })
 })
 

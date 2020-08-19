@@ -4,48 +4,27 @@ import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
 import * as all from '../src'
-import { Validator } from '../src/_model'
 
-const validatorFileNames = fs
+const tingFileNames = fs
   .readdirSync(path.join(__dirname, '..', 'src'))
-  .filter((n) => n.startsWith('is'))
+  .filter((n) => n !== 'index.ts')
+  .map((f) => f.split('.')[0])
 
-const validators = (Object.entries(all).filter(([name]) =>
-  name.startsWith('is'),
-) as unknown) as [string, Validator][]
+const tingTestFileNames = fs
+  .readdirSync(__dirname)
+  .filter((n) => n !== '_common.ts')
+  .map((f) => f.split('.')[0])
 
-test('index exports all validators', () => {
-  assert.is(validatorFileNames.length, validators.length)
+const tings = Object.keys(all)
+
+test('index exports all tings', () => {
+  assert.is(tingFileNames.length, tings.length)
+  assert.equal(tingFileNames, tings)
 })
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any -- allow all bad types
-const invalidInputs: any[] = [
-  0,
-  1,
-  new Date(),
-  undefined,
-  true,
-  false,
-  {},
-  [],
-  BigInt(1),
-  Symbol(1),
-  () => '',
-]
-
-validators.forEach(([name, validator]) => {
-  test(`${name} does not throw on string`, () => {
-    assert.not.throws(() => validator('string'))
-  })
-
-  invalidInputs.forEach((input) => {
-    test(`${name} throws ${String(input)} is not a string`, () => {
-      assert.throws(
-        () => validator(input),
-        (error: Error) => error.message === `${String(input)} is not a string`,
-      )
-    })
-  })
+test('all tings have a test file', () => {
+  assert.is(tingTestFileNames.length, tings.length)
+  assert.equal(tingTestFileNames, tings)
 })
 
 test.run()
