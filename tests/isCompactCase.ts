@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isCompact } from '../src'
+import { isCompactCase } from '../src'
 
 const invalidInputs = [
   '',
@@ -19,7 +19,7 @@ const invalidInputs = [
 ]
 invalidInputs.forEach((input) => {
   test(`${input} is not valid`, () => {
-    assert.is(isCompact(input), false)
+    assert.is(isCompactCase(input), false)
   })
 })
 
@@ -32,7 +32,7 @@ const validInputs = [
 ]
 validInputs.forEach((input) => {
   test(`${input} is valid`, () => {
-    assert.is(isCompact(input), true)
+    assert.is(isCompactCase(input), true)
   })
 })
 
