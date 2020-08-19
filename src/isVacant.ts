@@ -1,5 +1,5 @@
-import isMap from './isMap'
-import isSet from './isSet'
+import isMap from 'lodash/isMap'
+import isSet from 'lodash/isSet'
 
 const isVacant = (input: unknown): boolean => {
   if (input === null) {
