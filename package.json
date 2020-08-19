@@ -1,6 +1,6 @@
 {
   "name": "tings",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "description": "A collection of small utilities and Lodash addons",
   "license": "MIT",
