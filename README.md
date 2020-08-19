@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="media/logo.png" alt="tings" width="498" height="172" />
+  <img src="https://raw.githubusercontent.com/will-stone/tings/master/media/logo.png" alt="tings" width="498" height="172" />
 </div>
 
 <div align="center">
