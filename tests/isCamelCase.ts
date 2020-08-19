@@ -4,6 +4,7 @@ import * as assert from 'uvu/assert'
 import { isCamelCase } from '../src'
 
 const invalidInputs = [
+  123,
   '',
   'A',
   'notCAMEL',

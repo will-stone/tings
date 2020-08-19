@@ -4,6 +4,7 @@ import * as assert from 'uvu/assert'
 import { isCompactCase } from '../src'
 
 const invalidInputs = [
+  123,
   '',
   '  leadingSpace',
   '  twoLeadingSpaces',
