@@ -1,9 +1,8 @@
-export { default as isCompact } from './isCompact'
 export { default as isCamelCase } from './isCamelCase'
-export { default as isEmpty } from './isEmpty'
-export { default as isNotEmpty } from './isNotEmpty'
+export { default as isCompact } from './isCompact'
+export { default as isMap } from './isMap'
 export { default as isPascalCase } from './isPascalCase'
-
-export { default as intToOrdinal } from './intToOrdinal'
-
-export { default as strngs } from './strngs'
+export { default as isSet } from './isSet'
+export { default as isVacant } from './isVacant'
+export { default as toNumberAlways } from './toNumberAlways'
+export { default as toOrdinal } from './toOrdinal'
