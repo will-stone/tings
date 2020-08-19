@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  A collection of small utilities.
+  A collection of small utilities and Lodash addons.
 </div>
 
 To be continued...

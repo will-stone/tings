@@ -2,7 +2,7 @@
   "name": "tings",
   "version": "0.0.1",
   "private": false,
-  "description": "A collection of small utilities",
+  "description": "A collection of small utilities and Lodash addons",
   "license": "MIT",
   "author": "Will Stone",
   "main": "./dist/index.js",
