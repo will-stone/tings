@@ -40,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.159",
     "@will-stone/eslint-config": "^1.18.1",
     "@will-stone/prettier-config": "^3.1.0",
     "eslint": "^7.7.0",
@@ -52,6 +53,9 @@
     "typescript": "^3.9.7",
     "uvu": "^0.3.3",
     "watchlist": "^0.2.3"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.20"
   },
   "publishConfig": {
     "access": "public"
