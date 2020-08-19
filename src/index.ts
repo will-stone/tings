@@ -1,5 +1,5 @@
 export { default as isCamelCase } from './isCamelCase'
-export { default as isCompact } from './isCompact'
+export { default as isCompactCase } from './isCompactCase'
 export { default as isPascalCase } from './isPascalCase'
 export { default as isVacant } from './isVacant'
 export { default as toNumberAlways } from './toNumberAlways'
