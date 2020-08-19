@@ -5,14 +5,10 @@ import { isCamelCase } from '../src'
 
 const invalidInputs = [
   123,
-  '',
   'A',
-  'notCAMEL',
-  'endWithCaptiaL',
-  'containNumbers123',
-  '123',
-  'containsSpecial!Characters',
   '!',
+  'notCAMEL',
+  'containsSpecial!Characters',
   'thisHas aSpace',
 ]
 invalidInputs.forEach((input) => {
@@ -21,7 +17,17 @@ invalidInputs.forEach((input) => {
   })
 })
 
-const validInputs = ['one', 'a', 'camelCase', 'miltiWordCamelCase', 'aWord']
+const validInputs = [
+  '',
+  'one',
+  'a',
+  '123',
+  'camelCase',
+  'endWithCaptiaL',
+  'miltiWordCamelCase',
+  'aWord',
+  'containNumbers123',
+]
 validInputs.forEach((input) => {
   test(`${input} is valid`, () => {
     assert.is(isCamelCase(input), true)
