@@ -7,8 +7,7 @@
   "author": "Will Stone",
   "main": "./dist/index.js",
   "files": [
-    "./dist",
-    "logo.png"
+    "dist"
   ],
   "scripts": {
     "build": "yarn clean && tsc",
