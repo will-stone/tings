@@ -1,13 +1,8 @@
-const intToOrdinal = (int: number | string): string => {
-  const intAsString = String(int)
-  const intAsNumber = Number(int)
+import toNumberAlways from './toNumberAlways'
 
-  if (
-    (typeof int !== 'number' || typeof int !== 'string') &&
-    !Number.isInteger(intAsNumber)
-  ) {
-    throw new TypeError(`${intAsString} is not an integer`)
-  }
+const intToOrdinal = (int: unknown = 0): string => {
+  const intAsNumber = toNumberAlways(int)
+  const intAsString = String(intAsNumber)
 
   if (intAsString.endsWith('1') && intAsNumber !== 11) {
     return `${int}st`
