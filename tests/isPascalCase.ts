@@ -6,12 +6,23 @@ import { isPascalCase } from '../src'
 const invalidInputs = [
   123,
   '!',
+  new Set(),
+  Symbol(''),
+  123,
+  undefined,
+  // eslint-disable-next-line unicorn/no-null
+  null,
+  true,
+  false,
+  () => {
+    return false
+  },
   'notCAMEL',
   'containsSpecial!Characters',
   'thisHas aSpace',
 ]
 invalidInputs.forEach((input) => {
-  test(`${input} is not valid`, () => {
+  test(`${String(input)} is not valid`, () => {
     assert.is(isPascalCase(input), false)
   })
 })

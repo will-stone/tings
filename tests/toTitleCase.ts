@@ -49,3 +49,10 @@ const expected =
 test('title-cases the string', () => {
   assert.is(toTitleCase(actual), expected)
 })
+
+test('smallWordsAreNotCapitalised', () => {
+  assert.is(
+    toTitleCase('smallWordsAreNotCapitalised'),
+    'Small Words are not Capitalised',
+  )
+})
