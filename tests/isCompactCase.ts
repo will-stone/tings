@@ -5,7 +5,6 @@ import { isCompactCase } from '../src'
 
 const invalidInputs = [
   123,
-  '',
   '  leadingSpace',
   '  twoLeadingSpaces',
   'trailingSpace ',
@@ -25,6 +24,7 @@ invalidInputs.forEach((input) => {
 })
 
 const validInputs = [
+  '',
   'justletters',
   '123',
   'mixed123',
