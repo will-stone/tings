@@ -3,11 +3,19 @@
   "version": "0.0.8",
   "private": false,
   "description": "A collection of small utilities and Lodash addons",
+  "bugs": {
+    "url": "https://github.com/will-stone/tings/issues",
+    "email": "email@wstone.io"
+  },
   "repository": {
     "url": "https://github.com/will-stone/tings"
   },
   "license": "MIT",
-  "author": "Will Stone",
+  "author": {
+    "name": "Will Stone",
+    "email": "email@wstone.io",
+    "url": "https://wstone.io"
+  },
   "main": "./dist/index.js",
   "files": [
     "dist"
