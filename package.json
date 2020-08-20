@@ -3,6 +3,9 @@
   "version": "0.0.8",
   "private": false,
   "description": "A collection of small utilities and Lodash addons",
+  "repository": {
+    "url": "https://github.com/will-stone/tings"
+  },
   "license": "MIT",
   "author": "Will Stone",
   "main": "./dist/index.js",
