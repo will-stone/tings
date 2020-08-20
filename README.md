@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  A collection of small utilities and Lodash addons.
+  A collection of small utilities and complementary Lodash add-ons.
 </div>
 
 ---
@@ -15,6 +15,11 @@ npm i tings lodash
 # or
 yarn add tings lodash
 ```
+
+> Rather than reinvent the wheel, some of these utilities depend on Lodash
+> functions. This way, you will know that the two libraries are compatible. For
+> example, `isCamelCase` will return true for any string converted using
+> Lodash's `camelCase` function.
 
 ## Utilities
 
