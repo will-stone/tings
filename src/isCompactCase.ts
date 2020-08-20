@@ -3,6 +3,10 @@ const isCompactCase = (input: unknown): boolean => {
     return false
   }
 
+  if (input.length === 0) {
+    return true
+  }
+
   return /^\S+$/u.test(input)
 }
 
