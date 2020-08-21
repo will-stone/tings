@@ -1,5 +1,5 @@
 <p align="center" style="font-size: 80px">
-  🥂
+  <span>🥂</span>
   <img src="https://raw.githubusercontent.com/will-stone/tings/master/media/logo.png" alt="tings" width="498" height="172" />
 </p>
 
