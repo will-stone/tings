@@ -11,9 +11,9 @@
 ## Install
 
 ```bash
-npm i tings lodash
+npm i tings
 # or
-yarn add tings lodash
+yarn add tings
 ```
 
 > Rather than reinvent the wheel, some of these utilities depend on Lodash
@@ -21,9 +21,12 @@ yarn add tings lodash
 > example, `isCamelCase` will return true for any string converted using
 > Lodash's `camelCase` function.
 
+> The functions are marked below if they require Lodash, and you will need to
+> install Lodash if you would like to use that function.
+
 ## Utilities
 
-### `isCamelCase`
+### `isCamelCase` <span style="color: #2C8FFF">Requires Lodash</span>
 
 ```ts
 import { isCamelCase } from 'tings'
@@ -37,20 +40,39 @@ isCamelCase('NOTCamelCase') // false
 ```ts
 import { isCompactCase } from 'tings'
 
-isCompactCase('thisIsCompact') // true
-isCompactCase('This is not compact') // false
+isCompactCase('thisiscompact') // true
+isCompactCase('this is not compact') // false
 ```
 
-### `isPascalCase`
+### `isLowerCase`
+
+```ts
+import { isLowerCase } from 'tings'
+
+isLowerCase('this is lower') // true
+isLowerCase('This is not LOWER') // false
+```
+
+### `isPascalCase` <span style="color: #2C8FFF">Requires Lodash</span>
 
 ```ts
 import { isPascalCase } from 'tings'
 
 isPascalCase('ThisIsPascal') // true
-isPascalCase('notCAMEL') // false
+isPascalCase('notPascal') // false
 ```
 
-### `isVacant`
+### `isUniq`
+
+```ts
+import { isUniq } from 'tings'
+
+isUniq([1, 2, 3]) // true
+isUniq([1, 1, 2]) // false
+isUniq('not array') // true
+```
+
+### `isVacant` <span style="color: #2C8FFF">Requires Lodash</span>
 
 Similar to Lodash's [`isEmpty`](https://lodash.com/docs/#isEmpty), this will
 return true if a value is considered the minimum for its type. The main
@@ -103,16 +125,16 @@ toOrdinal('3') // 3rd
 toOrdinal('11') // 11th
 ```
 
-### `toPascalCase`
+### `toPascalCase` <span style="color: #2C8FFF">Requires Lodash</span>
 
 ```ts
 import { toPascalCase } from 'tings'
 
 toPascalCase('this is text') // ThisIsText
-toPascalCase('notCAMEL') // NotCamel
+toPascalCase('someTEXT') // SomeText
 ```
 
-### `toTitleCase`
+### `toTitleCase` <span style="color: #2C8FFF">Requires Lodash</span>
 
 ```ts
 import { toTitleCase } from 'tings'
