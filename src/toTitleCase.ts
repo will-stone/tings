@@ -26,8 +26,7 @@ export const englishSmallWords = [
 ]
 
 /**
- * keep small words in lowercase else uppercase the first letter
- * @param input
+ * Keep small words in lowercase, otherwise make the first letter uppercase.
  */
 const toTitleCase = (
   input: unknown,
@@ -35,7 +34,7 @@ const toTitleCase = (
 ): string => {
   const wordCollection: string[] = []
 
-  for (const word of words(input as string)) {
+  for (const word of words(String(input))) {
     const lowerWord = word.toLowerCase()
     const casedWord = smallWords.includes(lowerWord)
       ? lowerWord
