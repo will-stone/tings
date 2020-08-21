@@ -1,58 +1,38 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { toTitleCase } from '../src'
+import { isCompactCase, isLowerCase, isUniq, toTitleCase } from '../src'
 import { englishSmallWords } from '../src/toTitleCase'
 
-function isUniq(array: string[]): boolean {
-  return new Set(array).size === array.length
-}
-
-test('small words list does not include duplicates', () => {
+test('englishSmallWords lookup array is correct', () => {
+  // no duplicates
   assert.is(isUniq(englishSmallWords), true)
-})
-
-test('small words list is sorted alphbetically', () => {
+  // sorted alphbetically
   assert.equal([...englishSmallWords].sort(), englishSmallWords)
-})
-
-function isLowerCase(string: string): boolean {
-  return string === string.toLowerCase()
-}
-
-test('small words list are all lowercase', () => {
+  // all lowercase
   assert.is(englishSmallWords.every(isLowerCase), true)
-})
-
-function isTrimmed(string: string): boolean {
-  return string === string.trim()
-}
-
-test('small words list do not have leading or trailing spaces', () => {
-  assert.is(englishSmallWords.every(isTrimmed), true)
-})
-
-function isAtLeastOneChar(string: string): boolean {
-  return string.length >= 1
-}
-
-test('small words list include at least one character', () => {
-  assert.is(englishSmallWords.every(isAtLeastOneChar), true)
-})
-
-const actual =
-  'this Is a test of The Plugin VS. blah Blah BLAH. new Sentance Lorem ipsum dolor sit amet'
-
-const expected =
-  'This is a Test of the Plugin vs Blah Blah BLAH New Sentance Lorem Ipsum Dolor Sit Amet'
-
-test('title-cases the string', () => {
-  assert.is(toTitleCase(actual), expected)
-})
-
-test('smallWordsAreNotCapitalised', () => {
+  // does not contain any spaces
+  assert.is(englishSmallWords.every(isCompactCase), true)
+  // is at least one char
   assert.is(
-    toTitleCase('smallWordsAreNotCapitalised'),
-    'Small Words are not Capitalised',
+    englishSmallWords.every((s) => s.length >= 1),
+    true,
   )
+})
+
+const cases = [
+  [
+    'this Is a test of The Plugin VS. blah Blah BLAH. new Sentance Lorem ipsum dolor sit amet',
+    'This is a Test of the Plugin vs Blah Blah BLAH New Sentance Lorem Ipsum Dolor Sit Amet',
+  ],
+  ['smallWordsAreNotCapitalised', 'Small Words are not Capitalised'],
+  [123, '123'],
+  [new Map(), ''],
+  [() => false, ''],
+]
+
+cases.forEach(([input, expected]) => {
+  test(`title-cases the string: ${String(input)}`, () => {
+    assert.is(toTitleCase(input), expected)
+  })
 })
