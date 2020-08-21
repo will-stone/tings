@@ -1,6 +1,5 @@
 /**
- * Will return the given input as a number, if it cannot be converted, will return zero.
- * @param input anything
+ * Will return the given input as a number, if it cannot be converted, it will return 0.
  */
 const toNumberAlways = (input: unknown): number => {
   try {

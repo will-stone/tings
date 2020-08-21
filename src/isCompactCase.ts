@@ -1,3 +1,6 @@
+/**
+ * Determines if input is a compactcase (no whitespaces) string.
+ */
 const isCompactCase = (input: unknown): boolean => {
   if (typeof input !== 'string') {
     return false

@@ -4,10 +4,10 @@ import isSet from 'lodash/isSet'
 /**
  * Similar to Lodash's isEmpty this will return true if a value is considered
  * the minimum for its type. The main differences being:
- * - Only `0` is considered vacant, not all numbers.
- * - Only `BigInt(0)` is considered vacant, not all BigInts.
- * - `true` is not vacant.
- * - Symbols are considered not vacant.
+ * - Only `0` is vacant, not all numbers.
+ * - Only `BigInt(0)` is vacant, not all BigInts.
+ * - Only `false` is vacant, not both booleans.
+ * - Symbols are not vacant.
  * @param input
  */
 const isVacant = (input: unknown): boolean => {
