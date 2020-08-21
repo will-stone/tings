@@ -18,6 +18,8 @@ const cases = [
   [undefined, 0],
   [true, 1],
   [false, 0],
+  [1.1, 1.1],
+  [Number.NaN, 0],
 ]
 
 cases.forEach(([input, expected]) => {
