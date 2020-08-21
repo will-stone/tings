@@ -1,5 +1,3 @@
-import endsWith from 'lodash/endsWith'
-
 import toNumberAlways from './toNumberAlways'
 
 /**
@@ -13,15 +11,15 @@ const toOrdinal = (input: unknown = 0): string => {
   const isInt = Number.isInteger(number)
 
   if (isInt) {
-    if (endsWith(String(number), '1') && number !== 11) {
+    if (String(number).endsWith('1') && number !== 11) {
       return `${number}st`
     }
 
-    if (endsWith(String(number), '2') && number !== 12) {
+    if (String(number).endsWith('2') && number !== 12) {
       return `${number}nd`
     }
 
-    if (endsWith(String(number), '3') && number !== 13) {
+    if (String(number).endsWith('3') && number !== 13) {
       return `${number}rd`
     }
   }
