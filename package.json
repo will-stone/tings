@@ -1,6 +1,6 @@
 {
   "name": "tings",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "private": false,
   "description": "A collection of small utilities and Lodash addons",
   "bugs": {
