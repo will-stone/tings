@@ -68,6 +68,11 @@
   "peerDependencies": {
     "lodash": "^4.17.20"
   },
+  "peerDependenciesMeta": {
+    "lodash": {
+      "optional": true
+    }
+  },
   "publishConfig": {
     "access": "public"
   }
