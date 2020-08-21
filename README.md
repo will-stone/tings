@@ -26,7 +26,7 @@ yarn add tings
 
 ## Utilities
 
-### `isCamelCase` <span style="color: #2C8FFF">Requires Lodash</span>
+### `isCamelCase` **_Requires Lodash_**
 
 ```ts
 import { isCamelCase } from 'tings'
@@ -53,7 +53,7 @@ isLowerCase('this is lower') // true
 isLowerCase('This is not LOWER') // false
 ```
 
-### `isPascalCase` <span style="color: #2C8FFF">Requires Lodash</span>
+### `isPascalCase` **_Requires Lodash_**
 
 ```ts
 import { isPascalCase } from 'tings'
@@ -72,7 +72,7 @@ isUniq([1, 1, 2]) // false
 isUniq('not array') // true
 ```
 
-### `isVacant` <span style="color: #2C8FFF">Requires Lodash</span>
+### `isVacant` **_Requires Lodash_**
 
 Similar to Lodash's [`isEmpty`](https://lodash.com/docs/#isEmpty), this will
 return true if a value is considered the minimum for its type. The main
@@ -125,7 +125,7 @@ toOrdinal('3') // 3rd
 toOrdinal('11') // 11th
 ```
 
-### `toPascalCase` <span style="color: #2C8FFF">Requires Lodash</span>
+### `toPascalCase` **_Requires Lodash_**
 
 ```ts
 import { toPascalCase } from 'tings'
@@ -134,7 +134,7 @@ toPascalCase('this is text') // ThisIsText
 toPascalCase('someTEXT') // SomeText
 ```
 
-### `toTitleCase` <span style="color: #2C8FFF">Requires Lodash</span>
+### `toTitleCase` **_Requires Lodash_**
 
 ```ts
 import { toTitleCase } from 'tings'
