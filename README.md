@@ -33,7 +33,7 @@ yarn add tings
 ⚠️ **_Requires Lodash_**
 
 ```ts
-import { isCamelCase } from 'tings'
+import isCamelCase from 'tings/isCamelCase'
 
 isCamelCase('camelCase') // true
 isCamelCase('NOTCamelCase') // false
@@ -42,7 +42,7 @@ isCamelCase('NOTCamelCase') // false
 ### `isCompactCase`
 
 ```ts
-import { isCompactCase } from 'tings'
+import isCompactCase from 'tings/isCompactCase'
 
 isCompactCase('thisiscompact') // true
 isCompactCase('this is not compact') // false
@@ -51,7 +51,7 @@ isCompactCase('this is not compact') // false
 ### `isLowerCase`
 
 ```ts
-import { isLowerCase } from 'tings'
+import isLowerCase from 'tings/isLowerCase'
 
 isLowerCase('this is lower') // true
 isLowerCase('This is not LOWER') // false
@@ -62,7 +62,7 @@ isLowerCase('This is not LOWER') // false
 ⚠️ **_Requires Lodash_**
 
 ```ts
-import { isPascalCase } from 'tings'
+import isPascalCase from 'tings/isPascalCase'
 
 isPascalCase('ThisIsPascal') // true
 isPascalCase('notPascal') // false
@@ -71,7 +71,7 @@ isPascalCase('notPascal') // false
 ### `isUniq`
 
 ```ts
-import { isUniq } from 'tings'
+import isUniq from 'tings/isUniq'
 
 isUniq([1, 2, 3]) // true
 isUniq([1, 1, 2]) // false
@@ -92,7 +92,7 @@ differences being:
 - Symbols are considered _not vacant_.
 
 ```ts
-import { isVacant } from 'tings'
+import isVacant from 'tings/isVacant'
 
 isVacant('') // true
 isVacant(0) // true
@@ -115,7 +115,7 @@ isVacant({ key: 'value' }) // false
 Anything that cannot be converted to a number will yield zero.
 
 ```ts
-import { toNumberAlways } from 'tings'
+import toNumberAlways from 'tings/toNumberAlways'
 
 toNumberAlways('this is text') // 0
 toNumberAlways('3') // 3
@@ -126,7 +126,7 @@ toNumberAlways(new Set([])) // 0
 ### `toOrdinal`
 
 ```ts
-import { toOrdinal } from 'tings'
+import toOrdinal from 'tings/toOrdinal'
 
 toOrdinal('this is text') // 0th
 toOrdinal('3') // 3rd
@@ -138,7 +138,7 @@ toOrdinal('11') // 11th
 ⚠️ **_Requires Lodash_**
 
 ```ts
-import { toPascalCase } from 'tings'
+import toPascalCase from 'tings/toPascalCase'
 
 toPascalCase('this is text') // ThisIsText
 toPascalCase('someTEXT') // SomeText
@@ -149,7 +149,7 @@ toPascalCase('someTEXT') // SomeText
 ⚠️ **_Requires Lodash_**
 
 ```ts
-import { toTitleCase } from 'tings'
+import toTitleCase from 'tings/toTitleCase'
 
 toTitleCase('this is text') // This is Text
 toTitleCase('smallWordsAreNotCapitalised') // Small Words are not Capitalisedl
