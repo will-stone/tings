@@ -152,5 +152,5 @@ toPascalCase('someTEXT') // SomeText
 import toTitleCase from 'tings/toTitleCase'
 
 toTitleCase('this is text') // This is Text
-toTitleCase('smallWordsAreNotCapitalised') // Small Words are not Capitalisedl
+toTitleCase('smallWordsAreNotCapitalised') // Small Words are not Capitalised
 ```
