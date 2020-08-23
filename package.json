@@ -16,18 +16,17 @@
     "email": "email@wstone.io",
     "url": "https://wstone.io"
   },
-  "main": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
+  "main": "./index.js",
   "scripts": {
-    "build": "yarn clean && tsc",
+    "build": "tsc",
     "clean": "rimraf ./dist",
+    "copy-files": "cpy README.md dist/ && cpy package.json dist/",
     "lint": "eslint . --ignore-path .gitignore",
-    "release": "yarn lint && yarn build && np",
+    "release": "yarn clean && yarn lint && yarn build && np --contents=dist",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- yarn test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postversion": "yarn copy-files"
   },
   "husky": {
     "hooks": {
@@ -54,6 +53,7 @@
     "@types/lodash": "^4.14.159",
     "@will-stone/eslint-config": "^1.18.1",
     "@will-stone/prettier-config": "^3.1.0",
+    "cpy-cli": "^3.1.1",
     "eslint": "^7.7.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
