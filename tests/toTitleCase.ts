@@ -1,7 +1,14 @@
+import negate from 'lodash/negate'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isCompactCase, isLowerCase, isUniq, toTitleCase } from '../src'
+import {
+  isCompactCase,
+  isLowerCase,
+  isUniq,
+  isVacant,
+  toTitleCase,
+} from '../src'
 import { englishSmallWords } from '../src/toTitleCase'
 
 test('englishSmallWords lookup array is correct', () => {
@@ -14,10 +21,7 @@ test('englishSmallWords lookup array is correct', () => {
   // does not contain any spaces
   assert.is(englishSmallWords.every(isCompactCase), true)
   // is at least one char
-  assert.is(
-    englishSmallWords.every((s) => s.length >= 1),
-    true,
-  )
+  assert.is(englishSmallWords.every(negate(isVacant)), true)
 })
 
 const cases = [
@@ -27,8 +31,8 @@ const cases = [
   ],
   ['smallWordsAreNotCapitalised', 'Small Words are not Capitalised'],
   [123, '123'],
-  [new Map(), ''],
-  [() => false, ''],
+  [new Map(), 'Object Map'],
+  [() => false, 'False'],
 ]
 
 cases.forEach(([input, expected]) => {
@@ -36,3 +40,5 @@ cases.forEach(([input, expected]) => {
     assert.is(toTitleCase(input), expected)
   })
 })
+
+test.run()
