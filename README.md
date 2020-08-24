@@ -68,6 +68,17 @@ isPascalCase('ThisIsPascal') // true
 isPascalCase('notPascal') // false
 ```
 
+### `isTitleCase`
+
+⚠️ **_Requires Lodash_**
+
+```ts
+import isTitleCase from 'tings/isTitleCase'
+
+isTitleCase('this is text') // false
+isTitleCase('Small Words are not Capitalised') // true
+```
+
 ### `isUniq`
 
 ```ts
