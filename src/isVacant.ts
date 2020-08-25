@@ -8,7 +8,7 @@ import isSet from 'lodash/isSet'
  * - Only `BigInt(0)` is vacant, not all BigInts.
  * - Only `false` is vacant, not both booleans.
  * - Symbols are not vacant.
- * @param input
+ * @requires lodash
  */
 const isVacant = (input: unknown): boolean => {
   if (input === null) {
