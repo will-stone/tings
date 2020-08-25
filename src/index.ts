@@ -1,6 +1,7 @@
 export { default as isCamelCase } from './isCamelCase'
 export { default as isCompactCase } from './isCompactCase'
 export { default as isLowerCase } from './isLowerCase'
+export { default as isOccupied } from './isOccupied'
 export { default as isPascalCase } from './isPascalCase'
 export { default as isTitleCase } from './isTitleCase'
 export { default as isUniq } from './isUniq'
