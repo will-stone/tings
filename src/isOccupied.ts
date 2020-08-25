@@ -11,6 +11,6 @@ import isVacant from './isVacant'
  * - All Symbols are occupied.
  * @requires lodash
  */
-const isOccupied = negate(isVacant)
+const isOccupied = (input: unknown): boolean => negate(isVacant)(input)
 
 export default isOccupied
