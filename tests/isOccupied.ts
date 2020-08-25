@@ -33,6 +33,8 @@ const truthy = [
   BigInt(1),
   Symbol(1),
   true,
+  -2,
+  -1,
   1,
   2,
   new Set([1]),

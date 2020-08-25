@@ -4,9 +4,13 @@ import * as assert from 'uvu/assert'
 import { toNumberAlways } from '../src'
 
 const cases = [
+  [-2, -2],
+  [-1, -1],
   [0, 0],
   [1, 1],
   [2, 2],
+  ['-2', -2],
+  ['-1', -1],
   ['0', 0],
   ['1', 1],
   ['2', 2],
