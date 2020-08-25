@@ -57,6 +57,38 @@ isLowerCase('this is lower') // true
 isLowerCase('This is not LOWER') // false
 ```
 
+### `isOccupied`
+
+⚠️ **_Requires Lodash_**
+
+Similar to the opposite of Lodash's
+[`isEmpty`](https://lodash.com/docs/#isEmpty), this will return true if a value
+is considered more than the minimum for its type. The main differences being:
+
+- All numbers except `0` are occupied.
+- All BigInts except `BigInt(0)` are occupied.
+- Only `true` is occupied, not both booleans.
+- All Symbols are occupied.
+
+```ts
+import isOccupied from 'tings/isOccupied'
+
+isOccupied('') // false
+isOccupied(0) // false
+isOccupied(BigInt(0)) // false
+isOccupied([]) // false
+isOccupied({}) // false
+isOccupied(false) // false
+isOccupied(null) // false
+isOccupied(undefined) // false
+isOccupied(new Map([])) // false
+
+isOccupied(1) // true
+isOccupied(true) // true
+isOccupied('a') // true
+isOccupied({ key: 'value' }) // true
+```
+
 ### `isPascalCase`
 
 ⚠️ **_Requires Lodash_**
