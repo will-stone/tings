@@ -9,7 +9,7 @@ import isVacant from './isVacant'
  * - All BigInts except `BigInt(0)` are occupied.
  * - Only `true` is occupied, not both booleans.
  * - All Symbols are occupied.
- * @param input
+ * @requires lodash
  */
 const isOccupied = negate(isVacant)
 

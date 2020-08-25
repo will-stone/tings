@@ -29,6 +29,7 @@ export const englishSmallWords = [
 
 /**
  * Keep small words in lowercase, otherwise make the first letter uppercase.
+ * @requires lodash
  */
 const toTitleCase = (
   input: unknown,

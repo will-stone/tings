@@ -3,6 +3,7 @@ import upperFirst from 'lodash/upperFirst'
 
 /**
  * Converts input to PascalCase string.
+ * @requires lodash
  */
 const toPascalCase = (input: unknown): string =>
   upperFirst(camelCase(String(input)))
