@@ -1,6 +1,9 @@
 import upperFirst from 'lodash/upperFirst'
 import words from 'lodash/words'
 
+/**
+ * @internal
+ */
 export const englishSmallWords = [
   'a',
   'an',
