@@ -8,6 +8,9 @@ const cases = [
   ['blah blah', '0th'],
   [Number.NaN, '0th'],
   // Numbers
+  [-2, '-2nd'],
+  [-1, '-1st'],
+  [0, '0th'],
   [1, '1st'],
   [2, '2nd'],
   [3, '3rd'],
