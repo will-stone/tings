@@ -33,11 +33,15 @@ export const englishSmallWords = [
 /**
  * Keep small words in lowercase, otherwise make the first letter uppercase.
  * @requires lodash
+ * @example
+```ts
+import toTitleCase from 'tings/toTitleCase'
+
+toTitleCase('this is text') // This is Text
+toTitleCase('smallWordsAreNotCapitalised') // Small Words are not Capitalised
+```
  */
-const toTitleCase = (
-  input: unknown,
-  smallWords = englishSmallWords,
-): string => {
+function toTitleCase(input: unknown, smallWords = englishSmallWords): string {
   const wordCollection: string[] = []
 
   for (const word of words(String(input))) {

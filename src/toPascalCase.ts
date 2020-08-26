@@ -4,8 +4,16 @@ import upperFirst from 'lodash/upperFirst'
 /**
  * Converts input to PascalCase string.
  * @requires lodash
+ * @example
+```ts
+import toPascalCase from 'tings/toPascalCase'
+
+toPascalCase('this is text') // ThisIsText
+toPascalCase('someTEXT') // SomeText
+```
  */
-const toPascalCase = (input: unknown): string =>
-  upperFirst(camelCase(String(input)))
+function toPascalCase(input: unknown): string {
+  return upperFirst(camelCase(String(input)))
+}
 
 export default toPascalCase

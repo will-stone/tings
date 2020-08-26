@@ -18,7 +18,9 @@
   },
   "main": "./index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "yarn build:docs && yarn build:code",
+    "build:code": "tsc",
+    "build:docs": "typedoc && cpy tmp/README.md . && rimraf tmp",
     "clean": "rimraf ./dist",
     "copy-files": "cpy README.md dist/ && cpy package.json dist/",
     "lint": "eslint . --ignore-path .gitignore",
@@ -61,6 +63,8 @@
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2",
+    "typedoc": "^0.18.0",
+    "typedoc-plugin-markdown": "^2.4.2",
     "typescript": "^4.0.2",
     "uvu": "^0.3.3",
     "watchlist": "^0.2.3"

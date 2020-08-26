@@ -20,5 +20,12 @@
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
   },
-  "exclude": ["node_modules", "dist", "tests"]
+  "exclude": ["node_modules", "dist", "tests"],
+  "typedocOptions": {
+    "inputFiles": ["./src"],
+    "mode": "file",
+    "out": "tmp",
+    "stripInternal": true,
+    "readme": "intro.md"
+  }
 }
