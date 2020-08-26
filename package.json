@@ -20,7 +20,7 @@
   "scripts": {
     "build": "yarn build:docs && yarn build:code",
     "build:code": "tsc",
-    "build:docs": "typedoc && cpy tmp/README.md . && rimraf tmp",
+    "build:docs": "typedoc && cpy tmp/README.md . && rimraf tmp && prettier --write README.md",
     "clean": "rimraf ./dist",
     "copy-files": "cpy README.md dist/ && cpy package.json dist/",
     "lint": "eslint . --ignore-path .gitignore",
