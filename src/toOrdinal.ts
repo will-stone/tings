@@ -5,8 +5,16 @@ import toNumberAlways from './toNumberAlways'
  * 1 -> 1st
  * 4.2 -> 4.2th
  * notANumber -> 0th
+ * @example
+```ts
+import toOrdinal from 'tings/toOrdinal'
+
+toOrdinal('this is text') // 0th
+toOrdinal('3') // 3rd
+toOrdinal('11') // 11th
+```
  */
-const toOrdinal = (input: unknown = 0): string => {
+function toOrdinal(input: unknown = 0): string {
   const number = toNumberAlways(input)
   const isInt = Number.isInteger(number)
 
