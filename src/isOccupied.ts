@@ -10,7 +10,28 @@ import isVacant from './isVacant'
  * - Only `true` is occupied, not both booleans.
  * - All Symbols are occupied.
  * @requires lodash
+ * @example
+```ts
+import isOccupied from 'tings/isOccupied'
+
+isOccupied('') // false
+isOccupied(0) // false
+isOccupied(BigInt(0)) // false
+isOccupied([]) // false
+isOccupied({}) // false
+isOccupied(false) // false
+isOccupied(null) // false
+isOccupied(undefined) // false
+isOccupied(new Map([])) // false
+
+isOccupied(1) // true
+isOccupied(true) // true
+isOccupied('a') // true
+isOccupied({ key: 'value' }) // true
+```
  */
-const isOccupied = (input: unknown): boolean => negate(isVacant)(input)
+function isOccupied(input: unknown): boolean {
+  return negate(isVacant)(input)
+}
 
 export default isOccupied

@@ -9,8 +9,27 @@ import isSet from 'lodash/isSet'
  * - Only `false` is vacant, not both booleans.
  * - Symbols are not vacant.
  * @requires lodash
+ * @example
+```ts
+import isVacant from 'tings/isVacant'
+
+isVacant('') // true
+isVacant(0) // true
+isVacant(BigInt(0)) // true
+isVacant([]) // true
+isVacant({}) // true
+isVacant(false) // true
+isVacant(null) // true
+isVacant(undefined) // true
+isVacant(new Map([])) // true
+
+isVacant(1) // false
+isVacant(true) // false
+isVacant('a') // false
+isVacant({ key: 'value' }) // false
+```
  */
-const isVacant = (input: unknown): boolean => {
+function isVacant(input: unknown): boolean {
   if (input === null) {
     return true
   }
