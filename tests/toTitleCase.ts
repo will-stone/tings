@@ -1,4 +1,4 @@
-import { test } from 'uvu'
+import { suite, test } from 'uvu'
 import * as assert from 'uvu/assert'
 
 import {
@@ -10,19 +10,29 @@ import {
 } from '../src'
 import { englishSmallWords } from '../src/toTitleCase'
 
-// TODO use suite for this
-test('englishSmallWords lookup array is correct', () => {
-  // no duplicates
+const wordsList = suite('words list')
+
+wordsList('has no duplicates', () => {
   assert.is(isUniq(englishSmallWords), true)
-  // sorted alphbetically
+})
+
+wordsList('is sorted alphbetically', () => {
   assert.equal([...englishSmallWords].sort(), englishSmallWords)
-  // all lowercase
+})
+
+wordsList('is all lowercase', () => {
   assert.is(englishSmallWords.every(isLowerCase), true)
-  // does not contain any spaces
+})
+
+wordsList('does not contain any spaces', () => {
   assert.is(englishSmallWords.every(isCompactCase), true)
-  // is at least one char
+})
+
+wordsList('is at least one char', () => {
   assert.is(englishSmallWords.every(isOccupied), true)
 })
+
+wordsList.run()
 
 const cases = [
   [
