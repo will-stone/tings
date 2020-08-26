@@ -22,10 +22,11 @@
   },
   "exclude": ["node_modules", "dist", "tests"],
   "typedocOptions": {
+    "disableSources": true,
     "inputFiles": ["./src"],
     "mode": "file",
     "out": "tmp",
-    "stripInternal": true,
-    "readme": "intro.md"
+    "readme": "intro.md",
+    "stripInternal": true
   }
 }

@@ -54,9 +54,6 @@ yarn add tings
 
 ▸ **isCamelCase**(`input`: unknown): _boolean_
 
-_Defined in
-[isCamelCase.ts:14](https://github.com/will-stone/tings/blob/84fc896/src/isCamelCase.ts#L14)_
-
 Determines if input is a camelCase string.
 
 **`requires`** lodash
@@ -84,9 +81,6 @@ isCamelCase('NOTCamelCase') // false
 
 ▸ **isCompactCase**(`input`: unknown): _boolean_
 
-_Defined in
-[isCompactCase.ts:11](https://github.com/will-stone/tings/blob/84fc896/src/isCompactCase.ts#L11)_
-
 Determines if input is a compactcase (no whitespaces) string.
 
 **`example`**
@@ -112,9 +106,6 @@ isCompactCase('this is not compact') // false
 
 ▸ **isLowerCase**(`input`: unknown): _boolean_
 
-_Defined in
-[isLowerCase.ts:11](https://github.com/will-stone/tings/blob/84fc896/src/isLowerCase.ts#L11)_
-
 Determines if input is a string containing no UPPERcase characters.
 
 **`example`**
@@ -139,9 +130,6 @@ isLowerCase('This is not LOWER') // false
 ### isOccupied
 
 ▸ **isOccupied**(`input`: unknown): _boolean_
-
-_Defined in
-[isOccupied.ts:33](https://github.com/will-stone/tings/blob/84fc896/src/isOccupied.ts#L33)_
 
 Similar to the opposite of Lodash's isEmpty this will return true if a value is
 more than the minimum for its type. The main differences being:
@@ -188,9 +176,6 @@ isOccupied({ key: 'value' }) // true
 
 ▸ **isPascalCase**(`input`: unknown): _boolean_
 
-_Defined in
-[isPascalCase.ts:14](https://github.com/will-stone/tings/blob/84fc896/src/isPascalCase.ts#L14)_
-
 Determines if input is a PascalCase string.
 
 **`requires`** lodash
@@ -217,9 +202,6 @@ isPascalCase('notPascal') // false
 ### isTitleCase
 
 ▸ **isTitleCase**(`input`: unknown): _boolean_
-
-_Defined in
-[isTitleCase.ts:14](https://github.com/will-stone/tings/blob/84fc896/src/isTitleCase.ts#L14)_
 
 Determines if input is a Tile Case string.
 
@@ -248,9 +230,6 @@ isTitleCase('Small Words are not Capitalised') // true
 
 ▸ **isUniq**(`input`: unknown): _boolean_
 
-_Defined in
-[isUniq.ts:13](https://github.com/will-stone/tings/blob/84fc896/src/isUniq.ts#L13)_
-
 Determines if an array only contains unique items. Will return true for any
 input that's not an array.
 
@@ -277,9 +256,6 @@ isUniq('not array') // true
 ### isVacant
 
 ▸ **isVacant**(`input`: unknown): _boolean_
-
-_Defined in
-[isVacant.ts:32](https://github.com/will-stone/tings/blob/84fc896/src/isVacant.ts#L32)_
 
 Similar to Lodash's isEmpty this will return true if a value is considered the
 minimum for its type. The main differences being:
@@ -326,9 +302,6 @@ isVacant({ key: 'value' }) // false
 
 ▸ **toCompactCase**(`input`: unknown): _string_
 
-_Defined in
-[toCompactCase.ts:11](https://github.com/will-stone/tings/blob/84fc896/src/toCompactCase.ts#L11)_
-
 Removes all whitespace characters from a string.
 
 **`example`**
@@ -353,9 +326,6 @@ toCompactCase('someTEXT') // someTEXT
 ### toNumberAlways
 
 ▸ **toNumberAlways**(`input`: unknown): _number_
-
-_Defined in
-[toNumberAlways.ts:13](https://github.com/will-stone/tings/blob/84fc896/src/toNumberAlways.ts#L13)_
 
 Will return the given input as a number, if it cannot be converted, it will
 return 0.
@@ -385,9 +355,6 @@ toNumberAlways(new Set([])) // 0
 
 ▸ **toOrdinal**(`input`: unknown): _string_
 
-_Defined in
-[toOrdinal.ts:17](https://github.com/will-stone/tings/blob/84fc896/src/toOrdinal.ts#L17)_
-
 Converts a number to its ordinal string form, if possible, else returns 0th. 1
 -> 1st 4.2 -> 4.2th notANumber -> 0th
 
@@ -415,9 +382,6 @@ toOrdinal('11') // 11th
 
 ▸ **toPascalCase**(`input`: unknown): _string_
 
-_Defined in
-[toPascalCase.ts:15](https://github.com/will-stone/tings/blob/84fc896/src/toPascalCase.ts#L15)_
-
 Converts input to PascalCase string.
 
 **`requires`** lodash
@@ -444,9 +408,6 @@ toPascalCase('someTEXT') // SomeText
 ### toTitleCase
 
 ▸ **toTitleCase**(`input`: unknown, `smallWords`: string[]): _string_
-
-_Defined in
-[toTitleCase.ts:44](https://github.com/will-stone/tings/blob/84fc896/src/toTitleCase.ts#L44)_
 
 Keep small words in lowercase, otherwise make the first letter uppercase.
 
