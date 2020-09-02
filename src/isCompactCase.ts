@@ -1,14 +1,7 @@
 /**
- * Determines if input is a compactcase (no whitespaces) string.
- * @example
-```ts
-import isCompactCase from 'tings/isCompactCase'
-
-isCompactCase('thisiscompact') // true
-isCompactCase('this is not compact') // false
-```
+ * @internal
  */
-function isCompactCase(input: unknown): boolean {
+export function _isCompactCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }
@@ -18,6 +11,20 @@ function isCompactCase(input: unknown): boolean {
   }
 
   return /^\S+$/u.test(input)
+}
+
+/**
+ * Determines if input is a compactcase (no whitespaces) string.
+ * @example
+```ts
+import isCompactCase from 'tings/isCompactCase'
+
+isCompactCase('thisiscompact') // true
+isCompactCase('this is not compact') // false
+```
+ */
+function isCompactCase(string: string): boolean {
+  return _isCompactCase(string)
 }
 
 export default isCompactCase

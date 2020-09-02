@@ -1,4 +1,15 @@
 /**
+ * @internal
+ */
+export function _isLowerCase(input: unknown): boolean {
+  if (typeof input !== 'string') {
+    return false
+  }
+
+  return input === input.toLowerCase()
+}
+
+/**
  * Determines if input is a string containing no UPPERcase characters.
  * @example
 ```ts
@@ -8,12 +19,8 @@ isLowerCase('this is lower') // true
 isLowerCase('This is not LOWER') // false
 ```
  */
-function isLowerCase(input: unknown): boolean {
-  if (typeof input !== 'string') {
-    return false
-  }
-
-  return input === input.toLowerCase()
+function isLowerCase(string: string): boolean {
+  return _isLowerCase(string)
 }
 
 export default isLowerCase

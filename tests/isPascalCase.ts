@@ -3,7 +3,7 @@ import * as assert from 'uvu/assert'
 
 import { isPascalCase } from '../src'
 
-const invalidInputs = [
+const falsey = [
   123,
   '!',
   new Set(),
@@ -21,13 +21,15 @@ const invalidInputs = [
   'containsSpecial!Characters',
   'thisHas aSpace',
 ]
-invalidInputs.forEach((input) => {
-  test(`${String(input)} is not valid`, () => {
+falsey.forEach((input) => {
+  test(`${String(input)} is false`, () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     assert.is(isPascalCase(input), false)
   })
 })
 
-const validInputs = [
+const truthy = [
   '',
   'One',
   'A',
@@ -38,8 +40,8 @@ const validInputs = [
   'AWord',
   'ContainNumbers123',
 ]
-validInputs.forEach((input) => {
-  test(`${input} is valid`, () => {
+truthy.forEach((input) => {
+  test(`${input} is true`, () => {
     assert.is(isPascalCase(input), true)
   })
 })

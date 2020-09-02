@@ -53,7 +53,7 @@ yarn add tings
 
 ### isCamelCase
 
-▸ **isCamelCase**(`input`: unknown): _boolean_
+▸ **isCamelCase**(`string`: string): _boolean_
 
 Determines if input is a camelCase string.
 
@@ -70,9 +70,9 @@ isCamelCase('NOTCamelCase') // false
 
 **Parameters:**
 
-| Name    | Type    |
-| ------- | ------- |
-| `input` | unknown |
+| Name     | Type   |
+| -------- | ------ |
+| `string` | string |
 
 **Returns:** _boolean_
 
@@ -80,7 +80,7 @@ isCamelCase('NOTCamelCase') // false
 
 ### isCompactCase
 
-▸ **isCompactCase**(`input`: unknown): _boolean_
+▸ **isCompactCase**(`string`: string): _boolean_
 
 Determines if input is a compactcase (no whitespaces) string.
 
@@ -95,9 +95,9 @@ isCompactCase('this is not compact') // false
 
 **Parameters:**
 
-| Name    | Type    |
-| ------- | ------- |
-| `input` | unknown |
+| Name     | Type   |
+| -------- | ------ |
+| `string` | string |
 
 **Returns:** _boolean_
 
@@ -105,7 +105,7 @@ isCompactCase('this is not compact') // false
 
 ### isLowerCase
 
-▸ **isLowerCase**(`input`: unknown): _boolean_
+▸ **isLowerCase**(`string`: string): _boolean_
 
 Determines if input is a string containing no UPPERcase characters.
 
@@ -120,9 +120,9 @@ isLowerCase('This is not LOWER') // false
 
 **Parameters:**
 
-| Name    | Type    |
-| ------- | ------- |
-| `input` | unknown |
+| Name     | Type   |
+| -------- | ------ |
+| `string` | string |
 
 **Returns:** _boolean_
 
@@ -175,7 +175,7 @@ isOccupied({ key: 'value' }) // true
 
 ### isPascalCase
 
-▸ **isPascalCase**(`input`: unknown): _boolean_
+▸ **isPascalCase**(`string`: string): _boolean_
 
 Determines if input is a PascalCase string.
 
@@ -192,9 +192,9 @@ isPascalCase('notPascal') // false
 
 **Parameters:**
 
-| Name    | Type    |
-| ------- | ------- |
-| `input` | unknown |
+| Name     | Type   |
+| -------- | ------ |
+| `string` | string |
 
 **Returns:** _boolean_
 
@@ -202,7 +202,7 @@ isPascalCase('notPascal') // false
 
 ### isTitleCase
 
-▸ **isTitleCase**(`input`: unknown): _boolean_
+▸ **isTitleCase**(`string`: string): _boolean_
 
 Determines if input is a Tile Case string.
 
@@ -219,9 +219,9 @@ isTitleCase('Small Words are not Capitalised') // true
 
 **Parameters:**
 
-| Name    | Type    |
-| ------- | ------- |
-| `input` | unknown |
+| Name     | Type   |
+| -------- | ------ |
+| `string` | string |
 
 **Returns:** _boolean_
 
