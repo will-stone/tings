@@ -17,7 +17,7 @@ function _sleep(input: unknown): Promise<void> {
 ```ts
 import sleep from 'tings/sleep'
 
-await sleep(2000) // sleeps for 20 seconds
+await sleep(2000) // sleeps for 2 seconds
 ```
  */
 function sleep(milliseconds: number): Promise<void> {
