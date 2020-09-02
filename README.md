@@ -42,6 +42,7 @@ yarn add tings
 - [isTitleCase](README.md#istitlecase)
 - [isUniq](README.md#isuniq)
 - [isVacant](README.md#isvacant)
+- [sleep](README.md#sleep)
 - [toCompactCase](README.md#tocompactcase)
 - [toNumberAlways](README.md#tonumberalways)
 - [toOrdinal](README.md#toordinal)
@@ -295,6 +296,30 @@ isVacant({ key: 'value' }) // false
 | `input` | unknown |
 
 **Returns:** _boolean_
+
+---
+
+### sleep
+
+▸ **sleep**(`milliseconds`: number): _Promise‹void›_
+
+Pauses the current function.
+
+**`example`**
+
+```ts
+import sleep from 'tings/sleep'
+
+await sleep(2000) // sleeps for 20 seconds
+```
+
+**Parameters:**
+
+| Name           | Type   |
+| -------------- | ------ |
+| `milliseconds` | number |
+
+**Returns:** _Promise‹void›_
 
 ---
 
