@@ -3,7 +3,7 @@ import toTitleCase from './toTitleCase'
 /**
  * @internal
  */
-export function _isTitleCase(input: unknown): boolean {
+function _isTitleCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }
