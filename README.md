@@ -310,7 +310,7 @@ Pauses the current function.
 ```ts
 import sleep from 'tings/sleep'
 
-await sleep(2000) // sleeps for 20 seconds
+await sleep(2000) // sleeps for 2 seconds
 ```
 
 **Parameters:**
