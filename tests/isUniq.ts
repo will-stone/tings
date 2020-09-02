@@ -3,17 +3,22 @@ import * as assert from 'uvu/assert'
 
 import { isUniq } from '../src'
 
-const cases = [
-  [[1, 2], true],
-  [1, true],
-  [[], true],
-  [['', ''], false],
-  [[1, 1], false],
+const falsey = [
+  ['', ''],
+  [1, 1],
 ]
 
-cases.forEach(([input, expected]) => {
-  test(`${input} is ${expected}`, () => {
-    assert.is(isUniq(input), expected)
+falsey.forEach((input) => {
+  test(`${input} is false`, () => {
+    assert.is(isUniq(input), false)
+  })
+})
+
+const truthy = [[1, 2], 1, []]
+
+truthy.forEach((input) => {
+  test(`${input} is true`, () => {
+    assert.is(isUniq(input), true)
   })
 })
 

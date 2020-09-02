@@ -3,7 +3,7 @@ import * as assert from 'uvu/assert'
 
 import { isCamelCase } from '../src'
 
-const invalidInputs = [
+const falsey = [
   new Set(),
   Symbol(''),
   123,
@@ -23,13 +23,15 @@ const invalidInputs = [
   'containsSpecial!Characters',
   'thisHas aSpace',
 ]
-invalidInputs.forEach((input) => {
-  test(`${String(input)} is not valid`, () => {
+falsey.forEach((input) => {
+  test(`${String(input)} is false`, () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     assert.is(isCamelCase(input), false)
   })
 })
 
-const validInputs = [
+const truthy = [
   '',
   'one',
   'a',
@@ -40,8 +42,8 @@ const validInputs = [
   'aWord',
   'containNumbers123',
 ]
-validInputs.forEach((input) => {
-  test(`${input} is valid`, () => {
+truthy.forEach((input) => {
+  test(`${input} is true`, () => {
     assert.is(isCamelCase(input), true)
   })
 })

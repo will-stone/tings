@@ -3,7 +3,7 @@ import * as assert from 'uvu/assert'
 
 import { isTitleCase } from '../src'
 
-const invalidInputs = [
+const falsey = [
   123,
   '!',
   new Set(),
@@ -21,13 +21,15 @@ const invalidInputs = [
   'Contains Special ! Characters',
   'thisHas aSpace',
 ]
-invalidInputs.forEach((input) => {
-  test(`${String(input)} is not valid`, () => {
+falsey.forEach((input) => {
+  test(`${String(input)} is false`, () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     assert.is(isTitleCase(input), false)
   })
 })
 
-const validInputs = [
+const truthy = [
   '',
   'One',
   'a',
@@ -35,8 +37,8 @@ const validInputs = [
   'Title Case',
   'Small Words are not Capitalised',
 ]
-validInputs.forEach((input) => {
-  test(`${input} is valid`, () => {
+truthy.forEach((input) => {
+  test(`${input} is true`, () => {
     assert.is(isTitleCase(input), true)
   })
 })

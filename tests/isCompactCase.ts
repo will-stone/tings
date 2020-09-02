@@ -3,7 +3,7 @@ import * as assert from 'uvu/assert'
 
 import { isCompactCase } from '../src'
 
-const invalidInputs = [
+const falsey = [
   123,
   '  leadingSpace',
   '  twoLeadingSpaces',
@@ -17,13 +17,15 @@ const invalidInputs = [
   `
       `,
 ]
-invalidInputs.forEach((input) => {
-  test(`${input} is not valid`, () => {
+falsey.forEach((input) => {
+  test(`${input} is false`, () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     assert.is(isCompactCase(input), false)
   })
 })
 
-const validInputs = [
+const truthy = [
   '',
   'justletters',
   '123',
@@ -31,8 +33,8 @@ const validInputs = [
   'hyphenated-123',
   'special!@@£$%^%^*(-123',
 ]
-validInputs.forEach((input) => {
-  test(`${input} is valid`, () => {
+truthy.forEach((input) => {
+  test(`${input} is true`, () => {
     assert.is(isCompactCase(input), true)
   })
 })
