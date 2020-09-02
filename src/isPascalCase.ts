@@ -3,7 +3,7 @@ import toPascalCase from './toPascalCase'
 /**
  * @internal
  */
-export function _isPascalCase(input: unknown): boolean {
+function _isPascalCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }

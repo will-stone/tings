@@ -3,7 +3,7 @@ import camelCase from 'lodash/camelCase'
 /**
  * @internal
  */
-export function _isCamelCase(input: unknown): boolean {
+function _isCamelCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }

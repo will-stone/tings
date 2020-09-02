@@ -3,7 +3,7 @@ import toNumberAlways from './toNumberAlways'
 /**
  * @internal
  */
-export function _sleep(input: unknown): Promise<void> {
+function _sleep(input: unknown): Promise<void> {
   const ms = toNumberAlways(input)
 
   return new Promise((resolve) => {

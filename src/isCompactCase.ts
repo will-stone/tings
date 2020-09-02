@@ -1,7 +1,7 @@
 /**
  * @internal
  */
-export function _isCompactCase(input: unknown): boolean {
+function _isCompactCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }

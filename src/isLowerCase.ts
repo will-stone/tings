@@ -1,7 +1,7 @@
 /**
  * @internal
  */
-export function _isLowerCase(input: unknown): boolean {
+function _isLowerCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }
