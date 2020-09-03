@@ -1,17 +1,6 @@
 import camelCase from 'lodash/camelCase'
 
 /**
- * @internal
- */
-function _isCamelCase(input: unknown): boolean {
-  if (typeof input !== 'string') {
-    return false
-  }
-
-  return camelCase(input) === input
-}
-
-/**
  * Determines if input is a camelCase string.
  * @requires lodash
  * @example
@@ -23,7 +12,13 @@ isCamelCase('NOTCamelCase') // false
 ```
  */
 function isCamelCase(string: string): boolean {
-  return _isCamelCase(string)
+  const input = string as unknown
+
+  if (typeof input !== 'string') {
+    return false
+  }
+
+  return camelCase(input) === input
 }
 
 export default isCamelCase

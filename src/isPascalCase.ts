@@ -1,17 +1,6 @@
 import toPascalCase from './toPascalCase'
 
 /**
- * @internal
- */
-function _isPascalCase(input: unknown): boolean {
-  if (typeof input !== 'string') {
-    return false
-  }
-
-  return toPascalCase(input) === input
-}
-
-/**
  * Determines if input is a PascalCase string.
  * @requires lodash
  * @example
@@ -23,7 +12,13 @@ isPascalCase('notPascal') // false
 ```
  */
 function isPascalCase(string: string): boolean {
-  return _isPascalCase(string)
+  const input = string as unknown
+
+  if (typeof input !== 'string') {
+    return false
+  }
+
+  return toPascalCase(input) === input
 }
 
 export default isPascalCase

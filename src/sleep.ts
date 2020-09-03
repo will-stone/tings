@@ -1,17 +1,6 @@
 import toNumberAlways from './toNumberAlways'
 
 /**
- * @internal
- */
-function _sleep(input: unknown): Promise<void> {
-  const ms = toNumberAlways(input)
-
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms)
-  })
-}
-
-/**
  * Pauses the current function.
  * @example
 ```ts
@@ -21,7 +10,13 @@ await sleep(2000) // sleeps for 2 seconds
 ```
  */
 function sleep(milliseconds: number): Promise<void> {
-  return _sleep(milliseconds)
+  const input = milliseconds as unknown
+
+  const ms = toNumberAlways(input)
+
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms)
+  })
 }
 
 export default sleep
