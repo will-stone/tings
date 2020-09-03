@@ -1,19 +1,4 @@
 /**
- * @internal
- */
-function _isCompactCase(input: unknown): boolean {
-  if (typeof input !== 'string') {
-    return false
-  }
-
-  if (input.length === 0) {
-    return true
-  }
-
-  return /^\S+$/u.test(input)
-}
-
-/**
  * Determines if input is a compactcase (no whitespaces) string.
  * @example
 ```ts
@@ -24,7 +9,17 @@ isCompactCase('this is not compact') // false
 ```
  */
 function isCompactCase(string: string): boolean {
-  return _isCompactCase(string)
+  const input = string as unknown
+
+  if (typeof input !== 'string') {
+    return false
+  }
+
+  if (input.length === 0) {
+    return true
+  }
+
+  return /^\S+$/u.test(input)
 }
 
 export default isCompactCase

@@ -1,17 +1,6 @@
 import toTitleCase from './toTitleCase'
 
 /**
- * @internal
- */
-function _isTitleCase(input: unknown): boolean {
-  if (typeof input !== 'string') {
-    return false
-  }
-
-  return toTitleCase(input) === input
-}
-
-/**
  * Determines if input is a Tile Case string.
  * @requires lodash
  * @example
@@ -23,7 +12,13 @@ isTitleCase('Small Words are not Capitalised') // true
 ```
  */
 function isTitleCase(string: string): boolean {
-  return _isTitleCase(string)
+  const input = string as unknown
+
+  if (typeof input !== 'string') {
+    return false
+  }
+
+  return toTitleCase(input) === input
 }
 
 export default isTitleCase
