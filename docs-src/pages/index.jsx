@@ -1,6 +1,6 @@
 import React from 'react'
 
-import typeDocument from '../.data/typedoc.json'
+import t from '../.data/typedoc.json'
 
 export const config = {
   // Remove JS from built output
@@ -13,8 +13,10 @@ const Index = () => {
   return (
     <div>
       <img alt="tings" src="/logo2.png" />
-      hello!
-      {typeDocument.name}
+      <h1>{t.name}</h1>
+      {t.children.map((ting) => (
+        <h2 key={ting.id}>{ting.name}</h2>
+      ))}
     </div>
   )
 }
