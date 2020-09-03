@@ -11,7 +11,7 @@ export const config = {
 
 const Index = () => {
   return (
-    <div>
+    <div className="text-blue-400">
       <img alt="tings" src="/logo2.png" />
       <h1>{t.name}</h1>
       {t.children.map((ting) => (
