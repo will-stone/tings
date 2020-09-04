@@ -25,7 +25,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "release": "yarn clean && yarn lint && yarn release:code && yarn release:docs",
     "release:code": "yarn build:code && np --contents=dist",
-    "release:docs": "yarn build:docs && gh-pages -d docs",
+    "release:docs": "yarn build:docs && touch docs/.nojekyll && gh-pages -d docs",
     "start:docs": "yarn generate-typedoc && cd docs-src && next dev",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- yarn test",
