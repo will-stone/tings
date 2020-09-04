@@ -18,19 +18,19 @@
   },
   "main": "./index.js",
   "scripts": {
-    "build": "yarn build:code && yarn build:docs",
     "build:code": "tsc",
     "build:docs": "yarn generate-typedoc && cd docs-src && next build && next export --outdir ../docs",
-    "clean": "rimraf ./dist ./docs",
-    "copy-files": "cpy README.md dist/ && cpy package.json dist/",
+    "clean": "rimraf ./dist ./docs ./node_modules/.cache",
     "generate-typedoc": "typedoc --json docs-src/.data/typedoc.json",
     "lint": "eslint . --ignore-path .gitignore",
-    "release": "yarn clean && yarn lint && yarn build && np --contents=dist",
+    "release": "yarn clean && yarn lint && yarn release:code && yarn release:docs",
+    "release:code": "yarn build:code && np --contents=dist",
+    "release:docs": "yarn build:docs && gh-pages -d docs",
     "start:docs": "yarn generate-typedoc && cd docs-src && next dev",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- yarn test",
     "typecheck": "tsc --noEmit",
-    "postversion": "yarn copy-files"
+    "postversion": "cpy README.md dist/ && cpy package.json dist/"
   },
   "husky": {
     "hooks": {
