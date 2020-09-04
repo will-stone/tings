@@ -2,4 +2,7 @@ dist
 node_modules
 coverage
 yarn-error.log
-tmp
+
+.next
+.data
+docs/
