@@ -1,6 +1,7 @@
 dist
 node_modules
 coverage
+yarn-error.log
 
 .next
 .data
