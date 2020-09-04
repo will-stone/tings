@@ -2,10 +2,6 @@ dist
 node_modules
 coverage
 yarn-error.log
-tmp
 
 .next
 .data
-
-# Not sure if this is required, remove if it is.
-docs/_next
