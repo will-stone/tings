@@ -2,9 +2,12 @@ const typography = require('@tailwindcss/typography')
 
 module.exports = {
   future: {
+    purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
-  purge: ['./pages/**/*.jsx'],
+  purge: {
+    content: ['./components/**/*.jsx', './pages/**/*.jsx'],
+  },
   theme: {
     extend: {
       colors: {
