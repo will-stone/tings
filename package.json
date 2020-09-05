@@ -72,7 +72,7 @@
     "react-syntax-highlighter": "^13.5.3",
     "rimraf": "^3.0.2",
     "sinon": "^9.0.3",
-    "tailwindcss": "^1.7.6",
+    "tailwindcss": "^1.8.2",
     "ts-node": "^8.10.2",
     "typedoc": "^0.18.0",
     "typedoc-plugin-markdown": "^2.4.2",
