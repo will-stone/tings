@@ -74,6 +74,7 @@ const Index = () => {
                     })}
                   </Fragment>
                 ))}
+                <hr />
               </Fragment>
             ))}
           </div>
