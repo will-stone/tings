@@ -1554,10 +1554,10 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@will-stone/eslint-config@^1.21.0":
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/@will-stone/eslint-config/-/eslint-config-1.22.0.tgz#d41b5f0e5156bf46dfb12c99a4250e6727ebf207"
-  integrity sha512-pMJRq/k4Kp2Q/tDq+OzMfwwRebXvie3uiItksHsz5A0WjepxoBtVnBXIEXLoum7msv7tGTVyU6ZM+jJq1Q3WOQ==
+"@will-stone/eslint-config@^1.23.0":
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/@will-stone/eslint-config/-/eslint-config-1.23.0.tgz#e18edae4c1c49c37ccb9c0b70f54fbc236df9514"
+  integrity sha512-J1bskpN1sjR4C64aXOJ0RfIU8dVaiylGbwtJbl+nrhAL3s7nrdqBjEFPo4dTliukYA5ifpsRXbHhQ9FWCdHZqg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^3.10.1"
     "@typescript-eslint/parser" "^3.10.1"
@@ -8172,7 +8172,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^1.8.3:
+tailwindcss@^1.8.2:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.2.tgz#72374608676e7a05e3db5ead74f3ac51df54c73e"
   integrity sha512-Acz4b2caMlrnv9zCmmwENjcktV7rblaMYGwGUT6woqmwnttLZ9ePj7yynSCln/Aky/4SGyduf7y3yk/QZNw+vw==
