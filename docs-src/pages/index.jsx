@@ -1,3 +1,5 @@
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { Fragment } from 'react'
 import ReactMarkdown from 'react-markdown'
 
@@ -14,12 +16,16 @@ export const config = {
 const Index = () => {
   return (
     <div className="flex flex-col h-full">
-      <div className="flex-shrink-0 px-8 py-4 border-b">
+      <div className="flex-shrink-0 px-8 py-4 border-b flex justify-between items-center">
         <a className="inline-flex items-center" href="/">
           <img alt="tings" className="w-20 h-20 mr-4" src="/logo2.png" />
           <h1 className="text-3xl font-bold leading-tight text-cerise">
             {t.name}
           </h1>
+        </a>
+
+        <a href="https://github.com/will-stone/tings">
+          <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
       </div>
       <div className="flex-grow flex overflow-hidden">
