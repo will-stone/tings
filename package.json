@@ -53,6 +53,10 @@
     ]
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@tailwindcss/typography": "^0.2.0",
     "@types/lodash": "^4.14.159",
     "@types/react": "^16.9.49",
@@ -60,7 +64,7 @@
     "@will-stone/eslint-config": "^1.24.3",
     "@will-stone/prettier-config": "^3.1.0",
     "cpy-cli": "^3.1.1",
-    "eslint": "^7.7.0",
+    "eslint": "^7.9.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "next": "^9.5.3",
