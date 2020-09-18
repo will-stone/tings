@@ -83,7 +83,7 @@ const Index = () => {
         </div>
       </div>
       <div className="hidden lg:block flex-shrink-0 w-64 border-l overflow-y-auto">
-        <div className="py-8 px-4">
+        <div className="py-8 px-4 flex flex-col justify-between min-h-full">
           <ul className="space-y-4">
             <li>
               <a
@@ -103,6 +103,9 @@ const Index = () => {
                 <span className="text-cerise font-bold">Source Code</span>
               </a>
             </li>
+          </ul>
+
+          <ul>
             <li>
               <a
                 className="flex items-center space-x-2 hover:bg-peep px-4 py-2 rounded cursor-pointer"
@@ -114,8 +117,8 @@ const Index = () => {
                 >
                   <img alt="" className="max-h-full" src="/me.png" />
                 </span>
-                <span>
-                  By <span className="text-cerise font-bold">Will Stone</span>
+                <span className="font-bold">
+                  By <span className="text-cerise">Will Stone</span>
                 </span>
               </a>
             </li>
