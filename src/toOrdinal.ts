@@ -2,9 +2,9 @@ import toNumberAlways from './toNumberAlways'
 
 /**
  * Converts a number to its ordinal string form, if possible, else returns 0th.
- * 1 -> 1st
- * 4.2 -> 4.2th
- * notANumber -> 0th
+ * - 1 -> 1st
+ * - 4.2 -> 4.2th
+ * - notANumber -> 0th
  * @example
 ```ts
 import toOrdinal from 'tings/toOrdinal'
