@@ -3,6 +3,7 @@
   "version": "0.0.20",
   "private": false,
   "description": "A collection of small utilities and Lodash addons",
+  "homepage": "https://tings.wstone.io/",
   "bugs": {
     "url": "https://github.com/will-stone/tings/issues",
     "email": "email@wstone.io"
