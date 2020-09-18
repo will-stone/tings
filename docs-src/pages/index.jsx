@@ -18,8 +18,8 @@ const Index = () => {
     <div className="flex flex-col h-full">
       <div className="flex-shrink-0 px-8 py-4 border-b flex justify-between items-center">
         <a className="inline-flex items-center" href="/">
-          <img alt="tings" className="w-20 h-20 mr-4" src="/logo2.png" />
-          <h1 className="text-3xl font-bold leading-tight text-cerise">
+          <img alt="tings" className="w-12 h-12 mr-4" src="/logo2.png" />
+          <h1 className="text-2xl font-bold leading-tight text-cerise">
             {t.name}
           </h1>
         </a>
