@@ -6,7 +6,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
   },
   purge: {
-    content: ['./components/**/*.jsx', './pages/**/*.jsx'],
+    content: ['./components/**/*.jsx', './pages/**/*.jsx', '../README.md'],
   },
   theme: {
     extend: {
@@ -17,6 +17,15 @@ module.exports = {
         cerise: '#C92271',
       },
     },
+    typography: (theme) => ({
+      default: {
+        css: {
+          h1: {
+            color: theme('colors.cerise'),
+          },
+        },
+      },
+    }),
   },
   variants: {},
   plugins: [typography],
