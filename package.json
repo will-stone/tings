@@ -22,10 +22,12 @@
     "build:docs": "yarn generate-typedoc && cd docs-src && next build && next export --outdir ../docs",
     "generate-typedoc": "typedoc --json docs-src/.data/typedoc.json",
     "lint": "eslint . --ignore-path .gitignore",
-    "release": "yarn lint && yarn build && np --contents=pkg",
+    "prerelease": "yarn lint && yarn typecheck",
+    "release": "np --contents=pkg",
     "start:docs": "yarn generate-typedoc && cd docs-src && next dev",
     "test": "uvu -r esm tests --bail",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "version": "yarn build"
   },
   "husky": {
     "hooks": {
