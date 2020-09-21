@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isPascalCase } from '../src'
+import { isPascalCase } from '../pkg'
 
 const falsey = [
   123,
@@ -23,8 +23,6 @@ const falsey = [
 ]
 falsey.forEach((input) => {
   test(`${String(input)} is false`, () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     assert.is(isPascalCase(input), false)
   })
 })

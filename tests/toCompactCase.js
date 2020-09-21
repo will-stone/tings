@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isCompactCase, toCompactCase } from '../src'
+import { isCompactCase, toCompactCase } from '../pkg'
 
 const cases = [
   [0, '0'],

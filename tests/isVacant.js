@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isVacant } from '../src'
+import { isVacant } from '../pkg'
 
 const falsey = [
   'has content',

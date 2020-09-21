@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { toOrdinal } from '../src'
+import { toOrdinal } from '../pkg'
 
 const cases = [
   // Nonsense

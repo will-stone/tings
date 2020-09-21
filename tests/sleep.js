@@ -2,15 +2,15 @@ import sinon from 'sinon'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { sleep } from '../src'
+import { sleep } from '../pkg'
 
 // A test helper to spy on a callback and know if time has passed
-const sleepWrapper = async (ms: unknown, callback: () => void) => {
-  await sleep(ms as number)
+const sleepWrapper = async (ms, callback) => {
+  await sleep(ms)
   callback()
 }
 
-let clock: sinon.SinonFakeTimers
+let clock
 
 test.before(() => {
   clock = sinon.useFakeTimers()

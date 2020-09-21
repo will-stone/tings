@@ -7,8 +7,8 @@ import {
   isOccupied,
   isUniq,
   toTitleCase,
-} from '../src'
-import { englishSmallWords } from '../src/toTitleCase'
+} from '../pkg'
+import { englishSmallWords } from '../pkg/dist-src/toTitleCase'
 
 const wordsList = suite('words list')
 

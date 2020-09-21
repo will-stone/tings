@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { toPascalCase } from '../src'
+import { toPascalCase } from '../pkg'
 
 const cases = [
   [123, '123'],

@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { toNumberAlways } from '../src'
+import { toNumberAlways } from '../pkg'
 
 const cases = [
   [-2, -2],

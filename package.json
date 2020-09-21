@@ -17,19 +17,15 @@
     "email": "email@wstone.io",
     "url": "https://wstone.io"
   },
-  "main": "./index.js",
   "scripts": {
-    "build:code": "yarn clean && tsc",
-    "build:docs": "yarn clean && yarn generate-typedoc && cd docs-src && next build && next export --outdir ../docs",
-    "clean": "rimraf ./dist ./docs ./node_modules/.cache",
+    "build": "pika build",
+    "build:docs": "yarn generate-typedoc && cd docs-src && next build && next export --outdir ../docs",
     "generate-typedoc": "typedoc --json docs-src/.data/typedoc.json",
     "lint": "eslint . --ignore-path .gitignore",
-    "release": "yarn lint && yarn build:code && np --contents=dist",
+    "release": "yarn lint && yarn build && np --contents=pkg",
     "start:docs": "yarn generate-typedoc && cd docs-src && next dev",
-    "test": "uvu -r ts-node/register tests",
-    "test:watch": "watchlist src tests -- yarn test",
-    "typecheck": "tsc --noEmit",
-    "postversion": "cpy README.md dist/ && cpy package.json dist/"
+    "test": "uvu -r esm tests --bail",
+    "typecheck": "tsc --noEmit"
   },
   "husky": {
     "hooks": {
@@ -51,7 +47,10 @@
       "@will-stone/eslint-config/node",
       "@will-stone/eslint-config/react",
       "@will-stone/eslint-config/typescript"
-    ]
+    ],
+    "globals": {
+      "BigInt": "readonly"
+    }
   },
   "resolutions": {
     "node-fetch": "^2.6.1"
@@ -61,6 +60,10 @@
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-ts-standard-pkg": "^0.9.2",
     "@tailwindcss/typography": "^0.2.0",
     "@types/lodash": "^4.14.159",
     "@types/react": "^16.9.49",
@@ -69,6 +72,7 @@
     "@will-stone/prettier-config": "^3.1.0",
     "cpy-cli": "^3.1.1",
     "eslint": "^7.9.0",
+    "esm": "^3.2.25",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "next": "^9.5.3",
@@ -82,7 +86,6 @@
     "rimraf": "^3.0.2",
     "sinon": "^9.0.3",
     "tailwindcss": "^1.8.2",
-    "ts-node": "^8.10.2",
     "typedoc": "^0.18.0",
     "typedoc-plugin-markdown": "^2.4.2",
     "typescript": "^4.0.2",
@@ -99,5 +102,18 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-ts-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ]
+    ]
   }
 }

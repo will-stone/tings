@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isCompactCase } from '../src'
+import { isCompactCase } from '../pkg'
 
 const falsey = [
   123,
@@ -19,8 +19,6 @@ const falsey = [
 ]
 falsey.forEach((input) => {
   test(`${input} is false`, () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     assert.is(isCompactCase(input), false)
   })
 })

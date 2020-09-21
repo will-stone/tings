@@ -1,11 +1,9 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isTitleCase } from '../src'
+import { isCamelCase } from '../pkg'
 
 const falsey = [
-  123,
-  '!',
   new Set(),
   Symbol(''),
   123,
@@ -17,29 +15,34 @@ const falsey = [
   () => {
     return false
   },
-  'notTitle',
-  'Contains Special ! Characters',
+  'A',
+  '!',
+  'NotCamel',
+  'notCAMEL',
+  'NOTCamelCase',
+  'containsSpecial!Characters',
   'thisHas aSpace',
 ]
 falsey.forEach((input) => {
   test(`${String(input)} is false`, () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    assert.is(isTitleCase(input), false)
+    assert.is(isCamelCase(input), false)
   })
 })
 
 const truthy = [
   '',
-  'One',
+  'one',
   'a',
   '123',
-  'Title Case',
-  'Small Words are not Capitalised',
+  'camelCase',
+  'endWithCaptiaL',
+  'miltiWordCamelCase',
+  'aWord',
+  'containNumbers123',
 ]
 truthy.forEach((input) => {
   test(`${input} is true`, () => {
-    assert.is(isTitleCase(input), true)
+    assert.is(isCamelCase(input), true)
   })
 })
 

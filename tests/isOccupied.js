@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isOccupied } from '../src'
+import { isOccupied } from '../pkg'
 
 const falsey = [
   '',
