@@ -6,7 +6,7 @@
   "homepage": "https://tings.wstone.io/",
   "bugs": {
     "url": "https://github.com/will-stone/tings/issues",
-    "email": "email@wstone.io"
+    "email": "will@wstone.io"
   },
   "repository": {
     "url": "https://github.com/will-stone/tings"
@@ -14,7 +14,7 @@
   "license": "MIT",
   "author": {
     "name": "Will Stone",
-    "email": "email@wstone.io",
+    "email": "will@wstone.io",
     "url": "https://wstone.io"
   },
   "main": "./index.js",
