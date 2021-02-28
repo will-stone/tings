@@ -17,13 +17,13 @@ const falsey = [
   `
       `,
 ]
-falsey.forEach((input) => {
+for (const input of falsey) {
   test(`${input} is false`, () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     assert.is(isCompactCase(input), false)
   })
-})
+}
 
 const truthy = [
   '',
@@ -33,10 +33,10 @@ const truthy = [
   'hyphenated-123',
   'special!@@£$%^%^*(-123',
 ]
-truthy.forEach((input) => {
+for (const input of truthy) {
   test(`${input} is true`, () => {
     assert.is(isCompactCase(input), true)
   })
-})
+}
 
 test.run()
