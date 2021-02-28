@@ -1,8 +1,9 @@
 {
   "workbench.colorCustomizations": {
-    "statusBar.background": "#a11258",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#cf1771"
+    "titleBar.activeBackground": "#a11258",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#a1125899",
+    "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#A11258",
   "typescript.tsdk": "node_modules/typescript/lib"
