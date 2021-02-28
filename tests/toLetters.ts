@@ -18,11 +18,11 @@ const cases = [
   ],
 ]
 
-cases.forEach(([input, expected]) => {
+for (const [input, expected] of cases) {
   test(`${String(input)} is ${expected}`, () => {
     const result = toLetters(input)
     assert.is(result, expected)
   })
-})
+}
 
 test.run()

@@ -79,10 +79,10 @@ const cases = [
   [3.29, '3.29th'],
 ]
 
-cases.forEach(([input, expected]) => {
+for (const [input, expected] of cases) {
   test(`${input} is ${expected}`, () => {
     assert.is(toOrdinal(input), expected)
   })
-})
+}
 
 test.run()

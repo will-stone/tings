@@ -22,12 +22,12 @@ const cases = [
   ],
 ]
 
-cases.forEach(([input, expected]) => {
+for (const [input, expected] of cases) {
   test(`${String(input)} is ${expected}`, () => {
     const result = toCompactCase(input)
     assert.is(result, expected)
     assert.is(isCompactCase(result), true)
   })
-})
+}
 
 test.run()

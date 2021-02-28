@@ -45,10 +45,10 @@ const cases = [
   [() => false, 'False'],
 ]
 
-cases.forEach(([input, expected]) => {
+for (const [input, expected] of cases) {
   test(`title-cases the string: ${String(input)}`, () => {
     assert.is(toTitleCase(input), expected)
   })
-})
+}
 
 test.run()

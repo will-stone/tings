@@ -20,11 +20,11 @@ const falsey = [
   new Map([['string', 'string']]),
 ]
 
-falsey.forEach((input) => {
+for (const input of falsey) {
   test(`${String(input)} is false`, () => {
     assert.is(isVacant(input), false)
   })
-})
+}
 
 const truthy = [
   '',
@@ -42,10 +42,10 @@ const truthy = [
   new Map([]),
 ]
 
-truthy.forEach((input) => {
+for (const input of truthy) {
   test(`${input} is true`, () => {
     assert.is(isVacant(input), true)
   })
-})
+}
 
 test.run()

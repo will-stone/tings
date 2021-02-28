@@ -21,13 +21,13 @@ const falsey = [
   'Contains Special ! Characters',
   'thisHas aSpace',
 ]
-falsey.forEach((input) => {
+for (const input of falsey) {
   test(`${String(input)} is false`, () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     assert.is(isTitleCase(input), false)
   })
-})
+}
 
 const truthy = [
   '',
@@ -37,10 +37,10 @@ const truthy = [
   'Title Case',
   'Small Words are not Capitalised',
 ]
-truthy.forEach((input) => {
+for (const input of truthy) {
   test(`${input} is true`, () => {
     assert.is(isTitleCase(input), true)
   })
-})
+}
 
 test.run()

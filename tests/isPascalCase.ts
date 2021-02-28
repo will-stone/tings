@@ -21,13 +21,13 @@ const falsey = [
   'containsSpecial!Characters',
   'thisHas aSpace',
 ]
-falsey.forEach((input) => {
+for (const input of falsey) {
   test(`${String(input)} is false`, () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-expect-error
     assert.is(isPascalCase(input), false)
   })
-})
+}
 
 const truthy = [
   '',
@@ -40,10 +40,10 @@ const truthy = [
   'AWord',
   'ContainNumbers123',
 ]
-truthy.forEach((input) => {
+for (const input of truthy) {
   test(`${input} is true`, () => {
     assert.is(isPascalCase(input), true)
   })
-})
+}
 
 test.run()
