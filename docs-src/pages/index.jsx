@@ -6,8 +6,8 @@ import ReactMarkdown from 'react-markdown'
 import ReactMarkdownWithHtml from 'react-markdown/with-html'
 
 import * as readme from '../../README.md'
-import t from '../.data/typedoc.json'
 import CodeBlock from '../components/code-block'
+import t from '../typedoc.json'
 
 export const config = {
   // Remove JS from built output
@@ -50,7 +50,7 @@ const Index = () => {
               <h2 id={ting.name}>
                 <a href={`#${ting.name}`}>{ting.name}</a>
               </h2>
-              {ting.signatures.map((signature) => (
+              {ting.children[0].signatures.map((signature) => (
                 <Fragment key={signature.id}>
                   <ReactMarkdown source={signature.comment.shortText} />
                   {signature.comment.tags.map((tag) => {

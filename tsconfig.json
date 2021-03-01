@@ -22,9 +22,9 @@
   "exclude": ["node_modules", "dist", "tests"],
   "typedocOptions": {
     "disableSources": true,
-    "inputFiles": ["./src"],
-    "mode": "file",
+    "entryPoints": ["./src"],
     "readme": "none",
-    "stripInternal": true
+    "exclude": "**/*+(index|.spec|.e2e).ts",
+    "excludeInternal": true
   }
 }
