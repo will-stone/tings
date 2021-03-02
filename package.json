@@ -24,7 +24,7 @@
     "clean": "rimraf ./dist ./docs ./node_modules/.cache",
     "generate-typedoc": "typedoc --json ./docs-src/typedoc.json",
     "lint": "eslint . --ignore-path .gitignore",
-    "release": "npm run lint && npm run build && np --contents=dist",
+    "release": "npm run lint && npm run build && np",
     "start:docs": "npm run generate-typedoc && cd docs-src && next dev",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- npm run test",
@@ -95,5 +95,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "np": {
+    "yarn": false,
+    "contents": "dist"
   }
 }
