@@ -52,9 +52,6 @@
       "@will-stone/eslint-config/react"
     ]
   },
-  "resolutions": {
-    "node-fetch": "^2.6.1"
-  },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-brands-svg-icons": "^5.14.0",
