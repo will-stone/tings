@@ -8,10 +8,10 @@ jobs:
       - name: Begin CI...
         uses: actions/checkout@v2
 
-      - name: Use Node 12
+      - name: Use Node 15
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
+          node-version: 15.x
 
       - name: Use cached node_modules
         uses: actions/cache@v2
@@ -22,21 +22,21 @@ jobs:
             nodeModules-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm i
         env:
           CI: true
 
       - name: Lint
-        run: yarn lint
+        run: npm run lint
         env:
           CI: true
 
       - name: Test
-        run: yarn test
+        run: npm test
         env:
           CI: true
 
       - name: Build
-        run: yarn build:code
+        run: npm run build
         env:
           CI: true
