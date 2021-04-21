@@ -5,8 +5,8 @@ import React, { Fragment } from 'react'
 import ReactMarkdown from 'react-markdown'
 import ReactMarkdownWithHtml from 'react-markdown/with-html'
 
-import * as readme from '../../README.md'
 import CodeBlock from '../components/code-block'
+import * as readme from '../README.md'
 import t from '../typedoc.json'
 
 export const config = {
@@ -36,7 +36,7 @@ const Index = () => {
         </div>
       </div>
       <div className="flex-grow overflow-y-auto">
-        <div className="px-8 pb-8 prose max-w-none">
+        <div className="px-8 pb-8 prose prose-lg max-w-none">
           <ReactMarkdownWithHtml
             escapeHtml={false}
             renderers={{ code: CodeBlock }}
@@ -50,6 +50,7 @@ const Index = () => {
               <h2 id={ting.name}>
                 <a href={`#${ting.name}`}>{ting.name}</a>
               </h2>
+
               {ting.children[0].signatures.map((signature) => (
                 <Fragment key={signature.id}>
                   <ReactMarkdown source={signature.comment.shortText} />
