@@ -2,7 +2,7 @@
   "name": "tings",
   "version": "0.0.29",
   "private": false,
-  "description": "A collection of small utilities and Lodash addons",
+  "description": "A collection of small utilities",
   "homepage": "https://tings.wstone.io/",
   "bugs": {
     "url": "https://github.com/will-stone/tings/issues",
@@ -56,7 +56,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@tailwindcss/typography": "^0.2.0",
-    "@types/lodash": "^4.14.159",
     "@types/react": "^17.0.2",
     "@types/sinon": "^9.0.5",
     "@will-stone/eslint-config": "^2.3.0",
@@ -83,14 +82,6 @@
     "typescript": "^4.1.0",
     "uvu": "^0.5.1",
     "watchlist": "^0.2.3"
-  },
-  "peerDependencies": {
-    "lodash": "^4.17.20"
-  },
-  "peerDependenciesMeta": {
-    "lodash": {
-      "optional": true
-    }
   },
   "publishConfig": {
     "access": "public",
