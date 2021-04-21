@@ -19,13 +19,13 @@ export const config = {
 const Index = () => {
   return (
     <div className="flex-grow flex h-full overflow-hidden">
-      <div className="hidden md:block flex-shrink-0 w-64 border-r overflow-y-auto">
+      <div className="hidden md:block flex-shrink-0 w-64 border-r overflow-y-auto bg-gray-50">
         <div className="p-8">
           <ul className="">
             {t.children.map((ting) => (
               <li key={ting.id}>
                 <a
-                  className="block font-medium px-4 py-2 hover:bg-peep rounded cursor-pointer"
+                  className="block font-medium px-4 py-2 hover:bg-cerise hover:text-white rounded cursor-pointer"
                   href={`#${ting.name}`}
                 >
                   {ting.name}
@@ -35,6 +35,7 @@ const Index = () => {
           </ul>
         </div>
       </div>
+
       <div className="flex-grow overflow-y-auto">
         <div className="px-8 pb-8 prose prose-lg max-w-none">
           <ReactMarkdownWithHtml
@@ -83,25 +84,26 @@ const Index = () => {
           ))}
         </div>
       </div>
-      <div className="hidden lg:block flex-shrink-0 w-64 border-l overflow-y-auto">
+
+      <div className="hidden lg:block flex-shrink-0 w-64 border-l overflow-y-auto bg-gray-50">
         <div className="py-8 px-4 flex flex-col justify-between min-h-full">
           <ul className="space-y-4">
             <li>
               <a
-                className="flex items-center space-x-2 hover:bg-peep px-4 py-2 rounded cursor-pointer"
+                className="flex items-center space-x-2 hover:bg-cerise hover:text-white px-4 py-2 rounded cursor-pointer"
                 href="https://www.npmjs.com/package/tings"
               >
                 <FontAwesomeIcon fixedWidth icon={faNpm} size="2x" />
-                <span className="text-cerise font-bold">Package</span>
+                <span className="font-bold">Package</span>
               </a>
             </li>
             <li>
               <a
-                className="flex items-center space-x-2 hover:bg-peep px-4 py-2 rounded cursor-pointer"
+                className="flex items-center space-x-2 hover:bg-cerise hover:text-white px-4 py-2 rounded cursor-pointer"
                 href="https://github.com/will-stone/tings"
               >
                 <FontAwesomeIcon fixedWidth icon={faGithub} size="2x" />
-                <span className="text-cerise font-bold">Source Code</span>
+                <span className="font-bold">Source Code</span>
               </a>
             </li>
           </ul>
@@ -109,17 +111,17 @@ const Index = () => {
           <ul>
             <li>
               <a
-                className="flex items-center space-x-2 hover:bg-peep px-4 py-2 rounded cursor-pointer"
+                className="flex items-center space-x-2 hover:bg-cerise hover:text-white group px-4 py-2 rounded cursor-pointer"
                 href="https://wstone.io"
               >
-                <span
-                  className="inline-flex justify-center"
-                  style={{ width: '40px', height: '32px' }}
-                >
-                  <img alt="" className="max-h-full" src="/me.png" />
+                <span className="inline-flex justify-center group-hover:bg-white p-1 rounded">
+                  <img alt="" className="w-8" src="/me.png" />
                 </span>
                 <span className="font-bold">
-                  By <span className="text-cerise">Will Stone</span>
+                  By{' '}
+                  <span className="text-cerise group-hover:text-white">
+                    Will Stone
+                  </span>
                 </span>
               </a>
             </li>

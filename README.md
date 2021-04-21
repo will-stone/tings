@@ -5,7 +5,7 @@
 <h1 align="center">tings</h1>
 
 <p align="center">
-  A collection of small utilities.
+  A collection of small JavaScript utilities.
 </p>
 
 ---

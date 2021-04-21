@@ -2,7 +2,7 @@
   "name": "tings",
   "version": "0.0.29",
   "private": false,
-  "description": "A collection of small utilities",
+  "description": "A collection of small JavaScript utilities",
   "homepage": "https://tings.wstone.io/",
   "bugs": {
     "url": "https://github.com/will-stone/tings/issues",
