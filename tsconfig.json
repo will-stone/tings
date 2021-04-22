@@ -30,5 +30,5 @@
     "exclude": "**/*+(index|.spec|.e2e).ts",
     "excludeInternal": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-environment.d.ts", "**/*.ts", "**/*.tsx"]
 }
