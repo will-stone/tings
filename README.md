@@ -10,10 +10,4 @@
 
 ---
 
-## Install
-
-```bash
-npm i tings
-# or
-yarn add tings
-```
+Docs: https://tings.wstone.io/
