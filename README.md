@@ -5,15 +5,9 @@
 <h1 align="center">tings</h1>
 
 <p align="center">
-  A collection of small utilities and complementary Lodash add-ons.
+  A collection of small JavaScript utilities.
 </p>
 
 ---
 
-## Install
-
-```bash
-npm i tings
-# or
-yarn add tings
-```
+Docs: https://tings.wstone.io/

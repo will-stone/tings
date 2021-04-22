@@ -1,4 +1,4 @@
-import '../styles/index.css'
+import 'tailwindcss/tailwind.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import { config as fontawesomeConfig } from '@fortawesome/fontawesome-svg-core'
@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>tings</title>
+        <title>Tings</title>
 
         <link
           href="/apple-touch-icon.png"
@@ -35,6 +35,8 @@ function MyApp({ Component, pageProps }) {
         <link color="#cb1b71" href="/safari-pinned-tab.svg" rel="mask-icon" />
         <meta content="#ffffff" name="msapplication-TileColor" />
         <meta content="#ffffff" name="theme-color" />
+
+        <link href="https://rsms.me/inter/inter.css" rel="stylesheet" />
       </Head>
       <Component {...pageProps} />
     </>
