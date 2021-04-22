@@ -1,5 +1,5 @@
 /**
- * Determines if input is a compactcase (no whitespaces) string.
+ * Determines if input is a string that contains no whitespaces.
  * @example
 ```ts
 import isCompactCase from 'tings/isCompactCase'
