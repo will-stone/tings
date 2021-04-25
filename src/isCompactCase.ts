@@ -8,9 +8,7 @@ isCompactCase('thisiscompact') // true
 isCompactCase('this is not compact') // false
 ```
  */
-function isCompactCase(string: string): boolean {
-  const input = string as unknown
-
+function isCompactCase(input: unknown): boolean {
   if (typeof input !== 'string') {
     return false
   }
