@@ -19,8 +19,6 @@ const falsey = [
 ]
 for (const input of falsey) {
   test(`${input} is false`, () => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     assert.is(isCompactCase(input), false)
   })
 }
