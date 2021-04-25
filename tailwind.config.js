@@ -56,6 +56,13 @@ module.exports = {
               'pre': {
                 backgroundColor: `${theme('colors.gray.1000')} !important`,
               },
+              'a': {
+                'color': theme('colors.gray.400'),
+                'fontWeight': 'inherit',
+                '&:hover': {
+                  color: theme('colors.gray.50'),
+                },
+              },
             },
           ],
         },

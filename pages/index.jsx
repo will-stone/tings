@@ -69,7 +69,10 @@ const Index = () => (
     </aside>
 
     <main className="prose prose-lg md:ml-52 lg:ml-72 mt-8 md:mt-36 pb-32">
-      <p className="lead">A collection of small JavaScript utilities.</p>
+      <p className="lead">
+        A collection of small JavaScript utilities by{' '}
+        <a href="https://wstone.io/">Will Stone</a>.
+      </p>
 
       <h2>Install</h2>
 
