@@ -6,6 +6,7 @@ import React, { Fragment } from 'react'
 import ReactMarkdown from 'react-markdown'
 
 import CodeBlock from '../components/code-block'
+import packageJson from '../package.json'
 import t from '../typedoc.json'
 
 export const config = {
@@ -23,7 +24,7 @@ const Index = () => (
           <a className="flex items-center justify-center sm:justify-start space-x-2">
             <img alt="" className="w-12" src="/logo2.png" />
             <h1 className="text-3xl leading-snug font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-              Tings
+              Tings <span className="text-xs">{packageJson.version}</span>
             </h1>
           </a>
         </Link>
