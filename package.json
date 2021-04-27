@@ -61,7 +61,7 @@
     "@tailwindcss/typography": "^0.4.0",
     "@types/react": "^17.0.2",
     "@types/sinon": "^9.0.5",
-    "@will-stone/eslint-config": "^2.6.1",
+    "@will-stone/eslint-config": "^2.7.0",
     "@will-stone/prettier-config": "^4.0.0",
     "autoprefixer": "^10.2.5",
     "cpy-cli": "^3.1.1",
