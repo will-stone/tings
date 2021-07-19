@@ -19,7 +19,7 @@
   },
   "main": "./index.js",
   "scripts": {
-    "build": "npm run clean && tsc",
+    "build": "npm run clean && tsc --noEmit false",
     "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
     "clean": "rimraf ./dist ./docs ./node_modules/.cache",
     "generate-typedoc": "rimraf ./typedoc.json && typedoc --json ./typedoc.json",
