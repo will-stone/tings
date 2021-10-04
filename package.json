@@ -23,16 +23,16 @@
     "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
     "clean": "rimraf ./dist ./docs ./node_modules/.cache",
     "generate-typedoc": "rimraf ./typedoc.json && typedoc --json ./typedoc.json",
+    "postinstall": "husky install",
     "lint": "eslint . --ignore-path .gitignore",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
     "release": "npm run lint && npm run build && np",
     "start:docs": "npm run generate-typedoc && next dev",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- npm run test",
     "typecheck": "tsc --noEmit",
-    "postversion": "cpy README.md dist/ && cpy package.json dist/",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postversion": "cpy README.md dist/ && cpy package.json dist/"
   },
   "lint-staged": {
     "*.{css,json,md}": [
@@ -47,7 +47,8 @@
     "extends": [
       "@will-stone/eslint-config/typescript",
       "@will-stone/eslint-config/node",
-      "@will-stone/eslint-config/react"
+      "@will-stone/eslint-config/react",
+      "@will-stone/eslint-config/prettier"
     ],
     "rules": {
       "jsx-a11y/anchor-is-valid": "off"
@@ -61,8 +62,8 @@
     "@tailwindcss/typography": "^0.4.0",
     "@types/react": "^17.0.2",
     "@types/sinon": "^9.0.5",
-    "@will-stone/eslint-config": "^2.7.0",
-    "@will-stone/prettier-config": "^4.0.0",
+    "@will-stone/eslint-config": "^4.0.4",
+    "@will-stone/prettier-config": "^5.0.0",
     "autoprefixer": "^10.2.5",
     "cpy-cli": "^3.1.1",
     "eslint": "^7.24.0",
