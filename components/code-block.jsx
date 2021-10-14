@@ -2,31 +2,47 @@ import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import colors from 'tailwindcss/colors'
 
-const CodeBlock = ({ language, value }) => {
-  return (
+const CodeBlock = ({
+  // eslint-disable-next-line no-unused-vars
+  node,
+  inline,
+  className,
+  children,
+  ...props
+}) => {
+  const match = /language-(\w+)/u.exec(className || '')
+  return !inline && match ? (
     <SyntaxHighlighter
-      language={language}
+      PreTag="div"
+      language={match[1]}
       style={{
-        imports: {
+        'pre[class*="language-"]': {
+          background: 'transparent',
+        },
+        'imports': {
           color: '#F92D8E',
         },
-        function: {
+        'function': {
           color: '#F92D8E',
         },
-        keyword: {
+        'keyword': {
           color: '#88a6f1',
         },
-        string: {
+        'string': {
           color: colors.coolGray['300'],
         },
-        comment: {
+        'comment': {
           color: colors.coolGray['400'],
         },
       }}
       tabIndex="0"
-    >
-      {value}
+      {...props}>
+      {String(children).replace(/\n$/u, '')}
     </SyntaxHighlighter>
+  ) : (
+    <code className={className} {...props}>
+      {children}
+    </code>
   )
 }
 

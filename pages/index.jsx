@@ -34,8 +34,7 @@ const Index = () => (
             <a
               aria-label="npm"
               className="inline-block hover:bg-primary hover:text-white md:px-4 py-2 rounded cursor-pointer"
-              href="https://www.npmjs.com/package/tings"
-            >
+              href="https://www.npmjs.com/package/tings">
               <FontAwesomeIcon fixedWidth icon={faNpm} size="2x" />
             </a>
           </li>
@@ -43,8 +42,7 @@ const Index = () => (
             <a
               aria-label="GitHub repository"
               className="inline-block hover:bg-primary hover:text-white md:px-4 py-2 rounded cursor-pointer"
-              href="https://github.com/will-stone/tings"
-            >
+              href="https://github.com/will-stone/tings">
               <FontAwesomeIcon fixedWidth icon={faGithub} size="2x" />
             </a>
           </li>
@@ -59,8 +57,7 @@ const Index = () => (
             <li key={ting.id}>
               <a
                 className="block font-medium px-4 py-2 hover:bg-primary hover:text-white rounded cursor-pointer truncate"
-                href={`#${ting.name}`}
-              >
+                href={`#${ting.name}`}>
                 {ting.name}
               </a>
             </li>
@@ -77,7 +74,9 @@ const Index = () => (
 
       <h2>Install</h2>
 
-      <CodeBlock language="shell" value="npm i tings" />
+      <pre>
+        <CodeBlock className="language-shell">npm i tings</CodeBlock>
+      </pre>
 
       {t.children.map((ting) => (
         <Fragment key={ting.id}>
@@ -86,14 +85,13 @@ const Index = () => (
           </h2>
           {ting.children[0].signatures.map((signature) => (
             <Fragment key={signature.id}>
-              <ReactMarkdown source={signature.comment.shortText} />
+              <ReactMarkdown>{signature.comment.shortText}</ReactMarkdown>
               {signature.comment.tags.map((tag) => {
                 if (tag.tag === 'requires') {
                   return (
                     <p
                       key={tag.tag}
-                      className="flex items-center space-x-2 font-bold"
-                    >
+                      className="flex items-center space-x-2 font-bold">
                       <span className="text-yellow-500 text-3xl">⚠</span>
                       <span>Requires {tag.text}</span>
                     </p>
@@ -105,10 +103,9 @@ const Index = () => (
                     <h3>
                       {tag.tag.replace(/^(.)|\s+(.)/gu, (c) => c.toUpperCase())}
                     </h3>
-                    <ReactMarkdown
-                      renderers={{ code: CodeBlock }}
-                      source={tag.text}
-                    />
+                    <ReactMarkdown components={{ code: CodeBlock }}>
+                      {tag.text}
+                    </ReactMarkdown>
                   </Fragment>
                 )
               })}

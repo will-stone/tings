@@ -26,6 +26,7 @@
   "typedocOptions": {
     "disableSources": true,
     "entryPoints": ["./src"],
+    "entryPointStrategy": "expand",
     "readme": "none",
     "exclude": "**/*+(index|.spec|.e2e).ts",
     "excludeInternal": true
