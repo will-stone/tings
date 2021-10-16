@@ -21,6 +21,9 @@
   "module": "dist/module.js",
   "source": "src/index.ts",
   "types": "dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npm run clean && parcel build",
     "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
@@ -99,7 +102,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "np": {
-    "yarn": false,
-    "contents": "./dist"
+    "yarn": false
   }
 }
