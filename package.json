@@ -17,6 +17,7 @@
     "email": "hello@wstone.io",
     "url": "https://wstone.io"
   },
+  "sideEffects": false,
   "main": "dist/main.js",
   "module": "dist/module.js",
   "source": "src/index.ts",
