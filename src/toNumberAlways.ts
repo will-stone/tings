@@ -2,7 +2,7 @@
  * Will return the given input as a number, if it cannot be converted, it will return 0.
  * @example
 ```ts
-import toNumberAlways from 'tings/toNumberAlways'
+import { toNumberAlways } from 'tings'
 
 toNumberAlways('this is text') // 0
 toNumberAlways('3') // 3
