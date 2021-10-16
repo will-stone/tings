@@ -7,7 +7,7 @@ import toNumberAlways from './toNumberAlways'
  * - notANumber -> 0th
  * @example
 ```ts
-import toOrdinal from 'tings/toOrdinal'
+import { toOrdinal } from 'tings'
 
 toOrdinal('this is text') // 0th
 toOrdinal('3') // 3rd

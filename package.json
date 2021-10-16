@@ -17,22 +17,23 @@
     "email": "hello@wstone.io",
     "url": "https://wstone.io"
   },
-  "main": "./index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "source": "src/index.ts",
+  "types": "dist/types.d.ts",
   "scripts": {
-    "build": "npm run clean && tsc --noEmit false",
+    "build": "npm run clean && parcel build",
     "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
     "clean": "rimraf ./dist ./docs ./node_modules/.cache",
     "generate-typedoc": "rimraf ./typedoc.json && typedoc --json ./typedoc.json --pretty",
-    "postinstall": "husky install",
     "lint": "eslint . --ignore-path .gitignore",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable",
+    "prepare": "husky install",
     "release": "npm run lint && npm run build && np",
     "start:docs": "npm run generate-typedoc && next dev",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- npm run test",
     "typecheck": "tsc --noEmit",
-    "postversion": "cpy README.md dist/ && cpy package.json dist/"
+    "watch": "parcel watch"
   },
   "lint-staged": {
     "*.{css,json,md}": [
@@ -59,6 +60,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
+    "@parcel/packager-ts": "^2.0.0",
+    "@parcel/transformer-typescript-types": "^2.0.0",
     "@tailwindcss/typography": "^0.4.1",
     "@types/react": "^17.0.29",
     "@types/sinon": "^10.0.4",
@@ -71,7 +74,7 @@
     "lint-staged": "^11.2.3",
     "next": "^11.1.2",
     "np": "^7.5.0",
-    "pinst": "^2.1.6",
+    "parcel": "^2.0.0",
     "postcss": "^8.3.9",
     "prettier": "^2.4.1",
     "raw-loader": "^4.0.2",
