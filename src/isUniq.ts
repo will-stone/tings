@@ -3,7 +3,7 @@
  * Will return true for any input that's not an array.
  * @example
 ```ts
-import { isUniq } from 'tings'
+import isUniq from 'tings/isUniq'
 
 isUniq([1, 2, 3]) // true
 isUniq([1, 1, 2]) // false

@@ -2,7 +2,7 @@
  * Determines if input is a string that does not contain whitespaces.
  * @example
 ```ts
-import { isCompactCase } from 'tings'
+import isCompactCase from 'tings/isCompactCase'
 
 isCompactCase('thisiscompact') // true
 isCompactCase('this is not compact') // false
