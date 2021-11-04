@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isCompactCase } from '../src'
+import isCompactCase from '../src/isCompactCase'
 
 const falsey = [
   123,

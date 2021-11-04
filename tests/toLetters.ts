@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { toLetters } from '../src'
+import toLetters from '../src/toLetters'
 
 const cases = [
   [0, ''],
