@@ -98,6 +98,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "np": {
-    "yarn": false
+    "yarn": false,
+    "contents": "./dist"
   }
 }
