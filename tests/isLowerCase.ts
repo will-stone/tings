@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isLowerCase } from '../src'
+import isLowerCase from '../src/isLowerCase'
 
 const falsey = ['Title Case', 'camelCase', 'PascalCase', []]
 for (const input of falsey) {

@@ -2,7 +2,7 @@ import sinon from 'sinon'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { sleep } from '../src'
+import sleep from '../src/sleep'
 
 // A test helper to spy on a callback and know if time has passed
 const sleepWrapper = async (ms: unknown, callback: () => void) => {

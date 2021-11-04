@@ -1,7 +1,7 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import { isUniq } from '../src'
+import isUniq from '../src/isUniq'
 
 const falsey = [
   ['', ''],
