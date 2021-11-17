@@ -3,7 +3,8 @@
     "titleBar.activeBackground": "#a11258",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#a1125899",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "sash.hoverBorder": "#cf1771"
   },
   "peacock.color": "#A11258",
   "typescript.tsdk": "node_modules/typescript/lib"
