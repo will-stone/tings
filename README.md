@@ -10,4 +10,4 @@
 
 ---
 
-Docs: https://tings.wstone.io/
+Docs: https://tings.wstone.uk/
