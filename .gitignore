@@ -1,4 +1,3 @@
-dist
 node_modules
 coverage
 yarn-error.log
@@ -7,3 +6,6 @@ yarn-error.log
 docs/
 typedoc.json
 .parcel-cache
+
+# TypeScript incremental compilation cache
+*.tsbuildinfo
