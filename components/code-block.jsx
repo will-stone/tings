@@ -29,14 +29,15 @@ const CodeBlock = ({
           color: '#88a6f1',
         },
         'string': {
-          color: colors.coolGray['300'],
+          color: colors.gray['300'],
         },
         'comment': {
-          color: colors.coolGray['400'],
+          color: colors.gray['400'],
         },
       }}
       tabIndex="0"
-      {...props}>
+      {...props}
+    >
       {String(children).replace(/\n$/u, '')}
     </SyntaxHighlighter>
   ) : (

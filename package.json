@@ -3,10 +3,9 @@
   "version": "3.0.1",
   "private": false,
   "description": "A collection of small JavaScript utilities",
-  "homepage": "https://tings.wstone.io/",
+  "homepage": "https://tings.wstone.uk/",
   "bugs": {
-    "url": "https://github.com/will-stone/tings/issues",
-    "email": "hello@wstone.io"
+    "url": "https://github.com/will-stone/tings/issues"
   },
   "repository": {
     "url": "https://github.com/will-stone/tings"
@@ -14,27 +13,25 @@
   "license": "MIT",
   "author": {
     "name": "Will Stone",
-    "email": "hello@wstone.io",
-    "url": "https://wstone.io"
+    "email": "hello@wstone.uk",
+    "url": "https://wstone.uk"
   },
   "sideEffects": false,
-  "main": "./main.js",
+  "main": "./lib/index.js",
   "scripts": {
     "build": "npm run clean && tsc --noEmit false",
     "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
-    "clean": "rimraf ./dist ./docs ./node_modules/.cache",
+    "clean": "rimraf ./lib ./docs ./node_modules/.cache",
     "generate-typedoc": "rimraf ./typedoc.json && typedoc --json ./typedoc.json --pretty",
     "postinstall": "husky install",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint .",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "release": "npm run lint && npm run build && np",
     "start:docs": "npm run generate-typedoc && next dev",
     "test": "uvu -r ts-node/register tests",
     "test:watch": "watchlist src tests -- npm run test",
-    "typecheck": "tsc --noEmit",
-    "postversion": "cpy README.md dist/ && cpy package.json dist/",
-    "watch": "parcel watch"
+    "typecheck": "tsc --noEmit"
   },
   "lint-staged": {
     "*.{css,json,md}": [
@@ -50,10 +47,24 @@
       "@will-stone/eslint-config/typescript",
       "@will-stone/eslint-config/node",
       "@will-stone/eslint-config/react",
+      "plugin:tailwindcss/recommended",
       "@will-stone/eslint-config/prettier"
     ],
     "rules": {
-      "jsx-a11y/anchor-is-valid": "off"
+      "jsx-a11y/anchor-is-valid": "off",
+      "tailwindcss/no-custom-classname": [
+        "error",
+        {
+          "whitelist": [
+            "scrollbar",
+            "scrollbar-(thumb-.+|track-.+)",
+            "lead",
+            "language-.+",
+            "scroll-(smooth|mt-.+)",
+            "prose-invert"
+          ]
+        }
+      ]
     }
   },
   "devDependencies": {
@@ -61,35 +72,46 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
-    "@tailwindcss/typography": "^0.4.1",
-    "@types/react": "^17.0.34",
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/react": "^17.0.38",
     "@types/sinon": "^10.0.6",
-    "@will-stone/eslint-config": "^4.4.0",
-    "@will-stone/prettier-config": "^5.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "@will-stone/eslint-config": "^6.3.0",
+    "@will-stone/prettier-config": "^6.0.0",
     "autoprefixer": "^10.4.0",
     "cpy-cli": "^3.1.1",
-    "eslint": "^7.32.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-switch-case": "^1.1.2",
+    "eslint-plugin-tailwindcss": "^1.17.2",
+    "eslint-plugin-unicorn": "^39.0.0",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.6",
-    "next": "^12.0.2",
-    "np": "~7.4.0",
+    "lint-staged": "^12.1.4",
+    "next": "^12.0.7",
+    "np": "~7.6.0",
     "pinst": "^2.1.6",
-    "postcss": "^8.3.11",
-    "prettier": "^2.4.1",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
     "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-markdown": "^7.1.0",
-    "react-syntax-highlighter": "^15.4.4",
+    "react-markdown": "^7.1.1",
+    "react-syntax-highlighter": "^15.4.5",
     "rimraf": "^3.0.2",
-    "sinon": "^12.0.0",
+    "sinon": "^12.0.1",
     "tailwind-scrollbar": "^1.3.1",
-    "tailwindcss": "^2.2.19",
-    "tinycolor2": "^1.4.2",
+    "tailwindcss": "^3.0.7",
     "ts-node": "^10.4.0",
-    "typedoc": "^0.22.7",
-    "typedoc-plugin-markdown": "^3.11.3",
-    "typescript": "^4.4.4",
+    "typedoc": "^0.22.10",
+    "typedoc-plugin-markdown": "^3.11.8",
+    "typescript": "^4.5.4",
     "uvu": "^0.5.2",
     "watchlist": "^0.3.1"
   },
@@ -98,7 +120,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "np": {
-    "yarn": false,
-    "contents": "./dist"
+    "yarn": false
   }
 }
