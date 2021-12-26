@@ -88,7 +88,7 @@ const Index = () => (
 
       {t.children.map((ting) => (
         <Fragment key={ting.id}>
-          <h2 className="scroll-mt-8" id={ting.name}>
+          <h2 className="scroll-mt-28" id={ting.name}>
             <a href={`#${ting.name}`}>{ting.name}</a>
           </h2>
           {ting.children[0].signatures.map((signature) => (

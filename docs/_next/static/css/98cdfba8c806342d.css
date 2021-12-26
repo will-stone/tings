@@ -785,8 +785,8 @@ video {
 .cursor-pointer {
   cursor: pointer;
 }
-.scroll-mt-8 {
-  scroll-margin-top: 2rem;
+.scroll-mt-28 {
+  scroll-margin-top: 7rem;
 }
 .flex-col {
   flex-direction: column;
