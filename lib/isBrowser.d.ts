@@ -1,5 +1,5 @@
 /**
- * Is current code running in a browser environment
+ * Determines if current code is running in a browser environment.
  * @example
 ```ts
 import isBrowser from 'tings/lib/isBrowser'
