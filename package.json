@@ -22,9 +22,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "npm run clean && tsc --noEmit false",
-    "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
-    "clean": "rimraf ./lib ./docs ./node_modules/.cache",
+    "build": "rimraf ./lib && tsc --noEmit false",
+    "build:docs": "rimraf ./docs && npm run generate-typedoc && next build && next export --outdir ./docs",
     "generate-typedoc": "rimraf ./typedoc.json && typedoc --json ./typedoc.json --pretty",
     "lint": "eslint .",
     "prepare": "husky install",
