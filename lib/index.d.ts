@@ -1,3 +1,4 @@
+export { default as isBrowser } from './isBrowser';
 export { default as isCompactCase } from './isCompactCase';
 export { default as isLowerCase } from './isLowerCase';
 export { default as isUniq } from './isUniq';

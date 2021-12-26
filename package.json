@@ -23,6 +23,7 @@
   ],
   "scripts": {
     "build": "rimraf ./lib && tsc --noEmit false",
+    "build-and-test": "npm run build && npm run test",
     "build:docs": "rimraf ./docs && npm run generate-typedoc && next build && next export --outdir ./docs",
     "generate-typedoc": "rimraf ./typedoc.json && typedoc --json ./typedoc.json --pretty",
     "lint": "eslint .",
@@ -30,7 +31,7 @@
     "release": "npm run lint && npm run build && np",
     "start:docs": "npm run generate-typedoc && next dev",
     "test": "uvu -r esm ./tests",
-    "test:watch": "watchlist src tests -- npm run test",
+    "test:watch": "watchlist src tests -- npm run build-and-test",
     "typecheck": "tsc --noEmit",
     "version": "npm run build:docs && git add docs"
   },
