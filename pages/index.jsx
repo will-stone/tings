@@ -19,7 +19,7 @@ export const config = {
 
 const Index = () => (
   <div className="container" id="top">
-    <header className="md:container flex flex-col justify-center h-20 bg-gray-900 border-b border-primary">
+    <header className="md:container flex md:sticky md:top-0 flex-col justify-center h-20 bg-gray-900 border-b border-primary">
       <div className="flex justify-between items-center">
         <Link href="/">
           <a className="flex justify-center sm:justify-start items-center space-x-2">
