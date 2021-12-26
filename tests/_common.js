@@ -3,7 +3,7 @@ import path from 'path'
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import * as all from '../src'
+import * as all from '../lib'
 
 const tingFileNames = fs
   .readdirSync(path.join(__dirname, '..', 'src'))
@@ -12,7 +12,7 @@ const tingFileNames = fs
 
 const tingTestFileNames = fs
   .readdirSync(__dirname)
-  .filter((n) => n !== '_common.ts')
+  .filter((n) => n !== '_common.js')
   .map((f) => f.split('.')[0])
 
 const tings = Object.keys(all)
