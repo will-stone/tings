@@ -5,7 +5,7 @@
  * - notANumber -> 0th
  * @example
 ```ts
-import toOrdinal from 'tings/toOrdinal'
+import toOrdinal from 'tings/lib/toOrdinal'
 
 toOrdinal('this is text') // 0th
 toOrdinal('3') // 3rd
