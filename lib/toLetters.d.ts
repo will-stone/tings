@@ -2,7 +2,7 @@
  * Removes all non-alphabetical characters from a string.
  * @example
 ```ts
-import toLetters from 'tings/toLetters'
+import toLetters from 'tings/lib/toLetters'
 
 toLetters('this is text') // thisistext
 toLetters('123-Text!!!') // Text
