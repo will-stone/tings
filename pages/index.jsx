@@ -1,5 +1,6 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub'
 import { faNpm } from '@fortawesome/free-brands-svg-icons/faNpm'
+import { faChevronCircleUp } from '@fortawesome/free-solid-svg-icons/faChevronCircleUp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React, { Fragment } from 'react'
@@ -17,8 +18,8 @@ export const config = {
 }
 
 const Index = () => (
-  <div className="container">
-    <header className="md:container flex md:fixed top-0 right-0 left-0 flex-col justify-center h-20 bg-gray-900 border-b border-primary">
+  <div className="container" id="top">
+    <header className="md:container flex flex-col justify-center h-20 bg-gray-900 border-b border-primary">
       <div className="flex justify-between items-center">
         <Link href="/">
           <a className="flex justify-center sm:justify-start items-center space-x-2">
@@ -69,9 +70,11 @@ const Index = () => (
       </nav>
     </aside>
 
-    {/* TODO remove this when eslint rule updated - falsely doesn't like prose prose-lg */}
-    {/* eslint-disable-next-line tailwindcss/no-contradicting-classname */}
-    <main className="pb-32 mt-8 md:mt-36 md:ml-52 lg:ml-72 prose prose-lg prose-invert">
+    <main
+      // TODO remove this when eslint rule updated - falsely doesn't like prose prose-lg
+      // eslint-disable-next-line tailwindcss/no-contradicting-classname
+      className="pb-32 mt-16 md:ml-52 lg:ml-72 prose prose-lg prose-invert"
+    >
       <p className="lead">
         A collection of small JavaScript utilities by{' '}
         <a href="https://wstone.uk/">Will Stone</a>.
@@ -85,7 +88,7 @@ const Index = () => (
 
       {t.children.map((ting) => (
         <Fragment key={ting.id}>
-          <h2 className="scroll-mt-28" id={ting.name}>
+          <h2 className="scroll-mt-8" id={ting.name}>
             <a href={`#${ting.name}`}>{ting.name}</a>
           </h2>
           {ting.children[0].signatures.map((signature) => (
@@ -119,6 +122,13 @@ const Index = () => (
           ))}
         </Fragment>
       ))}
+
+      <a
+        className="fixed right-8 bottom-8 text-gray-600 hover:text-primary truncate rounded cursor-pointer"
+        href="/#top"
+      >
+        <FontAwesomeIcon fixedWidth icon={faChevronCircleUp} size="2x" />
+      </a>
     </main>
   </div>
 )
