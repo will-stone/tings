@@ -1,9 +1,10 @@
 import { test } from 'uvu'
 import * as assert from 'uvu/assert'
 
-import isLowerCase from '../src/isLowerCase'
+import isLowerCase from '../lib/isLowerCase'
 
 const falsey = ['Title Case', 'camelCase', 'PascalCase', []]
+
 for (const input of falsey) {
   test(`${input} is false`, () => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -19,6 +20,7 @@ const truthy = [
   `
   `,
 ]
+
 for (const input of truthy) {
   test(`${input} is true`, () => {
     assert.is(isLowerCase(input), true)
