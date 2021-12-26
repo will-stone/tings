@@ -18,6 +18,9 @@
   },
   "sideEffects": false,
   "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "npm run clean && tsc --noEmit false",
     "build:docs": "npm run clean && npm run generate-typedoc && next build && next export --outdir ./docs",
