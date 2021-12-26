@@ -3,7 +3,6 @@ coverage
 yarn-error.log
 
 .next
-docs/
 typedoc.json
 .parcel-cache
 

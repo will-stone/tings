@@ -31,7 +31,8 @@
     "start:docs": "npm run generate-typedoc && next dev",
     "test": "uvu -r esm ./tests",
     "test:watch": "watchlist src tests -- npm run test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "version": "npm run build:docs && git add docs"
   },
   "lint-staged": {
     "*.{css,json,md}": [
