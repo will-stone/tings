@@ -1,7 +1,7 @@
 name: CI
 on: [push]
 jobs:
-  Lint and Test:
+  lint-and-test:
     runs-on: ubuntu-latest
 
     steps:
