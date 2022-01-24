@@ -19,10 +19,10 @@ export const config = {
 
 const Index = () => (
   <div className="container" id="top">
-    <header className="md:container flex md:sticky md:top-0 flex-col justify-center h-20 bg-gray-900 border-b border-primary">
+    <header className="flex flex-col justify-center h-20 bg-gray-900 border-b border-primary md:container md:sticky md:top-0">
       <div className="flex justify-between items-center">
         <Link href="/">
-          <a className="flex justify-center sm:justify-start items-center space-x-2">
+          <a className="flex justify-center items-center space-x-2 sm:justify-start">
             <img alt="" className="w-12" src="/logo2.png" />
             <h1 className="text-3xl font-bold leading-snug text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-600">
               Tings <span className="text-xs">{packageJson.version}</span>
@@ -30,11 +30,11 @@ const Index = () => (
           </a>
         </Link>
 
-        <ul className="flex items-center md:-mr-4 space-x-4">
+        <ul className="flex items-center space-x-4 md:-mr-4">
           <li>
             <a
               aria-label="npm"
-              className="inline-block py-2 md:px-4 hover:text-white hover:bg-primary rounded cursor-pointer"
+              className="inline-block py-2 hover:text-white hover:bg-primary rounded cursor-pointer md:px-4"
               href="https://www.npmjs.com/package/tings"
             >
               <FontAwesomeIcon fixedWidth icon={faNpm} size="2x" />
@@ -43,7 +43,7 @@ const Index = () => (
           <li>
             <a
               aria-label="GitHub repository"
-              className="inline-block py-2 md:px-4 hover:text-white hover:bg-primary rounded cursor-pointer"
+              className="inline-block py-2 hover:text-white hover:bg-primary rounded cursor-pointer md:px-4"
               href="https://github.com/will-stone/tings"
             >
               <FontAwesomeIcon fixedWidth icon={faGithub} size="2x" />
@@ -53,7 +53,7 @@ const Index = () => (
       </div>
     </header>
 
-    <aside className="hidden md:block overflow-x-hidden overflow-y-auto fixed top-20 bottom-5 pt-16 md:w-40 lg:w-60 scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-900">
+    <aside className="hidden overflow-x-hidden overflow-y-auto fixed top-20 bottom-5 pt-16 md:block md:w-40 lg:w-60 scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-900">
       <nav className="pb-16">
         <ul className="">
           {t.children.map((ting) => (
@@ -73,7 +73,7 @@ const Index = () => (
     <main
       // TODO remove this when eslint rule updated - falsely doesn't like prose prose-lg
       // eslint-disable-next-line tailwindcss/no-contradicting-classname
-      className="pb-32 mt-16 md:ml-52 lg:ml-72 prose prose-lg prose-invert"
+      className="pb-32 mt-16 prose prose-lg prose-invert md:ml-52 lg:ml-72"
     >
       <p className="lead">
         A collection of small JavaScript utilities by{' '}
