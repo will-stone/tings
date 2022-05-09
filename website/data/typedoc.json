@@ -1,534 +1,562 @@
 {
-  "id": 0,
-  "name": "tings",
-  "kind": 1,
-  "flags": {},
-  "originalName": "",
-  "children": [
-    {
-      "id": 1,
-      "name": "isBrowser",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 2,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 3,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Determines if current code is running in a browser environment.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport isBrowser from 'tings/lib/isBrowser'\n\nisBrowser() // true\n```\n"
-                  }
-                ]
-              },
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [2]
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "isCompactCase",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 5,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 6,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Determines if input is a string that does not contain whitespaces.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport isCompactCase from 'tings/lib/isCompactCase'\n\nisCompactCase('thisiscompact') // true\nisCompactCase('this is not compact') // false\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 7,
-                  "name": "input",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [5]
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "isLowerCase",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 9,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 10,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Determines if input is a string containing no UPPERcase characters.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport isLowerCase from 'tings/lib/isLowerCase'\n\nisLowerCase('this is lower') // true\nisLowerCase('This is not LOWER') // false\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 11,
-                  "name": "string",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "string"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [9]
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "name": "isUniq",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 13,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 14,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Determines if an array only contains unique items.\nWill return true for any input that's not an array.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport isUniq from 'tings/lib/isUniq'\n\nisUniq([1, 2, 3]) // true\nisUniq([1, 1, 2]) // false\nisUniq('not array') // true\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 15,
-                  "name": "input",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [13]
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "name": "sleep",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 17,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 18,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Pauses the current function.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport sleep from 'tings/lib/sleep'\n\nawait sleep(2000) // sleeps for 2 seconds\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 19,
-                  "name": "milliseconds",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "number"
-                  }
-                }
-              ],
-              "type": {
-                "type": "reference",
-                "typeArguments": [
-                  {
-                    "type": "intrinsic",
-                    "name": "void"
-                  }
-                ],
-                "qualifiedName": "Promise",
-                "package": "typescript",
-                "name": "Promise"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [17]
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "name": "toCompactCase",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 21,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 22,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Removes all whitespace characters from a string.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport toCompactCase from 'tings/lib/toCompactCase'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 23,
-                  "name": "input",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [21]
-        }
-      ]
-    },
-    {
-      "id": 24,
-      "name": "toLetters",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 25,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 26,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Removes all non-alphabetical characters from a string.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport toLetters from 'tings/lib/toLetters'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 27,
-                  "name": "input",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [25]
-        }
-      ]
-    },
-    {
-      "id": 28,
-      "name": "toNumberAlways",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 29,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 30,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Will return the given input as a number, if it cannot be converted, it will return 0.",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport toNumberAlways from 'tings/lib/toNumberAlways'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 31,
-                  "name": "input",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "number"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [29]
-        }
-      ]
-    },
-    {
-      "id": 32,
-      "name": "toOrdinal",
-      "kind": 2,
-      "kindString": "Module",
-      "flags": {},
-      "children": [
-        {
-          "id": 33,
-          "name": "default",
-          "kind": 64,
-          "kindString": "Function",
-          "flags": {},
-          "signatures": [
-            {
-              "id": 34,
-              "name": "default",
-              "kind": 4096,
-              "kindString": "Call signature",
-              "flags": {},
-              "comment": {
-                "shortText": "Converts a number to its ordinal string form, if possible, else returns 0th.\n- 1 -> 1st\n- 4.2 -> 4.2th\n- notANumber -> 0th",
-                "tags": [
-                  {
-                    "tag": "example",
-                    "text": "\n```ts\nimport toOrdinal from 'tings/lib/toOrdinal'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```\n"
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 35,
-                  "name": "input",
-                  "kind": 32768,
-                  "kindString": "Parameter",
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  },
-                  "defaultValue": "0"
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "kind": 64,
-          "children": [33]
-        }
-      ]
-    }
-  ],
-  "groups": [
-    {
-      "title": "Modules",
-      "kind": 2,
-      "children": [1, 4, 8, 12, 16, 20, 24, 28, 32]
-    }
-  ]
+	"id": 0,
+	"name": "tings",
+	"kind": 1,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "isBrowser",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 2,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Determines if current code is running in a browser environment.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport isBrowser from 'tings/lib/isBrowser'\n\nisBrowser() // true\n```\n"
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "isCompactCase",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 5,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 6,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Determines if input is a string that does not contain whitespaces.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport isCompactCase from 'tings/lib/isCompactCase'\n\nisCompactCase('thisiscompact') // true\nisCompactCase('this is not compact') // false\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 7,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						5
+					]
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "isLowerCase",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 9,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 10,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Determines if input is a string containing no UPPERcase characters.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport isLowerCase from 'tings/lib/isLowerCase'\n\nisLowerCase('this is lower') // true\nisLowerCase('This is not LOWER') // false\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 11,
+									"name": "string",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						9
+					]
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "isUniq",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 13,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 14,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Determines if an array only contains unique items.\nWill return true for any input that's not an array.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport isUniq from 'tings/lib/isUniq'\n\nisUniq([1, 2, 3]) // true\nisUniq([1, 1, 2]) // false\nisUniq('not array') // true\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 15,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						13
+					]
+				}
+			]
+		},
+		{
+			"id": 16,
+			"name": "sleep",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 17,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 18,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Pauses the current function.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport sleep from 'tings/lib/sleep'\n\nawait sleep(2000) // sleeps for 2 seconds\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 19,
+									"name": "milliseconds",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"qualifiedName": "Promise",
+								"package": "typescript",
+								"name": "Promise"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						17
+					]
+				}
+			]
+		},
+		{
+			"id": 20,
+			"name": "toCompactCase",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 21,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 22,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Removes all whitespace characters from a string.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport toCompactCase from 'tings/lib/toCompactCase'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 23,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						21
+					]
+				}
+			]
+		},
+		{
+			"id": 24,
+			"name": "toLetters",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 25,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 26,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Removes all non-alphabetical characters from a string.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport toLetters from 'tings/lib/toLetters'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 27,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						25
+					]
+				}
+			]
+		},
+		{
+			"id": 28,
+			"name": "toNumberAlways",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 29,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 30,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Will return the given input as a number, if it cannot be converted, it will return 0.",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport toNumberAlways from 'tings/lib/toNumberAlways'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 31,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						29
+					]
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "toOrdinal",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 33,
+					"name": "default",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 34,
+							"name": "default",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Converts a number to its ordinal string form, if possible, else returns 0th.\n- 1 -> 1st\n- 4.2 -> 4.2th\n- notANumber -> 0th",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n```ts\nimport toOrdinal from 'tings/lib/toOrdinal'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 35,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									},
+									"defaultValue": "0"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						33
+					]
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 2,
+			"children": [
+				1,
+				4,
+				8,
+				12,
+				16,
+				20,
+				24,
+				28,
+				32
+			]
+		}
+	]
 }

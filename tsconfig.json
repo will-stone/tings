@@ -31,8 +31,7 @@
     "readme": "none",
     "exclude": "**/*+(index|.spec|.e2e).ts",
     "excludeInternal": true,
-    "json": "./website/data/typedoc.json",
-    "pretty": true
+    "json": "./website/data/typedoc.json"
   },
   "include": ["**/*.ts", "**/*.tsx"]
 }

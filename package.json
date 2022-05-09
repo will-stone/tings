@@ -26,7 +26,7 @@
     "build-and-test": "npm run build && npm run test",
     "build:docs": "rimraf ./docs && npm run generate-typedoc && astro build",
     "dev:docs": "npm run generate-typedoc && astro dev",
-    "generate-typedoc": "rimraf ./website/data/typedoc.json && typedoc --json ./website/data/typedoc.json --pretty",
+    "generate-typedoc": "rimraf ./website/data/typedoc.json && typedoc",
     "lint": "eslint .",
     "prepare": "husky install",
     "release": "npm run lint && npm run build && np",
