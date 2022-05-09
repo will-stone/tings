@@ -6,7 +6,7 @@ import * as assert from 'uvu/assert'
 import * as all from '../lib'
 
 const tingFileNames = fs
-  .readdirSync(path.join(__dirname, '..', 'src'))
+  .readdirSync(path.join(__dirname, '..', 'source'))
   .filter((n) => n !== 'index.ts')
   .map((f) => f.split('.')[0])
 
