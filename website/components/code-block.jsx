@@ -1,6 +1,4 @@
-import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import colors from 'tailwindcss/colors'
 
 const CodeBlock = ({
   // eslint-disable-next-line no-unused-vars
@@ -29,10 +27,10 @@ const CodeBlock = ({
           color: '#88a6f1',
         },
         'string': {
-          color: colors.gray['300'],
+          color: '#D1D5DB',
         },
         'comment': {
-          color: colors.gray['400'],
+          color: '#9CA3AF',
         },
       }}
       tabIndex="0"

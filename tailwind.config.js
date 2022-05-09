@@ -3,10 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const scrollbar = require('tailwind-scrollbar')
 
 module.exports = {
-  content: [
-    './components/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./website/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     screens: {
       sm: '640px',
