@@ -26,7 +26,7 @@
   "exclude": ["node_modules", "lib", "tests"],
   "typedocOptions": {
     "disableSources": true,
-    "entryPoints": ["./src"],
+    "entryPoints": ["./source"],
     "entryPointStrategy": "expand",
     "readme": "none",
     "exclude": "**/*+(index|.spec|.e2e).ts",

@@ -31,7 +31,7 @@
     "prepare": "husky install",
     "release": "npm run lint && npm run build && np",
     "test": "uvu -r esm ./tests",
-    "test:watch": "watchlist src tests -- npm run build-and-test",
+    "test:watch": "watchlist source tests -- npm run build-and-test",
     "typecheck": "tsc --noEmit",
     "version": "npm run build:docs && git add docs"
   },
