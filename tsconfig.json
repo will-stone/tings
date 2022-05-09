@@ -30,7 +30,9 @@
     "entryPointStrategy": "expand",
     "readme": "none",
     "exclude": "**/*+(index|.spec|.e2e).ts",
-    "excludeInternal": true
+    "excludeInternal": true,
+    "json": "./website/data/typedoc.json",
+    "pretty": true
   },
-  "include": ["next-environment.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx"]
 }

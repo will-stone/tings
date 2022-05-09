@@ -2,8 +2,6 @@ node_modules
 coverage
 yarn-error.log
 
-.next
-typedoc.json
 .parcel-cache
 
 # TypeScript incremental compilation cache
