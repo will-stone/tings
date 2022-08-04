@@ -1,5 +1,4 @@
 const typography = require('@tailwindcss/typography')
-const defaultTheme = require('tailwindcss/defaultTheme')
 const scrollbar = require('tailwind-scrollbar')
 
 module.exports = {
@@ -15,9 +14,6 @@ module.exports = {
       padding: '1.5rem',
     },
     extend: {
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
       colors: {
         // Wild Strawberry
         primary: '#F92D8E',
