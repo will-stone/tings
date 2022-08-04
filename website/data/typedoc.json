@@ -26,11 +26,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Determines if current code is running in a browser environment.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport isBrowser from 'tings/lib/isBrowser'\n\nisBrowser() // true\n```\n"
+										"kind": "text",
+										"text": "Determines if current code is running in a browser environment."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport isBrowser from 'tings/lib/isBrowser'\n\nisBrowser() // true\n```"
+											}
+										]
 									}
 								]
 							},
@@ -45,7 +55,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						2
 					]
@@ -73,11 +82,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Determines if input is a string that does not contain whitespaces.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport isCompactCase from 'tings/lib/isCompactCase'\n\nisCompactCase('thisiscompact') // true\nisCompactCase('this is not compact') // false\n```\n"
+										"kind": "text",
+										"text": "Determines if input is a string that does not contain whitespaces."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport isCompactCase from 'tings/lib/isCompactCase'\n\nisCompactCase('thisiscompact') // true\nisCompactCase('this is not compact') // false\n```"
+											}
+										]
 									}
 								]
 							},
@@ -105,7 +124,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						5
 					]
@@ -133,11 +151,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Determines if input is a string containing no UPPERcase characters.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport isLowerCase from 'tings/lib/isLowerCase'\n\nisLowerCase('this is lower') // true\nisLowerCase('This is not LOWER') // false\n```\n"
+										"kind": "text",
+										"text": "Determines if input is a string containing no UPPERcase characters."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport isLowerCase from 'tings/lib/isLowerCase'\n\nisLowerCase('this is lower') // true\nisLowerCase('This is not LOWER') // false\n```"
+											}
+										]
 									}
 								]
 							},
@@ -165,7 +193,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						9
 					]
@@ -193,11 +220,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Determines if an array only contains unique items.\nWill return true for any input that's not an array.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport isUniq from 'tings/lib/isUniq'\n\nisUniq([1, 2, 3]) // true\nisUniq([1, 1, 2]) // false\nisUniq('not array') // true\n```\n"
+										"kind": "text",
+										"text": "Determines if an array only contains unique items.\nWill return true for any input that's not an array."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport isUniq from 'tings/lib/isUniq'\n\nisUniq([1, 2, 3]) // true\nisUniq([1, 1, 2]) // false\nisUniq('not array') // true\n```"
+											}
+										]
 									}
 								]
 							},
@@ -225,7 +262,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						13
 					]
@@ -253,11 +289,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Pauses the current function.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport sleep from 'tings/lib/sleep'\n\nawait sleep(2000) // sleeps for 2 seconds\n```\n"
+										"kind": "text",
+										"text": "Pauses the current function."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport sleep from 'tings/lib/sleep'\n\nawait sleep(2000) // sleeps for 2 seconds\n```"
+											}
+										]
 									}
 								]
 							},
@@ -282,9 +328,9 @@
 										"name": "void"
 									}
 								],
+								"name": "Promise",
 								"qualifiedName": "Promise",
-								"package": "typescript",
-								"name": "Promise"
+								"package": "typescript"
 							}
 						}
 					]
@@ -293,7 +339,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						17
 					]
@@ -321,11 +366,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Removes all whitespace characters from a string.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport toCompactCase from 'tings/lib/toCompactCase'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```\n"
+										"kind": "text",
+										"text": "Removes all whitespace characters from a string."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport toCompactCase from 'tings/lib/toCompactCase'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
+											}
+										]
 									}
 								]
 							},
@@ -353,7 +408,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						21
 					]
@@ -381,11 +435,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Removes all non-alphabetical characters from a string.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport toLetters from 'tings/lib/toLetters'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```\n"
+										"kind": "text",
+										"text": "Removes all non-alphabetical characters from a string."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport toLetters from 'tings/lib/toLetters'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+											}
+										]
 									}
 								]
 							},
@@ -413,7 +477,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						25
 					]
@@ -441,11 +504,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Will return the given input as a number, if it cannot be converted, it will return 0.",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport toNumberAlways from 'tings/lib/toNumberAlways'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```\n"
+										"kind": "text",
+										"text": "Will return the given input as a number, if it cannot be converted, it will return 0."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport toNumberAlways from 'tings/lib/toNumberAlways'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```"
+											}
+										]
 									}
 								]
 							},
@@ -473,7 +546,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						29
 					]
@@ -501,11 +573,21 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Converts a number to its ordinal string form, if possible, else returns 0th.\n- 1 -> 1st\n- 4.2 -> 4.2th\n- notANumber -> 0th",
-								"tags": [
+								"summary": [
 									{
-										"tag": "example",
-										"text": "\n```ts\nimport toOrdinal from 'tings/lib/toOrdinal'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```\n"
+										"kind": "text",
+										"text": "Converts a number to its ordinal string form, if possible, else returns 0th.\n- 1 -> 1st\n- 4.2 -> 4.2th\n- notANumber -> 0th"
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport toOrdinal from 'tings/lib/toOrdinal'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```"
+											}
+										]
 									}
 								]
 							},
@@ -534,7 +616,6 @@
 			"groups": [
 				{
 					"title": "Functions",
-					"kind": 64,
 					"children": [
 						33
 					]
@@ -545,7 +626,6 @@
 	"groups": [
 		{
 			"title": "Modules",
-			"kind": 2,
 			"children": [
 				1,
 				4,
