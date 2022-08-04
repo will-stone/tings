@@ -7,21 +7,21 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "isBrowser",
+			"name": "is-browser",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 2,
-					"name": "default",
+					"name": "isBrowser",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 3,
-							"name": "default",
+							"name": "isBrowser",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -38,7 +38,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport isBrowser from 'tings/lib/isBrowser'\n\nisBrowser() // true\n```"
+												"text": "```ts\nimport { isBrowser } from 'tings'\n\nisBrowser() // true\n```"
 											}
 										]
 									}
@@ -63,21 +63,21 @@
 		},
 		{
 			"id": 4,
-			"name": "isCompactCase",
+			"name": "is-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 5,
-					"name": "default",
+					"name": "isCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 6,
-							"name": "default",
+							"name": "isCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -94,7 +94,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport isCompactCase from 'tings/lib/isCompactCase'\n\nisCompactCase('thisiscompact') // true\nisCompactCase('this is not compact') // false\n```"
+												"text": "```ts\nimport { isCompactCase } from 'tings'\n\nisCompactCase('thisiscompact') // true\nisCompactCase('this is not compact') // false\n```"
 											}
 										]
 									}
@@ -132,21 +132,21 @@
 		},
 		{
 			"id": 8,
-			"name": "isLowerCase",
+			"name": "is-lower-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 9,
-					"name": "default",
+					"name": "isLowerCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 10,
-							"name": "default",
+							"name": "isLowerCase",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -163,7 +163,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport isLowerCase from 'tings/lib/isLowerCase'\n\nisLowerCase('this is lower') // true\nisLowerCase('This is not LOWER') // false\n```"
+												"text": "```ts\nimport { isLowerCase } from 'tings'\n\nisLowerCase('this is lower') // true\nisLowerCase('This is not LOWER') // false\n```"
 											}
 										]
 									}
@@ -201,21 +201,21 @@
 		},
 		{
 			"id": 12,
-			"name": "isUniq",
+			"name": "is-uniq",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 13,
-					"name": "default",
+					"name": "isUniq",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 14,
-							"name": "default",
+							"name": "isUniq",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -232,7 +232,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport isUniq from 'tings/lib/isUniq'\n\nisUniq([1, 2, 3]) // true\nisUniq([1, 1, 2]) // false\nisUniq('not array') // true\n```"
+												"text": "```ts\nimport { isUniq } from 'tings'\n\nisUniq([1, 2, 3]) // true\nisUniq([1, 1, 2]) // false\nisUniq('not array') // true\n```"
 											}
 										]
 									}
@@ -277,14 +277,14 @@
 			"children": [
 				{
 					"id": 17,
-					"name": "default",
+					"name": "sleep",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 18,
-							"name": "default",
+							"name": "sleep",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -301,7 +301,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport sleep from 'tings/lib/sleep'\n\nawait sleep(2000) // sleeps for 2 seconds\n```"
+												"text": "```ts\nimport { sleep } from 'tings'\n\nawait sleep(2000) // sleeps for 2 seconds\n```"
 											}
 										]
 									}
@@ -347,21 +347,21 @@
 		},
 		{
 			"id": 20,
-			"name": "toCompactCase",
+			"name": "to-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 21,
-					"name": "default",
+					"name": "toCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 22,
-							"name": "default",
+							"name": "toCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -378,7 +378,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport toCompactCase from 'tings/lib/toCompactCase'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
+												"text": "```ts\nimport { toCompactCase } from 'tings'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
 											}
 										]
 									}
@@ -416,21 +416,21 @@
 		},
 		{
 			"id": 24,
-			"name": "toLetters",
+			"name": "to-letters",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 25,
-					"name": "default",
+					"name": "toLetters",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 26,
-							"name": "default",
+							"name": "toLetters",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -447,7 +447,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport toLetters from 'tings/lib/toLetters'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+												"text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
 											}
 										]
 									}
@@ -485,21 +485,21 @@
 		},
 		{
 			"id": 28,
-			"name": "toNumberAlways",
+			"name": "to-number-always",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 29,
-					"name": "default",
+					"name": "toNumberAlways",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 30,
-							"name": "default",
+							"name": "toNumberAlways",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -516,7 +516,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport toNumberAlways from 'tings/lib/toNumberAlways'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```"
+												"text": "```ts\nimport { toNumberAlways } from 'tings'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```"
 											}
 										]
 									}
@@ -554,21 +554,21 @@
 		},
 		{
 			"id": 32,
-			"name": "toOrdinal",
+			"name": "to-ordinal",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 33,
-					"name": "default",
+					"name": "toOrdinal",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 34,
-							"name": "default",
+							"name": "toOrdinal",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -585,7 +585,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport toOrdinal from 'tings/lib/toOrdinal'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```"
+												"text": "```ts\nimport { toOrdinal } from 'tings'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```"
 											}
 										]
 									}
