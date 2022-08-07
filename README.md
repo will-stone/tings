@@ -11,3 +11,7 @@
 ---
 
 Docs: https://tings.wstone.uk/
+
+---
+
+[![Verified on Openbase](https://badges.openbase.com/js/verified/tings.svg?token=rICHl9+BHdkOYcjuLQ/xFwWqsXaiIkphs/0zxeDPTr0=)](https://openbase.com/js/tings?utm_source=embedded&amp;utm_medium=badge&amp;utm_campaign=rate-badge) Openbase
