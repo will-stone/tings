@@ -1,0 +1,55 @@
+{
+  "name": "tings",
+  "version": "4.1.1",
+  "private": false,
+  "description": "A collection of small JavaScript utilities",
+  "homepage": "https://tings.wstone.uk/",
+  "bugs": {
+    "url": "https://github.com/will-stone/tings/issues"
+  },
+  "repository": {
+    "url": "https://github.com/will-stone/tings"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Will Stone",
+    "email": "hello@wstone.uk",
+    "url": "https://wstone.uk"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "unbuild",
+    "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typedoc": "^0.23.10",
+    "typedoc-plugin-markdown": "^3.13.4",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.6",
+    "vitest": "^0.21.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
