@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ESNext", "DOM"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "useDefineForClassFields": true
+  },
+  "include": ["source"],
+  "typedocOptions": {
+    "disableSources": true,
+    "entryPoints": ["./source"],
+    "entryPointStrategy": "expand",
+    "exclude": "**/*+(index|.spec|.e2e).ts",
+    "excludeInternal": true,
+    "json": "../website/data/typedoc.json",
+    "readme": "none"
+  }
+}
