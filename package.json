@@ -8,10 +8,10 @@
   ],
   "scripts": {
     "build": "npm run build -w tings && npm run build -w website",
-    "dev": "npm run dev --workspaces --if-present",
+    "dev": "npm run dev -ws --if-present",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs,.cjs",
     "prepare": "husky install",
-    "test": "npm test --workspaces --if-present"
+    "test": "npm test -ws --if-present"
   },
   "lint-staged": {
     "*.{css,json,md}": [
