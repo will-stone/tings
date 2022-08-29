@@ -6,3 +6,5 @@ yarn-error.log
 *.tsbuildinfo
 
 package/dist/
+
+.DS_Store
