@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { isLowerCase } from '../source/index.js'
+import { isLowerCase } from '../dist/index.js'
 
 const falsey = ['Title Case', 'camelCase', 'PascalCase', []]
 

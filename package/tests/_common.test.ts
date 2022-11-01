@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { expect, test } from 'vitest'
 
-import * as all from '../source/index.js'
+import * as all from '../dist/index.js'
 
 const tingFileNames = fs
   .readdirSync(path.join(__dirname, '..', 'source'))

@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { toOrdinal } from '../source/index.js'
+import { toOrdinal } from '../dist/index.js'
 
 const cases = [
   // Nonsense

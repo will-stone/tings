@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { isCompactCase } from '../source/index.js'
+import { isCompactCase } from '../dist/index.js'
 
 const falsey = [
   123,

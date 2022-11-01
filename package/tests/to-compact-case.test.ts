@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { toCompactCase } from '../source/index.js'
+import { toCompactCase } from '../dist/index.js'
 
 const cases = [
   [0, '0'],

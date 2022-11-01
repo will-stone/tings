@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { isUniq } from '../source/index.js'
+import { isUniq } from '../dist/index.js'
 
 test('should return false when array does not contain unique items', () => {
   expect(isUniq(['', ''])).toBe(false)

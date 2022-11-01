@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { isBrowser } from '../source/index.js'
+import { isBrowser } from '../dist/index.js'
 
 test('isBrowser is true', () => {
   const originalWindow = global.window

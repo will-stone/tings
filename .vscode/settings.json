@@ -9,5 +9,5 @@
   },
   "peacock.color": "#A11258",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "cSpell.words": ["postbuild"]
+  "cSpell.words": ["dts", "postbuild"]
 }

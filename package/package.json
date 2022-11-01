@@ -33,9 +33,10 @@
   ],
   "scripts": {
     "prebuild": "rimraf ./dist",
-    "build": "unbuild",
+    "build": "vite build",
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "prepublishOnly": "npm run build",
+    "pretest": "npm run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "type-check": "tsc"
@@ -45,7 +46,8 @@
     "typedoc": "^0.23.10",
     "typedoc-plugin-markdown": "^3.13.4",
     "typescript": "^4.7.4",
-    "unbuild": "^0.7.6",
+    "vite": "^3.2.2",
+    "vite-plugin-dts": "^1.6.6",
     "vitest": "^0.21.0"
   },
   "publishConfig": {
