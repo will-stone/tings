@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { toLetters } from '../source/index.js'
+import { toLetters } from '../dist/index.js'
 
 const cases = [
   [0, ''],
