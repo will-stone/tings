@@ -15,7 +15,6 @@ for (const file of fs.readdirSync(path.resolve(__dirname, './source'))) {
 export default defineConfig({
   build: {
     minify: false,
-    sourcemap: true,
     lib: {
       entry,
       formats: ['es', 'cjs'],
