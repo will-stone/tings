@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
@@ -14,11 +15,14 @@ for (const file of fs.readdirSync(path.resolve(__dirname, './source'))) {
 
 export default defineConfig({
   build: {
-    minify: false,
+    emptyOutDir: true,
+
     lib: {
       entry,
       formats: ['es', 'cjs'],
     },
+
+    minify: false,
   },
   plugins: [dts()],
 })

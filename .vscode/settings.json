@@ -9,5 +9,6 @@
   },
   "peacock.color": "#A11258",
   "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": ["dts", "postbuild"]
 }

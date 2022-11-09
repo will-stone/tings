@@ -1,11 +1,13 @@
+import type { FC } from 'react'
 import { Fragment } from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import packageJson from '../../package.json'
-import CodeBlock from '../components/code-block.jsx'
+import packageJson from '../../package/package.json'
 import t from '../data/typedoc.json'
+// eslint-disable-next-line import/extensions
+import CodeBlock from './components/code-block'
 
-export const Index = () => (
+const Index: FC = () => (
   <div className="container" id="top">
     <header className="border-primary flex h-20 flex-col justify-center border-b bg-gray-900 md:container md:sticky md:top-0">
       <div className="flex items-center justify-between">
@@ -72,6 +74,7 @@ export const Index = () => (
       <h2>Install</h2>
 
       <pre>
+        {/* @ts-expect-error -- is this type wrong? */}
         <CodeBlock className="language-shell">npm i tings</CodeBlock>
       </pre>
 
@@ -106,3 +109,5 @@ export const Index = () => (
     </main>
   </div>
 )
+
+export default Index
