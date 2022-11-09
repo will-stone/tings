@@ -5,6 +5,4 @@ yarn-error.log
 # TypeScript incremental compilation cache
 *.tsbuildinfo
 
-package/dist/
-
 .DS_Store

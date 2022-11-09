@@ -2,17 +2,19 @@ const typography = require('@tailwindcss/typography')
 const scrollbar = require('tailwind-scrollbar')
 
 module.exports = {
-  content: ['./**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}'],
+  content: ['./app/**/*.{html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     screens: {
-      sm: '640px',
-      md: '768px',
       lg: '1024px',
+      md: '768px',
+      sm: '640px',
     },
+
     container: {
       center: true,
       padding: '1.5rem',
     },
+
     extend: {
       colors: {
         // Wild Strawberry
@@ -20,5 +22,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [typography, scrollbar],
 }

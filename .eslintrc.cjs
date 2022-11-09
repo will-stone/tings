@@ -13,9 +13,9 @@ module.exports = {
     '@will-stone/eslint-config-node',
     'plugin:tailwindcss/recommended',
     '@will-stone/eslint-config-prettier',
-    'plugin:astro/recommended',
   ],
   rules: {
+    'import/extensions': ['error', 'always', { ignorePackages: true }],
     'tailwindcss/no-custom-classname': [
       'error',
       {
@@ -30,25 +30,5 @@ module.exports = {
         ],
       },
     ],
-    'import/extensions': ['error', 'always', { ignorePackages: true }],
   },
-  overrides: [
-    {
-      // Define the configuration for `.astro` file.
-      files: ['*.astro'],
-      // Allows Astro components to be parsed.
-      parser: 'astro-eslint-parser',
-      // Parse the script in `.astro` as TypeScript by adding the following configuration.
-      // It's the setting you need when using TypeScript.
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.astro'],
-      },
-      rules: {
-        // override/add rules settings here, such as:
-        // "astro/no-set-html-directive": "error"
-      },
-    },
-    // ...
-  ],
 }
