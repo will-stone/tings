@@ -61,11 +61,7 @@ const Index: FC = () => (
       </nav>
     </aside>
 
-    <main
-      // TODO remove this when eslint rule updated - falsely doesn't like prose prose-lg
-      // eslint-disable-next-line tailwindcss/no-contradicting-classname
-      className="prose prose-lg prose-invert mt-16 pb-32 md:ml-52 lg:ml-72"
-    >
+    <main className="prose prose-lg prose-invert mt-16 pb-32 md:ml-52 lg:ml-72">
       <p className="lead">
         A collection of small JavaScript utilities by{' '}
         <a href="https://wstone.uk/">Will Stone</a>.
