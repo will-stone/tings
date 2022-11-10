@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { toNumberAlways } from '../dist/index.js'
+import { toNumber } from '../dist/index.js'
 
 const cases = [
   [-2, -2],
@@ -27,5 +27,5 @@ const cases = [
 
 // @ts-expect-error -- doesn't like some of the inputs
 test.each(cases)('%s is %s', (input, expected) => {
-  expect(toNumberAlways(input)).toBe(expected)
+  expect(toNumber(input)).toBe(expected)
 })

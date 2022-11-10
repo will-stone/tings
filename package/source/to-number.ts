@@ -2,15 +2,15 @@
  * Will return the given input as a number, if it cannot be converted, it will return 0.
  * @example
 ```ts
-import { toNumberAlways } from 'tings'
+import { toNumber } from 'tings'
 
-toNumberAlways('this is text') // 0
-toNumberAlways('3') // 3
-toNumberAlways(0.4) // 0.4
-toNumberAlways(new Set([])) // 0
+toNumber('this is text') // 0
+toNumber('3') // 3
+toNumber(0.4) // 0.4
+toNumber(new Set([])) // 0
 ```
  */
-function toNumberAlways(input: unknown): number {
+function toNumber(input: unknown): number {
   try {
     const number = Number(input)
 
@@ -24,4 +24,4 @@ function toNumberAlways(input: unknown): number {
   }
 }
 
-export { toNumberAlways }
+export { toNumber }

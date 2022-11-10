@@ -1,4 +1,4 @@
-import { toNumberAlways } from './to-number-always.js'
+import { toNumber } from './to-number.js'
 
 /**
  * Converts a number to its ordinal string form, if possible, else returns 0th.
@@ -15,7 +15,7 @@ toOrdinal('11') // 11th
 ```
  */
 function toOrdinal(input: unknown = 0): string {
-  const number = toNumberAlways(input)
+  const number = toNumber(input)
   const isInt = Number.isInteger(number)
 
   if (isInt) {

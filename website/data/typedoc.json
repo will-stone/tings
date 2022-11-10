@@ -485,21 +485,21 @@
 		},
 		{
 			"id": 28,
-			"name": "to-number-always",
+			"name": "to-number",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 29,
-					"name": "toNumberAlways",
+					"name": "toNumber",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 30,
-							"name": "toNumberAlways",
+							"name": "toNumber",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -516,7 +516,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toNumberAlways } from 'tings'\n\ntoNumberAlways('this is text') // 0\ntoNumberAlways('3') // 3\ntoNumberAlways(0.4) // 0.4\ntoNumberAlways(new Set([])) // 0\n```"
+												"text": "```ts\nimport { toNumber } from 'tings'\n\ntoNumber('this is text') // 0\ntoNumber('3') // 3\ntoNumber(0.4) // 0.4\ntoNumber(new Set([])) // 0\n```"
 											}
 										]
 									}

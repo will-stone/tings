@@ -1,4 +1,4 @@
-import { toNumberAlways } from './to-number-always.js'
+import { toNumber } from './to-number.js'
 
 /**
  * Pauses the current function.
@@ -12,7 +12,7 @@ await sleep(2000) // sleeps for 2 seconds
 function sleep(milliseconds: number): Promise<void> {
   const input = milliseconds as unknown
 
-  const ms = toNumberAlways(input)
+  const ms = toNumber(input)
 
   return new Promise((resolve) => {
     setTimeout(resolve, ms)
