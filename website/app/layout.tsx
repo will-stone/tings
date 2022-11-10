@@ -12,6 +12,10 @@ const RootLayout: FC<Props> = ({ children }) => {
       <head>
         <title>Tings</title>
 
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+        <meta charSet="utf8" />
+
         <link
           href="/apple-touch-icon.png"
           rel="apple-touch-icon"
