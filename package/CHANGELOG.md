@@ -1,5 +1,11 @@
 # tings
 
+## 5.0.2
+
+### Patch Changes
+
+- Another test release.
+
 ## 5.0.1
 
 ### Patch Changes
