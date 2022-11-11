@@ -114,8 +114,13 @@
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "boolean"
+								"type": "predicate",
+								"name": "input",
+								"asserts": false,
+								"targetType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
 							}
 						}
 					]
@@ -172,19 +177,24 @@
 							"parameters": [
 								{
 									"id": 11,
-									"name": "string",
+									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "intrinsic",
-										"name": "string"
+										"name": "unknown"
 									}
 								}
 							],
 							"type": {
-								"type": "intrinsic",
-								"name": "boolean"
+								"type": "predicate",
+								"name": "input",
+								"asserts": false,
+								"targetType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
 							}
 						}
 					]

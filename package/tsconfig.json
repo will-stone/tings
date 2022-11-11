@@ -12,9 +12,10 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true,
+    "types": ["vitest/importMeta"],
     "useDefineForClassFields": true
   },
-  "include": ["source"],
+  "include": ["source", "_common.test.ts"],
   "typedocOptions": {
     "disableSources": true,
     "entryPoints": ["./source"],
