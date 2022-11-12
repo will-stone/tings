@@ -30,5 +30,6 @@ export default defineConfig({
   plugins: [dts()],
   test: {
     includeSource: ['source/**/*.{js,ts}'],
+    watch: false,
   },
 })

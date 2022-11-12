@@ -35,9 +35,7 @@
     "build": "vite build",
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "prepublishOnly": "npm run build",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "type-check": "tsc"
+    "test": "vitest typecheck"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
