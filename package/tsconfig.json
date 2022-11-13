@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["ESNext", "DOM"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "outDir": "dist",
     "skipLibCheck": true,
     "strict": true,
     "types": ["vitest/importMeta"],
