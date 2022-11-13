@@ -1,5 +1,11 @@
 # tings
 
+## 6.0.1
+
+### Patch Changes
+
+- Just a test now Tings uses pnpm.
+
 ## 6.0.0
 
 ### Major Changes
