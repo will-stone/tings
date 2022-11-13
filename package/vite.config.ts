@@ -2,7 +2,6 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import dts from 'vite-plugin-dts'
 import { defineConfig } from 'vitest/config'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -27,7 +26,6 @@ export default defineConfig({
   define: {
     'import.meta.vitest': 'undefined',
   },
-  plugins: [dts()],
   test: {
     includeSource: ['source/**/*.{js,ts}'],
     watch: false,
