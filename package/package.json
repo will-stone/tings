@@ -34,7 +34,7 @@
   "scripts": {
     "build": "vite build",
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm run build",
     "test": "vitest typecheck"
   },
   "devDependencies": {
