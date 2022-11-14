@@ -14,7 +14,7 @@ for (const file of fs.readdirSync(path.resolve(__dirname, './source'))) {
 
 export default defineConfig({
   build: {
-    emptyOutDir: true,
+    emptyOutDir: false,
 
     lib: {
       entry,
