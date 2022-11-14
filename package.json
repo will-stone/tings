@@ -3,7 +3,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "build": "pnpm -r run build",
+    "build": "pnpm -r --workspace-concurrency=1 run build",
     "dev": "pnpm -r run dev",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs,.cjs",
     "prepare": "husky install",
