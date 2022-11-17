@@ -2,12 +2,16 @@
   "name": "tings-monorepo",
   "private": true,
   "license": "MIT",
+  "workspaces": [
+    "website",
+    "package"
+  ],
   "scripts": {
-    "build": "pnpm -r --workspace-concurrency=1 run build",
-    "dev": "pnpm -r run dev",
+    "build": "npm run build -w tings && npm run build -w website",
+    "dev": "npm run dev -ws --if-present",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs,.cjs",
     "prepare": "husky install",
-    "test": "pnpm -r test"
+    "test": "npm test -ws --if-present"
   },
   "lint-staged": {
     "*.{css,json,md}": [
@@ -30,7 +34,6 @@
     "eslint-plugin-tailwindcss": "^3.6.2",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "typescript": "^4.8.4"
+    "prettier": "^2.7.1"
   }
 }
