@@ -1,5 +1,6 @@
 /**
  * Pauses the current function.
+ * @category Misc
  * @example
 ```ts
 import { sleep } from 'tings'

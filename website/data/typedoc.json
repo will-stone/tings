@@ -57,6 +57,14 @@
 					"title": "Functions",
 					"children": [
 						2
+					],
+					"categories": [
+						{
+							"title": "Environment",
+							"children": [
+								2
+							]
+						}
 					]
 				}
 			]
@@ -85,7 +93,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Determines if input is a string that does not contain whitespaces."
+										"text": "Determines if input is a string that does not contain white-spaces."
 									}
 								],
 								"blockTags": [
@@ -131,6 +139,14 @@
 					"title": "Functions",
 					"children": [
 						5
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								5
+							]
+						}
 					]
 				}
 			]
@@ -205,6 +221,14 @@
 					"title": "Functions",
 					"children": [
 						9
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								9
+							]
+						}
 					]
 				}
 			]
@@ -274,6 +298,14 @@
 					"title": "Functions",
 					"children": [
 						13
+					],
+					"categories": [
+						{
+							"title": "Array",
+							"children": [
+								13
+							]
+						}
 					]
 				}
 			]
@@ -351,6 +383,14 @@
 					"title": "Functions",
 					"children": [
 						17
+					],
+					"categories": [
+						{
+							"title": "Misc",
+							"children": [
+								17
+							]
+						}
 					]
 				}
 			]
@@ -420,6 +460,14 @@
 					"title": "Functions",
 					"children": [
 						21
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								21
+							]
+						}
 					]
 				}
 			]
@@ -489,6 +537,14 @@
 					"title": "Functions",
 					"children": [
 						25
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								25
+							]
+						}
 					]
 				}
 			]
@@ -558,6 +614,14 @@
 					"title": "Functions",
 					"children": [
 						29
+					],
+					"categories": [
+						{
+							"title": "Number",
+							"children": [
+								29
+							]
+						}
 					]
 				}
 			]
@@ -628,6 +692,14 @@
 					"title": "Functions",
 					"children": [
 						33
+					],
+					"categories": [
+						{
+							"title": "Number",
+							"children": [
+								33
+							]
+						}
 					]
 				}
 			]

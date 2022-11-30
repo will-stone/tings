@@ -1,6 +1,7 @@
 /**
  * Determines if an array only contains unique items.
  * Will return true for any input that's not an array.
+ * @category Array
  * @example
 ```ts
 import { isUniq } from 'tings'

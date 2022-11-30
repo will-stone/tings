@@ -2,6 +2,7 @@ import { toNumber } from './to-number.js'
 
 /**
  * Pauses the current function.
+ * @category Misc
  * @example
 ```ts
 import { sleep } from 'tings'

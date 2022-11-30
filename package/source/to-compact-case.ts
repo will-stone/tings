@@ -1,5 +1,6 @@
 /**
  * Removes all whitespace characters from a string.
+ * @category String
  * @example
 ```ts
 import { toCompactCase } from 'tings'
