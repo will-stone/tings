@@ -2,7 +2,7 @@ const typography = require('@tailwindcss/typography')
 const scrollbar = require('tailwind-scrollbar')
 
 module.exports = {
-  content: ['./app/**/*.{html,js,jsx,svelte,ts,tsx,vue}'],
+  content: ['./pages/**/*.{html,js,jsx,svelte,ts,tsx,vue}'],
   theme: {
     screens: {
       lg: '1024px',

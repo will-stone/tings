@@ -7,7 +7,7 @@
     "dev": "next dev",
     "start": "next start"
   },
-  "devDependencies": {
+  "dependencies": {
     "@tailwindcss/typography": "^0.5.8",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
