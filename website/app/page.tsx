@@ -7,6 +7,30 @@ import t from '../data/typedoc.json'
 // eslint-disable-next-line import/extensions
 import CodeBlock from './components/code-block'
 
+interface Ting {
+  id: number
+  name: string
+  signatures: unknown
+  summary: string
+  code: string
+}
+
+const byCategory: Record<string, Ting[]> = {}
+
+for (const ting of t.children) {
+  const { name, id, signatures } = ting.children[0]
+  const summary = signatures[0].comment.summary[0].text
+  const code = signatures[0].comment.blockTags[0].content[0].text
+  const category = ting.groups[0].categories[0].title
+  const details = { code, id, name, signatures, summary }
+
+  if (byCategory[category]) {
+    byCategory[category].push(details)
+  } else {
+    byCategory[category] = [details]
+  }
+}
+
 const Index: FC = () => (
   <div className="container" id="top">
     <header className="border-primary flex h-20 flex-col justify-center border-b bg-gray-900 md:container md:sticky md:top-0">
@@ -45,19 +69,26 @@ const Index: FC = () => (
     </header>
 
     <aside className="scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-900 fixed top-20 bottom-5 hidden overflow-y-auto overflow-x-hidden pt-16 md:block md:w-40 lg:w-60">
-      <nav className="pb-16">
-        <ul className="">
-          {t.children.map((ting) => (
-            <li key={ting.id}>
-              <a
-                className="hover:bg-primary block cursor-pointer truncate rounded py-2 px-4 font-medium hover:text-white"
-                href={`#${ting.children[0].name}`}
-              >
-                {ting.children[0].name}
-              </a>
-            </li>
+      <nav className="space-y-8 pb-16">
+        {Object.entries(byCategory)
+          .sort()
+          .map(([category, tings]) => (
+            <div key={category}>
+              <h2 className="text-gray-500">{category}</h2>
+              {tings.map((ting) => (
+                <ul key={ting.id}>
+                  <li>
+                    <a
+                      className="hover:bg-primary block cursor-pointer truncate rounded py-2 px-4 font-medium hover:text-white"
+                      href={`#${ting.name}`}
+                    >
+                      {ting.name}
+                    </a>
+                  </li>
+                </ul>
+              ))}
+            </div>
           ))}
-        </ul>
       </nav>
     </aside>
 
@@ -74,27 +105,30 @@ const Index: FC = () => (
         <CodeBlock className="language-shell">npm i tings</CodeBlock>
       </pre>
 
-      <h2>Tings</h2>
-
-      {t.children.map((ting) => (
-        <Fragment key={ting.id}>
-          <h3 className="scroll-mt-28" id={ting.children[0].name}>
-            <a href={`#${ting.children[0].name}`}>{ting.children[0].name}</a>
-          </h3>
-          {ting.children[0].signatures.map((signature) => (
-            <Fragment key={signature.id}>
-              <ReactMarkdown>{signature.comment.summary[0].text}</ReactMarkdown>
-              {signature.comment.blockTags.map((tag) => {
-                return (
-                  <ReactMarkdown key={tag.tag} components={{ code: CodeBlock }}>
-                    {tag.content[0].text}
-                  </ReactMarkdown>
-                )
-              })}
-            </Fragment>
-          ))}
-        </Fragment>
-      ))}
+      {Object.entries(byCategory)
+        .sort()
+        .map(([category, tings]) => (
+          <Fragment key={category}>
+            {tings.map((ting) => (
+              <Fragment key={ting.id}>
+                <h2 className="scroll-mt-28" id={ting.name}>
+                  <a href={`#${ting.name}`}>{ting.name}</a>
+                  <span
+                    aria-label={`in ${category} category`}
+                    className="bg-primary ml-4 rounded py-1 px-2 text-xs"
+                    role="presentation"
+                  >
+                    {category}
+                  </span>
+                </h2>
+                <ReactMarkdown>{ting.summary}</ReactMarkdown>
+                <ReactMarkdown components={{ code: CodeBlock }}>
+                  {ting.code}
+                </ReactMarkdown>
+              </Fragment>
+            ))}
+          </Fragment>
+        ))}
 
       <a
         className="hover:text-primary fixed right-8 bottom-8 flex h-8 w-8 cursor-pointer items-center justify-center truncate rounded bg-gray-800/80 text-xs leading-none text-gray-100 no-underline"

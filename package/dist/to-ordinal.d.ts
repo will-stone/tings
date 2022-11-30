@@ -3,6 +3,7 @@
  * - 1 -> 1st
  * - 4.2 -> 4.2th
  * - notANumber -> 0th
+ * @category Number
  * @example
 ```ts
 import { toOrdinal } from 'tings'

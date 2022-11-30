@@ -1,5 +1,6 @@
 /**
  * Determines if input is a string containing no UPPERcase characters.
+ * @category String
  * @example
 ```ts
 import { isLowerCase } from 'tings'

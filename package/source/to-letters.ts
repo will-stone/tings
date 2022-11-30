@@ -1,5 +1,6 @@
 /**
  * Removes all non-alphabetical characters from a string.
+ * @category String
  * @example
 ```ts
 import { toLetters } from 'tings'

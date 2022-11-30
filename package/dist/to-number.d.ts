@@ -1,5 +1,6 @@
 /**
  * Will return the given input as a number, if it cannot be converted, it will return 0.
+ * @category Number
  * @example
 ```ts
 import { toNumber } from 'tings'
