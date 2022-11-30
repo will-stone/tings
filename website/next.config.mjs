@@ -1,9 +1,7 @@
 // @ts-check
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  pageExtensions: ['page.tsx'],
   reactStrictMode: true,
 }
 

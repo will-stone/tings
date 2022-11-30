@@ -1,17 +1,9 @@
-import 'tailwindcss/tailwind.css'
+import { Head, Html, Main, NextScript } from 'next/document'
 
-import type { FC, ReactNode } from 'react'
-
-interface Props {
-  children: ReactNode
-}
-
-const RootLayout: FC<Props> = ({ children }) => {
+function MyDocument(): JSX.Element {
   return (
-    <html className="scroll-smooth" lang="en">
-      <head>
-        <title>Tings</title>
-
+    <Html lang="en">
+      <Head>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
         <meta charSet="utf8" />
@@ -37,10 +29,14 @@ const RootLayout: FC<Props> = ({ children }) => {
         <link color="#cb1b71" href="/safari-pinned-tab.svg" rel="mask-icon" />
         <meta content="#ffffff" name="msapplication-TileColor" />
         <meta content="#ffffff" name="theme-color" />
-      </head>
-      <body className="bg-gray-900 text-gray-300">{children}</body>
-    </html>
+      </Head>
+
+      <body className="bg-gray-900 text-gray-300">
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
   )
 }
 
-export default RootLayout
+export default MyDocument
