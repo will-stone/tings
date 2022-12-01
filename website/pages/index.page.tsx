@@ -36,7 +36,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Will Stone</title>
+        <title>Tings</title>
       </Head>
 
       <div className="container" id="top">
