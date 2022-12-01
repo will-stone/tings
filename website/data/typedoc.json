@@ -397,7 +397,7 @@
 		},
 		{
 			"id": 20,
-			"name": "to-compact-case",
+			"name": "this-month",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
@@ -419,7 +419,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Removes all whitespace characters from a string."
+										"text": "Displays \"this month\" in given or current locale"
 									}
 								],
 								"blockTags": [
@@ -428,7 +428,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toCompactCase } from 'tings'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
+												"text": "```ts\nimport { thisMonth } from 'tings'\n\nthisMonth() // this month\nthisMonth() // ce mois-ci\n```"
 											}
 										]
 									}
@@ -437,14 +437,15 @@
 							"parameters": [
 								{
 									"id": 23,
-									"name": "input",
+									"name": "locale",
 									"kind": 32768,
 									"kindString": "Parameter",
 									"flags": {},
 									"type": {
 										"type": "intrinsic",
-										"name": "unknown"
-									}
+										"name": "string"
+									},
+									"defaultValue": "'en-GB'"
 								}
 							],
 							"type": {
@@ -463,7 +464,7 @@
 					],
 					"categories": [
 						{
-							"title": "String",
+							"title": "Date",
 							"children": [
 								21
 							]
@@ -474,21 +475,21 @@
 		},
 		{
 			"id": 24,
-			"name": "to-letters",
+			"name": "to-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 25,
-					"name": "toLetters",
+					"name": "toCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 26,
-							"name": "toLetters",
+							"name": "toCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -496,7 +497,7 @@
 								"summary": [
 									{
 										"kind": "text",
-										"text": "Removes all non-alphabetical characters from a string."
+										"text": "Removes all whitespace characters from a string."
 									}
 								],
 								"blockTags": [
@@ -505,7 +506,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+												"text": "```ts\nimport { toCompactCase } from 'tings'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
 											}
 										]
 									}
@@ -551,20 +552,97 @@
 		},
 		{
 			"id": 28,
-			"name": "to-number",
+			"name": "to-letters",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 29,
-					"name": "toNumber",
+					"name": "toLetters",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 30,
+							"name": "toLetters",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Removes all non-alphabetical characters from a string."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 31,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						29
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								29
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "to-number",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 33,
+					"name": "toNumber",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 34,
 							"name": "toNumber",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -590,7 +668,7 @@
 							},
 							"parameters": [
 								{
-									"id": 31,
+									"id": 35,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -613,13 +691,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						29
+						33
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								29
+								33
 							]
 						}
 					]
@@ -627,21 +705,21 @@
 			]
 		},
 		{
-			"id": 32,
+			"id": 36,
 			"name": "to-ordinal",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 33,
+					"id": 37,
 					"name": "toOrdinal",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 34,
+							"id": 38,
 							"name": "toOrdinal",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -667,7 +745,7 @@
 							},
 							"parameters": [
 								{
-									"id": 35,
+									"id": 39,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -691,13 +769,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						33
+						37
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								33
+								37
 							]
 						}
 					]
@@ -717,7 +795,8 @@
 				20,
 				24,
 				28,
-				32
+				32,
+				36
 			]
 		}
 	]

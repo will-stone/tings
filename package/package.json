@@ -36,15 +36,17 @@
     "build": "vite build && tsc",
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "prepublishOnly": "npm run build",
-    "test": "vitest typecheck"
+    "test": "vitest",
+    "typecheck": "vitest typecheck"
   },
   "devDependencies": {
+    "@types/node": "^18.11.10",
     "rimraf": "^3.0.2",
     "typedoc": "^0.23.20",
     "typedoc-plugin-markdown": "^3.13.6",
     "typescript": "^4.8.4",
     "vite": "^3.2.3",
-    "vitest": "^0.25.1"
+    "vitest": "^0.25.3"
   },
   "publishConfig": {
     "access": "public",
