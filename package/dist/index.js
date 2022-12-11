@@ -3,6 +3,7 @@ import { isCompactCase } from "./is-compact-case.js";
 import { isLowerCase } from "./is-lower-case.js";
 import { isUniq } from "./is-uniq.js";
 import { sleep } from "./sleep.js";
+import { thisMonth } from "./this-month.js";
 import { toCompactCase } from "./to-compact-case.js";
 import { toLetters } from "./to-letters.js";
 import { toNumber } from "./to-number.js";
@@ -13,6 +14,7 @@ export {
   isLowerCase,
   isUniq,
   sleep,
+  thisMonth,
   toCompactCase,
   toLetters,
   toNumber,

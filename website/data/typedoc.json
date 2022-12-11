@@ -404,14 +404,14 @@
 			"children": [
 				{
 					"id": 21,
-					"name": "toCompactCase",
+					"name": "thisMonth",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 22,
-							"name": "toCompactCase",
+							"name": "thisMonth",
 							"kind": 4096,
 							"kindString": "Call signature",
 							"flags": {},
@@ -428,7 +428,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { thisMonth } from 'tings'\n\nthisMonth() // this month\nthisMonth() // ce mois-ci\n```"
+												"text": "```ts\nimport { thisMonth } from 'tings'\n\nthisMonth() // this month\nthisMonth('fr) // ce mois-ci\nthisMonth('es) // este mes\n```"
 											}
 										]
 									}
@@ -440,12 +440,13 @@
 									"name": "locale",
 									"kind": 32768,
 									"kindString": "Parameter",
-									"flags": {},
+									"flags": {
+										"isOptional": true
+									},
 									"type": {
 										"type": "intrinsic",
 										"name": "string"
-									},
-									"defaultValue": "'en-GB'"
+									}
 								}
 							],
 							"type": {

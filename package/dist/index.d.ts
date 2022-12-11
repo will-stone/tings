@@ -3,6 +3,7 @@ export { isCompactCase } from './is-compact-case.js';
 export { isLowerCase } from './is-lower-case.js';
 export { isUniq } from './is-uniq.js';
 export { sleep } from './sleep.js';
+export { thisMonth } from './this-month.js';
 export { toCompactCase } from './to-compact-case.js';
 export { toLetters } from './to-letters.js';
 export { toNumber } from './to-number.js';
