@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const toNumber = require("./to-number.cjs");
 function sleep(milliseconds) {
   const input = milliseconds;

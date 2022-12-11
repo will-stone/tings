@@ -1,4 +1,4 @@
-function thisMonth(locale = "en-GB") {
+function thisMonth(locale) {
   const relativeTimeFormatter = new Intl.RelativeTimeFormat(locale, {
     localeMatcher: "best fit",
     numeric: "auto",
@@ -7,5 +7,5 @@ function thisMonth(locale = "en-GB") {
   return relativeTimeFormatter.format(0, "month");
 }
 export {
-  thisMonth as toCompactCase
+  thisMonth
 };
