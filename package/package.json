@@ -37,7 +37,7 @@
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "prepublishOnly": "npm run build",
     "test": "vitest",
-    "typecheck": "vitest typecheck"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
     "@types/node": "^18.14.6",
