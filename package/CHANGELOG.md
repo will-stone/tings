@@ -1,5 +1,15 @@
 # tings
 
+## 7.0.0
+
+### Major Changes
+
+- 2a8c5be: Remove `thisMonth` ting.
+
+### Patch Changes
+
+- 5114ccd: Update deps.
+
 ## 6.0.1
 
 ### Patch Changes
