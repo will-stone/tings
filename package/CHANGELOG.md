@@ -1,5 +1,11 @@
 # tings
 
+## 7.0.1
+
+### Patch Changes
+
+- Re-release.
+
 ## 7.0.0
 
 ### Major Changes
