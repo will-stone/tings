@@ -9,5 +9,4 @@ toLetters('this is text') // thisistext
 toLetters('123-Text!!!') // Text
 ```
  */
-declare function toLetters(input: unknown): string;
-export { toLetters };
+export declare function toLetters(input: unknown): string;

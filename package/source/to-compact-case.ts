@@ -9,7 +9,7 @@ toCompactCase('this is text') // thisistext
 toCompactCase('someTEXT') // someTEXT
 ```
  */
-function toCompactCase(input: unknown): string {
+export function toCompactCase(input: unknown): string {
   return String(input).replaceAll(/\s/gu, '')
 }
 
@@ -40,5 +40,3 @@ if (import.meta.vitest) {
     expect(result).toBe(expected)
   })
 }
-
-export { toCompactCase }

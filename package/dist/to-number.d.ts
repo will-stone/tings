@@ -11,5 +11,4 @@ toNumber(0.4) // 0.4
 toNumber(new Set([])) // 0
 ```
  */
-declare function toNumber(input: unknown): number;
-export { toNumber };
+export declare function toNumber(input: unknown): number;

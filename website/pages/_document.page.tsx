@@ -1,6 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 
-function MyDocument(): JSX.Element {
+export default function MyDocument(): JSX.Element {
   return (
     <Html lang="en">
       <Head>
@@ -36,5 +36,3 @@ function MyDocument(): JSX.Element {
     </Html>
   )
 }
-
-export default MyDocument

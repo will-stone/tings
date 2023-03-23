@@ -15,7 +15,7 @@ toOrdinal('3') // 3rd
 toOrdinal('11') // 11th
 ```
  */
-function toOrdinal(input: unknown = 0): string {
+export function toOrdinal(input: unknown = 0): string {
   const number = toNumber(input)
   const isInt = Number.isInteger(number)
 
@@ -119,5 +119,3 @@ if (import.meta.vitest) {
     expect(toOrdinal(input)).toBe(expected)
   })
 }
-
-export { toOrdinal }

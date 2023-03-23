@@ -11,7 +11,7 @@ toNumber(0.4) // 0.4
 toNumber(new Set([])) // 0
 ```
  */
-function toNumber(input: unknown): number {
+export function toNumber(input: unknown): number {
   try {
     const number = Number(input)
 
@@ -56,5 +56,3 @@ if (import.meta.vitest) {
     expect(toNumber(input)).toBe(expected)
   })
 }
-
-export { toNumber }

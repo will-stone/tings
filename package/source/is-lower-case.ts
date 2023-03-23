@@ -9,7 +9,7 @@ isLowerCase('this is lower') // true
 isLowerCase('This is not LOWER') // false
 ```
  */
-function isLowerCase(input: unknown): input is string {
+export function isLowerCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }
@@ -38,5 +38,3 @@ if (import.meta.vitest) {
     expect(isLowerCase(input)).toBe(true)
   })
 }
-
-export { isLowerCase }
