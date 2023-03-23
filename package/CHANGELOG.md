@@ -1,5 +1,11 @@
 # tings
 
+## 7.0.4
+
+### Patch Changes
+
+- a871048: Internal refactor to inline exports.
+
 ## 7.0.3
 
 ### Patch Changes
