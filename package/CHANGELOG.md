@@ -1,5 +1,11 @@
 # tings
 
+## 7.0.2
+
+### Patch Changes
+
+- 65738e4: Replace `replace` with `replaceAll`.
+
 ## 7.0.1
 
 ### Patch Changes
