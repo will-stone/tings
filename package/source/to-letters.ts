@@ -10,7 +10,7 @@ toLetters('123-Text!!!') // Text
 ```
  */
 function toLetters(input: unknown): string {
-  return String(input).replace(/[^a-zA-Z]/gu, '')
+  return String(input).replaceAll(/[^a-zA-Z]/gu, '')
 }
 
 if (import.meta.vitest) {

@@ -10,7 +10,7 @@ toCompactCase('someTEXT') // someTEXT
 ```
  */
 function toCompactCase(input: unknown): string {
-  return String(input).replace(/\s/gu, '')
+  return String(input).replaceAll(/\s/gu, '')
 }
 
 if (import.meta.vitest) {

@@ -16,7 +16,7 @@ const tingFileNames = fs
   .map((f) => f.split('.')[0])
 
 const camelToKebab = (string_: string): string =>
-  string_.replace(/([\da-z])([A-Z])/gu, '$1-$2').toLowerCase()
+  string_.replaceAll(/([\da-z])([A-Z])/gu, '$1-$2').toLowerCase()
 
 const tings = Object.keys(all).map(camelToKebab)
 

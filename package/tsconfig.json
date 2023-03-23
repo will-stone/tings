@@ -17,7 +17,7 @@
     "types": ["vitest/importMeta"],
     "useDefineForClassFields": true
   },
-  "include": ["source", "_common.test.ts"],
+  "include": ["source", "common.test.ts"],
   "typedocOptions": {
     "disableSources": true,
     "entryPoints": ["./source"],
