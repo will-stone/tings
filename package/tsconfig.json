@@ -17,12 +17,12 @@
     "types": ["vitest/importMeta"],
     "useDefineForClassFields": true
   },
-  "include": ["source", "common.test.ts"],
+  "include": ["source"],
   "typedocOptions": {
     "disableSources": true,
     "entryPoints": ["./source"],
     "entryPointStrategy": "expand",
-    "exclude": "**/*+(index|.spec|.e2e).ts",
+    "exclude": "**/*+(index|.spec|.e2e|.test).ts",
     "excludeInternal": true,
     "json": "../website/data/typedoc.json",
     "readme": "none"

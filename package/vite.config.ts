@@ -8,7 +8,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const entry = {}
 
 for (const file of fs.readdirSync(path.resolve(__dirname, './source'))) {
-  entry[path.parse(file).name] = `./source/${file}`
+  if (!file.startsWith('_')) {
+    entry[path.parse(file).name] = `./source/${file}`
+  }
 }
 
 export default defineConfig({

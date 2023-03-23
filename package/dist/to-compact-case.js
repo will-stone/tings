@@ -1,5 +1,5 @@
 function toCompactCase(input) {
-  return String(input).replace(/\s/gu, "");
+  return String(input).replaceAll(/\s/gu, "");
 }
 export {
   toCompactCase
