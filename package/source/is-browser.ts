@@ -8,7 +8,7 @@ import { isBrowser } from 'tings'
 isBrowser() // true
 ```
  */
-function isBrowser(): boolean {
+export function isBrowser(): boolean {
   if (typeof window === 'object' && typeof document === 'object') {
     return true
   }
@@ -35,5 +35,3 @@ if (import.meta.vitest) {
     expect(isBrowser()).toBe(false)
   })
 }
-
-export { isBrowser }

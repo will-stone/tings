@@ -9,7 +9,7 @@ isCompactCase('thisiscompact') // true
 isCompactCase('this is not compact') // false
 ```
  */
-function isCompactCase(input: unknown): input is string {
+export function isCompactCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }
@@ -56,5 +56,3 @@ if (import.meta.vitest) {
     expect(isCompactCase(input)).toBe(true)
   })
 }
-
-export { isCompactCase }

@@ -10,7 +10,7 @@ import { sleep } from 'tings'
 await sleep(2000) // sleeps for 2 seconds
 ```
  */
-function sleep(milliseconds: number): Promise<void> {
+export function sleep(milliseconds: number): Promise<void> {
   const input = milliseconds as unknown
 
   const ms = toNumber(input)
@@ -77,5 +77,3 @@ if (import.meta.vitest) {
     expect(callbackSpy).toBeCalledTimes(1)
   })
 }
-
-export { sleep }

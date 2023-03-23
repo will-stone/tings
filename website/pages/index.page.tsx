@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 import packageJson from '../../package/package.json'
 import t from '../data/typedoc.json'
 // eslint-disable-next-line import/extensions
-import CodeBlock from './components/code-block'
+import { CodeBlock } from './components/code-block'
 
 interface Ting {
   id: number

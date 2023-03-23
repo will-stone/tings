@@ -9,5 +9,4 @@ toCompactCase('this is text') // thisistext
 toCompactCase('someTEXT') // someTEXT
 ```
  */
-declare function toCompactCase(input: unknown): string;
-export { toCompactCase };
+export declare function toCompactCase(input: unknown): string;

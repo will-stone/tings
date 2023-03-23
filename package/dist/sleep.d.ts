@@ -8,5 +8,4 @@ import { sleep } from 'tings'
 await sleep(2000) // sleeps for 2 seconds
 ```
  */
-declare function sleep(milliseconds: number): Promise<void>;
-export { sleep };
+export declare function sleep(milliseconds: number): Promise<void>;

@@ -13,5 +13,4 @@ toOrdinal('3') // 3rd
 toOrdinal('11') // 11th
 ```
  */
-declare function toOrdinal(input?: unknown): string;
-export { toOrdinal };
+export declare function toOrdinal(input?: unknown): string;

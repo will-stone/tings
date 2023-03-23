@@ -11,5 +11,4 @@ isUniq([1, 1, 2]) // false
 isUniq('not array') // true
 ```
  */
-declare function isUniq(input: unknown): boolean;
-export { isUniq };
+export declare function isUniq(input: unknown): boolean;

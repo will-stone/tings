@@ -9,7 +9,7 @@ toLetters('this is text') // thisistext
 toLetters('123-Text!!!') // Text
 ```
  */
-function toLetters(input: unknown): string {
+export function toLetters(input: unknown): string {
   return String(input).replaceAll(/[^a-zA-Z]/gu, '')
 }
 
@@ -37,5 +37,3 @@ if (import.meta.vitest) {
     expect(result).toBe(expected)
   })
 }
-
-export { toLetters }

@@ -1,7 +1,7 @@
 import type { CodeComponent } from 'react-markdown/lib/ast-to-react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-const CodeBlock: CodeComponent = ({
+export const CodeBlock: CodeComponent = ({
   className,
   children,
   inline,
@@ -44,5 +44,3 @@ const CodeBlock: CodeComponent = ({
     </code>
   )
 }
-
-export default CodeBlock

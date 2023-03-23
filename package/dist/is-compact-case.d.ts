@@ -9,5 +9,4 @@ isCompactCase('thisiscompact') // true
 isCompactCase('this is not compact') // false
 ```
  */
-declare function isCompactCase(input: unknown): input is string;
-export { isCompactCase };
+export declare function isCompactCase(input: unknown): input is string;

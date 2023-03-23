@@ -11,7 +11,7 @@ isUniq([1, 1, 2]) // false
 isUniq('not array') // true
 ```
  */
-function isUniq(input: unknown): boolean {
+export function isUniq(input: unknown): boolean {
   if (Array.isArray(input)) {
     return new Set(input).size === input.length
   }
@@ -34,5 +34,3 @@ if (import.meta.vitest) {
     expect(isUniq([])).toBe(true)
   })
 }
-
-export { isUniq }

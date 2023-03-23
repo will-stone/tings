@@ -8,5 +8,4 @@ import { isBrowser } from 'tings'
 isBrowser() // true
 ```
  */
-declare function isBrowser(): boolean;
-export { isBrowser };
+export declare function isBrowser(): boolean;
