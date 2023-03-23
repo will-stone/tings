@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "vite build && tsc",
+    "build": "vite build && tsc -p tsconfig.build.json",
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "prepublishOnly": "npm run build",
     "test": "vitest",

@@ -2,14 +2,16 @@ import fs from 'fs'
 import path from 'path'
 import { expect, test } from 'vitest'
 
-import * as all from './source/index.js'
+import * as all from './index.js'
 
 const tingFileNames = fs
-  .readdirSync(path.join(__dirname, 'source'))
+  .readdirSync(path.join(__dirname))
   .filter(
     (n) =>
       // Do not count the index file
       n !== 'index.ts' &&
+      // Do not count files that should be ignored
+      !n.startsWith('_') &&
       // Do not count hidden files, e.g. .DS_Store
       !n.startsWith('.'),
   )

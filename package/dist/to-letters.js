@@ -1,5 +1,5 @@
 function toLetters(input) {
-  return String(input).replace(/[^a-zA-Z]/gu, "");
+  return String(input).replaceAll(/[^a-zA-Z]/gu, "");
 }
 export {
   toLetters
