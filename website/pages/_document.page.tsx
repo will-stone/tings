@@ -4,8 +4,6 @@ function MyDocument(): JSX.Element {
   return (
     <Html lang="en">
       <Head>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
         <meta charSet="utf8" />
 
         <link
