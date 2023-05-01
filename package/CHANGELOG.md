@@ -1,5 +1,11 @@
 # tings
 
+## 7.0.5
+
+### Patch Changes
+
+- d43a381: Internal refactor to use tsup for bundling.
+
 ## 7.0.4
 
 ### Patch Changes
