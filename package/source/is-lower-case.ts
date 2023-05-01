@@ -16,25 +16,3 @@ export function isLowerCase(input: unknown): input is string {
 
   return input === input.toLowerCase()
 }
-
-if (import.meta.vitest) {
-  const { test, expect } = import.meta.vitest
-
-  const falsey = ['Title Case', 'camelCase', 'PascalCase', []]
-
-  test.each(falsey)('%s is false', (input) => {
-    expect(isLowerCase(input)).toBe(false)
-  })
-
-  const truthy = [
-    'lowercase',
-    'lower case',
-    '',
-    `
-`,
-  ]
-
-  test.each(truthy)('%s is true', (input) => {
-    expect(isLowerCase(input)).toBe(true)
-  })
-}

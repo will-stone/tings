@@ -32,20 +32,20 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "vite build && tsc -p tsconfig.build.json",
+    "build": "tsup source/index.ts --dts --format esm,cjs --clean",
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "prepublishOnly": "npm run build",
-    "test": "vitest",
+    "test": "vitest --watch=false",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
     "@types/node": "^18.15.5",
     "rimraf": "^4.4.1",
+    "tsup": "^6.7.0",
     "typedoc": "^0.23.28",
     "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^5.0.2",
-    "vite": "^4.2.1",
+    "vite": "^4.3.3",
     "vitest": "^0.29.7"
   },
   "publishConfig": {
