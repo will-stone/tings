@@ -12,6 +12,12 @@ test.each([
   [8, 5, [8, 7, 6, 5]],
   [-3, 2, [-3, -2, -1, 0, 1, 2]],
   [3, -2, [3, 2, 1, 0, -1, -2]],
+  [undefined, 6, []],
+  ['', 6, []],
+  [[], 6, []],
+  [6, undefined, []],
+  [6, '', []],
+  [6, [], []],
 ])('from %d, to %d', (from, to, expected) => {
-  expect(generateIntegers(from, to)).toStrictEqual(expected)
+  expect(generateIntegers(from as number, to as number)).toStrictEqual(expected)
 })
