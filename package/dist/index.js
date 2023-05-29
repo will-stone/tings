@@ -1,3 +1,12 @@
+// source/generate-integers.ts
+function generateIntegers(from, to) {
+  const list = [];
+  for (let index = from; from < to ? index <= to : index >= to; index = from < to ? index + 1 : index - 1) {
+    list.push(index);
+  }
+  return list;
+}
+
 // source/is-browser.ts
 function isBrowser() {
   if (typeof window === "object" && typeof document === "object") {
@@ -83,6 +92,7 @@ function toOrdinal(input = 0) {
   return `${number}th`;
 }
 export {
+  generateIntegers,
   isBrowser,
   isCompactCase,
   isLowerCase,

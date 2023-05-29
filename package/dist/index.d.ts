@@ -1,4 +1,16 @@
 /**
+ * Generate an array of integers from a given number to another.
+ * @category Array
+ * @example
+```ts
+import { generateIntegers } from 'tings'
+
+generateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
+```
+ */
+declare function generateIntegers(from: number, to: number): number[];
+
+/**
  * Determines if current code is running in a browser environment.
  * @category Environment
  * @example
@@ -121,4 +133,4 @@ toOrdinal('11') // 11th
  */
 declare function toOrdinal(input?: unknown): string;
 
-export { isBrowser, isCompactCase, isLowerCase, isUniq, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
+export { generateIntegers, isBrowser, isCompactCase, isLowerCase, isUniq, sleep, toCompactCase, toLetters, toNumber, toOrdinal };

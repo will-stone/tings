@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // source/index.ts
 var source_exports = {};
 __export(source_exports, {
+  generateIntegers: () => generateIntegers,
   isBrowser: () => isBrowser,
   isCompactCase: () => isCompactCase,
   isLowerCase: () => isLowerCase,
@@ -31,6 +32,15 @@ __export(source_exports, {
   toOrdinal: () => toOrdinal
 });
 module.exports = __toCommonJS(source_exports);
+
+// source/generate-integers.ts
+function generateIntegers(from, to) {
+  const list = [];
+  for (let index = from; from < to ? index <= to : index >= to; index = from < to ? index + 1 : index - 1) {
+    list.push(index);
+  }
+  return list;
+}
 
 // source/is-browser.ts
 function isBrowser() {
@@ -118,6 +128,7 @@ function toOrdinal(input = 0) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  generateIntegers,
   isBrowser,
   isCompactCase,
   isLowerCase,

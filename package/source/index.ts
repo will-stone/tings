@@ -1,3 +1,4 @@
+export { generateIntegers } from './generate-integers.js'
 export { isBrowser } from './is-browser.js'
 export { isCompactCase } from './is-compact-case.js'
 export { isLowerCase } from './is-lower-case.js'
