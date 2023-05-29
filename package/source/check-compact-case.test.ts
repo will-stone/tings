@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { isCompactCase } from './is-compact-case.js'
+import { checkCompactCase } from './check-compact-case.js'
 
 const falsey = [
   123,
@@ -18,7 +18,7 @@ const falsey = [
 ]
 
 test.each(falsey)('%s is falsey', (input) => {
-  expect(isCompactCase(input)).toBe(false)
+  expect(checkCompactCase(input)).toBe(false)
 })
 
 const truthy = [
@@ -31,5 +31,5 @@ const truthy = [
 ]
 
 test.each(truthy)('%s is truthy', (input) => {
-  expect(isCompactCase(input)).toBe(true)
+  expect(checkCompactCase(input)).toBe(true)
 })

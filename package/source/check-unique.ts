@@ -4,14 +4,14 @@
  * @category Array
  * @example
 ```ts
-import { isUniq } from 'tings'
+import { checkUnique } from 'tings'
 
-isUniq([1, 2, 3]) // true
-isUniq([1, 1, 2]) // false
-isUniq('not array') // true
+checkUnique([1, 2, 3]) // true
+checkUnique([1, 1, 2]) // false
+checkUnique('not array') // true
 ```
  */
-export function isUniq(input: unknown): boolean {
+export function checkUnique(input: unknown): boolean {
   if (Array.isArray(input)) {
     return new Set(input).size === input.length
   }

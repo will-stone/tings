@@ -3,13 +3,13 @@
  * @category String
  * @example
 ```ts
-import { isCompactCase } from 'tings'
+import { checkCompactCase } from 'tings'
 
-isCompactCase('thisiscompact') // true
-isCompactCase('this is not compact') // false
+checkCompactCase('thisiscompact') // true
+checkCompactCase('this is not compact') // false
 ```
  */
-export function isCompactCase(input: unknown): input is string {
+export function checkCompactCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }

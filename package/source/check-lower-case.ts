@@ -3,13 +3,13 @@
  * @category String
  * @example
 ```ts
-import { isLowerCase } from 'tings'
+import { checkLowerCase } from 'tings'
 
-isLowerCase('this is lower') // true
-isLowerCase('This is not LOWER') // false
+checkLowerCase('this is lower') // true
+checkLowerCase('This is not LOWER') // false
 ```
  */
-export function isLowerCase(input: unknown): input is string {
+export function checkLowerCase(input: unknown): input is string {
   if (typeof input !== 'string') {
     return false
   }

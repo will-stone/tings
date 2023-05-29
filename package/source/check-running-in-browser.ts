@@ -3,12 +3,12 @@
  * @category Environment
  * @example
 ```ts
-import { isBrowser } from 'tings'
+import { checkRunningInBrowser } from 'tings'
 
-isBrowser() // true
+checkRunningInBrowser() // true
 ```
  */
-export function isBrowser(): boolean {
+export function checkRunningInBrowser(): boolean {
   if (typeof window === 'object' && typeof document === 'object') {
     return true
   }

@@ -1,4 +1,57 @@
 /**
+ * Determines if input is a string that does not contain white-spaces.
+ * @category String
+ * @example
+```ts
+import { checkCompactCase } from 'tings'
+
+checkCompactCase('thisiscompact') // true
+checkCompactCase('this is not compact') // false
+```
+ */
+declare function checkCompactCase(input: unknown): input is string;
+
+/**
+ * Determines if input is a string containing no UPPERcase characters.
+ * @category String
+ * @example
+```ts
+import { checkLowerCase } from 'tings'
+
+checkLowerCase('this is lower') // true
+checkLowerCase('This is not LOWER') // false
+```
+ */
+declare function checkLowerCase(input: unknown): input is string;
+
+/**
+ * Determines if current code is running in a browser environment.
+ * @category Environment
+ * @example
+```ts
+import { checkRunningInBrowser } from 'tings'
+
+checkRunningInBrowser() // true
+```
+ */
+declare function checkRunningInBrowser(): boolean;
+
+/**
+ * Determines if an array only contains unique items.
+ * Will return true for any input that's not an array.
+ * @category Array
+ * @example
+```ts
+import { checkUnique } from 'tings'
+
+checkUnique([1, 2, 3]) // true
+checkUnique([1, 1, 2]) // false
+checkUnique('not array') // true
+```
+ */
+declare function checkUnique(input: unknown): boolean;
+
+/**
  * Generate an array of integers from a given number to another.
  * @category Array
  * @example
@@ -9,59 +62,6 @@ generateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
 ```
  */
 declare function generateIntegers(from: number, to: number): number[];
-
-/**
- * Determines if current code is running in a browser environment.
- * @category Environment
- * @example
-```ts
-import { isBrowser } from 'tings'
-
-isBrowser() // true
-```
- */
-declare function isBrowser(): boolean;
-
-/**
- * Determines if input is a string that does not contain white-spaces.
- * @category String
- * @example
-```ts
-import { isCompactCase } from 'tings'
-
-isCompactCase('thisiscompact') // true
-isCompactCase('this is not compact') // false
-```
- */
-declare function isCompactCase(input: unknown): input is string;
-
-/**
- * Determines if input is a string containing no UPPERcase characters.
- * @category String
- * @example
-```ts
-import { isLowerCase } from 'tings'
-
-isLowerCase('this is lower') // true
-isLowerCase('This is not LOWER') // false
-```
- */
-declare function isLowerCase(input: unknown): input is string;
-
-/**
- * Determines if an array only contains unique items.
- * Will return true for any input that's not an array.
- * @category Array
- * @example
-```ts
-import { isUniq } from 'tings'
-
-isUniq([1, 2, 3]) // true
-isUniq([1, 1, 2]) // false
-isUniq('not array') // true
-```
- */
-declare function isUniq(input: unknown): boolean;
 
 /**
  * Pauses the current function.
@@ -133,4 +133,4 @@ toOrdinal('11') // 11th
  */
 declare function toOrdinal(input?: unknown): string;
 
-export { generateIntegers, isBrowser, isCompactCase, isLowerCase, isUniq, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
+export { checkCompactCase, checkLowerCase, checkRunningInBrowser, checkUnique, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };

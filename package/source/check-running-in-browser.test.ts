@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 
-import { isBrowser } from './is-browser.js'
+import { checkRunningInBrowser } from './check-running-in-browser.js'
 
 test('isBrowser is true', () => {
   const originalWindow = global.window
@@ -9,11 +9,11 @@ test('isBrowser is true', () => {
   global.window = {}
   // @ts-expect-error -- TS doesn't like this override
   global.document = {}
-  expect(isBrowser()).toBe(true)
+  expect(checkRunningInBrowser()).toBe(true)
   global.window = originalWindow
   global.document = originalDocument
 })
 
 test('isBrowser is true', () => {
-  expect(isBrowser()).toBe(false)
+  expect(checkRunningInBrowser()).toBe(false)
 })
