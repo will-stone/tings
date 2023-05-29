@@ -10,7 +10,7 @@ checkUrlAbsolute("http://example.com/page") // true
 checkUrlAbsolute("/page") // false
 ```
  */
-export const checkUrlAbsolute = (url: string): boolean => {
+export const checkUrlAbsolute = (url: unknown): boolean => {
   if (typeof url !== 'string') return false
   // regex sourced from https://stackoverflow.com/a/19709846
   return /^(?:[+a-z]+:)?\/\//iu.test(url)

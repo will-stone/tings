@@ -63,7 +63,7 @@ checkUrlAbsolute("http://example.com/page") // true
 checkUrlAbsolute("/page") // false
 ```
  */
-declare const checkUrlAbsolute: (url: string) => boolean;
+declare const checkUrlAbsolute: (url: unknown) => boolean;
 
 /**
  * Generate an array of integers from a given number to another.
@@ -75,7 +75,7 @@ import { generateIntegers } from 'tings'
 generateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
 ```
  */
-declare function generateIntegers(from: number, to: number): number[];
+declare function generateIntegers(from: unknown, to: unknown): number[];
 
 /**
  * Pauses the current function.
