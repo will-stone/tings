@@ -108,9 +108,10 @@ const Home: NextPage = () => {
           <h2>Library Rules</h2>
 
           <ul>
-            <li>Tings will never throw.</li>
-            <li>Tings never assume anything about their input value(s).</li>
-            <li>Tings will always return a sensible default.</li>
+            <li>Zero dependencies.</li>
+            <li>Never throw.</li>
+            <li>Never assume anything about input value(s).</li>
+            <li>Always return a sensible default.</li>
           </ul>
 
           <h3>Naming</h3>
