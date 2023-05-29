@@ -1,5 +1,0 @@
----
-'tings': minor
----
-
-Added `generateIntegers`.

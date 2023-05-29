@@ -1,5 +1,22 @@
 # tings
 
+## 8.0.0
+
+### Major Changes
+
+- d1e50db: Changed boolean check functions' names to allow for easier result
+  naming. e.g. `const isCompactCase = checkCompactCase(input)`. All functions
+  starting with `is` changed to `check`, except `isBrowser` which is now
+  `checkRunningInBrowser`, and `isUniq` is now `checkUnique`.
+
+### Minor Changes
+
+- 81f3eaa: Added `generateIntegers`.
+
+### Patch Changes
+
+- 844d0f5: Fixed `generateIntegers` throws on non-numerical input.
+
 ## 7.0.5
 
 ### Patch Changes
