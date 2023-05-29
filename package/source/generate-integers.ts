@@ -8,7 +8,7 @@ import { generateIntegers } from 'tings'
 generateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
 ```
  */
-export function generateIntegers(from: number, to: number): number[] {
+export function generateIntegers(from: unknown, to: unknown): number[] {
   if (typeof from !== 'number' || typeof to !== 'number') {
     return []
   }
