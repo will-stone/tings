@@ -52,6 +52,20 @@ checkUnique('not array') // true
 declare function checkUnique(input: unknown): boolean;
 
 /**
+ * Determines if a URL string is absolute by seeing if it starts with a protocol.
+ * Will return false for any input that's not a string.
+ * @category String
+ * @example
+```ts
+import { checkUrlAbsolute } from 'tings'
+
+checkUrlAbsolute("http://example.com/page") // true
+checkUrlAbsolute("/page") // false
+```
+ */
+declare const checkUrlAbsolute: (url: string) => boolean;
+
+/**
  * Generate an array of integers from a given number to another.
  * @category Array
  * @example
@@ -133,4 +147,4 @@ toOrdinal('11') // 11th
  */
 declare function toOrdinal(input?: unknown): string;
 
-export { checkCompactCase, checkLowerCase, checkRunningInBrowser, checkUnique, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
+export { checkCompactCase, checkLowerCase, checkRunningInBrowser, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };

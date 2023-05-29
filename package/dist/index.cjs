@@ -24,6 +24,7 @@ __export(source_exports, {
   checkLowerCase: () => checkLowerCase,
   checkRunningInBrowser: () => checkRunningInBrowser,
   checkUnique: () => checkUnique,
+  checkUrlAbsolute: () => checkUrlAbsolute,
   generateIntegers: () => generateIntegers,
   sleep: () => sleep,
   toCompactCase: () => toCompactCase,
@@ -67,6 +68,13 @@ function checkUnique(input) {
   }
   return true;
 }
+
+// source/check-url-absolute.ts
+var checkUrlAbsolute = (url) => {
+  if (typeof url !== "string")
+    return false;
+  return /^(?:[+a-z]+:)?\/\//iu.test(url);
+};
 
 // source/generate-integers.ts
 function generateIntegers(from, to) {
@@ -135,6 +143,7 @@ function toOrdinal(input = 0) {
   checkLowerCase,
   checkRunningInBrowser,
   checkUnique,
+  checkUrlAbsolute,
   generateIntegers,
   sleep,
   toCompactCase,

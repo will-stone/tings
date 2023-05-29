@@ -312,20 +312,97 @@
 		},
 		{
 			"id": 16,
-			"name": "generate-integers",
+			"name": "check-url-absolute",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 17,
-					"name": "generateIntegers",
+					"name": "checkUrlAbsolute",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 18,
+							"name": "checkUrlAbsolute",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Determines if a URL string is absolute by seeing if it starts with a protocol.\nWill return false for any input that's not a string."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { checkUrlAbsolute } from 'tings'\n\ncheckUrlAbsolute(\"http://example.com/page\") // true\ncheckUrlAbsolute(\"/page\") // false\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 19,
+									"name": "url",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						17
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								17
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 20,
+			"name": "generate-integers",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 21,
+					"name": "generateIntegers",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 22,
 							"name": "generateIntegers",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -351,7 +428,7 @@
 							},
 							"parameters": [
 								{
-									"id": 19,
+									"id": 23,
 									"name": "from",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -362,7 +439,7 @@
 									}
 								},
 								{
-									"id": 20,
+									"id": 24,
 									"name": "to",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -388,13 +465,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						17
+						21
 					],
 					"categories": [
 						{
 							"title": "Array",
 							"children": [
-								17
+								21
 							]
 						}
 					]
@@ -402,21 +479,21 @@
 			]
 		},
 		{
-			"id": 21,
+			"id": 25,
 			"name": "sleep",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 22,
+					"id": 26,
 					"name": "sleep",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 23,
+							"id": 27,
 							"name": "sleep",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -442,7 +519,7 @@
 							},
 							"parameters": [
 								{
-									"id": 24,
+									"id": 28,
 									"name": "milliseconds",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -473,13 +550,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						22
+						26
 					],
 					"categories": [
 						{
 							"title": "Misc",
 							"children": [
-								22
+								26
 							]
 						}
 					]
@@ -487,21 +564,21 @@
 			]
 		},
 		{
-			"id": 25,
+			"id": 29,
 			"name": "to-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 26,
+					"id": 30,
 					"name": "toCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 27,
+							"id": 31,
 							"name": "toCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -520,83 +597,6 @@
 											{
 												"kind": "code",
 												"text": "```ts\nimport { toCompactCase } from 'tings'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
-											}
-										]
-									}
-								]
-							},
-							"parameters": [
-								{
-									"id": 28,
-									"name": "input",
-									"kind": 32768,
-									"kindString": "Parameter",
-									"flags": {},
-									"type": {
-										"type": "intrinsic",
-										"name": "unknown"
-									}
-								}
-							],
-							"type": {
-								"type": "intrinsic",
-								"name": "string"
-							}
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Functions",
-					"children": [
-						26
-					],
-					"categories": [
-						{
-							"title": "String",
-							"children": [
-								26
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"id": 29,
-			"name": "to-letters",
-			"kind": 2,
-			"kindString": "Module",
-			"flags": {},
-			"children": [
-				{
-					"id": 30,
-					"name": "toLetters",
-					"kind": 64,
-					"kindString": "Function",
-					"flags": {},
-					"signatures": [
-						{
-							"id": 31,
-							"name": "toLetters",
-							"kind": 4096,
-							"kindString": "Call signature",
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Removes all non-alphabetical characters from a string."
-									}
-								],
-								"blockTags": [
-									{
-										"tag": "@example",
-										"content": [
-											{
-												"kind": "code",
-												"text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
 											}
 										]
 									}
@@ -642,20 +642,97 @@
 		},
 		{
 			"id": 33,
-			"name": "to-number",
+			"name": "to-letters",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 34,
-					"name": "toNumber",
+					"name": "toLetters",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 35,
+							"name": "toLetters",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Removes all non-alphabetical characters from a string."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 36,
+									"name": "input",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						34
+					],
+					"categories": [
+						{
+							"title": "String",
+							"children": [
+								34
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 37,
+			"name": "to-number",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 38,
+					"name": "toNumber",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 39,
 							"name": "toNumber",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -681,7 +758,7 @@
 							},
 							"parameters": [
 								{
-									"id": 36,
+									"id": 40,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -704,13 +781,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						34
+						38
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								34
+								38
 							]
 						}
 					]
@@ -718,21 +795,21 @@
 			]
 		},
 		{
-			"id": 37,
+			"id": 41,
 			"name": "to-ordinal",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 38,
+					"id": 42,
 					"name": "toOrdinal",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 39,
+							"id": 43,
 							"name": "toOrdinal",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -758,7 +835,7 @@
 							},
 							"parameters": [
 								{
-									"id": 40,
+									"id": 44,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -782,13 +859,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						38
+						42
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								38
+								42
 							]
 						}
 					]
@@ -805,11 +882,12 @@
 				9,
 				12,
 				16,
-				21,
+				20,
 				25,
 				29,
 				33,
-				37
+				37,
+				41
 			]
 		}
 	]
