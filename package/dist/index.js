@@ -33,6 +33,13 @@ function checkUnique(input) {
   return true;
 }
 
+// source/check-url-absolute.ts
+var checkUrlAbsolute = (url) => {
+  if (typeof url !== "string")
+    return false;
+  return /^(?:[+a-z]+:)?\/\//iu.test(url);
+};
+
 // source/generate-integers.ts
 function generateIntegers(from, to) {
   if (typeof from !== "number" || typeof to !== "number") {
@@ -99,6 +106,7 @@ export {
   checkLowerCase,
   checkRunningInBrowser,
   checkUnique,
+  checkUrlAbsolute,
   generateIntegers,
   sleep,
   toCompactCase,
