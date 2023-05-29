@@ -1,5 +1,11 @@
 # tings
 
+## 8.1.0
+
+### Minor Changes
+
+- 162d111: Added `checkUrlAbsolute`.
+
 ## 8.0.0
 
 ### Major Changes
