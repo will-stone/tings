@@ -14,6 +14,7 @@ interface Ting {
   signatures: unknown
   summary: string
   code: string
+  slug: string
 }
 
 const byCategory: Record<string, Ting[]> = {}
@@ -23,7 +24,15 @@ for (const ting of t.children) {
   const summary = signatures[0].comment.summary[0].text
   const code = signatures[0].comment.blockTags[0].content[0].text
   const category = ting.groups[0].categories[0].title
-  const details = { code, id, name, signatures, summary }
+
+  const details = {
+    code,
+    id,
+    name,
+    signatures,
+    slug: ting.name,
+    summary,
+  }
 
   if (byCategory[category]) {
     byCategory[category].push(details)
@@ -191,6 +200,15 @@ const isUnique = checkUnique([1, 2, 3])
                     <ReactMarkdown components={{ code: CodeBlock }}>
                       {ting.code}
                     </ReactMarkdown>
+                    <p className="text-gray-300">
+                      Source:{' '}
+                      <a
+                        className="text-gray-300"
+                        href={`https://github.com/will-stone/tings/blob/main/package/source/${ting.slug}.ts`}
+                      >
+                        {ting.slug}.ts
+                      </a>
+                    </p>
                   </Fragment>
                 ))}
               </Fragment>
