@@ -105,6 +105,64 @@ const Home: NextPage = () => {
             <a href="https://wstone.uk/">Will Stone</a>.
           </p>
 
+          <h2>Library Rules</h2>
+
+          <ul>
+            <li>Tings will never throw.</li>
+            <li>Tings never assume anything about their input value(s).</li>
+            <li>Tings will always return a sensible default.</li>
+          </ul>
+
+          <h3>Naming</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Prefix</th>
+                <th>Condition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>check</code>
+                </td>
+                <td>Returns a boolean</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>generate</code>
+                </td>
+                <td>Returns new data</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>to</code>
+                </td>
+                <td>Returns coerced input</td>
+              </tr>
+              <tr>
+                <td colSpan={2}>
+                  <small>
+                    Functions that do not return data do not have a prefix.
+                  </small>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            This allows for comfortable variable naming without clashes, for
+            example:
+          </p>
+
+          <ReactMarkdown components={{ code: CodeBlock }}>
+            {`\`\`\`js
+const isUnique = checkUnique([1, 2, 3])
+\`\`\`
+`}
+          </ReactMarkdown>
+
           <h2>Install</h2>
 
           <pre>

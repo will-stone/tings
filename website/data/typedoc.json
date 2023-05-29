@@ -358,7 +358,7 @@
 									"flags": {},
 									"type": {
 										"type": "intrinsic",
-										"name": "string"
+										"name": "unknown"
 									}
 								}
 							],
@@ -435,7 +435,7 @@
 									"flags": {},
 									"type": {
 										"type": "intrinsic",
-										"name": "number"
+										"name": "unknown"
 									}
 								},
 								{
@@ -446,7 +446,7 @@
 									"flags": {},
 									"type": {
 										"type": "intrinsic",
-										"name": "number"
+										"name": "unknown"
 									}
 								}
 							],
