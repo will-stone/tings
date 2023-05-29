@@ -1,5 +1,11 @@
 # tings
 
+## 8.1.1
+
+### Patch Changes
+
+- e11873c: Fix `checkUrlAbsolute` not accepting non-strings.
+
 ## 8.1.0
 
 ### Minor Changes
