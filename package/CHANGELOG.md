@@ -1,5 +1,11 @@
 # tings
 
+## 8.1.2
+
+### Patch Changes
+
+- 30b78e8: Added more examples of potential undesired input.
+
 ## 8.1.1
 
 ### Patch Changes
