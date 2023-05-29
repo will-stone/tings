@@ -35,6 +35,9 @@ function checkUnique(input) {
 
 // source/generate-integers.ts
 function generateIntegers(from, to) {
+  if (typeof from !== "number" || typeof to !== "number") {
+    return [];
+  }
   const list = [];
   for (let index = from; from < to ? index <= to : index >= to; index = from < to ? index + 1 : index - 1) {
     list.push(index);
