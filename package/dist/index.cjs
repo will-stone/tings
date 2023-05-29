@@ -20,11 +20,11 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // source/index.ts
 var source_exports = {};
 __export(source_exports, {
+  checkCompactCase: () => checkCompactCase,
+  checkLowerCase: () => checkLowerCase,
+  checkRunningInBrowser: () => checkRunningInBrowser,
+  checkUnique: () => checkUnique,
   generateIntegers: () => generateIntegers,
-  isBrowser: () => isBrowser,
-  isCompactCase: () => isCompactCase,
-  isLowerCase: () => isLowerCase,
-  isUniq: () => isUniq,
   sleep: () => sleep,
   toCompactCase: () => toCompactCase,
   toLetters: () => toLetters,
@@ -33,25 +33,8 @@ __export(source_exports, {
 });
 module.exports = __toCommonJS(source_exports);
 
-// source/generate-integers.ts
-function generateIntegers(from, to) {
-  const list = [];
-  for (let index = from; from < to ? index <= to : index >= to; index = from < to ? index + 1 : index - 1) {
-    list.push(index);
-  }
-  return list;
-}
-
-// source/is-browser.ts
-function isBrowser() {
-  if (typeof window === "object" && typeof document === "object") {
-    return true;
-  }
-  return false;
-}
-
-// source/is-compact-case.ts
-function isCompactCase(input) {
+// source/check-compact-case.ts
+function checkCompactCase(input) {
   if (typeof input !== "string") {
     return false;
   }
@@ -61,20 +44,37 @@ function isCompactCase(input) {
   return /^\S+$/u.test(input);
 }
 
-// source/is-lower-case.ts
-function isLowerCase(input) {
+// source/check-lower-case.ts
+function checkLowerCase(input) {
   if (typeof input !== "string") {
     return false;
   }
   return input === input.toLowerCase();
 }
 
-// source/is-uniq.ts
-function isUniq(input) {
+// source/check-running-in-browser.ts
+function checkRunningInBrowser() {
+  if (typeof window === "object" && typeof document === "object") {
+    return true;
+  }
+  return false;
+}
+
+// source/check-unique.ts
+function checkUnique(input) {
   if (Array.isArray(input)) {
     return new Set(input).size === input.length;
   }
   return true;
+}
+
+// source/generate-integers.ts
+function generateIntegers(from, to) {
+  const list = [];
+  for (let index = from; from < to ? index <= to : index >= to; index = from < to ? index + 1 : index - 1) {
+    list.push(index);
+  }
+  return list;
 }
 
 // source/to-number.ts
@@ -128,11 +128,11 @@ function toOrdinal(input = 0) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  checkCompactCase,
+  checkLowerCase,
+  checkRunningInBrowser,
+  checkUnique,
   generateIntegers,
-  isBrowser,
-  isCompactCase,
-  isLowerCase,
-  isUniq,
   sleep,
   toCompactCase,
   toLetters,
