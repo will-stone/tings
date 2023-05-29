@@ -7,6 +7,7 @@ import { checkCompactCase } from 'tings'
 
 checkCompactCase('thisiscompact') // true
 checkCompactCase('this is not compact') // false
+checkCompactCase(123) // false - input is not a string
 ```
  */
 declare function checkCompactCase(input: unknown): input is string;
@@ -20,6 +21,7 @@ import { checkLowerCase } from 'tings'
 
 checkLowerCase('this is lower') // true
 checkLowerCase('This is not LOWER') // false
+checkLowerCase(123) // false - input is not a string
 ```
  */
 declare function checkLowerCase(input: unknown): input is string;
@@ -61,6 +63,7 @@ import { checkUrlAbsolute } from 'tings'
 
 checkUrlAbsolute("http://example.com/page") // true
 checkUrlAbsolute("/page") // false
+checkUrlAbsolute(123) // false - input is not a string
 ```
  */
 declare const checkUrlAbsolute: (url: unknown) => boolean;
@@ -73,6 +76,7 @@ declare const checkUrlAbsolute: (url: unknown) => boolean;
 import { generateIntegers } from 'tings'
 
 generateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
+generateIntegers("abc", 6) // [] - at least one input is not a number
 ```
  */
 declare function generateIntegers(from: unknown, to: unknown): number[];
@@ -85,6 +89,7 @@ declare function generateIntegers(from: unknown, to: unknown): number[];
 import { sleep } from 'tings'
 
 await sleep(2000) // sleeps for 2 seconds
+await sleep("abc") // sleeps for 0 seconds as input is not a number
 ```
  */
 declare function sleep(milliseconds: number): Promise<void>;
@@ -143,6 +148,7 @@ import { toOrdinal } from 'tings'
 toOrdinal('this is text') // 0th
 toOrdinal('3') // 3rd
 toOrdinal('11') // 11th
+toOrdinal(3.14) // 3.14th
 ```
  */
 declare function toOrdinal(input?: unknown): string;

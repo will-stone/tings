@@ -8,6 +8,7 @@ import { toNumber } from './to-number.js'
 import { sleep } from 'tings'
 
 await sleep(2000) // sleeps for 2 seconds
+await sleep("abc") // sleeps for 0 seconds as input is not a number
 ```
  */
 export function sleep(milliseconds: number): Promise<void> {
