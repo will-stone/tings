@@ -38,7 +38,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { checkCompactCase } from 'tings'\n\ncheckCompactCase('thisiscompact') // true\ncheckCompactCase('this is not compact') // false\n```"
+												"text": "```ts\nimport { checkCompactCase } from 'tings'\n\ncheckCompactCase('thisiscompact') // true\ncheckCompactCase('this is not compact') // false\ncheckCompactCase(123) // false - input is not a string\n```"
 											}
 										]
 									}
@@ -120,7 +120,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { checkLowerCase } from 'tings'\n\ncheckLowerCase('this is lower') // true\ncheckLowerCase('This is not LOWER') // false\n```"
+												"text": "```ts\nimport { checkLowerCase } from 'tings'\n\ncheckLowerCase('this is lower') // true\ncheckLowerCase('This is not LOWER') // false\ncheckLowerCase(123) // false - input is not a string\n```"
 											}
 										]
 									}
@@ -343,7 +343,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { checkUrlAbsolute } from 'tings'\n\ncheckUrlAbsolute(\"http://example.com/page\") // true\ncheckUrlAbsolute(\"/page\") // false\n```"
+												"text": "```ts\nimport { checkUrlAbsolute } from 'tings'\n\ncheckUrlAbsolute(\"http://example.com/page\") // true\ncheckUrlAbsolute(\"/page\") // false\ncheckUrlAbsolute(123) // false - input is not a string\n```"
 											}
 										]
 									}
@@ -420,7 +420,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { generateIntegers } from 'tings'\n\ngenerateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\n```"
+												"text": "```ts\nimport { generateIntegers } from 'tings'\n\ngenerateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\ngenerateIntegers(\"abc\", 6) // [] - at least one input is not a number\n```"
 											}
 										]
 									}
@@ -511,7 +511,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { sleep } from 'tings'\n\nawait sleep(2000) // sleeps for 2 seconds\n```"
+												"text": "```ts\nimport { sleep } from 'tings'\n\nawait sleep(2000) // sleeps for 2 seconds\nawait sleep(\"abc\") // sleeps for 0 seconds as input is not a number\n```"
 											}
 										]
 									}
@@ -827,7 +827,7 @@
 										"content": [
 											{
 												"kind": "code",
-												"text": "```ts\nimport { toOrdinal } from 'tings'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\n```"
+												"text": "```ts\nimport { toOrdinal } from 'tings'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\ntoOrdinal(3.14) // 3.14th\n```"
 											}
 										]
 									}

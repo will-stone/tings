@@ -6,6 +6,7 @@
 import { generateIntegers } from 'tings'
 
 generateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]
+generateIntegers("abc", 6) // [] - at least one input is not a number
 ```
  */
 export function generateIntegers(from: unknown, to: unknown): number[] {

@@ -6,6 +6,7 @@ const cases = [
   [0, ''],
   ['', ''],
   [true, 'true'],
+  [123, ''],
   [['hello', 'moo'], 'hellomoo'],
   ['  some-Spaces ', 'someSpaces'],
   ['123-Text!!!(hello)<html>?</html>', 'Texthellohtmlhtml'],

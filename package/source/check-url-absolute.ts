@@ -8,6 +8,7 @@ import { checkUrlAbsolute } from 'tings'
 
 checkUrlAbsolute("http://example.com/page") // true
 checkUrlAbsolute("/page") // false
+checkUrlAbsolute(123) // false - input is not a string
 ```
  */
 export const checkUrlAbsolute = (url: unknown): boolean => {

@@ -7,6 +7,7 @@ import { checkCompactCase } from 'tings'
 
 checkCompactCase('thisiscompact') // true
 checkCompactCase('this is not compact') // false
+checkCompactCase(123) // false - input is not a string
 ```
  */
 export function checkCompactCase(input: unknown): input is string {

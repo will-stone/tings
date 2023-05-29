@@ -13,6 +13,7 @@ import { toOrdinal } from 'tings'
 toOrdinal('this is text') // 0th
 toOrdinal('3') // 3rd
 toOrdinal('11') // 11th
+toOrdinal(3.14) // 3.14th
 ```
  */
 export function toOrdinal(input: unknown = 0): string {
