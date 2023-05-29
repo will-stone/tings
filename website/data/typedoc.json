@@ -7,20 +7,111 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "is-browser",
+			"name": "generate-integers",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
 					"id": 2,
-					"name": "isBrowser",
+					"name": "generateIntegers",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
 							"id": 3,
+							"name": "generateIntegers",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Generate an array of integers from a given number to another."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { generateIntegers } from 'tings'\n\ngenerateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\n```"
+											}
+										]
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "from",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 5,
+									"name": "to",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "number"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						2
+					],
+					"categories": [
+						{
+							"title": "Array",
+							"children": [
+								2
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "is-browser",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {},
+			"children": [
+				{
+					"id": 7,
+					"name": "isBrowser",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {},
+					"signatures": [
+						{
+							"id": 8,
 							"name": "isBrowser",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -56,13 +147,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						2
+						7
 					],
 					"categories": [
 						{
 							"title": "Environment",
 							"children": [
-								2
+								7
 							]
 						}
 					]
@@ -70,21 +161,21 @@
 			]
 		},
 		{
-			"id": 4,
+			"id": 9,
 			"name": "is-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 5,
+					"id": 10,
 					"name": "isCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 6,
+							"id": 11,
 							"name": "isCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -110,7 +201,7 @@
 							},
 							"parameters": [
 								{
-									"id": 7,
+									"id": 12,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -138,13 +229,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						5
+						10
 					],
 					"categories": [
 						{
 							"title": "String",
 							"children": [
-								5
+								10
 							]
 						}
 					]
@@ -152,21 +243,21 @@
 			]
 		},
 		{
-			"id": 8,
+			"id": 13,
 			"name": "is-lower-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 9,
+					"id": 14,
 					"name": "isLowerCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 10,
+							"id": 15,
 							"name": "isLowerCase",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -192,7 +283,7 @@
 							},
 							"parameters": [
 								{
-									"id": 11,
+									"id": 16,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -220,13 +311,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						9
+						14
 					],
 					"categories": [
 						{
 							"title": "String",
 							"children": [
-								9
+								14
 							]
 						}
 					]
@@ -234,21 +325,21 @@
 			]
 		},
 		{
-			"id": 12,
+			"id": 17,
 			"name": "is-uniq",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 13,
+					"id": 18,
 					"name": "isUniq",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 14,
+							"id": 19,
 							"name": "isUniq",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -274,7 +365,7 @@
 							},
 							"parameters": [
 								{
-									"id": 15,
+									"id": 20,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -297,13 +388,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						13
+						18
 					],
 					"categories": [
 						{
 							"title": "Array",
 							"children": [
-								13
+								18
 							]
 						}
 					]
@@ -311,21 +402,21 @@
 			]
 		},
 		{
-			"id": 16,
+			"id": 21,
 			"name": "sleep",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 17,
+					"id": 22,
 					"name": "sleep",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 18,
+							"id": 23,
 							"name": "sleep",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -351,7 +442,7 @@
 							},
 							"parameters": [
 								{
-									"id": 19,
+									"id": 24,
 									"name": "milliseconds",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -382,13 +473,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						17
+						22
 					],
 					"categories": [
 						{
 							"title": "Misc",
 							"children": [
-								17
+								22
 							]
 						}
 					]
@@ -396,21 +487,21 @@
 			]
 		},
 		{
-			"id": 20,
+			"id": 25,
 			"name": "to-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 21,
+					"id": 26,
 					"name": "toCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 22,
+							"id": 27,
 							"name": "toCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -436,7 +527,7 @@
 							},
 							"parameters": [
 								{
-									"id": 23,
+									"id": 28,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -459,13 +550,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						21
+						26
 					],
 					"categories": [
 						{
 							"title": "String",
 							"children": [
-								21
+								26
 							]
 						}
 					]
@@ -473,21 +564,21 @@
 			]
 		},
 		{
-			"id": 24,
+			"id": 29,
 			"name": "to-letters",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 25,
+					"id": 30,
 					"name": "toLetters",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 26,
+							"id": 31,
 							"name": "toLetters",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -513,7 +604,7 @@
 							},
 							"parameters": [
 								{
-									"id": 27,
+									"id": 32,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -536,13 +627,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						25
+						30
 					],
 					"categories": [
 						{
 							"title": "String",
 							"children": [
-								25
+								30
 							]
 						}
 					]
@@ -550,21 +641,21 @@
 			]
 		},
 		{
-			"id": 28,
+			"id": 33,
 			"name": "to-number",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 29,
+					"id": 34,
 					"name": "toNumber",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 30,
+							"id": 35,
 							"name": "toNumber",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -590,7 +681,7 @@
 							},
 							"parameters": [
 								{
-									"id": 31,
+									"id": 36,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -613,13 +704,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						29
+						34
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								29
+								34
 							]
 						}
 					]
@@ -627,21 +718,21 @@
 			]
 		},
 		{
-			"id": 32,
+			"id": 37,
 			"name": "to-ordinal",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 33,
+					"id": 38,
 					"name": "toOrdinal",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 34,
+							"id": 39,
 							"name": "toOrdinal",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -667,7 +758,7 @@
 							},
 							"parameters": [
 								{
-									"id": 35,
+									"id": 40,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -691,13 +782,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						33
+						38
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								33
+								38
 							]
 						}
 					]
@@ -710,14 +801,15 @@
 			"title": "Modules",
 			"children": [
 				1,
-				4,
-				8,
-				12,
-				16,
-				20,
-				24,
-				28,
-				32
+				6,
+				9,
+				13,
+				17,
+				21,
+				25,
+				29,
+				33,
+				37
 			]
 		}
 	]

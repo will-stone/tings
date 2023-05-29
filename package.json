@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "npm run build -w tings && npm run build -w website",
-    "dev": "npm run dev -ws --if-present",
+    "dev": "concurrently 'npm run dev -w website' 'npm run dev -w tings' -n web,lib -c blue,magenta",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs,.cjs",
     "prepare": "husky install",
     "test": "npm test -ws --if-present"
@@ -30,6 +30,7 @@
     "@will-stone/eslint-config-react": "^3.0.1",
     "@will-stone/eslint-config-typescript": "^6.0.0",
     "@will-stone/prettier-config": "^6.0.4",
+    "concurrently": "^8.0.1",
     "eslint": "^8.36.0",
     "eslint-plugin-tailwindcss": "^3.10.1",
     "husky": "^8.0.3",
