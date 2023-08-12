@@ -22,7 +22,7 @@
     "disableSources": true,
     "entryPoints": ["./source"],
     "entryPointStrategy": "expand",
-    "exclude": "**/*+(index|.spec|.e2e|.test).ts",
+    "exclude": "**/*+(index|.spec|.e2e|.test|.bench).ts",
     "excludeInternal": true,
     "json": "../website/data/typedoc.json",
     "readme": "none"
