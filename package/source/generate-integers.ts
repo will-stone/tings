@@ -14,14 +14,17 @@ export function generateIntegers(from: unknown, to: unknown): number[] {
     return []
   }
 
-  const list = []
+  const step = from < to ? 1 : -1
+  const length = Math.abs(to - from) + 1
 
-  for (
-    let index = from;
-    from < to ? index <= to : index >= to;
-    index = from < to ? index + 1 : index - 1
-  ) {
-    list.push(index)
+  // Construct the array with slots first, as this is more performant than
+  // adding to the array on each iteration below.
+  // eslint-disable-next-line unicorn/no-new-array -- this method is much more performant than Unicorn's suggested method of `Array.from({length})`.
+  const list = new Array(length)
+
+  // `for` and `while` loops are much faster than using array methods.
+  for (let index = 0; index < length; index = index + 1) {
+    list[index] = from + index * step
   }
 
   return list
