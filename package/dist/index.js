@@ -45,11 +45,13 @@ function generateIntegers(from, to) {
   if (typeof from !== "number" || typeof to !== "number") {
     return [];
   }
-  const step = from < to ? 1 : -1;
-  const length = Math.abs(to - from) + 1;
+  const fromTrunc = Math.trunc(from);
+  const toTrunc = Math.trunc(to);
+  const step = fromTrunc < toTrunc ? 1 : -1;
+  const length = Math.abs(toTrunc - fromTrunc) + 1;
   const list = new Array(length);
   for (let index = 0; index < length; index = index + 1) {
-    list[index] = from + index * step;
+    list[index] = fromTrunc + index * step;
   }
   return list;
 }
