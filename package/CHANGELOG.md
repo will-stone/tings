@@ -1,5 +1,12 @@
 # tings
 
+## 8.1.4
+
+### Patch Changes
+
+- `generateIntegers` now ignores any decimal places on `from` and `to`
+  arguments.
+
 ## 8.1.3
 
 ### Patch Changes

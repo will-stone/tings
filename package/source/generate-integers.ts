@@ -14,8 +14,11 @@ export function generateIntegers(from: unknown, to: unknown): number[] {
     return []
   }
 
-  const step = from < to ? 1 : -1
-  const length = Math.abs(to - from) + 1
+  const fromTrunc = Math.trunc(from)
+  const toTrunc = Math.trunc(to)
+
+  const step = fromTrunc < toTrunc ? 1 : -1
+  const length = Math.abs(toTrunc - fromTrunc) + 1
 
   // Construct the array with slots first, as this is more performant than
   // adding to the array on each iteration below.
@@ -24,7 +27,7 @@ export function generateIntegers(from: unknown, to: unknown): number[] {
 
   // `for` and `while` loops are much faster than using array methods.
   for (let index = 0; index < length; index = index + 1) {
-    list[index] = from + index * step
+    list[index] = fromTrunc + index * step
   }
 
   return list
