@@ -18,6 +18,7 @@ test.each([
   [6, undefined, []],
   [6, '', []],
   [6, [], []],
+  [6.5, 7.5, [6, 7]],
 ])('from %d, to %d', (from, to, expected) => {
   expect(generateIntegers(from as number, to as number)).toStrictEqual(expected)
 })
