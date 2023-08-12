@@ -388,21 +388,21 @@
 			]
 		},
 		{
-			"id": 20,
+			"id": 21,
 			"name": "generate-integers",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 21,
+					"id": 22,
 					"name": "generateIntegers",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 22,
+							"id": 23,
 							"name": "generateIntegers",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -428,7 +428,7 @@
 							},
 							"parameters": [
 								{
-									"id": 23,
+									"id": 24,
 									"name": "from",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -439,7 +439,7 @@
 									}
 								},
 								{
-									"id": 24,
+									"id": 25,
 									"name": "to",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -465,13 +465,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						21
+						22
 					],
 					"categories": [
 						{
 							"title": "Array",
 							"children": [
-								21
+								22
 							]
 						}
 					]
@@ -479,21 +479,28 @@
 			]
 		},
 		{
-			"id": 25,
+			"id": 20,
+			"name": "generate-integers.bench",
+			"kind": 2,
+			"kindString": "Module",
+			"flags": {}
+		},
+		{
+			"id": 26,
 			"name": "sleep",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 26,
+					"id": 27,
 					"name": "sleep",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 27,
+							"id": 28,
 							"name": "sleep",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -519,7 +526,7 @@
 							},
 							"parameters": [
 								{
-									"id": 28,
+									"id": 29,
 									"name": "milliseconds",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -550,13 +557,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						26
+						27
 					],
 					"categories": [
 						{
 							"title": "Misc",
 							"children": [
-								26
+								27
 							]
 						}
 					]
@@ -564,21 +571,21 @@
 			]
 		},
 		{
-			"id": 29,
+			"id": 30,
 			"name": "to-compact-case",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 30,
+					"id": 31,
 					"name": "toCompactCase",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 31,
+							"id": 32,
 							"name": "toCompactCase",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -604,7 +611,7 @@
 							},
 							"parameters": [
 								{
-									"id": 32,
+									"id": 33,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -627,13 +634,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						30
+						31
 					],
 					"categories": [
 						{
 							"title": "String",
 							"children": [
-								30
+								31
 							]
 						}
 					]
@@ -641,21 +648,21 @@
 			]
 		},
 		{
-			"id": 33,
+			"id": 34,
 			"name": "to-letters",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 34,
+					"id": 35,
 					"name": "toLetters",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 35,
+							"id": 36,
 							"name": "toLetters",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -681,7 +688,7 @@
 							},
 							"parameters": [
 								{
-									"id": 36,
+									"id": 37,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -704,13 +711,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						34
+						35
 					],
 					"categories": [
 						{
 							"title": "String",
 							"children": [
-								34
+								35
 							]
 						}
 					]
@@ -718,21 +725,21 @@
 			]
 		},
 		{
-			"id": 37,
+			"id": 38,
 			"name": "to-number",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 38,
+					"id": 39,
 					"name": "toNumber",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 39,
+							"id": 40,
 							"name": "toNumber",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -758,7 +765,7 @@
 							},
 							"parameters": [
 								{
-									"id": 40,
+									"id": 41,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -781,13 +788,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						38
+						39
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								38
+								39
 							]
 						}
 					]
@@ -795,21 +802,21 @@
 			]
 		},
 		{
-			"id": 41,
+			"id": 42,
 			"name": "to-ordinal",
 			"kind": 2,
 			"kindString": "Module",
 			"flags": {},
 			"children": [
 				{
-					"id": 42,
+					"id": 43,
 					"name": "toOrdinal",
 					"kind": 64,
 					"kindString": "Function",
 					"flags": {},
 					"signatures": [
 						{
-							"id": 43,
+							"id": 44,
 							"name": "toOrdinal",
 							"kind": 4096,
 							"kindString": "Call signature",
@@ -835,7 +842,7 @@
 							},
 							"parameters": [
 								{
-									"id": 44,
+									"id": 45,
 									"name": "input",
 									"kind": 32768,
 									"kindString": "Parameter",
@@ -859,13 +866,13 @@
 				{
 					"title": "Functions",
 					"children": [
-						42
+						43
 					],
 					"categories": [
 						{
 							"title": "Number",
 							"children": [
-								42
+								43
 							]
 						}
 					]
@@ -882,12 +889,13 @@
 				9,
 				12,
 				16,
+				21,
 				20,
-				25,
-				29,
-				33,
-				37,
-				41
+				26,
+				30,
+				34,
+				38,
+				42
 			]
 		}
 	]
