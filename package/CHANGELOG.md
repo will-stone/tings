@@ -1,5 +1,11 @@
 # tings
 
+## 8.1.3
+
+### Patch Changes
+
+- 894d549: Increased performance of `generateIntegers` by almost double.
+
 ## 8.1.2
 
 ### Patch Changes
