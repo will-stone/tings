@@ -14,6 +14,8 @@ const tingFileNames = fs
       !n.startsWith('_') &&
       // Do not count tests
       !n.includes('.test.') &&
+      // Do not count benchmark tests
+      !n.includes('.bench.') &&
       // Do not count hidden files, e.g. .DS_Store
       !n.startsWith('.'),
   )
