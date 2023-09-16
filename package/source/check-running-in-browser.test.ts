@@ -14,6 +14,6 @@ test('isBrowser is true', () => {
   global.document = originalDocument
 })
 
-test('isBrowser is true', () => {
+test('isBrowser is false', () => {
   expect(checkRunningInBrowser()).toBe(false)
 })

@@ -8,7 +8,7 @@ import t from '../data/typedoc.json'
 // eslint-disable-next-line import/extensions
 import { CodeBlock } from './components/code-block'
 
-interface Ting {
+type Ting = {
   id: number
   name: string
   signatures: unknown
@@ -49,14 +49,14 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="container" id="top">
-        <header className="border-primary flex h-20 flex-col justify-center border-b bg-gray-900 md:container md:sticky md:top-0">
+        <header className="flex h-20 flex-col justify-center border-b border-primary bg-gray-900 md:container md:sticky md:top-0">
           <div className="flex items-center justify-between">
             <a
               className="flex items-center justify-center space-x-2 sm:justify-start"
               href="/"
             >
               <img alt="" className="w-12" src="/logo2.png" />
-              <h1 className="from-primary bg-gradient-to-r to-blue-600 bg-clip-text text-3xl font-bold leading-snug text-transparent">
+              <h1 className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-3xl font-bold leading-snug text-transparent">
                 Tings <span className="text-xs">{packageJson.version}</span>
               </h1>
             </a>
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
               <li>
                 <a
                   aria-label="npm"
-                  className="hover:bg-primary inline-block cursor-pointer rounded py-2 hover:text-white md:px-4"
+                  className="inline-block cursor-pointer rounded py-2 hover:bg-primary hover:text-white md:px-4"
                   href="https://www.npmjs.com/package/tings"
                 >
                   npm
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
               <li>
                 <a
                   aria-label="GitHub repository"
-                  className="hover:bg-primary inline-block cursor-pointer rounded py-2 hover:text-white md:px-4"
+                  className="inline-block cursor-pointer rounded py-2 hover:bg-primary hover:text-white md:px-4"
                   href="https://github.com/will-stone/tings"
                 >
                   GitHub
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
           </div>
         </header>
 
-        <aside className="scrollbar scrollbar-thumb-gray-500 scrollbar-track-gray-900 fixed top-20 bottom-5 hidden overflow-y-auto overflow-x-hidden pt-16 md:block md:w-40 lg:w-60">
+        <aside className="fixed bottom-5 top-20 hidden overflow-y-auto overflow-x-hidden pt-16 scrollbar scrollbar-track-gray-900 scrollbar-thumb-gray-500 md:block md:w-40 lg:w-60">
           <nav className="space-y-8 pb-16">
             {Object.entries(byCategory)
               .sort()
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                     <ul key={ting.id}>
                       <li>
                         <a
-                          className="hover:bg-primary block cursor-pointer truncate rounded py-2 px-4 font-medium hover:text-white"
+                          className="block cursor-pointer truncate rounded px-4 py-2 font-medium hover:bg-primary hover:text-white"
                           href={`#${ting.name}`}
                         >
                           {ting.name}
@@ -190,7 +190,7 @@ const isUnique = checkUnique([1, 2, 3])
                       <a href={`#${ting.name}`}>{ting.name}</a>
                       <span
                         aria-label={`in ${category} category`}
-                        className="bg-primary ml-4 rounded py-1 px-2 text-xs"
+                        className="ml-4 rounded bg-primary px-2 py-1 text-xs"
                         role="presentation"
                       >
                         {category}
@@ -215,7 +215,7 @@ const isUnique = checkUnique([1, 2, 3])
             ))}
 
           <a
-            className="hover:text-primary fixed right-8 bottom-8 flex h-8 w-8 cursor-pointer items-center justify-center truncate rounded bg-gray-800/80 text-xs leading-none text-gray-100 no-underline"
+            className="fixed bottom-8 right-8 flex h-8 w-8 cursor-pointer items-center justify-center truncate rounded bg-gray-800/80 text-xs leading-none text-gray-100 no-underline hover:text-primary"
             href="/#top"
           >
             Top
