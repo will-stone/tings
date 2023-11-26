@@ -1,18 +1,13 @@
-import type { CodeComponent } from 'react-markdown/lib/ast-to-react'
+import type { Components } from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
-export const CodeBlock: CodeComponent = ({
-  className,
-  children,
-  inline,
-  ...props
-}) => {
-  const match = /language-(\w+)/u.exec(className || '')
-  return !inline && match ? (
+export const CodeBlock: Components['code'] = ({ className, children }) => {
+  const [, language] = /language-(\w+)/u.exec(className || '') || []
+
+  return (
     <SyntaxHighlighter
       PreTag="div"
-      language={match[1]}
-      // @ts-expect-error -- https://github.com/react-syntax-highlighter/react-syntax-highlighter/issues/489
+      language={language}
       style={{
         'comment': {
           color: '#9CA3AF',
@@ -34,13 +29,8 @@ export const CodeBlock: CodeComponent = ({
         },
       }}
       tabIndex="0"
-      {...props}
     >
       {String(children).replace(/\n$/u, '')}
     </SyntaxHighlighter>
-  ) : (
-    <code className={className} {...props}>
-      {children}
-    </code>
   )
 }

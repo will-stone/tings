@@ -24,6 +24,7 @@
     "entryPointStrategy": "expand",
     "exclude": "**/*+(index|.spec|.e2e|.test|.bench).ts",
     "excludeInternal": true,
+    "excludeNotDocumented": true,
     "json": "../website/data/typedoc.json",
     "readme": "none"
   }
