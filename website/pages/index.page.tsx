@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown'
 
 import packageJson from '../../package/package.json'
 import t from '../data/typedoc.json'
-// eslint-disable-next-line import/extensions
 import { CodeBlock } from './components/code-block'
 
 type Ting = {
@@ -21,9 +20,9 @@ const byCategory: Record<string, Ting[]> = {}
 
 for (const ting of t.children) {
   const { name, id, signatures } = ting.children[0]
-  const summary = signatures[0].comment.summary[0].text
-  const code = signatures[0].comment.blockTags[0].content[0].text
-  const category = ting.groups[0].categories[0].title
+  const summary = signatures?.[0].comment.summary[0].text
+  const code = signatures?.[0].comment.blockTags[0].content[0].text
+  const category = ting.categories?.[0].title
 
   const details = {
     code,
@@ -191,7 +190,6 @@ const isUnique = checkUnique([1, 2, 3])
                       <span
                         aria-label={`in ${category} category`}
                         className="ml-4 rounded bg-primary px-2 py-1 text-xs"
-                        role="presentation"
                       >
                         {category}
                       </span>

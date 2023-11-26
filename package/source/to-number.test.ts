@@ -16,7 +16,6 @@ const cases = [
   ['blah', 0],
   [new Set(), 0],
   [[], 0],
-  // eslint-disable-next-line unicorn/no-null
   [null, 0],
   [undefined, 0],
   [true, 1],

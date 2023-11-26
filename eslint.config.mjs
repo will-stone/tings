@@ -17,5 +17,5 @@ export default [
       },
     },
   },
-  ...config,
+  ...config(),
 ]
