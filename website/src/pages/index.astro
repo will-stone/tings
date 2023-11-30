@@ -1,0 +1,260 @@
+---
+import { Code } from 'astro:components'
+import { Markdown } from 'astro-remote'
+
+import packageJson from '../../../package/package.json'
+import CodeBlock from '../components/code-block.astro'
+import t from '../data/typedoc.json'
+
+type Ting = {
+  id: number
+  name: string
+  signatures: unknown
+  summary: string
+  code: string
+  slug: string
+}
+
+const byCategory: Record<string, Ting[]> = {}
+
+for (const ting of t.children) {
+  const { name, id, signatures } = ting.children[0]
+  const summary = signatures?.[0].comment.summary[0].text
+  const code = signatures?.[0].comment.blockTags[0].content[0].text
+  const category = ting.categories?.[0].title
+
+  const details = {
+    code,
+    id,
+    name,
+    signatures,
+    slug: ting.name,
+    summary,
+  }
+
+  if (byCategory[category]) {
+    byCategory[category].push(details)
+  } else {
+    byCategory[category] = [details]
+  }
+}
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <link href="/site.webmanifest" rel="manifest" />
+    <link color="#cb1b71" href="/safari-pinned-tab.svg" rel="mask-icon" />
+    <meta content="#ffffff" name="msapplication-TileColor" />
+    <meta content="#ffffff" name="theme-color" />
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Tings</title>
+    <style>
+      :root {
+        /* --shiki-color-text: #EEEEEE; */
+        --shiki-color-background: #080c13;
+        --astro-code-color-background: #080c13;
+        /* --shiki-token-constant: #660000; */
+        --shiki-token-string: #d1d5db;
+        --astro-code-token-string: #d1d5db;
+        --shiki-token-comment: #6c7180;
+        --astro-code-token-comment: #6c7180;
+        --shiki-token-keyword: #88a6f1;
+        --astro-code-token-keyword: #88a6f1;
+        /* --shiki-token-parameter: #AA0000; */
+        --shiki-token-function: #f92d8e;
+        --astro-code-token-function: #f92d8e;
+        /* --shiki-token-string-expression: #CC0000; */
+        /* --shiki-token-punctuation: #DD0000; */
+        /* --shiki-token-link: #EE0000; */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-300">
+    <div class="container" id="top">
+      <header
+        class="flex h-20 flex-col justify-center border-b border-primary bg-gray-900 md:container md:sticky md:top-0"
+      >
+        <div class="flex items-center justify-between">
+          <a
+            class="flex items-center justify-center space-x-2 sm:justify-start"
+            href="/"
+          >
+            <img alt="" class="w-12" src="/logo2.png" />
+            <h1
+              class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-3xl font-bold leading-snug text-transparent"
+            >
+              Tings <span class="text-xs">{packageJson.version}</span>
+            </h1>
+          </a>
+
+          <ul class="flex items-center space-x-4 md:-mr-4">
+            <li>
+              <a
+                aria-label="npm"
+                class="inline-block cursor-pointer rounded py-2 hover:bg-primary hover:text-white md:px-4"
+                href="https://www.npmjs.com/package/tings"
+              >
+                npm
+              </a>
+            </li>
+            <li>
+              <a
+                aria-label="GitHub repository"
+                class="inline-block cursor-pointer rounded py-2 hover:bg-primary hover:text-white md:px-4"
+                href="https://github.com/will-stone/tings"
+              >
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <aside
+        class="fixed bottom-5 top-20 hidden overflow-y-auto overflow-x-hidden pt-16 scrollbar scrollbar-track-gray-900 scrollbar-thumb-gray-500 md:block md:w-40 lg:w-60"
+      >
+        <nav class="space-y-8 pb-16">
+          {
+            Object.entries(byCategory)
+              .sort()
+              .map(([category, tings]) => (
+                <div>
+                  <h2 class="text-gray-500">{category}</h2>
+                  {tings.map((ting) => (
+                    <ul>
+                      <li>
+                        <a
+                          class="block cursor-pointer truncate rounded px-4 py-2 font-medium hover:bg-primary hover:text-white"
+                          href={`#${ting.name}`}
+                        >
+                          {ting.name}
+                        </a>
+                      </li>
+                    </ul>
+                  ))}
+                </div>
+              ))
+          }
+        </nav>
+      </aside>
+
+      <main class="prose prose-lg prose-invert mt-16 pb-32 md:ml-52 lg:ml-72">
+        <p class="lead">
+          A collection of small JavaScript utilities by{' '}
+          <a href="https://wstone.uk/">Will Stone</a>.
+        </p>
+
+        <h2>Library Rules</h2>
+
+        <ul>
+          <li>Zero dependencies.</li>
+          <li>Never throw.</li>
+          <li>Never assume anything about input value(s).</li>
+          <li>Always return a sensible default.</li>
+        </ul>
+
+        <h3>Naming</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Prefix</th>
+              <th>Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <code>check</code>
+              </td>
+              <td>Returns a boolean</td>
+            </tr>
+            <tr>
+              <td>
+                <code>generate</code>
+              </td>
+              <td>Returns new data</td>
+            </tr>
+            <tr>
+              <td>
+                <code>to</code>
+              </td>
+              <td>Returns coerced input</td>
+            </tr>
+            <tr>
+              <td colspan={2}>
+                <small>
+                  Functions that do not return data do not have a prefix.
+                </small>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          This allows for comfortable variable naming without clashes, for
+          example:
+        </p>
+
+        <Code
+          code={`const isUnique = checkUnique([1, 2, 3])`}
+          lang="js"
+          theme="css-variables"
+        />
+
+        <h2>Install</h2>
+
+        <Code code={`npm i tings`} lang="sh" theme="css-variables" />
+
+        {
+          Object.entries(byCategory)
+            .sort()
+            .map(([category, tings]) => (
+              <>
+                {tings.map((ting) => (
+                  <>
+                    <h2 class="scroll-mt-28" id={ting.name}>
+                      <a href={`#${ting.name}`} class="mr-4">
+                        {ting.name}
+                      </a>
+                      <span
+                        aria-label={`in ${category} category`}
+                        class="rounded bg-primary px-2 py-1 text-xs inline-block"
+                      >
+                        {category}
+                      </span>
+                    </h2>
+                    <Markdown content={ting.summary} />
+                    <Markdown content={ting.code} components={{ CodeBlock }} />
+                    <p class="text-gray-300">
+                      Source:{' '}
+                      <a
+                        class="text-gray-300"
+                        href={`https://github.com/will-stone/tings/blob/main/package/source/${ting.slug}.ts`}
+                      >
+                        {ting.slug}.ts
+                      </a>
+                    </p>
+                  </>
+                ))}
+              </>
+            ))
+        }
+
+        <a
+          class="fixed bottom-8 right-8 flex h-8 w-8 cursor-pointer items-center justify-center truncate rounded bg-gray-800/80 text-xs leading-none text-gray-100 no-underline hover:text-primary"
+          href="/#top"
+        >
+          Top
+        </a>
+      </main>
+    </div>
+  </body>
+</html>

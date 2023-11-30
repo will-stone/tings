@@ -3,24 +3,21 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "NEXT_TELEMETRY_DISABLED=1 next build",
-    "dev": "NEXT_TELEMETRY_DISABLED=1 next dev",
-    "start": "NEXT_TELEMETRY_DISABLED=1 next start"
+    "astro": "astro",
+    "build": "astro check && astro build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "start": "astro dev"
   },
   "dependencies": {
+    "@astrojs/check": "^0.3.1",
+    "@astrojs/tailwind": "^6.0.0-beta.0",
     "@tailwindcss/typography": "^0.5.10",
-    "@types/react": "18.2.38",
-    "@types/react-dom": "18.2.17",
-    "@types/react-syntax-highlighter": "^15.5.10",
-    "autoprefixer": "^10.4.16",
-    "next": "^14.0.3",
-    "postcss": "^8.4.31",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-markdown": "^9.0.1",
-    "react-syntax-highlighter": "^15.5.0",
+    "astro": "^4.0.0-beta.2",
+    "astro-remote": "^0.2.4",
+    "shiki": "^0.14.5",
     "tailwind-scrollbar": "^3.0.5",
-    "tailwindcss": "^3.3.5"
-  },
-  "devDependencies": {}
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.3.2"
+  }
 }

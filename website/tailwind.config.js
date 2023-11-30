@@ -1,8 +1,11 @@
-const typography = require('@tailwindcss/typography')
-const scrollbar = require('tailwind-scrollbar')
+// @ts-check
+import typography from '@tailwindcss/typography'
+import scrollbar from 'tailwind-scrollbar'
 
-module.exports = {
-  content: ['./pages/**/*.{html,js,jsx,svelte,ts,tsx,vue}'],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{html,js,jsx,astro,ts,tsx}'],
+
   theme: {
     screens: {
       lg: '1024px',

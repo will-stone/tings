@@ -7,7 +7,5 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": ["justletters", "postbuild", "thisiscompact"],
   "eslint.experimental.useFlatConfig": true,
-  "eslint.options": {
-    "overrideConfigFile": "eslint.config.mjs"
-  }
+  "eslint.validate": ["astro"]
 }
