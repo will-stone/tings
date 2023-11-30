@@ -1,0 +1,1020 @@
+{
+  "id": 0,
+  "name": "tings",
+  "variant": "project",
+  "kind": 1,
+  "flags": {},
+  "children": [
+    {
+      "id": 1,
+      "name": "check-compact-case",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 2,
+          "name": "checkCompactCase",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 3,
+              "name": "checkCompactCase",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if input is a string that does not contain white-spaces."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkCompactCase } from 'tings'\n\ncheckCompactCase('thisiscompact') // true\ncheckCompactCase('this is not compact') // false\ncheckCompactCase(123) // false - input is not a string\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 4,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "predicate",
+                "name": "input",
+                "asserts": false,
+                "targetType": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [2]
+        }
+      ],
+      "categories": [
+        {
+          "title": "String",
+          "children": [2]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "check-lower-case",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 6,
+          "name": "checkLowerCase",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 7,
+              "name": "checkLowerCase",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if input is a string containing no UPPERcase characters."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkLowerCase } from 'tings'\n\ncheckLowerCase('this is lower') // true\ncheckLowerCase('This is not LOWER') // false\ncheckLowerCase(123) // false - input is not a string\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 8,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "predicate",
+                "name": "input",
+                "asserts": false,
+                "targetType": {
+                  "type": "intrinsic",
+                  "name": "string"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [6]
+        }
+      ],
+      "categories": [
+        {
+          "title": "String",
+          "children": [6]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "check-running-in-browser",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 10,
+          "name": "checkRunningInBrowser",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 11,
+              "name": "checkRunningInBrowser",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if current code is running in a browser environment."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkRunningInBrowser } from 'tings'\n\ncheckRunningInBrowser() // true\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "type": {
+                "type": "intrinsic",
+                "name": "boolean"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [10]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Environment",
+          "children": [10]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "check-unique",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 13,
+          "name": "checkUnique",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 14,
+              "name": "checkUnique",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if an array only contains unique items.\nWill return true for any input that's not an array."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkUnique } from 'tings'\n\ncheckUnique([1, 2, 3]) // true\ncheckUnique([1, 1, 2]) // false\ncheckUnique('not array') // true\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 15,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "boolean"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [13]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Array",
+          "children": [13]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "check-url-absolute",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 17,
+          "name": "checkUrlAbsolute",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 18,
+              "name": "checkUrlAbsolute",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if a URL string is absolute by seeing if it starts with a protocol.\nWill return false for any input that's not a string."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkUrlAbsolute } from 'tings'\n\ncheckUrlAbsolute(\"http://example.com/page\") // true\ncheckUrlAbsolute(\"/page\") // false\ncheckUrlAbsolute(123) // false - input is not a string\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 19,
+                  "name": "url",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "boolean"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [17]
+        }
+      ],
+      "categories": [
+        {
+          "title": "String",
+          "children": [17]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "generate-integers",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 21,
+          "name": "generateIntegers",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 22,
+              "name": "generateIntegers",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Generate an array of integers from a given number to another."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { generateIntegers } from 'tings'\n\ngenerateIntegers(1, 6) // [1, 2, 3, 4, 5, 6]\ngenerateIntegers(\"abc\", 6) // [] - at least one input is not a number\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 23,
+                  "name": "from",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                },
+                {
+                  "id": 24,
+                  "name": "to",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "array",
+                "elementType": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [21]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Array",
+          "children": [21]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "sleep",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 27,
+          "name": "sleep",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 28,
+              "name": "sleep",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Pauses the current function."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { sleep } from 'tings'\n\nawait sleep(2000) // sleeps for 2 seconds\nawait sleep(\"abc\") // sleeps for 0 seconds as input is not a number\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 29,
+                  "name": "milliseconds",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "number"
+                  }
+                }
+              ],
+              "type": {
+                "type": "reference",
+                "target": {
+                  "sourceFileName": "../node_modules/typescript/lib/lib.es5.d.ts",
+                  "qualifiedName": "Promise"
+                },
+                "typeArguments": [
+                  {
+                    "type": "intrinsic",
+                    "name": "void"
+                  }
+                ],
+                "name": "Promise",
+                "package": "typescript"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [27]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Misc",
+          "children": [27]
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "to-compact-case",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 31,
+          "name": "toCompactCase",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 32,
+              "name": "toCompactCase",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Removes all whitespace characters from a string."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { toCompactCase } from 'tings'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 33,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [31]
+        }
+      ],
+      "categories": [
+        {
+          "title": "String",
+          "children": [31]
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "to-letters",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 35,
+          "name": "toLetters",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 36,
+              "name": "toLetters",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Removes all non-alphabetical characters from a string."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 37,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [35]
+        }
+      ],
+      "categories": [
+        {
+          "title": "String",
+          "children": [35]
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "to-number",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 39,
+          "name": "toNumber",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 40,
+              "name": "toNumber",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Will return the given input as a number, if it cannot be converted, it will return 0."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { toNumber } from 'tings'\n\ntoNumber('this is text') // 0\ntoNumber('3') // 3\ntoNumber(0.4) // 0.4\ntoNumber(new Set([])) // 0\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 41,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "number"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [39]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Number",
+          "children": [39]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "to-ordinal",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 43,
+          "name": "toOrdinal",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 44,
+              "name": "toOrdinal",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Converts a number to its ordinal string form, if possible, else returns 0th.\n- 1 -> 1st\n- 4.2 -> 4.2th\n- notANumber -> 0th"
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { toOrdinal } from 'tings'\n\ntoOrdinal('this is text') // 0th\ntoOrdinal('3') // 3rd\ntoOrdinal('11') // 11th\ntoOrdinal(3.14) // 3.14th\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 45,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  },
+                  "defaultValue": "0"
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [43]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Number",
+          "children": [43]
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "title": "Modules",
+      "children": [1, 5, 9, 12, 16, 20, 26, 30, 34, 38, 42]
+    }
+  ],
+  "packageName": "tings",
+  "symbolIdMap": {
+    "1": {
+      "sourceFileName": "source/check-compact-case.ts",
+      "qualifiedName": ""
+    },
+    "2": {
+      "sourceFileName": "source/check-compact-case.ts",
+      "qualifiedName": "checkCompactCase"
+    },
+    "3": {
+      "sourceFileName": "source/check-compact-case.ts",
+      "qualifiedName": "checkCompactCase"
+    },
+    "4": {
+      "sourceFileName": "source/check-compact-case.ts",
+      "qualifiedName": "input"
+    },
+    "5": {
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": ""
+    },
+    "6": {
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "checkLowerCase"
+    },
+    "7": {
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "checkLowerCase"
+    },
+    "8": {
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "input"
+    },
+    "9": {
+      "sourceFileName": "source/check-running-in-browser.ts",
+      "qualifiedName": ""
+    },
+    "10": {
+      "sourceFileName": "source/check-running-in-browser.ts",
+      "qualifiedName": "checkRunningInBrowser"
+    },
+    "11": {
+      "sourceFileName": "source/check-running-in-browser.ts",
+      "qualifiedName": "checkRunningInBrowser"
+    },
+    "12": {
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": ""
+    },
+    "13": {
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "checkUnique"
+    },
+    "14": {
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "checkUnique"
+    },
+    "15": {
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "input"
+    },
+    "16": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": ""
+    },
+    "17": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "checkUrlAbsolute"
+    },
+    "18": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "checkUrlAbsolute"
+    },
+    "19": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "url"
+    },
+    "20": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": ""
+    },
+    "21": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "generateIntegers"
+    },
+    "22": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "generateIntegers"
+    },
+    "23": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "from"
+    },
+    "24": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "to"
+    },
+    "26": {
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": ""
+    },
+    "27": {
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "sleep"
+    },
+    "28": {
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "sleep"
+    },
+    "29": {
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "milliseconds"
+    },
+    "30": {
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": ""
+    },
+    "31": {
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "toCompactCase"
+    },
+    "32": {
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "toCompactCase"
+    },
+    "33": {
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "input"
+    },
+    "34": {
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": ""
+    },
+    "35": {
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "toLetters"
+    },
+    "36": {
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "toLetters"
+    },
+    "37": {
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "input"
+    },
+    "38": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": ""
+    },
+    "39": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "toNumber"
+    },
+    "40": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "toNumber"
+    },
+    "41": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "input"
+    },
+    "42": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": ""
+    },
+    "43": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": "toOrdinal"
+    },
+    "44": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": "toOrdinal"
+    },
+    "45": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": "input"
+    }
+  }
+}

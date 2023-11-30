@@ -2,6 +2,7 @@
   "name": "tings-monorepo",
   "private": true,
   "license": "MIT",
+  "type": "module",
   "workspaces": [
     "website",
     "package"
@@ -9,7 +10,7 @@
   "scripts": {
     "build": "npm run build -w tings && npm run build -w website",
     "dev": "concurrently 'npm run dev -w website' 'npm run dev -w tings' -n web,lib -c blue,magenta",
-    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs .",
+    "lint": "eslint .",
     "prepare": "husky install",
     "test": "npm test -ws --if-present"
   },
@@ -18,10 +19,9 @@
       "prettier --write"
     ],
     "*.{js,jsx,ts,tsx,cjs,mjs}": [
-      "cross-env ESLINT_USE_FLAT_CONFIG=true eslint -c eslint.config.mjs --fix"
+      "eslint --fix"
     ]
   },
-  "prettier": "@will-stone/prettier-config",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "@will-stone/eslint-config": "^0.12.1",
@@ -31,6 +31,7 @@
     "eslint": "^8.54.0",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
-    "prettier": "^3.1.0"
+    "prettier": "^3.1.0",
+    "prettier-plugin-astro": "^0.12.2"
   }
 }
