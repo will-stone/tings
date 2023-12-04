@@ -21,11 +21,13 @@ jobs:
       - run: npm run lint
 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - run: npm test
 
   typecheck:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - run: npm run typecheck -w tings
