@@ -7,20 +7,80 @@
   "children": [
     {
       "id": 1,
-      "name": "check-compact-case",
+      "name": "check-browser",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
           "id": 2,
-          "name": "checkCompactCase",
+          "name": "checkBrowser",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
               "id": 3,
+              "name": "checkBrowser",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if current code is running in a browser environment."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkBrowser } from 'tings'\n\ncheckBrowser() // true\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "type": {
+                "type": "intrinsic",
+                "name": "boolean"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [2]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Environment",
+          "children": [2]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "check-compact-case",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 5,
+          "name": "checkCompactCase",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 6,
               "name": "checkCompactCase",
               "variant": "signature",
               "kind": 4096,
@@ -46,7 +106,7 @@
               },
               "parameters": [
                 {
-                  "id": 4,
+                  "id": 7,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -73,32 +133,115 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [2]
+          "children": [5]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [2]
+          "children": [5]
         }
       ]
     },
     {
-      "id": 5,
+      "id": 8,
+      "name": "check-date",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 9,
+          "name": "checkDate",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 10,
+              "name": "checkDate",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if input is a valid Date."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkDate } from 'tings'\n\ncheckDate(new Date()) // true\ncheckDate(\"not a date\") // false\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 11,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "predicate",
+                "name": "input",
+                "asserts": false,
+                "targetType": {
+                  "type": "reference",
+                  "target": {
+                    "sourceFileName": "../node_modules/typescript/lib/lib.es5.d.ts",
+                    "qualifiedName": "Date"
+                  },
+                  "name": "Date",
+                  "package": "typescript"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [9]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Date",
+          "children": [9]
+        }
+      ]
+    },
+    {
+      "id": 12,
       "name": "check-lower-case",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 6,
+          "id": 13,
           "name": "checkLowerCase",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 7,
+              "id": 14,
               "name": "checkLowerCase",
               "variant": "signature",
               "kind": 4096,
@@ -124,7 +267,7 @@
               },
               "parameters": [
                 {
-                  "id": 8,
+                  "id": 15,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -151,92 +294,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [6]
+          "children": [13]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [6]
+          "children": [13]
         }
       ]
     },
     {
-      "id": 9,
-      "name": "check-running-in-browser",
-      "variant": "declaration",
-      "kind": 2,
-      "flags": {},
-      "children": [
-        {
-          "id": 10,
-          "name": "checkRunningInBrowser",
-          "variant": "declaration",
-          "kind": 64,
-          "flags": {},
-          "signatures": [
-            {
-              "id": 11,
-              "name": "checkRunningInBrowser",
-              "variant": "signature",
-              "kind": 4096,
-              "flags": {},
-              "comment": {
-                "summary": [
-                  {
-                    "kind": "text",
-                    "text": "Determines if current code is running in a browser environment."
-                  }
-                ],
-                "blockTags": [
-                  {
-                    "tag": "@example",
-                    "content": [
-                      {
-                        "kind": "code",
-                        "text": "```ts\nimport { checkRunningInBrowser } from 'tings'\n\ncheckRunningInBrowser() // true\n```"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "type": {
-                "type": "intrinsic",
-                "name": "boolean"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "children": [10]
-        }
-      ],
-      "categories": [
-        {
-          "title": "Environment",
-          "children": [10]
-        }
-      ]
-    },
-    {
-      "id": 12,
+      "id": 16,
       "name": "check-unique",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 13,
+          "id": 17,
           "name": "checkUnique",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 14,
+              "id": 18,
               "name": "checkUnique",
               "variant": "signature",
               "kind": 4096,
@@ -262,7 +345,7 @@
               },
               "parameters": [
                 {
-                  "id": 15,
+                  "id": 19,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -284,32 +367,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [13]
+          "children": [17]
         }
       ],
       "categories": [
         {
           "title": "Array",
-          "children": [13]
+          "children": [17]
         }
       ]
     },
     {
-      "id": 16,
+      "id": 20,
       "name": "check-url-absolute",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 17,
+          "id": 21,
           "name": "checkUrlAbsolute",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 18,
+              "id": 22,
               "name": "checkUrlAbsolute",
               "variant": "signature",
               "kind": 4096,
@@ -335,7 +418,7 @@
               },
               "parameters": [
                 {
-                  "id": 19,
+                  "id": 23,
                   "name": "url",
                   "variant": "param",
                   "kind": 32768,
@@ -357,32 +440,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [17]
+          "children": [21]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [17]
+          "children": [21]
         }
       ]
     },
     {
-      "id": 20,
+      "id": 24,
       "name": "generate-integers",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 21,
+          "id": 25,
           "name": "generateIntegers",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 22,
+              "id": 26,
               "name": "generateIntegers",
               "variant": "signature",
               "kind": 4096,
@@ -408,7 +491,7 @@
               },
               "parameters": [
                 {
-                  "id": 23,
+                  "id": 27,
                   "name": "from",
                   "variant": "param",
                   "kind": 32768,
@@ -419,7 +502,7 @@
                   }
                 },
                 {
-                  "id": 24,
+                  "id": 28,
                   "name": "to",
                   "variant": "param",
                   "kind": 32768,
@@ -444,32 +527,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [21]
+          "children": [25]
         }
       ],
       "categories": [
         {
           "title": "Array",
-          "children": [21]
+          "children": [25]
         }
       ]
     },
     {
-      "id": 26,
+      "id": 30,
       "name": "sleep",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 27,
+          "id": 31,
           "name": "sleep",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 28,
+              "id": 32,
               "name": "sleep",
               "variant": "signature",
               "kind": 4096,
@@ -495,7 +578,7 @@
               },
               "parameters": [
                 {
-                  "id": 29,
+                  "id": 33,
                   "name": "milliseconds",
                   "variant": "param",
                   "kind": 32768,
@@ -528,32 +611,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [27]
+          "children": [31]
         }
       ],
       "categories": [
         {
           "title": "Misc",
-          "children": [27]
+          "children": [31]
         }
       ]
     },
     {
-      "id": 30,
+      "id": 34,
       "name": "to-compact-case",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 31,
+          "id": 35,
           "name": "toCompactCase",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 32,
+              "id": 36,
               "name": "toCompactCase",
               "variant": "signature",
               "kind": 4096,
@@ -572,79 +655,6 @@
                       {
                         "kind": "code",
                         "text": "```ts\nimport { toCompactCase } from 'tings'\n\ntoCompactCase('this is text') // thisistext\ntoCompactCase('someTEXT') // someTEXT\n```"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "parameters": [
-                {
-                  "id": 33,
-                  "name": "input",
-                  "variant": "param",
-                  "kind": 32768,
-                  "flags": {},
-                  "type": {
-                    "type": "intrinsic",
-                    "name": "unknown"
-                  }
-                }
-              ],
-              "type": {
-                "type": "intrinsic",
-                "name": "string"
-              }
-            }
-          ]
-        }
-      ],
-      "groups": [
-        {
-          "title": "Functions",
-          "children": [31]
-        }
-      ],
-      "categories": [
-        {
-          "title": "String",
-          "children": [31]
-        }
-      ]
-    },
-    {
-      "id": 34,
-      "name": "to-letters",
-      "variant": "declaration",
-      "kind": 2,
-      "flags": {},
-      "children": [
-        {
-          "id": 35,
-          "name": "toLetters",
-          "variant": "declaration",
-          "kind": 64,
-          "flags": {},
-          "signatures": [
-            {
-              "id": 36,
-              "name": "toLetters",
-              "variant": "signature",
-              "kind": 4096,
-              "flags": {},
-              "comment": {
-                "summary": [
-                  {
-                    "kind": "text",
-                    "text": "Removes all non-alphabetical characters from a string."
-                  }
-                ],
-                "blockTags": [
-                  {
-                    "tag": "@example",
-                    "content": [
-                      {
-                        "kind": "code",
-                        "text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
                       }
                     ]
                   }
@@ -686,20 +696,93 @@
     },
     {
       "id": 38,
-      "name": "to-number",
+      "name": "to-letters",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
           "id": 39,
-          "name": "toNumber",
+          "name": "toLetters",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
               "id": 40,
+              "name": "toLetters",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Removes all non-alphabetical characters from a string."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { toLetters } from 'tings'\n\ntoLetters('this is text') // thisistext\ntoLetters('123-Text!!!') // Text\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 41,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "intrinsic",
+                "name": "string"
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [39]
+        }
+      ],
+      "categories": [
+        {
+          "title": "String",
+          "children": [39]
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "to-number",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 43,
+          "name": "toNumber",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 44,
               "name": "toNumber",
               "variant": "signature",
               "kind": 4096,
@@ -725,7 +808,7 @@
               },
               "parameters": [
                 {
-                  "id": 41,
+                  "id": 45,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -747,32 +830,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [39]
+          "children": [43]
         }
       ],
       "categories": [
         {
           "title": "Number",
-          "children": [39]
+          "children": [43]
         }
       ]
     },
     {
-      "id": 42,
+      "id": 46,
       "name": "to-ordinal",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 43,
+          "id": 47,
           "name": "toOrdinal",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 44,
+              "id": 48,
               "name": "toOrdinal",
               "variant": "signature",
               "kind": 4096,
@@ -798,7 +881,7 @@
               },
               "parameters": [
                 {
-                  "id": 45,
+                  "id": 49,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -821,13 +904,13 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [43]
+          "children": [47]
         }
       ],
       "categories": [
         {
           "title": "Number",
-          "children": [43]
+          "children": [47]
         }
       ]
     }
@@ -835,184 +918,200 @@
   "groups": [
     {
       "title": "Modules",
-      "children": [1, 5, 9, 12, 16, 20, 26, 30, 34, 38, 42]
+      "children": [1, 4, 8, 12, 16, 20, 24, 30, 34, 38, 42, 46]
     }
   ],
   "packageName": "tings",
   "symbolIdMap": {
     "1": {
-      "sourceFileName": "source/check-compact-case.ts",
+      "sourceFileName": "source/check-browser.ts",
       "qualifiedName": ""
     },
     "2": {
-      "sourceFileName": "source/check-compact-case.ts",
-      "qualifiedName": "checkCompactCase"
+      "sourceFileName": "source/check-browser.ts",
+      "qualifiedName": "checkBrowser"
     },
     "3": {
-      "sourceFileName": "source/check-compact-case.ts",
-      "qualifiedName": "checkCompactCase"
+      "sourceFileName": "source/check-browser.ts",
+      "qualifiedName": "checkBrowser"
     },
     "4": {
       "sourceFileName": "source/check-compact-case.ts",
-      "qualifiedName": "input"
+      "qualifiedName": ""
     },
     "5": {
-      "sourceFileName": "source/check-lower-case.ts",
-      "qualifiedName": ""
+      "sourceFileName": "source/check-compact-case.ts",
+      "qualifiedName": "checkCompactCase"
     },
     "6": {
-      "sourceFileName": "source/check-lower-case.ts",
-      "qualifiedName": "checkLowerCase"
+      "sourceFileName": "source/check-compact-case.ts",
+      "qualifiedName": "checkCompactCase"
     },
     "7": {
-      "sourceFileName": "source/check-lower-case.ts",
-      "qualifiedName": "checkLowerCase"
-    },
-    "8": {
-      "sourceFileName": "source/check-lower-case.ts",
+      "sourceFileName": "source/check-compact-case.ts",
       "qualifiedName": "input"
     },
-    "9": {
-      "sourceFileName": "source/check-running-in-browser.ts",
+    "8": {
+      "sourceFileName": "source/check-date.ts",
       "qualifiedName": ""
     },
+    "9": {
+      "sourceFileName": "source/check-date.ts",
+      "qualifiedName": "checkDate"
+    },
     "10": {
-      "sourceFileName": "source/check-running-in-browser.ts",
-      "qualifiedName": "checkRunningInBrowser"
+      "sourceFileName": "source/check-date.ts",
+      "qualifiedName": "checkDate"
     },
     "11": {
-      "sourceFileName": "source/check-running-in-browser.ts",
-      "qualifiedName": "checkRunningInBrowser"
+      "sourceFileName": "source/check-date.ts",
+      "qualifiedName": "input"
     },
     "12": {
-      "sourceFileName": "source/check-unique.ts",
+      "sourceFileName": "source/check-lower-case.ts",
       "qualifiedName": ""
     },
     "13": {
-      "sourceFileName": "source/check-unique.ts",
-      "qualifiedName": "checkUnique"
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "checkLowerCase"
     },
     "14": {
-      "sourceFileName": "source/check-unique.ts",
-      "qualifiedName": "checkUnique"
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "checkLowerCase"
     },
     "15": {
-      "sourceFileName": "source/check-unique.ts",
+      "sourceFileName": "source/check-lower-case.ts",
       "qualifiedName": "input"
     },
     "16": {
-      "sourceFileName": "source/check-url-absolute.ts",
+      "sourceFileName": "source/check-unique.ts",
       "qualifiedName": ""
     },
     "17": {
-      "sourceFileName": "source/check-url-absolute.ts",
-      "qualifiedName": "checkUrlAbsolute"
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "checkUnique"
     },
     "18": {
-      "sourceFileName": "source/check-url-absolute.ts",
-      "qualifiedName": "checkUrlAbsolute"
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "checkUnique"
     },
     "19": {
-      "sourceFileName": "source/check-url-absolute.ts",
-      "qualifiedName": "url"
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "input"
     },
     "20": {
-      "sourceFileName": "source/generate-integers.ts",
+      "sourceFileName": "source/check-url-absolute.ts",
       "qualifiedName": ""
     },
     "21": {
-      "sourceFileName": "source/generate-integers.ts",
-      "qualifiedName": "generateIntegers"
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "checkUrlAbsolute"
     },
     "22": {
-      "sourceFileName": "source/generate-integers.ts",
-      "qualifiedName": "generateIntegers"
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "checkUrlAbsolute"
     },
     "23": {
-      "sourceFileName": "source/generate-integers.ts",
-      "qualifiedName": "from"
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "url"
     },
     "24": {
       "sourceFileName": "source/generate-integers.ts",
-      "qualifiedName": "to"
-    },
-    "26": {
-      "sourceFileName": "source/sleep.ts",
       "qualifiedName": ""
     },
+    "25": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "generateIntegers"
+    },
+    "26": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "generateIntegers"
+    },
     "27": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": "sleep"
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "from"
     },
     "28": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": "sleep"
-    },
-    "29": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": "milliseconds"
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "to"
     },
     "30": {
-      "sourceFileName": "source/to-compact-case.ts",
+      "sourceFileName": "source/sleep.ts",
       "qualifiedName": ""
     },
     "31": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": "toCompactCase"
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "sleep"
     },
     "32": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": "toCompactCase"
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "sleep"
     },
     "33": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": "input"
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "milliseconds"
     },
     "34": {
-      "sourceFileName": "source/to-letters.ts",
+      "sourceFileName": "source/to-compact-case.ts",
       "qualifiedName": ""
     },
     "35": {
-      "sourceFileName": "source/to-letters.ts",
-      "qualifiedName": "toLetters"
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "toCompactCase"
     },
     "36": {
-      "sourceFileName": "source/to-letters.ts",
-      "qualifiedName": "toLetters"
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "toCompactCase"
     },
     "37": {
-      "sourceFileName": "source/to-letters.ts",
+      "sourceFileName": "source/to-compact-case.ts",
       "qualifiedName": "input"
     },
     "38": {
-      "sourceFileName": "source/to-number.ts",
+      "sourceFileName": "source/to-letters.ts",
       "qualifiedName": ""
     },
     "39": {
-      "sourceFileName": "source/to-number.ts",
-      "qualifiedName": "toNumber"
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "toLetters"
     },
     "40": {
-      "sourceFileName": "source/to-number.ts",
-      "qualifiedName": "toNumber"
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "toLetters"
     },
     "41": {
-      "sourceFileName": "source/to-number.ts",
+      "sourceFileName": "source/to-letters.ts",
       "qualifiedName": "input"
     },
     "42": {
-      "sourceFileName": "source/to-ordinal.ts",
+      "sourceFileName": "source/to-number.ts",
       "qualifiedName": ""
     },
     "43": {
-      "sourceFileName": "source/to-ordinal.ts",
-      "qualifiedName": "toOrdinal"
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "toNumber"
     },
     "44": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "toNumber"
+    },
+    "45": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "input"
+    },
+    "46": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": ""
+    },
+    "47": {
       "sourceFileName": "source/to-ordinal.ts",
       "qualifiedName": "toOrdinal"
     },
-    "45": {
+    "48": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": "toOrdinal"
+    },
+    "49": {
       "sourceFileName": "source/to-ordinal.ts",
       "qualifiedName": "input"
     }

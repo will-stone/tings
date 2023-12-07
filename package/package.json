@@ -33,7 +33,7 @@
   "scripts": {
     "bench": "vitest bench",
     "build": "tsup source/index.ts --dts --format esm,cjs --clean",
-    "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
+    "postbuild": "rimraf ../website/src/data/typedoc.json && typedoc",
     "dev": "npm run build -- --watch --onSuccess \"npm run postbuild\"",
     "test": "vitest",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
