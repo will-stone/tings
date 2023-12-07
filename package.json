@@ -12,7 +12,10 @@
     "dev": "concurrently 'npm run dev -w website' 'npm run dev -w tings' -n web,lib -c blue,magenta",
     "lint": "eslint .",
     "prepare": "husky install",
-    "test": "npm test -w tings"
+    "prerelease": "npm run build -w tings",
+    "release": "changeset publish",
+    "test": "npm test -w tings",
+    "version": "changeset version"
   },
   "lint-staged": {
     "*.{css,json,md}": [
