@@ -36,7 +36,7 @@
     "postbuild": "rimraf ../website/data/typedoc.json && typedoc",
     "dev": "npm run build -- --watch --onSuccess \"npm run postbuild\"",
     "prepublishOnly": "npm run build",
-    "test": "vitest --watch=false",
+    "test": "vitest",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "devDependencies": {
