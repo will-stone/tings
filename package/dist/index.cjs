@@ -22,6 +22,7 @@ var source_exports = {};
 __export(source_exports, {
   checkBrowser: () => checkBrowser,
   checkCompactCase: () => checkCompactCase,
+  checkDate: () => checkDate,
   checkLowerCase: () => checkLowerCase,
   checkUnique: () => checkUnique,
   checkUrlAbsolute: () => checkUrlAbsolute,
@@ -51,6 +52,11 @@ function checkCompactCase(input) {
     return true;
   }
   return /^\S+$/u.test(input);
+}
+
+// source/check-date.ts
+function checkDate(input) {
+  return input instanceof Date && (input == null ? void 0 : input.toString()) !== "Invalid Date";
 }
 
 // source/check-lower-case.ts
@@ -145,6 +151,7 @@ function toOrdinal(input = 0) {
 0 && (module.exports = {
   checkBrowser,
   checkCompactCase,
+  checkDate,
   checkLowerCase,
   checkUnique,
   checkUrlAbsolute,

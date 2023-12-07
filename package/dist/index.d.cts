@@ -25,6 +25,19 @@ checkCompactCase(123) // false - input is not a string
 declare function checkCompactCase(input: unknown): input is string;
 
 /**
+ * Determines if input is a valid Date.
+ * @category Date
+ * @example
+```ts
+import { checkDate } from 'tings'
+
+checkDate(new Date()) // true
+checkDate("not a date") // false
+```
+ */
+declare function checkDate(input: unknown): input is Date;
+
+/**
  * Determines if input is a string containing no UPPERcase characters.
  * @category String
  * @example
@@ -153,4 +166,4 @@ toOrdinal(3.14) // 3.14th
  */
 declare function toOrdinal(input?: unknown): string;
 
-export { checkBrowser, checkCompactCase, checkLowerCase, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
+export { checkBrowser, checkCompactCase, checkDate, checkLowerCase, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
