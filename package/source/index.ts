@@ -1,6 +1,6 @@
+export { checkBrowser } from './check-browser.js'
 export { checkCompactCase } from './check-compact-case.js'
 export { checkLowerCase } from './check-lower-case.js'
-export { checkRunningInBrowser } from './check-running-in-browser.js'
 export { checkUnique } from './check-unique.js'
 export { checkUrlAbsolute } from './check-url-absolute.js'
 export { generateIntegers } from './generate-integers.js'

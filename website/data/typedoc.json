@@ -7,20 +7,84 @@
 	"children": [
 		{
 			"id": 1,
-			"name": "check-compact-case",
+			"name": "check-browser",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
 					"id": 2,
-					"name": "checkCompactCase",
+					"name": "checkBrowser",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
 							"id": 3,
+							"name": "checkBrowser",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Determines if current code is running in a browser environment."
+									}
+								],
+								"blockTags": [
+									{
+										"tag": "@example",
+										"content": [
+											{
+												"kind": "code",
+												"text": "```ts\nimport { checkBrowser } from 'tings'\n\ncheckBrowser() // true\n```"
+											}
+										]
+									}
+								]
+							},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"children": [
+						2
+					]
+				}
+			],
+			"categories": [
+				{
+					"title": "Environment",
+					"children": [
+						2
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"name": "check-compact-case",
+			"variant": "declaration",
+			"kind": 2,
+			"flags": {},
+			"children": [
+				{
+					"id": 5,
+					"name": "checkCompactCase",
+					"variant": "declaration",
+					"kind": 64,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 6,
 							"name": "checkCompactCase",
 							"variant": "signature",
 							"kind": 4096,
@@ -46,7 +110,7 @@
 							},
 							"parameters": [
 								{
-									"id": 4,
+									"id": 7,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -74,7 +138,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						2
+						5
 					]
 				}
 			],
@@ -82,27 +146,27 @@
 				{
 					"title": "String",
 					"children": [
-						2
+						5
 					]
 				}
 			]
 		},
 		{
-			"id": 5,
+			"id": 8,
 			"name": "check-lower-case",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 6,
+					"id": 9,
 					"name": "checkLowerCase",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 7,
+							"id": 10,
 							"name": "checkLowerCase",
 							"variant": "signature",
 							"kind": 4096,
@@ -128,7 +192,7 @@
 							},
 							"parameters": [
 								{
-									"id": 8,
+									"id": 11,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -156,7 +220,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						6
+						9
 					]
 				}
 			],
@@ -164,71 +228,7 @@
 				{
 					"title": "String",
 					"children": [
-						6
-					]
-				}
-			]
-		},
-		{
-			"id": 9,
-			"name": "check-running-in-browser",
-			"variant": "declaration",
-			"kind": 2,
-			"flags": {},
-			"children": [
-				{
-					"id": 10,
-					"name": "checkRunningInBrowser",
-					"variant": "declaration",
-					"kind": 64,
-					"flags": {},
-					"signatures": [
-						{
-							"id": 11,
-							"name": "checkRunningInBrowser",
-							"variant": "signature",
-							"kind": 4096,
-							"flags": {},
-							"comment": {
-								"summary": [
-									{
-										"kind": "text",
-										"text": "Determines if current code is running in a browser environment."
-									}
-								],
-								"blockTags": [
-									{
-										"tag": "@example",
-										"content": [
-											{
-												"kind": "code",
-												"text": "```ts\nimport { checkRunningInBrowser } from 'tings'\n\ncheckRunningInBrowser() // true\n```"
-											}
-										]
-									}
-								]
-							},
-							"type": {
-								"type": "intrinsic",
-								"name": "boolean"
-							}
-						}
-					]
-				}
-			],
-			"groups": [
-				{
-					"title": "Functions",
-					"children": [
-						10
-					]
-				}
-			],
-			"categories": [
-				{
-					"title": "Environment",
-					"children": [
-						10
+						9
 					]
 				}
 			]
@@ -881,8 +881,8 @@
 			"title": "Modules",
 			"children": [
 				1,
-				5,
-				9,
+				4,
+				8,
 				12,
 				16,
 				20,
@@ -897,48 +897,48 @@
 	"packageName": "tings",
 	"symbolIdMap": {
 		"1": {
-			"sourceFileName": "source/check-compact-case.ts",
+			"sourceFileName": "source/check-browser.ts",
 			"qualifiedName": ""
 		},
 		"2": {
-			"sourceFileName": "source/check-compact-case.ts",
-			"qualifiedName": "checkCompactCase"
+			"sourceFileName": "source/check-browser.ts",
+			"qualifiedName": "checkBrowser"
 		},
 		"3": {
-			"sourceFileName": "source/check-compact-case.ts",
-			"qualifiedName": "checkCompactCase"
+			"sourceFileName": "source/check-browser.ts",
+			"qualifiedName": "checkBrowser"
 		},
 		"4": {
 			"sourceFileName": "source/check-compact-case.ts",
-			"qualifiedName": "input"
-		},
-		"5": {
-			"sourceFileName": "source/check-lower-case.ts",
 			"qualifiedName": ""
 		},
+		"5": {
+			"sourceFileName": "source/check-compact-case.ts",
+			"qualifiedName": "checkCompactCase"
+		},
 		"6": {
-			"sourceFileName": "source/check-lower-case.ts",
-			"qualifiedName": "checkLowerCase"
+			"sourceFileName": "source/check-compact-case.ts",
+			"qualifiedName": "checkCompactCase"
 		},
 		"7": {
-			"sourceFileName": "source/check-lower-case.ts",
-			"qualifiedName": "checkLowerCase"
+			"sourceFileName": "source/check-compact-case.ts",
+			"qualifiedName": "input"
 		},
 		"8": {
 			"sourceFileName": "source/check-lower-case.ts",
-			"qualifiedName": "input"
-		},
-		"9": {
-			"sourceFileName": "source/check-running-in-browser.ts",
 			"qualifiedName": ""
 		},
+		"9": {
+			"sourceFileName": "source/check-lower-case.ts",
+			"qualifiedName": "checkLowerCase"
+		},
 		"10": {
-			"sourceFileName": "source/check-running-in-browser.ts",
-			"qualifiedName": "checkRunningInBrowser"
+			"sourceFileName": "source/check-lower-case.ts",
+			"qualifiedName": "checkLowerCase"
 		},
 		"11": {
-			"sourceFileName": "source/check-running-in-browser.ts",
-			"qualifiedName": "checkRunningInBrowser"
+			"sourceFileName": "source/check-lower-case.ts",
+			"qualifiedName": "input"
 		},
 		"12": {
 			"sourceFileName": "source/check-unique.ts",

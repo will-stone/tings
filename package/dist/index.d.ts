@@ -1,4 +1,16 @@
 /**
+ * Determines if current code is running in a browser environment.
+ * @category Environment
+ * @example
+```ts
+import { checkBrowser } from 'tings'
+
+checkBrowser() // true
+```
+ */
+declare function checkBrowser(): boolean;
+
+/**
  * Determines if input is a string that does not contain white-spaces.
  * @category String
  * @example
@@ -25,18 +37,6 @@ checkLowerCase(123) // false - input is not a string
 ```
  */
 declare function checkLowerCase(input: unknown): input is string;
-
-/**
- * Determines if current code is running in a browser environment.
- * @category Environment
- * @example
-```ts
-import { checkRunningInBrowser } from 'tings'
-
-checkRunningInBrowser() // true
-```
- */
-declare function checkRunningInBrowser(): boolean;
 
 /**
  * Determines if an array only contains unique items.
@@ -153,4 +153,4 @@ toOrdinal(3.14) // 3.14th
  */
 declare function toOrdinal(input?: unknown): string;
 
-export { checkCompactCase, checkLowerCase, checkRunningInBrowser, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
+export { checkBrowser, checkCompactCase, checkLowerCase, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
