@@ -17,6 +17,11 @@ function checkCompactCase(input) {
   return /^\S+$/u.test(input);
 }
 
+// source/check-date.ts
+function checkDate(input) {
+  return input instanceof Date && (input == null ? void 0 : input.toString()) !== "Invalid Date";
+}
+
 // source/check-lower-case.ts
 function checkLowerCase(input) {
   if (typeof input !== "string") {
@@ -108,6 +113,7 @@ function toOrdinal(input = 0) {
 export {
   checkBrowser,
   checkCompactCase,
+  checkDate,
   checkLowerCase,
   checkUnique,
   checkUrlAbsolute,
