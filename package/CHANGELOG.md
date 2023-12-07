@@ -1,5 +1,19 @@
 # tings
 
+## 9.0.0
+
+### Major Changes
+
+- 6a81d86: Renamed `checkRunningInBrowser` to `checkBrowser`.
+
+### Minor Changes
+
+- a9b0d2c: Added `checkDate` ting.
+
+### Patch Changes
+
+- 45aaa8d: Updated package declarations.
+
 ## 8.1.4
 
 ### Patch Changes
