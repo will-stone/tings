@@ -1,3 +1,11 @@
+// source/check-browser.ts
+function checkBrowser() {
+  if (typeof window === "object" && typeof document === "object") {
+    return true;
+  }
+  return false;
+}
+
 // source/check-compact-case.ts
 function checkCompactCase(input) {
   if (typeof input !== "string") {
@@ -15,14 +23,6 @@ function checkLowerCase(input) {
     return false;
   }
   return input === input.toLowerCase();
-}
-
-// source/check-running-in-browser.ts
-function checkRunningInBrowser() {
-  if (typeof window === "object" && typeof document === "object") {
-    return true;
-  }
-  return false;
 }
 
 // source/check-unique.ts
@@ -106,9 +106,9 @@ function toOrdinal(input = 0) {
   return `${number}th`;
 }
 export {
+  checkBrowser,
   checkCompactCase,
   checkLowerCase,
-  checkRunningInBrowser,
   checkUnique,
   checkUrlAbsolute,
   generateIntegers,

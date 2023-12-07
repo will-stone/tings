@@ -20,9 +20,9 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // source/index.ts
 var source_exports = {};
 __export(source_exports, {
+  checkBrowser: () => checkBrowser,
   checkCompactCase: () => checkCompactCase,
   checkLowerCase: () => checkLowerCase,
-  checkRunningInBrowser: () => checkRunningInBrowser,
   checkUnique: () => checkUnique,
   checkUrlAbsolute: () => checkUrlAbsolute,
   generateIntegers: () => generateIntegers,
@@ -33,6 +33,14 @@ __export(source_exports, {
   toOrdinal: () => toOrdinal
 });
 module.exports = __toCommonJS(source_exports);
+
+// source/check-browser.ts
+function checkBrowser() {
+  if (typeof window === "object" && typeof document === "object") {
+    return true;
+  }
+  return false;
+}
 
 // source/check-compact-case.ts
 function checkCompactCase(input) {
@@ -51,14 +59,6 @@ function checkLowerCase(input) {
     return false;
   }
   return input === input.toLowerCase();
-}
-
-// source/check-running-in-browser.ts
-function checkRunningInBrowser() {
-  if (typeof window === "object" && typeof document === "object") {
-    return true;
-  }
-  return false;
 }
 
 // source/check-unique.ts
@@ -143,9 +143,9 @@ function toOrdinal(input = 0) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  checkBrowser,
   checkCompactCase,
   checkLowerCase,
-  checkRunningInBrowser,
   checkUnique,
   checkUrlAbsolute,
   generateIntegers,
