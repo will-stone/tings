@@ -14,8 +14,7 @@
     "prepare": "husky install",
     "prerelease": "npm run build -w tings",
     "release": "changeset publish",
-    "test": "npm test -w tings",
-    "version": "changeset version"
+    "test": "npm test -w tings"
   },
   "lint-staged": {
     "*.{css,json,md}": [

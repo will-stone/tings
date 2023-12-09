@@ -5,15 +5,14 @@ on: [push]
 env:
   HUSKY: 0
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
       - run: npm ci
       - run: npm run lint
 
@@ -22,9 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
       - run: npm ci
       - run: npm test
 
@@ -33,18 +29,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
       - run: npm ci
       - run: npm run typecheck -w tings
 
-  deploy-website:
+  changesets:
     if: github.ref == 'refs/heads/main'
     needs:
       - lint
       - test
       - typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-website:
+    if: github.ref == 'refs/heads/main'
+    needs:
+      - release
     runs-on: ubuntu-latest
     permissions:
       pages: write # to deploy to Pages
@@ -55,9 +61,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v2
