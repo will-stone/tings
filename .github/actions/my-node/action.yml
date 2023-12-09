@@ -1,0 +1,9 @@
+name: 'My node'
+description: 'Common node config between jobs'
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        cache: 'npm'
