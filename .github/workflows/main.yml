@@ -50,7 +50,7 @@ jobs:
   deploy-website:
     if: github.ref == 'refs/heads/main'
     needs:
-      - release
+      - changesets
     runs-on: ubuntu-latest
     permissions:
       pages: write # to deploy to Pages
