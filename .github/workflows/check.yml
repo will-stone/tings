@@ -1,0 +1,19 @@
+name: Check
+
+on: [push]
+
+env:
+  HUSKY: 0
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: npm i --audit=false --fund=false
+      - run: npm run lint
+      - run: npm test
+      - run: npm run typecheck -w tings

@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  workflow_run:
+    workflows: ["Run Tests"]
+    branches: [main]
+    types: 
+      - completed
+env:
+  HUSKY: 0
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - run: npm i --audit=false --fund=false
+      - uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy website
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        run: npm run build
+        uses: actions/upload-pages-artifact@v2
+          with:
+            path: './website/dist/'
+        uses: actions/deploy-pages@v2
+
