@@ -2,9 +2,9 @@ name: Release
 
 on:
   workflow_run:
-    workflows: ["Run Tests"]
+    workflows: ['Check']
     branches: [main]
-    types: 
+    types:
       - completed
 env:
   HUSKY: 0
@@ -20,19 +20,29 @@ jobs:
       id-token: write # to verify the deployment originates from an appropriate source
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+
       - run: npm i --audit=false --fund=false
-      - uses: changesets/action@v1
+
+      - name: Create release pull request or publish to npm
+        id: changesets
+        uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy website
+      - name: Build
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: npm run build
-        uses: actions/upload-pages-artifact@v2
-          with:
-            path: './website/dist/'
-        uses: actions/deploy-pages@v2
 
+      - name: Upload website artefacts
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './website/dist/'
+
+      - name: Deploy website
+        if: steps.changesets.outputs.hasChangesets == 'false'
+        uses: actions/deploy-pages@v2
