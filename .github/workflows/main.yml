@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/my-node
-      - run: npm ci
       - run: npm run lint
 
   test:
@@ -21,7 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/my-node
-      - run: npm ci
       - run: npm test
 
   typecheck:
@@ -29,7 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/my-node
-      - run: npm ci
       - run: npm run typecheck -w tings
 
   changesets:
@@ -42,7 +39,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/my-node
-      - run: npm ci
       - uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -61,7 +57,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/my-node
-      - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v2
         with:
