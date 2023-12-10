@@ -7,4 +7,6 @@ runs:
       with:
         node-version-file: '.nvmrc'
         cache: 'npm'
-    - run: npm i --audit=false --fund=false
+    - name: Install dependencies
+      shell: bash
+      run: npm i --audit=false --fund=false
