@@ -62,9 +62,10 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
           commit: 'chore: version package'
+          publish: npm run release
 
       - name: Build
-        if: steps.changesets.outputs.hasChangesets == 'false'
+        if: steps.changesets.outputs.published == 'false'
         run: npm run build
 
       - name: Upload website artefacts
