@@ -1,5 +1,11 @@
 # tings
 
+## 9.0.2
+
+### Patch Changes
+
+- 7c6fae0: Non-release: testing CI.
+
 ## 9.0.1
 
 ### Patch Changes
