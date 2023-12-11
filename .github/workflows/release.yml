@@ -19,13 +19,17 @@ jobs:
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+          cache: npm
 
-      - run: npm i --audit=false --fund=false
+      - name: Install dependencies
+        run: npm ci
 
       - name: Create release pull request or publish to npm
         id: changesets
