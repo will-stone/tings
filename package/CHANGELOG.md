@@ -1,5 +1,11 @@
 # tings
 
+## 9.0.1
+
+### Patch Changes
+
+- c37ab5f: Non-release: testing CI.
+
 ## 9.0.0
 
 ### Major Changes
