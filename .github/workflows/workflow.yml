@@ -64,16 +64,16 @@ jobs:
           commit: 'chore: version package'
           publish: npm run release
 
-      - name: Build
-        if: steps.changesets.outputs.published == 'false'
-        run: npm run build
+      - name: Build website
+        if: steps.changesets.outputs.published == 'true'
+        run: npm run build -w website
 
       - name: Upload website artefacts
-        if: steps.changesets.outputs.hasChangesets == 'false'
+        if: steps.changesets.outputs.published == 'true'
         uses: actions/upload-pages-artifact@v2
         with:
           path: './website/dist/'
 
       - name: Deploy website
-        if: steps.changesets.outputs.hasChangesets == 'false'
+        if: steps.changesets.outputs.published == 'true'
         uses: actions/deploy-pages@v2
