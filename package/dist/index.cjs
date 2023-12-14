@@ -24,6 +24,7 @@ __export(source_exports, {
   checkCompactCase: () => checkCompactCase,
   checkDate: () => checkDate,
   checkLowerCase: () => checkLowerCase,
+  checkPrime: () => checkPrime,
   checkUnique: () => checkUnique,
   checkUrlAbsolute: () => checkUrlAbsolute,
   generateIntegers: () => generateIntegers,
@@ -65,6 +66,17 @@ function checkLowerCase(input) {
     return false;
   }
   return input === input.toLowerCase();
+}
+
+// source/check-prime.ts
+function checkPrime(input) {
+  if (typeof input !== "number" || !Number.isInteger(input))
+    return false;
+  for (let i = 2, s = Math.sqrt(input); i <= s; i = i + 1) {
+    if (input % i === 0)
+      return false;
+  }
+  return input > 1;
 }
 
 // source/check-unique.ts
@@ -153,6 +165,7 @@ function toOrdinal(input = 0) {
   checkCompactCase,
   checkDate,
   checkLowerCase,
+  checkPrime,
   checkUnique,
   checkUrlAbsolute,
   generateIntegers,
