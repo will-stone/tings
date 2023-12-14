@@ -228,20 +228,98 @@
     },
     {
       "id": 12,
-      "name": "check-lower-case",
+      "name": "check-even",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
           "id": 13,
-          "name": "checkLowerCase",
+          "name": "checkEven",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
               "id": 14,
+              "name": "checkEven",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if input is an even integer."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkEven } from 'tings'\n\ncheckEven(-4)   // true\ncheckEven(-1)   // false\ncheckEven(0)    // true\ncheckEven(1)    // false\ncheckEven(2)    // true\ncheckEven(5)    // false\ncheckEven(9)    // false\ncheckEven(3.14) // false\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 15,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "predicate",
+                "name": "input",
+                "asserts": false,
+                "targetType": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [13]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Number",
+          "children": [13]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "check-lower-case",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 17,
+          "name": "checkLowerCase",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 18,
               "name": "checkLowerCase",
               "variant": "signature",
               "kind": 4096,
@@ -267,7 +345,7 @@
               },
               "parameters": [
                 {
-                  "id": 15,
+                  "id": 19,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -294,33 +372,33 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [13]
+          "children": [17]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [13]
+          "children": [17]
         }
       ]
     },
     {
-      "id": 16,
-      "name": "check-prime",
+      "id": 20,
+      "name": "check-odd",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 17,
-          "name": "checkPrime",
+          "id": 21,
+          "name": "checkOdd",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 18,
-              "name": "checkPrime",
+              "id": 22,
+              "name": "checkOdd",
               "variant": "signature",
               "kind": 4096,
               "flags": {},
@@ -328,7 +406,7 @@
                 "summary": [
                   {
                     "kind": "text",
-                    "text": "Determines if input is a prime number."
+                    "text": "Determines if input is an odd integer."
                   }
                 ],
                 "blockTags": [
@@ -337,7 +415,7 @@
                     "content": [
                       {
                         "kind": "code",
-                        "text": "```ts\nimport { checkPrime } from 'tings'\n\ncheckPrime(0)    // false\ncheckPrime(1)    // false\ncheckPrime(2)    // true\ncheckPrime(5)    // true\ncheckPrime(9)    // false\ncheckPrime(3.14) // false\n```"
+                        "text": "```ts\nimport { checkOdd } from 'tings'\n\ncheckOdd(-4)   // false\ncheckOdd(-1)   // true\ncheckOdd(0)    // false\ncheckOdd(1)    // true\ncheckOdd(2)    // false\ncheckOdd(5)    // true\ncheckOdd(9)    // true\ncheckOdd(3.14) // false\n```"
                       }
                     ]
                   }
@@ -345,7 +423,7 @@
               },
               "parameters": [
                 {
-                  "id": 19,
+                  "id": 23,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -372,32 +450,110 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [17]
+          "children": [21]
         }
       ],
       "categories": [
         {
           "title": "Number",
-          "children": [17]
+          "children": [21]
         }
       ]
     },
     {
-      "id": 20,
+      "id": 24,
+      "name": "check-prime",
+      "variant": "declaration",
+      "kind": 2,
+      "flags": {},
+      "children": [
+        {
+          "id": 25,
+          "name": "checkPrime",
+          "variant": "declaration",
+          "kind": 64,
+          "flags": {},
+          "signatures": [
+            {
+              "id": 26,
+              "name": "checkPrime",
+              "variant": "signature",
+              "kind": 4096,
+              "flags": {},
+              "comment": {
+                "summary": [
+                  {
+                    "kind": "text",
+                    "text": "Determines if input is a prime number."
+                  }
+                ],
+                "blockTags": [
+                  {
+                    "tag": "@example",
+                    "content": [
+                      {
+                        "kind": "code",
+                        "text": "```ts\nimport { checkPrime } from 'tings'\n\ncheckPrime(0)    // false\ncheckPrime(1)    // false\ncheckPrime(2)    // true\ncheckPrime(5)    // true\ncheckPrime(9)    // false\ncheckPrime(3.14) // false\n```"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "parameters": [
+                {
+                  "id": 27,
+                  "name": "input",
+                  "variant": "param",
+                  "kind": 32768,
+                  "flags": {},
+                  "type": {
+                    "type": "intrinsic",
+                    "name": "unknown"
+                  }
+                }
+              ],
+              "type": {
+                "type": "predicate",
+                "name": "input",
+                "asserts": false,
+                "targetType": {
+                  "type": "intrinsic",
+                  "name": "number"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "title": "Functions",
+          "children": [25]
+        }
+      ],
+      "categories": [
+        {
+          "title": "Number",
+          "children": [25]
+        }
+      ]
+    },
+    {
+      "id": 28,
       "name": "check-unique",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 21,
+          "id": 29,
           "name": "checkUnique",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 22,
+              "id": 30,
               "name": "checkUnique",
               "variant": "signature",
               "kind": 4096,
@@ -423,7 +579,7 @@
               },
               "parameters": [
                 {
-                  "id": 23,
+                  "id": 31,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -445,32 +601,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [21]
+          "children": [29]
         }
       ],
       "categories": [
         {
           "title": "Array",
-          "children": [21]
+          "children": [29]
         }
       ]
     },
     {
-      "id": 24,
+      "id": 32,
       "name": "check-url-absolute",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 25,
+          "id": 33,
           "name": "checkUrlAbsolute",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 26,
+              "id": 34,
               "name": "checkUrlAbsolute",
               "variant": "signature",
               "kind": 4096,
@@ -496,7 +652,7 @@
               },
               "parameters": [
                 {
-                  "id": 27,
+                  "id": 35,
                   "name": "url",
                   "variant": "param",
                   "kind": 32768,
@@ -518,32 +674,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [25]
+          "children": [33]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [25]
+          "children": [33]
         }
       ]
     },
     {
-      "id": 28,
+      "id": 36,
       "name": "generate-integers",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 29,
+          "id": 37,
           "name": "generateIntegers",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 30,
+              "id": 38,
               "name": "generateIntegers",
               "variant": "signature",
               "kind": 4096,
@@ -569,7 +725,7 @@
               },
               "parameters": [
                 {
-                  "id": 31,
+                  "id": 39,
                   "name": "from",
                   "variant": "param",
                   "kind": 32768,
@@ -580,7 +736,7 @@
                   }
                 },
                 {
-                  "id": 32,
+                  "id": 40,
                   "name": "to",
                   "variant": "param",
                   "kind": 32768,
@@ -605,32 +761,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [29]
+          "children": [37]
         }
       ],
       "categories": [
         {
           "title": "Array",
-          "children": [29]
+          "children": [37]
         }
       ]
     },
     {
-      "id": 34,
+      "id": 42,
       "name": "sleep",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 35,
+          "id": 43,
           "name": "sleep",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 36,
+              "id": 44,
               "name": "sleep",
               "variant": "signature",
               "kind": 4096,
@@ -656,7 +812,7 @@
               },
               "parameters": [
                 {
-                  "id": 37,
+                  "id": 45,
                   "name": "milliseconds",
                   "variant": "param",
                   "kind": 32768,
@@ -689,32 +845,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [35]
+          "children": [43]
         }
       ],
       "categories": [
         {
           "title": "Misc",
-          "children": [35]
+          "children": [43]
         }
       ]
     },
     {
-      "id": 38,
+      "id": 46,
       "name": "to-compact-case",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 39,
+          "id": 47,
           "name": "toCompactCase",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 40,
+              "id": 48,
               "name": "toCompactCase",
               "variant": "signature",
               "kind": 4096,
@@ -740,7 +896,7 @@
               },
               "parameters": [
                 {
-                  "id": 41,
+                  "id": 49,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -762,32 +918,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [39]
+          "children": [47]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [39]
+          "children": [47]
         }
       ]
     },
     {
-      "id": 42,
+      "id": 50,
       "name": "to-letters",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 43,
+          "id": 51,
           "name": "toLetters",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 44,
+              "id": 52,
               "name": "toLetters",
               "variant": "signature",
               "kind": 4096,
@@ -813,7 +969,7 @@
               },
               "parameters": [
                 {
-                  "id": 45,
+                  "id": 53,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -835,32 +991,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [43]
+          "children": [51]
         }
       ],
       "categories": [
         {
           "title": "String",
-          "children": [43]
+          "children": [51]
         }
       ]
     },
     {
-      "id": 46,
+      "id": 54,
       "name": "to-number",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 47,
+          "id": 55,
           "name": "toNumber",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 48,
+              "id": 56,
               "name": "toNumber",
               "variant": "signature",
               "kind": 4096,
@@ -886,7 +1042,7 @@
               },
               "parameters": [
                 {
-                  "id": 49,
+                  "id": 57,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -908,32 +1064,32 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [47]
+          "children": [55]
         }
       ],
       "categories": [
         {
           "title": "Number",
-          "children": [47]
+          "children": [55]
         }
       ]
     },
     {
-      "id": 50,
+      "id": 58,
       "name": "to-ordinal",
       "variant": "declaration",
       "kind": 2,
       "flags": {},
       "children": [
         {
-          "id": 51,
+          "id": 59,
           "name": "toOrdinal",
           "variant": "declaration",
           "kind": 64,
           "flags": {},
           "signatures": [
             {
-              "id": 52,
+              "id": 60,
               "name": "toOrdinal",
               "variant": "signature",
               "kind": 4096,
@@ -959,7 +1115,7 @@
               },
               "parameters": [
                 {
-                  "id": 53,
+                  "id": 61,
                   "name": "input",
                   "variant": "param",
                   "kind": 32768,
@@ -982,13 +1138,13 @@
       "groups": [
         {
           "title": "Functions",
-          "children": [51]
+          "children": [59]
         }
       ],
       "categories": [
         {
           "title": "Number",
-          "children": [51]
+          "children": [59]
         }
       ]
     }
@@ -996,7 +1152,7 @@
   "groups": [
     {
       "title": "Modules",
-      "children": [1, 4, 8, 12, 16, 20, 24, 28, 34, 38, 42, 46, 50]
+      "children": [1, 4, 8, 12, 16, 20, 24, 28, 32, 36, 42, 46, 50, 54, 58]
     }
   ],
   "packageName": "tings",
@@ -1046,166 +1202,198 @@
       "qualifiedName": "input"
     },
     "12": {
-      "sourceFileName": "source/check-lower-case.ts",
+      "sourceFileName": "source/check-even.ts",
       "qualifiedName": ""
     },
     "13": {
-      "sourceFileName": "source/check-lower-case.ts",
-      "qualifiedName": "checkLowerCase"
+      "sourceFileName": "source/check-even.ts",
+      "qualifiedName": "checkEven"
     },
     "14": {
-      "sourceFileName": "source/check-lower-case.ts",
-      "qualifiedName": "checkLowerCase"
+      "sourceFileName": "source/check-even.ts",
+      "qualifiedName": "checkEven"
     },
     "15": {
-      "sourceFileName": "source/check-lower-case.ts",
+      "sourceFileName": "source/check-even.ts",
       "qualifiedName": "input"
     },
     "16": {
-      "sourceFileName": "source/check-prime.ts",
+      "sourceFileName": "source/check-lower-case.ts",
       "qualifiedName": ""
     },
     "17": {
-      "sourceFileName": "source/check-prime.ts",
-      "qualifiedName": "checkPrime"
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "checkLowerCase"
     },
     "18": {
-      "sourceFileName": "source/check-prime.ts",
-      "qualifiedName": "checkPrime"
+      "sourceFileName": "source/check-lower-case.ts",
+      "qualifiedName": "checkLowerCase"
     },
     "19": {
-      "sourceFileName": "source/check-prime.ts",
+      "sourceFileName": "source/check-lower-case.ts",
       "qualifiedName": "input"
     },
     "20": {
-      "sourceFileName": "source/check-unique.ts",
+      "sourceFileName": "source/check-odd.ts",
       "qualifiedName": ""
     },
     "21": {
-      "sourceFileName": "source/check-unique.ts",
-      "qualifiedName": "checkUnique"
+      "sourceFileName": "source/check-odd.ts",
+      "qualifiedName": "checkOdd"
     },
     "22": {
-      "sourceFileName": "source/check-unique.ts",
-      "qualifiedName": "checkUnique"
+      "sourceFileName": "source/check-odd.ts",
+      "qualifiedName": "checkOdd"
     },
     "23": {
-      "sourceFileName": "source/check-unique.ts",
+      "sourceFileName": "source/check-odd.ts",
       "qualifiedName": "input"
     },
     "24": {
-      "sourceFileName": "source/check-url-absolute.ts",
+      "sourceFileName": "source/check-prime.ts",
       "qualifiedName": ""
     },
     "25": {
-      "sourceFileName": "source/check-url-absolute.ts",
-      "qualifiedName": "checkUrlAbsolute"
+      "sourceFileName": "source/check-prime.ts",
+      "qualifiedName": "checkPrime"
     },
     "26": {
-      "sourceFileName": "source/check-url-absolute.ts",
-      "qualifiedName": "checkUrlAbsolute"
+      "sourceFileName": "source/check-prime.ts",
+      "qualifiedName": "checkPrime"
     },
     "27": {
-      "sourceFileName": "source/check-url-absolute.ts",
-      "qualifiedName": "url"
+      "sourceFileName": "source/check-prime.ts",
+      "qualifiedName": "input"
     },
     "28": {
-      "sourceFileName": "source/generate-integers.ts",
+      "sourceFileName": "source/check-unique.ts",
       "qualifiedName": ""
     },
     "29": {
-      "sourceFileName": "source/generate-integers.ts",
-      "qualifiedName": "generateIntegers"
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "checkUnique"
     },
     "30": {
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "checkUnique"
+    },
+    "31": {
+      "sourceFileName": "source/check-unique.ts",
+      "qualifiedName": "input"
+    },
+    "32": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": ""
+    },
+    "33": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "checkUrlAbsolute"
+    },
+    "34": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "checkUrlAbsolute"
+    },
+    "35": {
+      "sourceFileName": "source/check-url-absolute.ts",
+      "qualifiedName": "url"
+    },
+    "36": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": ""
+    },
+    "37": {
       "sourceFileName": "source/generate-integers.ts",
       "qualifiedName": "generateIntegers"
     },
-    "31": {
+    "38": {
+      "sourceFileName": "source/generate-integers.ts",
+      "qualifiedName": "generateIntegers"
+    },
+    "39": {
       "sourceFileName": "source/generate-integers.ts",
       "qualifiedName": "from"
     },
-    "32": {
+    "40": {
       "sourceFileName": "source/generate-integers.ts",
       "qualifiedName": "to"
     },
-    "34": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": ""
-    },
-    "35": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": "sleep"
-    },
-    "36": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": "sleep"
-    },
-    "37": {
-      "sourceFileName": "source/sleep.ts",
-      "qualifiedName": "milliseconds"
-    },
-    "38": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": ""
-    },
-    "39": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": "toCompactCase"
-    },
-    "40": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": "toCompactCase"
-    },
-    "41": {
-      "sourceFileName": "source/to-compact-case.ts",
-      "qualifiedName": "input"
-    },
     "42": {
-      "sourceFileName": "source/to-letters.ts",
+      "sourceFileName": "source/sleep.ts",
       "qualifiedName": ""
     },
     "43": {
-      "sourceFileName": "source/to-letters.ts",
-      "qualifiedName": "toLetters"
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "sleep"
     },
     "44": {
-      "sourceFileName": "source/to-letters.ts",
-      "qualifiedName": "toLetters"
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "sleep"
     },
     "45": {
-      "sourceFileName": "source/to-letters.ts",
-      "qualifiedName": "input"
+      "sourceFileName": "source/sleep.ts",
+      "qualifiedName": "milliseconds"
     },
     "46": {
-      "sourceFileName": "source/to-number.ts",
+      "sourceFileName": "source/to-compact-case.ts",
       "qualifiedName": ""
     },
     "47": {
-      "sourceFileName": "source/to-number.ts",
-      "qualifiedName": "toNumber"
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "toCompactCase"
     },
     "48": {
-      "sourceFileName": "source/to-number.ts",
-      "qualifiedName": "toNumber"
+      "sourceFileName": "source/to-compact-case.ts",
+      "qualifiedName": "toCompactCase"
     },
     "49": {
-      "sourceFileName": "source/to-number.ts",
+      "sourceFileName": "source/to-compact-case.ts",
       "qualifiedName": "input"
     },
     "50": {
-      "sourceFileName": "source/to-ordinal.ts",
+      "sourceFileName": "source/to-letters.ts",
       "qualifiedName": ""
     },
     "51": {
-      "sourceFileName": "source/to-ordinal.ts",
-      "qualifiedName": "toOrdinal"
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "toLetters"
     },
     "52": {
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "toLetters"
+    },
+    "53": {
+      "sourceFileName": "source/to-letters.ts",
+      "qualifiedName": "input"
+    },
+    "54": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": ""
+    },
+    "55": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "toNumber"
+    },
+    "56": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "toNumber"
+    },
+    "57": {
+      "sourceFileName": "source/to-number.ts",
+      "qualifiedName": "input"
+    },
+    "58": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": ""
+    },
+    "59": {
       "sourceFileName": "source/to-ordinal.ts",
       "qualifiedName": "toOrdinal"
     },
-    "53": {
+    "60": {
+      "sourceFileName": "source/to-ordinal.ts",
+      "qualifiedName": "toOrdinal"
+    },
+    "61": {
       "sourceFileName": "source/to-ordinal.ts",
       "qualifiedName": "input"
     }
