@@ -1,5 +1,12 @@
 # tings
 
+## 9.1.0
+
+### Minor Changes
+
+- c9fcdcf: Added `checkPrime`.
+- c6bc27d: Added `checkOdd` and `checkEven`.
+
 ## 9.0.3
 
 ### Patch Changes
