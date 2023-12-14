@@ -30,6 +30,17 @@ function checkLowerCase(input) {
   return input === input.toLowerCase();
 }
 
+// source/check-prime.ts
+function checkPrime(input) {
+  if (typeof input !== "number" || !Number.isInteger(input))
+    return false;
+  for (let i = 2, s = Math.sqrt(input); i <= s; i = i + 1) {
+    if (input % i === 0)
+      return false;
+  }
+  return input > 1;
+}
+
 // source/check-unique.ts
 function checkUnique(input) {
   if (Array.isArray(input)) {
@@ -115,6 +126,7 @@ export {
   checkCompactCase,
   checkDate,
   checkLowerCase,
+  checkPrime,
   checkUnique,
   checkUrlAbsolute,
   generateIntegers,

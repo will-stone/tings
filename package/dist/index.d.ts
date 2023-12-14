@@ -52,6 +52,23 @@ checkLowerCase(123) // false - input is not a string
 declare function checkLowerCase(input: unknown): input is string;
 
 /**
+ * Determines if input is a prime number.
+ * @category Number
+ * @example
+```ts
+import { checkPrime } from 'tings'
+
+checkPrime(0)    // false
+checkPrime(1)    // false
+checkPrime(2)    // true
+checkPrime(5)    // true
+checkPrime(9)    // false
+checkPrime(3.14) // false
+```
+ */
+declare function checkPrime(input: unknown): input is number;
+
+/**
  * Determines if an array only contains unique items.
  * Will return true for any input that's not an array.
  * @category Array
@@ -166,4 +183,4 @@ toOrdinal(3.14) // 3.14th
  */
 declare function toOrdinal(input?: unknown): string;
 
-export { checkBrowser, checkCompactCase, checkDate, checkLowerCase, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
+export { checkBrowser, checkCompactCase, checkDate, checkLowerCase, checkPrime, checkUnique, checkUrlAbsolute, generateIntegers, sleep, toCompactCase, toLetters, toNumber, toOrdinal };
