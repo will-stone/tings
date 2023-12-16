@@ -65,15 +65,15 @@ jobs:
           publish: npm run release
 
       - name: Build website
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.changesets.outputs.hasChangesets == 'false'
         run: npm run build -w website
 
       - name: Upload website artefacts
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.changesets.outputs.hasChangesets == 'false'
         uses: actions/upload-pages-artifact@v2
         with:
           path: './website/dist/'
 
       - name: Deploy website
-        if: steps.changesets.outputs.published == 'true'
+        if: steps.changesets.outputs.hasChangesets == 'false'
         uses: actions/deploy-pages@v2
