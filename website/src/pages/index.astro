@@ -81,7 +81,7 @@ for (const ting of t.children) {
   <body class="bg-gray-900 text-gray-300">
     <div class="container" id="top">
       <header
-        class="flex h-20 flex-col justify-center border-b border-primary bg-gray-900 md:container md:sticky md:top-0"
+        class="border-primary flex h-20 flex-col justify-center border-b bg-gray-900 md:container md:sticky md:top-0"
       >
         <div class="flex items-center justify-between">
           <a
@@ -90,7 +90,7 @@ for (const ting of t.children) {
           >
             <img alt="" class="w-12" src="/logo2.png" />
             <h1
-              class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-3xl font-bold leading-snug text-transparent"
+              class="from-primary bg-gradient-to-r to-blue-600 bg-clip-text text-3xl font-bold leading-snug text-transparent"
             >
               Tings <span class="text-xs">{packageJson.version}</span>
             </h1>
@@ -100,7 +100,7 @@ for (const ting of t.children) {
             <li>
               <a
                 aria-label="npm"
-                class="inline-block cursor-pointer rounded py-2 hover:bg-primary hover:text-white md:px-4"
+                class="hover:bg-primary inline-block cursor-pointer rounded py-2 hover:text-white md:px-4"
                 href="https://www.npmjs.com/package/tings"
               >
                 npm
@@ -109,7 +109,7 @@ for (const ting of t.children) {
             <li>
               <a
                 aria-label="GitHub repository"
-                class="inline-block cursor-pointer rounded py-2 hover:bg-primary hover:text-white md:px-4"
+                class="hover:bg-primary inline-block cursor-pointer rounded py-2 hover:text-white md:px-4"
                 href="https://github.com/will-stone/tings"
               >
                 GitHub
@@ -120,7 +120,7 @@ for (const ting of t.children) {
       </header>
 
       <aside
-        class="fixed bottom-5 top-20 hidden overflow-y-auto overflow-x-hidden pt-16 scrollbar scrollbar-track-gray-900 scrollbar-thumb-gray-500 md:block md:w-40 lg:w-60"
+        class="scrollbar scrollbar-track-gray-900 scrollbar-thumb-gray-500 fixed bottom-5 top-20 hidden overflow-y-auto overflow-x-hidden pt-16 md:block md:w-40 lg:w-60"
       >
         <nav class="space-y-8 pb-16">
           {
@@ -133,7 +133,7 @@ for (const ting of t.children) {
                     <ul>
                       <li>
                         <a
-                          class="block cursor-pointer truncate rounded px-4 py-2 font-medium hover:bg-primary hover:text-white"
+                          class="hover:bg-primary block cursor-pointer truncate rounded px-4 py-2 font-medium hover:text-white"
                           href={`#${ting.name}`}
                         >
                           {ting.name}
@@ -228,7 +228,7 @@ for (const ting of t.children) {
                       </a>
                       <span
                         aria-label={`in ${category} category`}
-                        class="rounded bg-primary px-2 py-1 text-xs inline-block"
+                        class="bg-primary inline-block rounded px-2 py-1 text-xs"
                       >
                         {category}
                       </span>
@@ -251,7 +251,7 @@ for (const ting of t.children) {
         }
 
         <a
-          class="fixed bottom-8 right-8 flex h-8 w-8 cursor-pointer items-center justify-center truncate rounded bg-gray-800/80 text-xs leading-none text-gray-100 no-underline hover:text-primary"
+          class="hover:text-primary fixed bottom-8 right-8 flex h-8 w-8 cursor-pointer items-center justify-center truncate rounded bg-gray-800/80 text-xs leading-none text-gray-100 no-underline"
           href="/#top"
         >
           Top
