@@ -1,5 +1,11 @@
 # tings
 
+## 10.0.0
+
+### Major Changes
+
+- 1ab112a: Tings is now ESM-only, and will now allow dependencies.
+
 ## 9.1.0
 
 ### Minor Changes
