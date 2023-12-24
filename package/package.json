@@ -18,35 +18,25 @@
   },
   "sideEffects": false,
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
-  },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "exports": "./dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "bench": "vitest bench",
-    "build": "tsup source/index.ts --dts --format esm,cjs --clean",
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.build.json",
     "postbuild": "typedoc",
     "dev": "npm run build -- --watch --onSuccess \"npm run postbuild\"",
     "test": "vitest",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "^20.10.4",
+    "@types/node": "^20.10.5",
     "rimraf": "^5.0.5",
-    "tsup": "^8.0.1",
     "typedoc": "^0.25.4",
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10",
-    "vitest": "^1.0.4"
+    "vitest": "^1.1.0"
   },
   "publishConfig": {
     "access": "public",
