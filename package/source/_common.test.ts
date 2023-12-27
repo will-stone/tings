@@ -1,8 +1,12 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
 import { expect, test } from 'vitest'
 
 import * as all from './index.js'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const tingFileNames = fs
   .readdirSync(path.join(__dirname))
