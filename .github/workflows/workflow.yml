@@ -61,7 +61,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          commit: 'chore: version package'
+          commit: 'Version package'
           publish: npm run release
 
       - name: Build website
