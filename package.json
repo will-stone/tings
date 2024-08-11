@@ -33,7 +33,7 @@
     "husky": "^9.1.4",
     "lint-staged": "^15.2.8",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.13.0"
+    "prettier-plugin-astro": "^0.14.1"
   },
   "overrides": {
     "eslint": "^9.9.0"
