@@ -33,25 +33,25 @@ test(`sleeps for 0 milliseconds given a non-number`, async () => {
   sleepWrapper('blah', callbackSpy)
 
   await vi.advanceTimersByTime(0)
-  expect(callbackSpy).toBeCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledTimes(1)
 })
 
 test(`sleeps for 0 milliseconds given a negative number`, async () => {
   sleepWrapper(-10_000, callbackSpy)
 
   await vi.advanceTimersByTime(0)
-  expect(callbackSpy).toBeCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledTimes(1)
 })
 
 test(`sleeps for given float milliseconds, rounded-down`, async () => {
   sleepWrapper(10_000.942_89, callbackSpy)
 
   await vi.advanceTimersByTime(0)
-  expect(callbackSpy).not.toBeCalled()
+  expect(callbackSpy).not.toHaveBeenCalled()
 
   await vi.advanceTimersByTime(9999)
-  expect(callbackSpy).not.toBeCalled()
+  expect(callbackSpy).not.toHaveBeenCalled()
 
   await vi.advanceTimersByTime(10_000)
-  expect(callbackSpy).toBeCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledTimes(1)
 })

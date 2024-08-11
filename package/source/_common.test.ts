@@ -31,6 +31,6 @@ const camelToKebab = (string_: string): string =>
 const tings = Object.keys(all).map(camelToKebab)
 
 test('index exports all tings', () => {
-  expect(tingFileNames.length).toBe(tings.length)
-  expect(tingFileNames).toEqual(tings)
+  expect(tingFileNames).toHaveLength(tings.length)
+  expect(tingFileNames).toStrictEqual(tings)
 })
