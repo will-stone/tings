@@ -35,6 +35,7 @@
     "build": "tsup source/index.ts --dts --format esm,cjs --clean",
     "postbuild": "typedoc",
     "dev": "npm run build -- --watch --onSuccess \"npm run postbuild\"",
+    "release": "release-it",
     "test": "vitest",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },

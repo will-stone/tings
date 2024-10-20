@@ -2,9 +2,6 @@ name: Workflow
 
 on: [push]
 
-env:
-  HUSKY: 0
-
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
@@ -54,26 +51,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create release pull request or publish to npm
-        id: changesets
-        uses: changesets/action@v1
+      - name: Setup config
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+
+      - name: Release
+        run: cd package && npm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        with:
-          commit: 'Version package'
-          publish: npm run release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build website
-        if: steps.changesets.outputs.hasChangesets == 'false'
         run: npm run build -w website
 
       - name: Upload website artefacts
-        if: steps.changesets.outputs.hasChangesets == 'false'
         uses: actions/upload-pages-artifact@v2
         with:
           path: './website/dist/'
 
       - name: Deploy website
-        if: steps.changesets.outputs.hasChangesets == 'false'
         uses: actions/deploy-pages@v2
