@@ -1,3 +1,12 @@
+# Changelog
+
+## 9.1.1 (2024-10-20)
+
+### Patches
+
+- Testing auto-release
+  ([ffbce8f](https://github.com/will-stone/tings/commit/ffbce8f31d6416fb95d1bcf3bd499a488098b255))
+
 # tings
 
 ## 9.1.0
