@@ -5,8 +5,12 @@ on: [push]
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  doctor:
+  workflow:
     runs-on: ubuntu-latest
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+      contents: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -29,46 +33,29 @@ jobs:
       - name: Type check
         run: npm run typecheck -w tings
 
-  release:
-    if: github.ref == 'refs/heads/main'
-    needs: [doctor]
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-      contents: write
-      pull-requests: write
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
       - name: Setup config
+        if: github.ref == 'refs/heads/main'
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: Release
+        if: github.ref == 'refs/heads/main'
         run: npm run release -w tings
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build website
+        if: github.ref == 'refs/heads/main'
         run: npm run build -w website
 
       - name: Upload website artefacts
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v2
         with:
           path: './website/dist/'
 
       - name: Deploy website
+        if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v2
