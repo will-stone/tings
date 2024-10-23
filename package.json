@@ -1,18 +1,49 @@
 {
-  "name": "tings-monorepo",
-  "private": true,
+  "name": "tings",
+  "version": "9.1.1",
+  "private": false,
+  "description": "A collection of small JavaScript utilities",
+  "homepage": "https://tings.wstone.uk/",
+  "bugs": {
+    "url": "https://github.com/will-stone/tings/issues"
+  },
+  "repository": {
+    "url": "https://github.com/will-stone/tings"
+  },
   "license": "MIT",
+  "author": {
+    "name": "Will Stone",
+    "email": "hello@wstone.uk",
+    "url": "https://wstone.uk"
+  },
+  "sideEffects": false,
   "type": "module",
-  "workspaces": [
-    "website",
-    "package"
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
   ],
   "scripts": {
-    "build": "npm run build -w tings && npm run build -w website",
-    "dev": "concurrently 'npm run dev -w website' 'npm run dev -w tings' -n web,lib -c blue,magenta",
+    "bench": "vitest bench",
+    "build": "npm run build:lib && npm run build:web",
+    "postbuild": "typedoc",
+    "build:lib": "tsup source/index.ts --dts --format esm,cjs --clean",
+    "build:web": "astro check && astro build",
+    "dev": "concurrently 'npm run dev:web' 'npm run dev:lib' -n web,lib -c blue,magenta",
+    "dev:lib": "npm run build:lib -- --watch --onSuccess \"npm run postbuild\"",
+    "dev:web": "astro dev",
     "lint": "eslint .",
     "prepare": "simple-git-hooks",
-    "test": "npm test -w tings"
+    "release": "release-it",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "simple-git-hooks": {
     "pre-commit": "npx --no lint-staged"
@@ -26,19 +57,40 @@
     ]
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^6.0.0-beta.0",
     "@commits-with-character/conventional-changelog-preset": "^1.0.0",
     "@release-it/conventional-changelog": "^9.0.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/node": "^22.2.0",
     "@will-stone/eslint-config": "^11.0.1",
     "@will-stone/prettier-config": "^8.0.1",
+    "astro": "^4.16.7",
+    "astro-remote": "^0.3.3",
     "concurrently": "^8.2.2",
     "eslint": "^9.9.0",
     "lint-staged": "^15.2.8",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "release-it": "^17.10.0",
-    "simple-git-hooks": "^2.11.1"
+    "rimraf": "^5.0.6",
+    "shiki": "^0.14.7",
+    "simple-git-hooks": "^2.11.1",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.4.9",
+    "tsup": "^8.2.4",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-markdown": "^3.17.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "overrides": {
-    "eslint": "^9.9.0"
+    "eslint": "^9.9.0",
+    "typescript": "^5.5.4"
   }
 }

@@ -210,7 +210,7 @@
 								"targetType": {
 									"type": "reference",
 									"target": {
-										"sourceFileName": "../node_modules/typescript/lib/lib.es5.d.ts",
+										"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
 										"qualifiedName": "Date"
 									},
 									"name": "Date",
@@ -866,7 +866,7 @@
 							"type": {
 								"type": "reference",
 								"target": {
-									"sourceFileName": "../node_modules/typescript/lib/lib.es5.d.ts",
+									"sourceFileName": "node_modules/typescript/lib/lib.es5.d.ts",
 									"qualifiedName": "Promise"
 								},
 								"typeArguments": [

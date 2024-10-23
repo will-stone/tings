@@ -4,7 +4,6 @@ export default [
   {
     settings: {
       tailwindcss: {
-        config: 'website/tailwind.config.cjs',
         whitelist: [
           'scrollbar',
           'scrollbar-(thumb-.+|track-.+)',

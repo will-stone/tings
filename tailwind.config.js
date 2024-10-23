@@ -4,7 +4,7 @@ import scrollbar from 'tailwind-scrollbar'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{html,js,jsx,astro,ts,tsx}'],
+  content: ['./website/**/*.{html,js,jsx,astro,ts,tsx}'],
 
   theme: {
     screens: {

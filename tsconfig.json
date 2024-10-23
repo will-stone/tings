@@ -17,7 +17,7 @@
     "types": ["vitest/importMeta"],
     "useDefineForClassFields": true
   },
-  "include": ["source"],
+  "include": ["source", "website"],
   "typedocOptions": {
     "disableSources": true,
     "entryPoints": ["./source"],
@@ -25,7 +25,7 @@
     "exclude": "**/*+(index|.spec|.e2e|.test|.bench).ts",
     "excludeInternal": true,
     "excludeNotDocumented": true,
-    "json": "../website/src/data/typedoc.json",
+    "json": "./website/src/data/typedoc.json",
     "readme": "none"
   }
 }

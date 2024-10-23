@@ -2,7 +2,7 @@
 import { Code } from 'astro:components'
 import { Markdown } from 'astro-remote'
 
-import packageJson from '../../../package/package.json'
+import packageJson from '../../../package.json'
 import CodeBlock from '../components/code-block.astro'
 import t from '../data/typedoc.json'
 
@@ -239,7 +239,11 @@ for (const ting of t.children) {
                       </span>
                     </h2>
                     <Markdown content={ting.summary} />
-                    <Markdown content={ting.code} components={{ CodeBlock }} />
+                    <Markdown
+                      content={ting.code}
+                      components={{ CodeBlock }}
+                      sanitize={{ allowComponents: true }}
+                    />
                     <p class="text-gray-300">
                       Source:{' '}
                       <a
