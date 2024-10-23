@@ -60,16 +60,16 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^6.0.0-beta.0",
     "@commits-with-character/conventional-changelog-preset": "^1.0.0",
-    "@release-it/conventional-changelog": "^9.0.0",
+    "@release-it/conventional-changelog": "^9.0.1",
     "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "^22.2.0",
+    "@types/node": "^22.7.9",
     "@will-stone/eslint-config": "^11.0.1",
     "@will-stone/prettier-config": "^8.0.1",
     "astro": "^4.16.7",
     "astro-remote": "^0.3.3",
     "concurrently": "^8.2.2",
-    "eslint": "^9.9.0",
-    "lint-staged": "^15.2.8",
+    "eslint": "^9.13.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "release-it": "^17.10.0",
@@ -77,12 +77,12 @@
     "shiki": "^0.14.7",
     "simple-git-hooks": "^2.11.1",
     "tailwind-scrollbar": "^3.1.0",
-    "tailwindcss": "^3.4.9",
-    "tsup": "^8.2.4",
+    "tailwindcss": "^3.4.14",
+    "tsup": "^8.3.0",
     "typedoc": "^0.25.13",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
     "vitest": "^1.6.0"
   },
   "publishConfig": {
@@ -90,7 +90,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "overrides": {
-    "eslint": "^9.9.0",
-    "typescript": "^5.5.4"
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3"
   }
 }
