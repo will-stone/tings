@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prefer-global-this -- want to check window and document */
+
 import { expect, test } from 'vitest'
 
 import { checkBrowser } from './check-browser.js'
