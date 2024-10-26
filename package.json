@@ -61,7 +61,7 @@
     "@astrojs/tailwind": "^6.0.0-beta.0",
     "@commits-with-character/conventional-changelog-preset": "^1.0.0",
     "@release-it/conventional-changelog": "^9.0.1",
-    "@tailwindcss/typography": "^0.5.13",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.8.1",
     "@will-stone/eslint-config": "^11.0.1",
     "@will-stone/prettier-config": "^8.0.1",
