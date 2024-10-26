@@ -67,7 +67,7 @@
     "@will-stone/prettier-config": "^8.0.1",
     "astro": "^4.16.7",
     "astro-remote": "^0.3.3",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.1",
     "eslint": "^9.13.0",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
