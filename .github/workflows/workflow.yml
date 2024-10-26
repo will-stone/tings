@@ -31,7 +31,7 @@ jobs:
         run: npm test
 
       - name: Type check
-        run: npm run typecheck -w tings
+        run: npm run typecheck
 
       - name: Setup config
         if: github.ref == 'refs/heads/main'
@@ -41,14 +41,14 @@ jobs:
 
       - name: Release
         if: github.ref == 'refs/heads/main'
-        run: npm run release -w tings
+        run: npm run release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build website
         if: github.ref == 'refs/heads/main'
-        run: npm run build -w website
+        run: npm run build:web
 
       - name: Upload website artefacts
         if: github.ref == 'refs/heads/main'
