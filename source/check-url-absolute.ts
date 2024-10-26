@@ -11,7 +11,7 @@ checkUrlAbsolute("/page") // false
 checkUrlAbsolute(123) // false - input is not a string
 ```
  */
-export const checkUrlAbsolute = (url: unknown): boolean => {
+export function checkUrlAbsolute(url: unknown): boolean {
   if (typeof url !== 'string') return false
   // regex sourced from https://stackoverflow.com/a/19709846
   return /^(?:[+a-z]+:)?\/\//iu.test(url)

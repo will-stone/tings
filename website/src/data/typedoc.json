@@ -1473,5 +1473,42 @@
 			"sourceFileName": "source/to-ordinal.ts",
 			"qualifiedName": "input"
 		}
+	},
+	"files": {
+		"entries": {
+			"1": "source/check-browser.ts",
+			"2": "source/check-compact-case.ts",
+			"3": "source/check-date.ts",
+			"4": "source/check-even.ts",
+			"5": "source/check-lower-case.ts",
+			"6": "source/check-odd.ts",
+			"7": "source/check-prime.ts",
+			"8": "source/check-unique.ts",
+			"9": "source/check-url-absolute.ts",
+			"10": "source/generate-integers.ts",
+			"11": "source/index.ts",
+			"12": "source/sleep.ts",
+			"13": "source/to-compact-case.ts",
+			"14": "source/to-letters.ts",
+			"15": "source/to-number.ts",
+			"16": "source/to-ordinal.ts"
+		},
+		"reflections": {
+			"1": 1,
+			"2": 4,
+			"3": 8,
+			"4": 12,
+			"5": 16,
+			"6": 20,
+			"7": 24,
+			"8": 28,
+			"9": 32,
+			"10": 36,
+			"12": 42,
+			"13": 46,
+			"14": 50,
+			"15": 54,
+			"16": 58
+		}
 	}
 }
