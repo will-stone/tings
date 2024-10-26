@@ -21,10 +21,10 @@ afterEach(() => {
 test('sleeps for given milliseconds', async () => {
   sleepWrapper(10_000, callbackSpy)
 
-  await vi.advanceTimersByTime(9001)
+  await vi.advanceTimersByTimeAsync(9001)
   expect(callbackSpy).not.toHaveBeenCalled()
 
-  await vi.advanceTimersByTime(1000)
+  await vi.advanceTimersByTimeAsync(1000)
   expect(callbackSpy).toHaveBeenCalledTimes(1)
 })
 
@@ -32,26 +32,26 @@ test(`sleeps for 0 milliseconds given a non-number`, async () => {
   // @ts-expect-error -- not a number
   sleepWrapper('blah', callbackSpy)
 
-  await vi.advanceTimersByTime(0)
+  await vi.advanceTimersByTimeAsync(0)
   expect(callbackSpy).toHaveBeenCalledTimes(1)
 })
 
 test(`sleeps for 0 milliseconds given a negative number`, async () => {
   sleepWrapper(-10_000, callbackSpy)
 
-  await vi.advanceTimersByTime(0)
+  await vi.advanceTimersByTimeAsync(0)
   expect(callbackSpy).toHaveBeenCalledTimes(1)
 })
 
 test(`sleeps for given float milliseconds, rounded-down`, async () => {
   sleepWrapper(10_000.942_89, callbackSpy)
 
-  await vi.advanceTimersByTime(0)
+  await vi.advanceTimersByTimeAsync(0)
   expect(callbackSpy).not.toHaveBeenCalled()
 
-  await vi.advanceTimersByTime(9999)
+  await vi.advanceTimersByTimeAsync(9999)
   expect(callbackSpy).not.toHaveBeenCalled()
 
-  await vi.advanceTimersByTime(10_000)
+  await vi.advanceTimersByTimeAsync(10_000)
   expect(callbackSpy).toHaveBeenCalledTimes(1)
 })
