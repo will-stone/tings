@@ -9,4 +9,5 @@ yarn-error.log
 
 tsconfig.vitest-temp.json
 dist
+dist-website
 .astro
