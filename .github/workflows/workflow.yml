@@ -54,7 +54,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './website/dist/'
+          path: './dist-website/'
 
       - name: Deploy website
         if: github.ref == 'refs/heads/main'
