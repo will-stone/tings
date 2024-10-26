@@ -1,5 +1,12 @@
 # Changelog
 
+## 9.1.2 (2024-10-26)
+
+### Patches
+
+- Test release
+  ([55f9326](https://github.com/will-stone/tings/commit/55f932626104ff9908fd4fd16a438a04e8c41f47))
+
 ## 9.1.1 (2024-10-20)
 
 ### Patches
