@@ -1,11 +1,7 @@
 ---
-import shiki from 'shiki'
-
 const { lang, code } = Astro.props
 
-const highlighted = await shiki
-  .getHighlighter({ theme: 'css-variables' })
-  .then((highlighter) => highlighter.codeToHtml(code, { lang }))
+import { Code } from 'astro/components'
 ---
 
-<Fragment set:html={highlighted} />
+<Code code={code} lang={lang} theme={'github-dark-high-contrast'} />
