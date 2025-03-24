@@ -40,13 +40,10 @@
     "dev:lib": "npm run build:lib -- --watch --onSuccess \"npm run postbuild\"",
     "dev:web": "astro dev",
     "lint": "eslint .",
-    "prepare": "simple-git-hooks",
+    "prepare": "husky",
     "release": "release-it",
     "test": "vitest",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx --no lint-staged"
   },
   "lint-staged": {
     "*.{css,json,md,js,jsx,ts,tsx,cjs,mjs}": [
@@ -69,11 +66,11 @@
     "astro-remote": "^0.3.3",
     "concurrently": "^9.0.1",
     "eslint": "^9.13.0",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "release-it": "^17.10.0",
-    "simple-git-hooks": "^2.11.1",
     "tailwind-scrollbar": "^3.1.0",
     "tailwindcss": "^3.4.14",
     "tsup": "^8.3.5",
