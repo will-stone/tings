@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.3](https://github.com/will-stone/tings/compare/9.1.2...9.1.3) (2025-03-24)
+
+### Patches
+
+- Migrate to pnpm, this is a test release
+  ([bf883e8](https://github.com/will-stone/tings/commit/bf883e86f82e5ca8dd890c57cdcfe33ffc4a0778))
+
 ## 9.1.2 (2024-10-26)
 
 ### Patches
