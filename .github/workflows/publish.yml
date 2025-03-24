@@ -56,9 +56,9 @@ jobs:
         run: npm run build:web
 
       - name: Upload website artefacts
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './dist-website/'
 
       - name: Deploy website
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
