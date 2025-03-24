@@ -11,7 +11,9 @@ test('isBrowser is true', () => {
   global.window = {}
   // @ts-expect-error -- TS doesn't like this override
   global.document = {}
+
   expect(checkBrowser()).toBe(true)
+
   global.window = originalWindow
   global.document = originalDocument
 })

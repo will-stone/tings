@@ -16,5 +16,5 @@ export default [
       },
     },
   },
-  ...config(),
+  ...(await config()),
 ]

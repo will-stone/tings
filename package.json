@@ -32,12 +32,12 @@
   ],
   "scripts": {
     "bench": "vitest bench",
-    "build": "npm run build:lib && npm run build:web",
+    "build": "pnpm build:lib && pnpm build:web",
     "postbuild": "typedoc",
     "build:lib": "tsup source/index.ts --dts --format esm,cjs --clean",
     "build:web": "astro check && astro build",
-    "dev": "concurrently 'npm run dev:web' 'npm run dev:lib' -n web,lib -c blue,magenta",
-    "dev:lib": "npm run build:lib -- --watch --onSuccess \"npm run postbuild\"",
+    "dev": "concurrently 'pnpm dev:web' 'pnpm dev:lib' -n web,lib -c blue,magenta",
+    "dev:lib": "pnpm build:lib -- --watch --onSuccess \"pnpm postbuild\"",
     "dev:web": "astro dev",
     "lint": "eslint .",
     "prepare": "husky",
@@ -56,33 +56,43 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^6.0.0-beta.0",
-    "@commits-with-character/conventional-changelog-preset": "^1.0.0",
-    "@release-it/conventional-changelog": "^9.0.1",
+    "@commits-with-character/conventional-changelog-preset": "^2.0.0",
+    "@release-it/conventional-changelog": "^10.0.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.8.1",
-    "@will-stone/eslint-config": "^12.0.0",
-    "@will-stone/prettier-config": "^8.0.1",
-    "astro": "^4.16.7",
+    "@vitest/eslint-plugin": "^1.1.38",
+    "@will-stone/eslint-config": "^15.0.4",
+    "@will-stone/prettier-config": "^9.0.2",
+    "astro": "^5.5.4",
+    "astro-eslint-parser": "^1.2.2",
     "astro-remote": "^0.3.3",
     "concurrently": "^9.0.1",
     "eslint": "^9.13.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-tailwindcss": "^3.18.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "release-it": "^17.10.0",
-    "tailwind-scrollbar": "^3.1.0",
+    "release-it": "^18.1.2",
+    "tailwind-scrollbar": "^4.0.1",
     "tailwindcss": "^3.4.14",
     "tsup": "^8.3.5",
     "typedoc": "^0.26.10",
     "typedoc-plugin-markdown": "^4.2.9",
     "typescript": "^5.6.3",
-    "vite": "^5.4.10",
-    "vitest": "^2.1.4"
+    "vite": "^6.2.3",
+    "vitest": "^3.0.9"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   },
   "overrides": {
     "eslint": "^9.13.0",

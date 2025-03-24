@@ -1,6 +1,8 @@
-name: Workflow
-
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -14,48 +16,49 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
 
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
-          cache: npm
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Test
-        run: npm test
-
-      - name: Type check
-        run: npm run typecheck
-
-      - name: Setup config
-        if: github.ref == 'refs/heads/main'
+      - name: setup config
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
+
+      - name: Type check
+        run: pnpm typecheck
+
       - name: Release
-        if: github.ref == 'refs/heads/main'
-        run: npm run release
+        run: pnpm release
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build website
-        if: github.ref == 'refs/heads/main'
         run: npm run build:web
 
       - name: Upload website artefacts
-        if: github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v2
         with:
           path: './dist-website/'
 
       - name: Deploy website
-        if: github.ref == 'refs/heads/main'
         uses: actions/deploy-pages@v2

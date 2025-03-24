@@ -23,5 +23,6 @@ const cases = [
 
 test.each(cases)('%s is %s', (input, expected) => {
   const result = toCompactCase(input)
+
   expect(result).toBe(expected)
 })

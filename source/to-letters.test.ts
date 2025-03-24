@@ -21,5 +21,6 @@ const cases = [
 // @ts-expect-error -- doesn't like array inputs
 test.each(cases)('%s is %s', (input, expected) => {
   const result = toLetters(input)
+
   expect(result).toBe(expected)
 })
