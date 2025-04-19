@@ -15,11 +15,11 @@ importers:
         specifier: ^6.0.0-beta.0
         version: 6.0.1(astro@5.7.4(@types/node@22.13.13)(jiti@2.4.2)(rollup@4.40.0)(typescript@5.8.2)(yaml@2.7.1))(tailwindcss@3.4.17)
       '@commits-with-character/conventional-changelog-preset':
-        specifier: ^2.0.0
-        version: 2.0.0(@release-it/conventional-changelog@10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5)))(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))
+        specifier: ^4.0.0
+        version: 4.0.0(@release-it/conventional-changelog@10.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5)))(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))
       '@release-it/conventional-changelog':
-        specifier: ^10.0.0
-        version: 10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))
+        specifier: ^10.0.1
+        version: 10.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.16(tailwindcss@3.4.17)
@@ -173,12 +173,12 @@ packages:
   '@capsizecss/unpack@2.4.0':
     resolution: {integrity: sha512-GrSU71meACqcmIUxPYOJvGKF0yryjN/L1aCuE9DViCTJI7bfkjgYDPD1zbNDcINJwSSP6UaBZY9GAbYDO7re0Q==}
 
-  '@commits-with-character/conventional-changelog-preset@2.0.0':
-    resolution: {integrity: sha512-4LBNJsd5MtsnwT2eDgF++38BgbsuNCpSw63nll+CwgBbyyJwLUCYUjJtvWoqVczigBNFQEhsz/y0h9Y+79EVSQ==}
+  '@commits-with-character/conventional-changelog-preset@4.0.0':
+    resolution: {integrity: sha512-LG6CHni1A4n1q2ZWGJ6Q5Kv5MUDmqFzGxjtXL4kN72T7Ht88LDahZhvdEKG7V+8ekKPUticp8Z/O7XY0zmytfA==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@release-it/conventional-changelog': ^10.0.0
-      release-it: ^18.1.1
+      '@release-it/conventional-changelog': ^10.0.1
+      release-it: ^19.0.1
 
   '@conventional-changelog/git-client@1.0.1':
     resolution: {integrity: sha512-PJEqBwAleffCMETaVm/fUgHldzBE35JFk3/9LL6NUA5EXa3qednu+UT6M7E5iBu3zIQZCULYIiZ90fBYHt6xUw==}
@@ -942,11 +942,11 @@ packages:
     resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@release-it/conventional-changelog@10.0.0':
-    resolution: {integrity: sha512-49qf9phGmPUIGpY2kwfgehs9en1znbPv2zdNn1WMLAH9DtHUh4m6KNSB+mLFGAMUhv24JhsA8ruYRYgluc2UJw==}
+  '@release-it/conventional-changelog@10.0.1':
+    resolution: {integrity: sha512-Qp+eyMGCPyq5xiWoNK91cWVIR/6HD1QAUNeG6pV2G4kxotWl81k/KDQqDNvrNVmr9+zDp53jI7pVVYQp6mi4zA==}
     engines: {node: ^20.9.0 || >=22.0.0}
     peerDependencies:
-      release-it: ^18.0.0
+      release-it: ^18.0.0 || ^19.0.0
 
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
@@ -1253,8 +1253,8 @@ packages:
   '@types/prismjs@1.26.5':
     resolution: {integrity: sha512-AUZTa7hQ2KY5L7AmtSiqxlhWxb4ina0yd8hNbl4TWuqnv/pFP0nDMb3YrfSBf4hJVGLh2YEIBfKaBW/9UEl6IQ==}
 
-  '@types/semver@7.5.8':
-    resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
+  '@types/semver@7.7.0':
+    resolution: {integrity: sha512-k107IF4+Xr7UHjwDc7Cfd6PRQfbdkiRabXGRjo07b4WyPahFBZCZ1sE+BNxYIJPPg73UkfOsVOLwqVc/6ETrIA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -5073,14 +5073,14 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@commits-with-character/conventional-changelog-preset@2.0.0(@release-it/conventional-changelog@10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5)))(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))':
+  '@commits-with-character/conventional-changelog-preset@4.0.0(@release-it/conventional-changelog@10.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5)))(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))':
     dependencies:
-      '@release-it/conventional-changelog': 10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))
+      '@release-it/conventional-changelog': 10.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))
       release-it: 19.0.1(@types/node@22.13.13)(magicast@0.3.5)
 
   '@conventional-changelog/git-client@1.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)':
     dependencies:
-      '@types/semver': 7.5.8
+      '@types/semver': 7.7.0
       semver: 7.7.1
     optionalDependencies:
       conventional-commits-filter: 5.0.0
@@ -5662,7 +5662,7 @@ snapshots:
 
   '@pkgr/core@0.2.4': {}
 
-  '@release-it/conventional-changelog@10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))':
+  '@release-it/conventional-changelog@10.0.1(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)(release-it@19.0.1(@types/node@22.13.13)(magicast@0.3.5))':
     dependencies:
       concat-stream: 2.0.0
       conventional-changelog: 6.0.0(conventional-commits-filter@5.0.0)
@@ -5925,7 +5925,7 @@ snapshots:
 
   '@types/prismjs@1.26.5': {}
 
-  '@types/semver@7.5.8': {}
+  '@types/semver@7.7.0': {}
 
   '@types/unist@3.0.3': {}
 
