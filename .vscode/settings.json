@@ -5,6 +5,5 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["justletters", "postbuild", "thisiscompact"],
-  "eslint.validate": ["astro"]
+  "cSpell.words": ["justletters", "postbuild", "thisiscompact"]
 }
