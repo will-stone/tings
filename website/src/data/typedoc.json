@@ -1,4 +1,5 @@
 {
+	"schemaVersion": "2.0",
 	"id": 0,
 	"name": "tings",
 	"variant": "project",
@@ -33,6 +34,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Environment"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -97,6 +107,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "String"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -180,6 +199,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Date"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -210,7 +238,8 @@
 								"targetType": {
 									"type": "reference",
 									"target": {
-										"sourceFileName": "node_modules/.pnpm/typescript@5.8.2/node_modules/typescript/lib/lib.es5.d.ts",
+										"packageName": "typescript",
+										"packagePath": "lib/lib.es5.d.ts",
 										"qualifiedName": "Date"
 									},
 									"name": "Date",
@@ -266,6 +295,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Number"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -349,6 +387,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "String"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -430,6 +477,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Number"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -513,6 +569,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Number"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -595,6 +660,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Array"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -672,6 +746,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "String"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -748,6 +831,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Array"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -840,6 +932,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Misc"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -866,7 +967,8 @@
 							"type": {
 								"type": "reference",
 								"target": {
-									"sourceFileName": "node_modules/.pnpm/typescript@5.8.2/node_modules/typescript/lib/lib.es5.d.ts",
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
 									"qualifiedName": "Promise"
 								},
 								"typeArguments": [
@@ -927,6 +1029,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "String"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -1005,6 +1116,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "String"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -1081,6 +1201,15 @@
 									}
 								],
 								"blockTags": [
+									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Number"
+											}
+										]
+									},
 									{
 										"tag": "@example",
 										"content": [
@@ -1159,6 +1288,15 @@
 								],
 								"blockTags": [
 									{
+										"tag": "@category",
+										"content": [
+											{
+												"kind": "text",
+												"text": "Number"
+											}
+										]
+									},
+									{
 										"tag": "@example",
 										"content": [
 											{
@@ -1234,243 +1372,303 @@
 	"packageName": "tings",
 	"symbolIdMap": {
 		"1": {
-			"sourceFileName": "source/check-browser.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-browser.ts",
 			"qualifiedName": ""
 		},
 		"2": {
-			"sourceFileName": "source/check-browser.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-browser.ts",
 			"qualifiedName": "checkBrowser"
 		},
 		"3": {
-			"sourceFileName": "source/check-browser.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-browser.ts",
 			"qualifiedName": "checkBrowser"
 		},
 		"4": {
-			"sourceFileName": "source/check-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-compact-case.ts",
 			"qualifiedName": ""
 		},
 		"5": {
-			"sourceFileName": "source/check-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-compact-case.ts",
 			"qualifiedName": "checkCompactCase"
 		},
 		"6": {
-			"sourceFileName": "source/check-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-compact-case.ts",
 			"qualifiedName": "checkCompactCase"
 		},
 		"7": {
-			"sourceFileName": "source/check-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-compact-case.ts",
 			"qualifiedName": "input"
 		},
 		"8": {
-			"sourceFileName": "source/check-date.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-date.ts",
 			"qualifiedName": ""
 		},
 		"9": {
-			"sourceFileName": "source/check-date.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-date.ts",
 			"qualifiedName": "checkDate"
 		},
 		"10": {
-			"sourceFileName": "source/check-date.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-date.ts",
 			"qualifiedName": "checkDate"
 		},
 		"11": {
-			"sourceFileName": "source/check-date.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-date.ts",
 			"qualifiedName": "input"
 		},
 		"12": {
-			"sourceFileName": "source/check-even.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-even.ts",
 			"qualifiedName": ""
 		},
 		"13": {
-			"sourceFileName": "source/check-even.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-even.ts",
 			"qualifiedName": "checkEven"
 		},
 		"14": {
-			"sourceFileName": "source/check-even.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-even.ts",
 			"qualifiedName": "checkEven"
 		},
 		"15": {
-			"sourceFileName": "source/check-even.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-even.ts",
 			"qualifiedName": "input"
 		},
 		"16": {
-			"sourceFileName": "source/check-lower-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-lower-case.ts",
 			"qualifiedName": ""
 		},
 		"17": {
-			"sourceFileName": "source/check-lower-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-lower-case.ts",
 			"qualifiedName": "checkLowerCase"
 		},
 		"18": {
-			"sourceFileName": "source/check-lower-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-lower-case.ts",
 			"qualifiedName": "checkLowerCase"
 		},
 		"19": {
-			"sourceFileName": "source/check-lower-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-lower-case.ts",
 			"qualifiedName": "input"
 		},
 		"20": {
-			"sourceFileName": "source/check-odd.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-odd.ts",
 			"qualifiedName": ""
 		},
 		"21": {
-			"sourceFileName": "source/check-odd.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-odd.ts",
 			"qualifiedName": "checkOdd"
 		},
 		"22": {
-			"sourceFileName": "source/check-odd.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-odd.ts",
 			"qualifiedName": "checkOdd"
 		},
 		"23": {
-			"sourceFileName": "source/check-odd.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-odd.ts",
 			"qualifiedName": "input"
 		},
 		"24": {
-			"sourceFileName": "source/check-prime.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-prime.ts",
 			"qualifiedName": ""
 		},
 		"25": {
-			"sourceFileName": "source/check-prime.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-prime.ts",
 			"qualifiedName": "checkPrime"
 		},
 		"26": {
-			"sourceFileName": "source/check-prime.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-prime.ts",
 			"qualifiedName": "checkPrime"
 		},
 		"27": {
-			"sourceFileName": "source/check-prime.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-prime.ts",
 			"qualifiedName": "input"
 		},
 		"28": {
-			"sourceFileName": "source/check-unique.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-unique.ts",
 			"qualifiedName": ""
 		},
 		"29": {
-			"sourceFileName": "source/check-unique.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-unique.ts",
 			"qualifiedName": "checkUnique"
 		},
 		"30": {
-			"sourceFileName": "source/check-unique.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-unique.ts",
 			"qualifiedName": "checkUnique"
 		},
 		"31": {
-			"sourceFileName": "source/check-unique.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-unique.ts",
 			"qualifiedName": "input"
 		},
 		"32": {
-			"sourceFileName": "source/check-url-absolute.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-url-absolute.ts",
 			"qualifiedName": ""
 		},
 		"33": {
-			"sourceFileName": "source/check-url-absolute.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-url-absolute.ts",
 			"qualifiedName": "checkUrlAbsolute"
 		},
 		"34": {
-			"sourceFileName": "source/check-url-absolute.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-url-absolute.ts",
 			"qualifiedName": "checkUrlAbsolute"
 		},
 		"35": {
-			"sourceFileName": "source/check-url-absolute.ts",
+			"packageName": "tings",
+			"packagePath": "source/check-url-absolute.ts",
 			"qualifiedName": "url"
 		},
 		"36": {
-			"sourceFileName": "source/generate-integers.ts",
+			"packageName": "tings",
+			"packagePath": "source/generate-integers.ts",
 			"qualifiedName": ""
 		},
 		"37": {
-			"sourceFileName": "source/generate-integers.ts",
+			"packageName": "tings",
+			"packagePath": "source/generate-integers.ts",
 			"qualifiedName": "generateIntegers"
 		},
 		"38": {
-			"sourceFileName": "source/generate-integers.ts",
+			"packageName": "tings",
+			"packagePath": "source/generate-integers.ts",
 			"qualifiedName": "generateIntegers"
 		},
 		"39": {
-			"sourceFileName": "source/generate-integers.ts",
+			"packageName": "tings",
+			"packagePath": "source/generate-integers.ts",
 			"qualifiedName": "from"
 		},
 		"40": {
-			"sourceFileName": "source/generate-integers.ts",
+			"packageName": "tings",
+			"packagePath": "source/generate-integers.ts",
 			"qualifiedName": "to"
 		},
 		"42": {
-			"sourceFileName": "source/sleep.ts",
+			"packageName": "tings",
+			"packagePath": "source/sleep.ts",
 			"qualifiedName": ""
 		},
 		"43": {
-			"sourceFileName": "source/sleep.ts",
+			"packageName": "tings",
+			"packagePath": "source/sleep.ts",
 			"qualifiedName": "sleep"
 		},
 		"44": {
-			"sourceFileName": "source/sleep.ts",
+			"packageName": "tings",
+			"packagePath": "source/sleep.ts",
 			"qualifiedName": "sleep"
 		},
 		"45": {
-			"sourceFileName": "source/sleep.ts",
+			"packageName": "tings",
+			"packagePath": "source/sleep.ts",
 			"qualifiedName": "milliseconds"
 		},
 		"46": {
-			"sourceFileName": "source/to-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-compact-case.ts",
 			"qualifiedName": ""
 		},
 		"47": {
-			"sourceFileName": "source/to-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-compact-case.ts",
 			"qualifiedName": "toCompactCase"
 		},
 		"48": {
-			"sourceFileName": "source/to-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-compact-case.ts",
 			"qualifiedName": "toCompactCase"
 		},
 		"49": {
-			"sourceFileName": "source/to-compact-case.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-compact-case.ts",
 			"qualifiedName": "input"
 		},
 		"50": {
-			"sourceFileName": "source/to-letters.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-letters.ts",
 			"qualifiedName": ""
 		},
 		"51": {
-			"sourceFileName": "source/to-letters.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-letters.ts",
 			"qualifiedName": "toLetters"
 		},
 		"52": {
-			"sourceFileName": "source/to-letters.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-letters.ts",
 			"qualifiedName": "toLetters"
 		},
 		"53": {
-			"sourceFileName": "source/to-letters.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-letters.ts",
 			"qualifiedName": "input"
 		},
 		"54": {
-			"sourceFileName": "source/to-number.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-number.ts",
 			"qualifiedName": ""
 		},
 		"55": {
-			"sourceFileName": "source/to-number.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-number.ts",
 			"qualifiedName": "toNumber"
 		},
 		"56": {
-			"sourceFileName": "source/to-number.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-number.ts",
 			"qualifiedName": "toNumber"
 		},
 		"57": {
-			"sourceFileName": "source/to-number.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-number.ts",
 			"qualifiedName": "input"
 		},
 		"58": {
-			"sourceFileName": "source/to-ordinal.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-ordinal.ts",
 			"qualifiedName": ""
 		},
 		"59": {
-			"sourceFileName": "source/to-ordinal.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-ordinal.ts",
 			"qualifiedName": "toOrdinal"
 		},
 		"60": {
-			"sourceFileName": "source/to-ordinal.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-ordinal.ts",
 			"qualifiedName": "toOrdinal"
 		},
 		"61": {
-			"sourceFileName": "source/to-ordinal.ts",
+			"packageName": "tings",
+			"packagePath": "source/to-ordinal.ts",
 			"qualifiedName": "input"
 		}
 	},
