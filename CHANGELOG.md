@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.6](https://github.com/will-stone/tings/compare/9.1.5...9.1.6) (2026-04-03)
+
+### Patches
+
+- Fix source links in docs
+  ([782a0e0](https://github.com/will-stone/tings/commit/782a0e05b7ee2f495a3e4a5b6c031c88012f4368))
+
 ## [9.1.5](https://github.com/will-stone/tings/compare/9.1.4...9.1.5) (2026-04-03)
 
 ### Patches
