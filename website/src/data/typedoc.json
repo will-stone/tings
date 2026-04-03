@@ -904,21 +904,21 @@
 			]
 		},
 		{
-			"id": 42,
+			"id": 41,
 			"name": "sleep",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 43,
+					"id": 42,
 					"name": "sleep",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 44,
+							"id": 43,
 							"name": "sleep",
 							"variant": "signature",
 							"kind": 4096,
@@ -953,7 +953,7 @@
 							},
 							"parameters": [
 								{
-									"id": 45,
+									"id": 44,
 									"name": "milliseconds",
 									"variant": "param",
 									"kind": 32768,
@@ -988,7 +988,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						43
+						42
 					]
 				}
 			],
@@ -996,27 +996,27 @@
 				{
 					"title": "Misc",
 					"children": [
-						43
+						42
 					]
 				}
 			]
 		},
 		{
-			"id": 46,
+			"id": 45,
 			"name": "to-compact-case",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 47,
+					"id": 46,
 					"name": "toCompactCase",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 48,
+							"id": 47,
 							"name": "toCompactCase",
 							"variant": "signature",
 							"kind": 4096,
@@ -1051,7 +1051,7 @@
 							},
 							"parameters": [
 								{
-									"id": 49,
+									"id": 48,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -1074,7 +1074,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						47
+						46
 					]
 				}
 			],
@@ -1082,27 +1082,27 @@
 				{
 					"title": "String",
 					"children": [
-						47
+						46
 					]
 				}
 			]
 		},
 		{
-			"id": 50,
+			"id": 49,
 			"name": "to-letters",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 51,
+					"id": 50,
 					"name": "toLetters",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 52,
+							"id": 51,
 							"name": "toLetters",
 							"variant": "signature",
 							"kind": 4096,
@@ -1137,7 +1137,7 @@
 							},
 							"parameters": [
 								{
-									"id": 53,
+									"id": 52,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -1160,7 +1160,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						51
+						50
 					]
 				}
 			],
@@ -1168,27 +1168,27 @@
 				{
 					"title": "String",
 					"children": [
-						51
+						50
 					]
 				}
 			]
 		},
 		{
-			"id": 54,
+			"id": 53,
 			"name": "to-number",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 55,
+					"id": 54,
 					"name": "toNumber",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 56,
+							"id": 55,
 							"name": "toNumber",
 							"variant": "signature",
 							"kind": 4096,
@@ -1223,7 +1223,7 @@
 							},
 							"parameters": [
 								{
-									"id": 57,
+									"id": 56,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -1246,7 +1246,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						55
+						54
 					]
 				}
 			],
@@ -1254,27 +1254,27 @@
 				{
 					"title": "Number",
 					"children": [
-						55
+						54
 					]
 				}
 			]
 		},
 		{
-			"id": 58,
+			"id": 57,
 			"name": "to-ordinal",
 			"variant": "declaration",
 			"kind": 2,
 			"flags": {},
 			"children": [
 				{
-					"id": 59,
+					"id": 58,
 					"name": "toOrdinal",
 					"variant": "declaration",
 					"kind": 64,
 					"flags": {},
 					"signatures": [
 						{
-							"id": 60,
+							"id": 59,
 							"name": "toOrdinal",
 							"variant": "signature",
 							"kind": 4096,
@@ -1309,7 +1309,7 @@
 							},
 							"parameters": [
 								{
-									"id": 61,
+									"id": 60,
 									"name": "input",
 									"variant": "param",
 									"kind": 32768,
@@ -1333,7 +1333,7 @@
 				{
 					"title": "Functions",
 					"children": [
-						59
+						58
 					]
 				}
 			],
@@ -1341,7 +1341,7 @@
 				{
 					"title": "Number",
 					"children": [
-						59
+						58
 					]
 				}
 			]
@@ -1361,11 +1361,11 @@
 				28,
 				32,
 				36,
-				42,
-				46,
-				50,
-				54,
-				58
+				41,
+				45,
+				49,
+				53,
+				57
 			]
 		}
 	],
@@ -1571,10 +1571,15 @@
 			"packagePath": "source/generate-integers.ts",
 			"qualifiedName": "to"
 		},
-		"42": {
+		"41": {
 			"packageName": "tings",
 			"packagePath": "source/sleep.ts",
 			"qualifiedName": ""
+		},
+		"42": {
+			"packageName": "tings",
+			"packagePath": "source/sleep.ts",
+			"qualifiedName": "sleep"
 		},
 		"43": {
 			"packageName": "tings",
@@ -1584,17 +1589,17 @@
 		"44": {
 			"packageName": "tings",
 			"packagePath": "source/sleep.ts",
-			"qualifiedName": "sleep"
+			"qualifiedName": "milliseconds"
 		},
 		"45": {
 			"packageName": "tings",
-			"packagePath": "source/sleep.ts",
-			"qualifiedName": "milliseconds"
+			"packagePath": "source/to-compact-case.ts",
+			"qualifiedName": ""
 		},
 		"46": {
 			"packageName": "tings",
 			"packagePath": "source/to-compact-case.ts",
-			"qualifiedName": ""
+			"qualifiedName": "toCompactCase"
 		},
 		"47": {
 			"packageName": "tings",
@@ -1604,17 +1609,17 @@
 		"48": {
 			"packageName": "tings",
 			"packagePath": "source/to-compact-case.ts",
-			"qualifiedName": "toCompactCase"
+			"qualifiedName": "input"
 		},
 		"49": {
 			"packageName": "tings",
-			"packagePath": "source/to-compact-case.ts",
-			"qualifiedName": "input"
+			"packagePath": "source/to-letters.ts",
+			"qualifiedName": ""
 		},
 		"50": {
 			"packageName": "tings",
 			"packagePath": "source/to-letters.ts",
-			"qualifiedName": ""
+			"qualifiedName": "toLetters"
 		},
 		"51": {
 			"packageName": "tings",
@@ -1624,17 +1629,17 @@
 		"52": {
 			"packageName": "tings",
 			"packagePath": "source/to-letters.ts",
-			"qualifiedName": "toLetters"
+			"qualifiedName": "input"
 		},
 		"53": {
 			"packageName": "tings",
-			"packagePath": "source/to-letters.ts",
-			"qualifiedName": "input"
+			"packagePath": "source/to-number.ts",
+			"qualifiedName": ""
 		},
 		"54": {
 			"packageName": "tings",
 			"packagePath": "source/to-number.ts",
-			"qualifiedName": ""
+			"qualifiedName": "toNumber"
 		},
 		"55": {
 			"packageName": "tings",
@@ -1644,17 +1649,17 @@
 		"56": {
 			"packageName": "tings",
 			"packagePath": "source/to-number.ts",
-			"qualifiedName": "toNumber"
+			"qualifiedName": "input"
 		},
 		"57": {
 			"packageName": "tings",
-			"packagePath": "source/to-number.ts",
-			"qualifiedName": "input"
+			"packagePath": "source/to-ordinal.ts",
+			"qualifiedName": ""
 		},
 		"58": {
 			"packageName": "tings",
 			"packagePath": "source/to-ordinal.ts",
-			"qualifiedName": ""
+			"qualifiedName": "toOrdinal"
 		},
 		"59": {
 			"packageName": "tings",
@@ -1662,11 +1667,6 @@
 			"qualifiedName": "toOrdinal"
 		},
 		"60": {
-			"packageName": "tings",
-			"packagePath": "source/to-ordinal.ts",
-			"qualifiedName": "toOrdinal"
-		},
-		"61": {
 			"packageName": "tings",
 			"packagePath": "source/to-ordinal.ts",
 			"qualifiedName": "input"
@@ -1684,12 +1684,11 @@
 			"8": "source/check-unique.ts",
 			"9": "source/check-url-absolute.ts",
 			"10": "source/generate-integers.ts",
-			"11": "source/index.ts",
-			"12": "source/sleep.ts",
-			"13": "source/to-compact-case.ts",
-			"14": "source/to-letters.ts",
-			"15": "source/to-number.ts",
-			"16": "source/to-ordinal.ts"
+			"11": "source/sleep.ts",
+			"12": "source/to-compact-case.ts",
+			"13": "source/to-letters.ts",
+			"14": "source/to-number.ts",
+			"15": "source/to-ordinal.ts"
 		},
 		"reflections": {
 			"1": 1,
@@ -1702,11 +1701,11 @@
 			"8": 28,
 			"9": 32,
 			"10": 36,
-			"12": 42,
-			"13": 46,
-			"14": 50,
-			"15": 54,
-			"16": 58
+			"11": 41,
+			"12": 45,
+			"13": 49,
+			"14": 53,
+			"15": 57
 		}
 	}
 }
