@@ -21,15 +21,15 @@ export function toOrdinal(input: unknown = 0): string {
   const isInt = Number.isInteger(number)
 
   if (isInt) {
-    if (String(number).endsWith('1') && number !== 11) {
+    if (number !== 11 && Math.abs(number) % 10 === 1) {
       return `${number}st`
     }
 
-    if (String(number).endsWith('2') && number !== 12) {
+    if (number !== 12 && Math.abs(number) % 10 === 2) {
       return `${number}nd`
     }
 
-    if (String(number).endsWith('3') && number !== 13) {
+    if (number !== 13 && Math.abs(number) % 10 === 3) {
       return `${number}rd`
     }
   }
