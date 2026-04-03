@@ -21,14 +21,7 @@ test.each(falsey)('%s is falsey', (input) => {
   expect(checkCompactCase(input)).toBe(false)
 })
 
-const truthy = [
-  '',
-  'justletters',
-  '123',
-  'mixed123',
-  'hyphenated-123',
-  'special!@@£$%^%^*(-123',
-]
+const truthy = ['', 'justletters', '123', 'mixed123', 'hyphenated-123', 'special!@@£$%^%^*(-123']
 
 test.each(truthy)('%s is truthy', (input) => {
   expect(checkCompactCase(input)).toBe(true)

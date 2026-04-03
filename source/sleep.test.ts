@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-floating-promises */
 import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 
 import { sleep } from './sleep.js'
@@ -27,7 +28,7 @@ test('sleeps for given milliseconds', async () => {
 
   await vi.advanceTimersByTimeAsync(1000)
 
-  expect(callbackSpy).toHaveBeenCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledOnce()
 })
 
 test(`sleeps for 0 milliseconds given a non-number`, async () => {
@@ -36,7 +37,7 @@ test(`sleeps for 0 milliseconds given a non-number`, async () => {
 
   await vi.advanceTimersByTimeAsync(0)
 
-  expect(callbackSpy).toHaveBeenCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledOnce()
 })
 
 test(`sleeps for 0 milliseconds given a negative number`, async () => {
@@ -44,7 +45,7 @@ test(`sleeps for 0 milliseconds given a negative number`, async () => {
 
   await vi.advanceTimersByTimeAsync(0)
 
-  expect(callbackSpy).toHaveBeenCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledOnce()
 })
 
 test(`sleeps for given float milliseconds, rounded-down`, async () => {
@@ -60,5 +61,5 @@ test(`sleeps for given float milliseconds, rounded-down`, async () => {
 
   await vi.advanceTimersByTimeAsync(10_000)
 
-  expect(callbackSpy).toHaveBeenCalledTimes(1)
+  expect(callbackSpy).toHaveBeenCalledOnce()
 })

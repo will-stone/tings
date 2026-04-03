@@ -71,8 +71,7 @@
 
 ### Patch Changes
 
-- `generateIntegers` now ignores any decimal places on `from` and `to`
-  arguments.
+- `generateIntegers` now ignores any decimal places on `from` and `to` arguments.
 
 ## 8.1.3
 
@@ -102,10 +101,10 @@
 
 ### Major Changes
 
-- d1e50db: Changed boolean check functions' names to allow for easier result
-  naming. e.g. `const isCompactCase = checkCompactCase(input)`. All functions
-  starting with `is` changed to `check`, except `isBrowser` which is now
-  `checkRunningInBrowser`, and `isUniq` is now `checkUnique`.
+- d1e50db: Changed boolean check functions' names to allow for easier result naming. e.g.
+  `const isCompactCase = checkCompactCase(input)`. All functions starting with `is` changed to
+  `check`, except `isBrowser` which is now `checkRunningInBrowser`, and `isUniq` is now
+  `checkUnique`.
 
 ### Minor Changes
 
@@ -165,8 +164,8 @@
 
 ### Major Changes
 
-- 98420b6: Rename `toNumberAlways` to `toNumber`. This was originally named to
-  avoid a clash with Lodash but Tings is no longer a Lodash addon package.
+- 98420b6: Rename `toNumberAlways` to `toNumber`. This was originally named to avoid a clash with
+  Lodash but Tings is no longer a Lodash addon package.
 
 ## 5.0.2
 

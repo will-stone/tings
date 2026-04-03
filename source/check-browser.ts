@@ -1,12 +1,12 @@
 /**
  * Determines if current code is running in a browser environment.
- * @category Environment
  * @example
-```ts
-import { checkBrowser } from 'tings'
-
-checkBrowser() // true
-```
+ * ```ts
+ * import { checkBrowser } from 'tings'
+ *
+ * checkBrowser() // true
+ * ```
+ * @category Environment
  */
 export function checkBrowser(): boolean {
   // eslint-disable-next-line unicorn/prefer-global-this -- want to check window not globalThis

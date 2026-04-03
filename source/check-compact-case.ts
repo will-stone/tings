@@ -1,14 +1,14 @@
 /**
  * Determines if input is a string that does not contain white-spaces.
- * @category String
  * @example
-```ts
-import { checkCompactCase } from 'tings'
-
-checkCompactCase('thisiscompact') // true
-checkCompactCase('this is not compact') // false
-checkCompactCase(123) // false - input is not a string
-```
+ * ```ts
+ * import { checkCompactCase } from 'tings'
+ *
+ * checkCompactCase('thisiscompact') // true
+ * checkCompactCase('this is not compact') // false
+ * checkCompactCase(123) // false - input is not a string
+ * ```
+ * @category String
  */
 export function checkCompactCase(input: unknown): input is string {
   if (typeof input !== 'string') {

@@ -1,17 +1,17 @@
 /**
  * Determines if input is a prime number.
- * @category Number
  * @example
-```ts
-import { checkPrime } from 'tings'
-
-checkPrime(0)    // false
-checkPrime(1)    // false
-checkPrime(2)    // true
-checkPrime(5)    // true
-checkPrime(9)    // false
-checkPrime(3.14) // false
-```
+ * ```ts
+ * import { checkPrime } from 'tings'
+ *
+ * checkPrime(0)    // false
+ * checkPrime(1)    // false
+ * checkPrime(2)    // true
+ * checkPrime(5)    // true
+ * checkPrime(9)    // false
+ * checkPrime(3.14) // false
+ * ```
+ * @category Number
  */
 export function checkPrime(input: unknown): input is number {
   if (typeof input !== 'number' || !Number.isInteger(input)) return false

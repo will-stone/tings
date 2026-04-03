@@ -4,17 +4,17 @@ import { toNumber } from './to-number.js'
  * Converts a number to its ordinal string form, if possible, else returns 0th.
  * - 1 -> 1st
  * - 4.2 -> 4.2th
- * - notANumber -> 0th
- * @category Number
+ * - notANumber -> 0th.
  * @example
-```ts
-import { toOrdinal } from 'tings'
-
-toOrdinal('this is text') // 0th
-toOrdinal('3') // 3rd
-toOrdinal('11') // 11th
-toOrdinal(3.14) // 3.14th
-```
+ * ```ts
+ * import { toOrdinal } from 'tings'
+ *
+ * toOrdinal('this is text') // 0th
+ * toOrdinal('3') // 3rd
+ * toOrdinal('11') // 11th
+ * toOrdinal(3.14) // 3.14th
+ * ```
+ * @category Number
  */
 export function toOrdinal(input: unknown = 0): string {
   const number = toNumber(input)

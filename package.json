@@ -3,6 +3,11 @@
   "version": "9.1.4",
   "private": false,
   "description": "A collection of small JavaScript utilities",
+  "keywords": [
+    "util",
+    "utils",
+    "utilities"
+  ],
   "homepage": "https://tings.wstone.uk/",
   "bugs": {
     "url": "https://github.com/will-stone/tings/issues"
@@ -54,16 +59,20 @@
       "eslint --fix"
     ]
   },
+  "overrides": {
+    "eslint": "$eslint",
+    "typescript": "$typescript"
+  },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
     "@astrojs/tailwind": "^6.0.2",
     "@commits-with-character/conventional-changelog-preset": "^5.1.1",
     "@release-it/conventional-changelog": "^10.0.6",
     "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^22.19.17",
+    "@types/node": "^24.1.0",
     "@vitest/eslint-plugin": "^1.6.14",
-    "@will-stone/eslint-config": "^16.2.0",
-    "@will-stone/prettier-config": "^11.0.1",
+    "@will-stone/eslint-config": "^26.2.0",
+    "@will-stone/prettier-config": "^12.0.0",
     "astro": "^5.18.1",
     "astro-eslint-parser": "^1.4.0",
     "astro-remote": "^0.3.4",
@@ -86,8 +95,10 @@
     "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@10.6.5",
+  "engines": {
+    "node": ">=22"
+  },
   "publishConfig": {
-    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "pnpm": {
@@ -95,9 +106,5 @@
       "esbuild",
       "sharp"
     ]
-  },
-  "overrides": {
-    "eslint": "$eslint",
-    "typescript": "$typescript"
   }
 }

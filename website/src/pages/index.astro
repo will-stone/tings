@@ -7,18 +7,18 @@ import CodeBlock from '../components/code-block.astro'
 import t from '../data/typedoc.json'
 
 type Ting = {
+  code: string
   id: number
   name: string
   signatures: unknown
-  summary: string
-  code: string
   slug: string
+  summary: string
 }
 
 const byCategory: Record<string, Ting[]> = {}
 
 for (const ting of t.children) {
-  const { name, id, signatures } = ting.children[0]
+  const { id, name, signatures } = ting.children[0]
   const summary = signatures?.[0].comment.summary[0].text
   const code = signatures?.[0].comment.blockTags[1].content[0].text
   const category = ting.categories?.[0].title
@@ -90,10 +90,7 @@ for (const ting of t.children) {
         class="flex h-20 flex-col justify-center border-b border-primary bg-gray-900 md:container md:sticky md:top-0"
       >
         <div class="flex items-center justify-between">
-          <a
-            class="flex items-center justify-center space-x-2 sm:justify-start"
-            href="/"
-          >
+          <a class="flex items-center justify-center space-x-2 sm:justify-start" href="/">
             <img alt="" class="w-12" src="/logo2.png" />
             <h1
               class="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-3xl font-bold leading-snug text-transparent"
@@ -131,7 +128,7 @@ for (const ting of t.children) {
         <nav class="space-y-8 pb-16">
           {
             Object.entries(byCategory)
-              .sort()
+              .toSorted()
               .map(([category, tings]) => (
                 <div>
                   <h2 class="text-gray-500">{category}</h2>
@@ -198,18 +195,13 @@ for (const ting of t.children) {
             </tr>
             <tr>
               <td colspan={2}>
-                <small>
-                  Functions that do not return a value do not have a prefix.
-                </small>
+                <small> Functions that do not return a value do not have a prefix. </small>
               </td>
             </tr>
           </tbody>
         </table>
 
-        <p>
-          This allows for comfortable variable naming without clashes, for
-          example:
-        </p>
+        <p>This allows for comfortable variable naming without clashes, for example:</p>
 
         <Code
           code={`const isUnique = checkUnique([1, 2, 3])`}
@@ -219,15 +211,11 @@ for (const ting of t.children) {
 
         <h2>Install</h2>
 
-        <Code
-          code={`npm i tings`}
-          lang="sh"
-          theme="github-dark-high-contrast"
-        />
+        <Code code={`npm i tings`} lang="sh" theme="github-dark-high-contrast" />
 
         {
           Object.entries(byCategory)
-            .sort()
+            .toSorted()
             .map(([category, tings]) => (
               <>
                 {tings.map((ting) => (

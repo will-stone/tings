@@ -1,19 +1,19 @@
 /**
  * Determines if input is an odd integer.
- * @category Number
  * @example
-```ts
-import { checkOdd } from 'tings'
-
-checkOdd(-4)   // false
-checkOdd(-1)   // true
-checkOdd(0)    // false
-checkOdd(1)    // true
-checkOdd(2)    // false
-checkOdd(5)    // true
-checkOdd(9)    // true
-checkOdd(3.14) // false
-```
+ * ```ts
+ * import { checkOdd } from 'tings'
+ *
+ * checkOdd(-4)   // false
+ * checkOdd(-1)   // true
+ * checkOdd(0)    // false
+ * checkOdd(1)    // true
+ * checkOdd(2)    // false
+ * checkOdd(5)    // true
+ * checkOdd(9)    // true
+ * checkOdd(3.14) // false
+ * ```
+ * @category Number
  */
 export function checkOdd(input: unknown): input is number {
   if (typeof input !== 'number' || !Number.isInteger(input)) return false
