@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.5](https://github.com/will-stone/tings/compare/9.1.4...9.1.5) (2026-04-03)
+
+### Patches
+
+- Remove useless optional chain from checkDate
+  ([a879e67](https://github.com/will-stone/tings/commit/a879e67f09645dcf0da70f6e03dfeabef526a1c1))
+
 ## [9.1.4](https://github.com/will-stone/tings/compare/9.1.3...9.1.4) (2026-04-03)
 
 ### Patches
