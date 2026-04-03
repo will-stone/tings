@@ -81,7 +81,7 @@
     "eslint-plugin-astro": "^1.6.0",
     "eslint-plugin-tailwindcss": "^3.18.2",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.2",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "release-it": "^19.2.4",
@@ -92,7 +92,7 @@
     "typedoc-plugin-markdown": "^4.11.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.2"
   },
   "packageManager": "pnpm@10.6.5",
   "engines": {

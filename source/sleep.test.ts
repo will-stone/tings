@@ -16,7 +16,7 @@ beforeEach(() => {
 })
 
 afterEach(() => {
-  vi.restoreAllMocks()
+  vi.clearAllMocks()
 })
 
 test('sleeps for given milliseconds', async () => {
