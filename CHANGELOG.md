@@ -1,5 +1,12 @@
 # Changelog
 
+## [9.1.4](https://github.com/will-stone/tings/compare/9.1.3...9.1.4) (2026-04-03)
+
+### Patches
+
+- Calculate toOrdinal without converting to string
+  ([4aec458](https://github.com/will-stone/tings/commit/4aec458700c4d6541015797d691b3e790b4b8572))
+
 ## [9.1.3](https://github.com/will-stone/tings/compare/9.1.2...9.1.3) (2025-03-24)
 
 ### Patches
