@@ -46,18 +46,10 @@
     "dev:lib": "pnpm build:lib -- --watch --onSuccess \"pnpm postbuild\"",
     "dev:web": "astro dev",
     "lint": "eslint .",
-    "prepare": "husky",
+    "prepare": "vp config",
     "release": "release-it",
     "test": "vitest",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
-  },
-  "lint-staged": {
-    "*.{css,json,md,js,jsx,ts,tsx,cjs,mjs}": [
-      "prettier --write"
-    ],
-    "*.{js,jsx,ts,tsx,cjs,mjs,json}": [
-      "eslint --fix"
-    ]
+    "typecheck": "tsc"
   },
   "overrides": {
     "eslint": "$eslint",
@@ -79,8 +71,6 @@
     "concurrently": "^9.2.1",
     "eslint": "^9.39.4",
     "eslint-plugin-astro": "^1.6.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "release-it": "^19.2.4",
@@ -91,6 +81,7 @@
     "typedoc-plugin-markdown": "^4.11.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
+    "vite-plus": "^0.1.15",
     "vitest": "^4.1.2"
   },
   "packageManager": "pnpm@10.33.0",

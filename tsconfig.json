@@ -12,11 +12,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
+    "noEmit": true,
     "skipLibCheck": true,
     "strict": true,
     "useDefineForClassFields": true
   },
-  "include": ["source", "website"],
+  "include": ["source", "website", "vite.config.ts"],
   "typedocOptions": {
     "disableSources": true,
     "entryPoints": ["./source"],
