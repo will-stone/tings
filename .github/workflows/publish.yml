@@ -19,15 +19,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Setup node
-        uses: actions/setup-node@v4
+      - uses: voidzero-dev/setup-vp@v1
         with:
-          node-version-file: .nvmrc
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
+          node-version: '24'
+          cache: true
 
       - name: setup config
         run: |
@@ -35,24 +30,24 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
       - name: Install dependencies
-        run: pnpm install
+        run: vp i
 
       - name: Lint
-        run: pnpm lint
+        run: vpr lint
 
       - name: Test
-        run: pnpm test
+        run: vpr test
 
       - name: Type check
-        run: pnpm typecheck
+        run: vpr typecheck
 
       - name: Release
-        run: pnpm release
+        run: vpr release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build website
-        run: npm run build:web
+        run: vpr build:web
 
       - name: Upload website artefacts
         uses: actions/upload-pages-artifact@v3
