@@ -24,7 +24,7 @@ importers:
         specifier: ^4.2.2
         version: 4.2.2(vite@7.3.1(@types/node@24.12.2)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))
       '@types/node':
-        specifier: ^24.1.0
+        specifier: ^24.12.2
         version: 24.12.2
       '@vitest/eslint-plugin':
         specifier: ^1.6.14
@@ -69,7 +69,7 @@ importers:
         specifier: ^19.2.4
         version: 19.2.4(@types/node@24.12.2)(magicast@0.5.2)
       tailwind-scrollbar:
-        specifier: ^4.0.0
+        specifier: ^4.0.2
         version: 4.0.2(react@19.2.4)(tailwindcss@4.2.2)
       tailwindcss:
         specifier: ^4.2.2
