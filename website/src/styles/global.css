@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+@plugin 'tailwind-scrollbar';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --breakpoint-xl: initial;
+  --breakpoint-2xl: initial;
+
+  /* Wild Strawberry */
+  --color-primary: #f92d8e;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
